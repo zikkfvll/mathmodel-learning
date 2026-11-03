@@ -1,0 +1,389 @@
+{
+  "policy": {
+    "path": "work/q4/execution_upgrade_20261030/inverse_v30/INVERSE_POLICY.json",
+    "bytes": 3080,
+    "sha256": "d7aeae74d8b012cd7f7465aa6f05208669d91112cdb34a392539f1843e3c16c2"
+  },
+  "observed": {
+    "config": {
+      "volume_m3": 700000.0,
+      "duration_s": 960.0,
+      "mu": 0.04,
+      "xi_m_s2": 500.0,
+      "speed_m_s": 30.0,
+      "cfl": 0.175
+    },
+    "dx_m": 15.0,
+    "argv": [
+      "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/.venv/bin/python",
+      "-B",
+      "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/reports/q4/execution_upgrade_20261030/stage30_pipeline_v30/q4_analysis.py",
+      "pilot",
+      "--out",
+      "work/q4/execution_upgrade_20261030/inverse_v30/synthetic_truth_15",
+      "--inputs",
+      "work/q4/execution_upgrade_20261030/terrain_local_v7",
+      "--dx",
+      "15.0",
+      "--order",
+      "2",
+      "--backend",
+      "c",
+      "--horizon",
+      "1800",
+      "--cfl",
+      "0.175",
+      "--dry",
+      "0.0001",
+      "--maxdt",
+      "2",
+      "--volume",
+      "700000.0",
+      "--duration",
+      "960.0",
+      "--mu",
+      "0.04",
+      "--xi",
+      "500.0",
+      "--entry-width",
+      "30.0",
+      "--speed",
+      "30.0",
+      "--shape",
+      "triangle",
+      "--terrain-name",
+      "copernicus"
+    ],
+    "exit_code": 0,
+    "total_wall_s": 288.5856310829986,
+    "folder": "work/q4/execution_upgrade_20261030/inverse_v30/synthetic_truth_15",
+    "valid": true,
+    "status": "arrived",
+    "target_max_h_m": 10.292181962784229,
+    "response_g": 3.9504917015398093,
+    "raw_margin_m": 10.192181962784229,
+    "response_g_unit": "dimensionless_log_margin",
+    "time_s": 675.6068462587493,
+    "time_bracket_s": [
+      675.5722830599843,
+      675.6414094575142
+    ],
+    "solver_wall_s": 285.41852504201233,
+    "mass_error_rel": 5.987073693956649e-15,
+    "momentum_error_rel": 5.595067212152931e-15,
+    "receipt": {
+      "path": "work/q4/execution_upgrade_20261030/inverse_v30/synthetic_truth_15/RUN_RECEIPT.json",
+      "bytes": 4898,
+      "sha256": "6b5949edc80b45c3f76685fc5d1c505b22b5a431894018862b6fd4675e76a4bd"
+    },
+    "result": {
+      "path": "work/q4/execution_upgrade_20261030/inverse_v30/synthetic_truth_15/pilot_15.json",
+      "bytes": 4256,
+      "sha256": "b5ba3b18ac022bacbe0caee146c665919fe78d7e5216f059c82c2a4644976bef"
+    },
+    "compile_and_load_s": 0.7091818330809474
+  },
+  "arrival_GP": {
+    "theta": [
+      1.0311503114778195,
+      1.0,
+      0.8698846639969398
+    ],
+    "mean": 715.9672716086,
+    "scale": 61.22533048741978,
+    "jitter_normalized_variance": 1e-08,
+    "NLL": -9.230364552261541,
+    "covariance_condition_number": 928522.7228376861,
+    "fit_status": "converged_MLE",
+    "fallback_policy": "prefer finite SPD converged starts; otherwise flag lowest finite SPD iterate",
+    "optimizer_attempts": [
+      {
+        "success": true,
+        "fun": -9.230364302235593,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      {
+        "success": true,
+        "fun": -9.230363649673048,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      {
+        "success": true,
+        "fun": -9.230364552261541,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      }
+    ]
+  },
+  "depth_GP": {
+    "theta": [
+      0.9865196049236638,
+      0.7749601775522075,
+      0.5004767310584868
+    ],
+    "mean": 9.368261577542752,
+    "scale": 0.5511889519451101,
+    "jitter_normalized_variance": 1e-08,
+    "NLL": -1.5446010401800692,
+    "covariance_condition_number": 217070.2227812072,
+    "fit_status": "converged_MLE",
+    "fallback_policy": "prefer finite SPD converged starts; otherwise flag lowest finite SPD iterate",
+    "optimizer_attempts": [
+      {
+        "success": true,
+        "fun": -1.5446010401800692,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      {
+        "success": true,
+        "fun": -1.5446004566982658,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      {
+        "success": true,
+        "fun": -1.5446010392960687,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      }
+    ]
+  },
+  "single_constraint_candidates": 1138,
+  "two_constraint_candidates": 634,
+  "candidate_grid_count": 1681,
+  "Pareto_indices": [
+    412,
+    954,
+    1621,
+    1663,
+    1664,
+    1665
+  ],
+  "representatives_recomputed": [
+    {
+      "grid_index": 412,
+      "normalized_parameter": [
+        0.25,
+        0.05
+      ],
+      "surrogate_errors": [
+        0.0012457650653990035,
+        1.6508129344615885
+      ],
+      "physical": {
+        "config": {
+          "volume_m3": 650000.0,
+          "duration_s": 960.0,
+          "mu": 0.031,
+          "xi_m_s2": 500.0,
+          "speed_m_s": 30.0
+        },
+        "dx_m": 30.0,
+        "argv": [
+          "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/.venv/bin/python",
+          "-B",
+          "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/reports/q4/execution_upgrade_20261030/stage30_pipeline_v30/q4_analysis.py",
+          "pilot",
+          "--out",
+          "work/q4/execution_upgrade_20261030/inverse_v30/pareto_recheck_0412",
+          "--inputs",
+          "work/q4/execution_upgrade_20261030/terrain_local_v7",
+          "--dx",
+          "30.0",
+          "--order",
+          "2",
+          "--backend",
+          "c",
+          "--horizon",
+          "1800",
+          "--cfl",
+          "0.35",
+          "--dry",
+          "0.0001",
+          "--maxdt",
+          "2",
+          "--volume",
+          "650000.0",
+          "--duration",
+          "960.0",
+          "--mu",
+          "0.031",
+          "--xi",
+          "500.0",
+          "--entry-width",
+          "30.0",
+          "--speed",
+          "30.0",
+          "--shape",
+          "triangle",
+          "--terrain-name",
+          "copernicus"
+        ],
+        "exit_code": 0,
+        "total_wall_s": 22.70103899994865,
+        "folder": "work/q4/execution_upgrade_20261030/inverse_v30/pareto_recheck_0412",
+        "valid": true,
+        "status": "arrived",
+        "target_max_h_m": 9.087428060185834,
+        "response_g": 3.827273946758545,
+        "raw_margin_m": 8.987428060185835,
+        "response_g_unit": "dimensionless_log_margin",
+        "time_s": 675.2692442442749,
+        "time_bracket_s": [
+          675.1299272968344,
+          675.4085611917154
+        ],
+        "solver_wall_s": 21.357826207997277,
+        "mass_error_rel": 5.1939143584324695e-15,
+        "momentum_error_rel": 3.6305419641482295e-15,
+        "receipt": {
+          "path": "work/q4/execution_upgrade_20261030/inverse_v30/pareto_recheck_0412/RUN_RECEIPT.json",
+          "bytes": 4905,
+          "sha256": "2af42ccdf3a234cf8d989087ef0052b64b9374fbf4b73487e5ef8382055d6b1e"
+        },
+        "result": {
+          "path": "work/q4/execution_upgrade_20261030/inverse_v30/pareto_recheck_0412/pilot_30.json",
+          "bytes": 4261,
+          "sha256": "0648a516e4098bc45050c692d7e87611c2d5dac88d25456d73431b696a719ad0"
+        },
+        "compile_and_load_s": 0.6093985419720411
+      },
+      "held_out_Q_error_m3_s": 114.11519260154353,
+      "truth_parameter_relative_errors": {
+        "volume": -0.0714285714285714,
+        "mu": -0.22499999999999998
+      }
+    },
+    {
+      "grid_index": 1665,
+      "normalized_parameter": [
+        1.0,
+        0.625
+      ],
+      "surrogate_errors": [
+        0.11007478634766509,
+        0.13610636943986756
+      ],
+      "physical": {
+        "config": {
+          "volume_m3": 800000.0,
+          "duration_s": 960.0,
+          "mu": 0.042499999999999996,
+          "xi_m_s2": 500.0,
+          "speed_m_s": 30.0
+        },
+        "dx_m": 30.0,
+        "argv": [
+          "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/.venv/bin/python",
+          "-B",
+          "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/reports/q4/execution_upgrade_20261030/stage30_pipeline_v30/q4_analysis.py",
+          "pilot",
+          "--out",
+          "work/q4/execution_upgrade_20261030/inverse_v30/pareto_recheck_1665",
+          "--inputs",
+          "work/q4/execution_upgrade_20261030/terrain_local_v7",
+          "--dx",
+          "30.0",
+          "--order",
+          "2",
+          "--backend",
+          "c",
+          "--horizon",
+          "1800",
+          "--cfl",
+          "0.35",
+          "--dry",
+          "0.0001",
+          "--maxdt",
+          "2",
+          "--volume",
+          "800000.0",
+          "--duration",
+          "960.0",
+          "--mu",
+          "0.042499999999999996",
+          "--xi",
+          "500.0",
+          "--entry-width",
+          "30.0",
+          "--speed",
+          "30.0",
+          "--shape",
+          "triangle",
+          "--terrain-name",
+          "copernicus"
+        ],
+        "exit_code": 0,
+        "total_wall_s": 23.30394283402711,
+        "folder": "work/q4/execution_upgrade_20261030/inverse_v30/pareto_recheck_1665",
+        "valid": true,
+        "status": "arrived",
+        "target_max_h_m": 10.20860575908534,
+        "response_g": 3.942416969415822,
+        "raw_margin_m": 10.108605759085341,
+        "response_g_unit": "dimensionless_log_margin",
+        "time_s": 682.3389622966272,
+        "time_bracket_s": [
+          682.2026852919744,
+          682.47523930128
+        ],
+        "solver_wall_s": 21.973347999854013,
+        "mass_error_rel": 6.475602276623269e-15,
+        "momentum_error_rel": 3.2623168876542944e-15,
+        "receipt": {
+          "path": "work/q4/execution_upgrade_20261030/inverse_v30/pareto_recheck_1665/RUN_RECEIPT.json",
+          "bytes": 4920,
+          "sha256": "d1bad7bf0e9c282787841fd6a10c3277d2bfb6263662e811b10e3ca6f62fdfd4"
+        },
+        "result": {
+          "path": "work/q4/execution_upgrade_20261030/inverse_v30/pareto_recheck_1665/pilot_30.json",
+          "bytes": 4269,
+          "sha256": "1bbb01efae3a81789a524fa2b2446f274ff57b00197a024cad43c84aeb6d38f1"
+        },
+        "compile_and_load_s": 0.6000145410653204
+      },
+      "held_out_Q_error_m3_s": 194.81676499141327,
+      "truth_parameter_relative_errors": {
+        "volume": 0.1428571428571428,
+        "mu": 0.06249999999999978
+      }
+    }
+  ],
+  "nonidentifiable_terminal_velocity_family": [
+    {
+      "mu": 0.02,
+      "xi": 312.50000000000006,
+      "terminal_m_s": 7.0710678118654755,
+      "u_at10s_m_s": 5.685266734189001
+    },
+    {
+      "mu": 0.035,
+      "xi": 384.61538461538464,
+      "terminal_m_s": 7.0710678118654755,
+      "u_at10s_m_s": 5.07108850387666
+    },
+    {
+      "mu": 0.05,
+      "xi": 500.00000000000006,
+      "terminal_m_s": 7.0710678118654755,
+      "u_at10s_m_s": 4.245013880855969
+    },
+    {
+      "mu": 0.065,
+      "xi": 714.2857142857143,
+      "terminal_m_s": 7.0710678118654755,
+      "u_at10s_m_s": 3.1868843850030593
+    },
+    {
+      "mu": 0.075,
+      "xi": 999.9999999999998,
+      "terminal_m_s": 7.0710678118654755,
+      "u_at10s_m_s": 2.3586710298676334
+    }
+  ],
+  "two_observable_exact_recovery": {
+    "true_mu": 0.05,
+    "recovered_mu": 0.05000000000000002,
+    "true_xi": 500.0,
+    "recovered_xi": 500.00000000000017
+  },
+  "not_a_natural_calibration": true,
+  "independent_review": "pending"
+}

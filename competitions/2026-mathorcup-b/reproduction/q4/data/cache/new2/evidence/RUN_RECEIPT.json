@@ -1,0 +1,145 @@
+{
+  "started_at": "2026-10-30T10:48:07.706571+00:00",
+  "finished_at": "2026-10-30T10:48:40.592072+00:00",
+  "argv": [
+    "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/reports/q4/decision_guard_20261030/source_v1/q4_analysis.py",
+    "pilot",
+    "--out",
+    "work/q4/decision_guard_20261030/new_point2/physical_verification",
+    "--inputs",
+    "work/q4/execution_upgrade_20261030/terrain_local_v7",
+    "--dx",
+    "30.0",
+    "--order",
+    "2",
+    "--backend",
+    "c",
+    "--horizon",
+    "1800",
+    "--cfl",
+    "0.35",
+    "--dry",
+    "0.0001",
+    "--maxdt",
+    "2",
+    "--volume",
+    "475682.8460010884",
+    "--duration",
+    "960.0",
+    "--mu",
+    "0.075",
+    "--xi",
+    "500.0",
+    "--entry-width",
+    "30.0",
+    "--speed",
+    "30.0",
+    "--shape",
+    "triangle",
+    "--terrain-name",
+    "copernicus"
+  ],
+  "code": {
+    "path": "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/reports/q4/decision_guard_20261030/source_v1/q4_analysis.py",
+    "bytes": 154758,
+    "sha256": "b7ce2b6e4cd81ad7407d4fe9feb31f61ef847d65582ff5a2860359d8fa24bd67"
+  },
+  "code_after": {
+    "path": "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/reports/q4/decision_guard_20261030/source_v1/q4_analysis.py",
+    "bytes": 154758,
+    "sha256": "b7ce2b6e4cd81ad7407d4fe9feb31f61ef847d65582ff5a2860359d8fa24bd67"
+  },
+  "acceleration": {
+    "C_source_sha256": "2fa9a17b9638988294c55b5225d1fca0ac1010b50963b99b2551b45d9d8200c5",
+    "library_sha256": "44e6257baa19b6b495dd32cfd289291b67d08dc0f4445e2dfa628f890cb119da",
+    "compile_and_load_s": 0.8321395828388631,
+    "actual_compile_command": [
+      "cc",
+      "-O3",
+      "-std=c99",
+      "-shared",
+      "-fPIC",
+      "work/q4/decision_guard_20261030/new_point2/physical_verification/cbuild/2fa9a17b96389882/flux.c",
+      "-o",
+      "work/q4/decision_guard_20261030/new_point2/physical_verification/cbuild/2fa9a17b96389882/flux.so",
+      "-lm",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk"
+    ],
+    "fast_math": false
+  },
+  "source_unchanged_during_run": true,
+  "inputs": [
+    {
+      "path": "work/q4/execution_upgrade_20261030/terrain_local_v7/RUN_RECEIPT.json",
+      "bytes": 2196,
+      "sha256": "bfdbb5d950e3f5c03c574ea3b33dc0b35ad2302f451333ddf88e77a8f14f1d67"
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/terrain_local_v7/SOURCE_SNAPSHOT.py",
+      "bytes": 29039,
+      "sha256": "2b1f34977b1c5489ab623ed3c5cfbb41f794bddbb137e61cfb540b7680f754d7"
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/terrain_local_v7/TERRAIN.json",
+      "bytes": 2101,
+      "sha256": "dde8572bdd83d6d1d827effb59e945e27fbdefb4932df74185f4eaadcca43486"
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/terrain_local_v7/aster_support.npz",
+      "bytes": 111912,
+      "sha256": "9ddbc2cc91afb48e647ea10894393fabbf8aeea62786df76aff09f571878f245"
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/terrain_local_v7/copernicus_support.npz",
+      "bytes": 111735,
+      "sha256": "df004dc549a6fc60a0093d916f7381da669c87d8a3a2efb91073b87a7051587d"
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/terrain_local_v7/mapped_path_utm.csv",
+      "bytes": 8121,
+      "sha256": "f18d194021c05d2cc66b0f4f3d76ab66b053460d86fb17c2aee787dc4a1526c0"
+    }
+  ],
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "versions": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "pillow": "13.0.0",
+      "rasterio": "1.5.2",
+      "pyproj": "3.8.0"
+    }
+  },
+  "failure": null,
+  "outputs": [
+    {
+      "path": "work/q4/decision_guard_20261030/new_point2/physical_verification/ENTRY_FACE.json",
+      "bytes": 5828,
+      "sha256": "727e3de56d29eb3e1896f36bb45503c319a0b82fe840e181a2642342d1340c28"
+    },
+    {
+      "path": "work/q4/decision_guard_20261030/new_point2/physical_verification/SOURCE_SNAPSHOT.py",
+      "bytes": 154758,
+      "sha256": "b7ce2b6e4cd81ad7407d4fe9feb31f61ef847d65582ff5a2860359d8fa24bd67"
+    },
+    {
+      "path": "work/q4/decision_guard_20261030/new_point2/physical_verification/pilot_30.json",
+      "bytes": 4042,
+      "sha256": "36a90f0b50eef97cc368d3322a81655ab04427cd48989a597ba4e0aab8e5d64d"
+    },
+    {
+      "path": "work/q4/decision_guard_20261030/new_point2/physical_verification/pilot_30.npz",
+      "bytes": 321439,
+      "sha256": "d480c1ea43c58bad2bc8059136bab3a7dbebd899ec75b9dc5e0706322f8553d5"
+    },
+    {
+      "path": "work/q4/decision_guard_20261030/new_point2/physical_verification/pilot_30_budget.npz",
+      "bytes": 1005160,
+      "sha256": "9a8b2c3521269359d9f8b307bfea792640dbf6e16cba0e4d3b6ccb1119cbbccb"
+    }
+  ],
+  "scientific_approval": "pending"
+}

@@ -1,0 +1,12 @@
+﻿branch,pool,top,boundary
+H-END_C10_coverage90,17,"[""d1_era5_precip_sum"", ""rh2_mean"", ""t20_t2_diff"", ""ws10_mean"", ""d1_era5_precip_max""]",[]
+H-START_C10_coverage90,17,"[""d1_era5_precip_sum"", ""rh2_mean"", ""t20_t2_diff"", ""ws10_mean"", ""d1_era5_precip_max""]",[]
+H-END_C00_coverage90,17,"[""d1_era5_precip_sum"", ""rh2_mean"", ""d1_era5_precip_max"", ""t20_t2_diff"", ""ws10_mean""]",[]
+H-START_C00_coverage90,17,"[""d1_era5_precip_sum"", ""rh2_mean"", ""d1_era5_precip_max"", ""t20_t2_diff"", ""ws10_mean""]",[]
+H-END_C10_coverage95,17,"[""d1_era5_precip_sum"", ""rh2_mean"", ""t20_t2_diff"", ""ws10_mean"", ""d1_era5_precip_max""]",[]
+drop30d_all_factors,17,"[""d1_era5_precip_max"", ""d1_era5_precip_sum"", ""pdd"", ""warm_rate"", ""rsd_mean""]",[]
+all_factors_min20,18,"[""d1_era5_precip_sum"", ""rh2_mean"", ""t20_t2_diff"", ""ws10_mean"", ""d1_era5_precip_max""]",[]
+all_factors_min15,19,"[""d1_era5_precip_sum"", ""rh2_mean"", ""t20_t2_diff"", ""ws10_mean"", ""d1_era5_precip_max""]",[]
+rho0.85,17,"[""d1_era5_precip_sum"", ""rh2_mean"", ""t20_t2_diff"", ""ws10_mean"", ""d1_era5_precip_max""]",[]
+rho0.95,17,"[""d1_era5_precip_sum"", ""rh2_mean"", ""t20_t2_diff"", ""ws10_mean"", ""d1_era5_precip_max""]",[]
+common_history_support,17,"[""d1_era5_precip_sum"", ""rh2_mean"", ""t20_t2_diff"", ""ws10_mean"", ""d1_era5_precip_max""]",[]

@@ -1,0 +1,17 @@
+{
+  "time": "2026-10-30T06:35:34.856845+00:00",
+  "files": [
+    {
+      "url": "https://data.nasa.gov/dataset/aster-global-digital-elevation-model-v003",
+      "status": "failed",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://www.fisheries.noaa.gov/inport/item/59575/full-list",
+      "path": "补充数据/Q4_升级资料_20261030/执行补充/数据许可/NASA_LPDAAC_policy_NOAA_record.html",
+      "bytes": 22051,
+      "sha256": "d76802505b57ea5224757e34543932c5dd9ed909a68eefcc5354842b26b90d07",
+      "status": "downloaded"
+    }
+  ]
+}

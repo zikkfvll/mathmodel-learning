@@ -1,0 +1,7 @@
+case,execution,physical_status,horizon_s,target_max_h_m,peak_domain_h_m,ever_coverage_m2,final_coverage_m2,motion_at_horizon,mass_error_rel,whole_window_valid,solver_wall_s
+copernicus_30,completed,valid_no_arrival_by_horizon,3600,0.0,22.18048288323392,301500.0,201600.0,moving,4.947651177644745e-15,True,1114.70505008311
+copernicus_40,completed,valid_no_arrival_by_horizon,3600,0.0,23.570635441599972,313600.0,212800.0,moving,2.6193447411060343e-15,True,373.3841735001188
+aster_40,completed,valid_no_arrival_by_horizon,3600,0.0,29.088694727491337,145600.0,102400.0,moving,2.764863893389703e-15,True,417.556025542086
+double_40,completed,valid_no_arrival_by_horizon,3600,0.0,23.68637402973814,313600.0,212800.0,moving,2.764863893389699e-15,True,557.2199075841345
+high_40,not_run_deadline,,3600,,,,,,,,
+low_40,not_run_deadline,,3600,,,,,,,,

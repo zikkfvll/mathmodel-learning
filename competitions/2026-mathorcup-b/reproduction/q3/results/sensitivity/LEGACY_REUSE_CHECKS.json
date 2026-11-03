@@ -1,0 +1,227 @@
+{
+  "matched24_scenarios": [
+    {
+      "regime": "strong",
+      "q0": 0.17,
+      "offset_m_s": -1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "strong",
+      "q0": 0.17,
+      "offset_m_s": 0.0,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "strong",
+      "q0": 0.17,
+      "offset_m_s": 1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "strong",
+      "q0": 0.3,
+      "offset_m_s": -1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "strong",
+      "q0": 0.3,
+      "offset_m_s": 0.0,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "strong",
+      "q0": 0.3,
+      "offset_m_s": 1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "strong",
+      "q0": 0.5,
+      "offset_m_s": -1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "strong",
+      "q0": 0.5,
+      "offset_m_s": 0.0,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "strong",
+      "q0": 0.5,
+      "offset_m_s": 1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "strong",
+      "q0": 0.75,
+      "offset_m_s": -1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "strong",
+      "q0": 0.75,
+      "offset_m_s": 0.0,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "strong",
+      "q0": 0.75,
+      "offset_m_s": 1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.17,
+      "offset_m_s": -1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.17,
+      "offset_m_s": 0.0,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.17,
+      "offset_m_s": 1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.3,
+      "offset_m_s": -1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.3,
+      "offset_m_s": 0.0,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.3,
+      "offset_m_s": 1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.5,
+      "offset_m_s": -1.5,
+      "old_status": "no_hit",
+      "new_status": "no_hit",
+      "tau_abs_difference_s": null,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.5,
+      "offset_m_s": 0.0,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.5,
+      "offset_m_s": 1.5,
+      "old_status": "hit",
+      "new_status": "hit",
+      "tau_abs_difference_s": 0.0,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.75,
+      "offset_m_s": -1.5,
+      "old_status": "no_hit",
+      "new_status": "no_hit",
+      "tau_abs_difference_s": null,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.75,
+      "offset_m_s": 0.0,
+      "old_status": "no_hit",
+      "new_status": "no_hit",
+      "tau_abs_difference_s": null,
+      "pass": true
+    },
+    {
+      "regime": "near",
+      "q0": 0.75,
+      "offset_m_s": 1.5,
+      "old_status": "no_hit",
+      "new_status": "no_hit",
+      "tau_abs_difference_s": null,
+      "pass": true
+    }
+  ],
+  "old4_initial_admission_controls": "preserved in source table, outside this phase grid",
+  "old_numerical_controls": {
+    "role": "historical numerical tolerance tests, not new physical sensitivity or new certification",
+    "case_count": 6,
+    "max_finite_tau_difference_s": 1.982534854505502e-06,
+    "all_statuses_equal": true
+  }
+}

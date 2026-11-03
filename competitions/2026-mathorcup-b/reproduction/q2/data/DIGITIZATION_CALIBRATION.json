@@ -1,0 +1,118 @@
+{
+  "source_pdf": "补充数据/Q2_单床段增强_20261029/reviewer_sources/CGHC_202610008.pdf",
+  "source_physical_page": 5,
+  "source_printed_page": 4,
+  "render_dpi": 300,
+  "render_size_px": [
+    2551,
+    3438
+  ],
+  "rendering_only_no_new_remote_data": true,
+  "map_lon_controls_pixel_value": [
+    [
+      724.6,
+      85.35
+    ],
+    [
+      1005.8,
+      85.4
+    ],
+    [
+      1287.2,
+      85.45
+    ],
+    [
+      1568.6,
+      85.5
+    ],
+    [
+      1849.6,
+      85.55
+    ]
+  ],
+  "map_lat_controls_pixel_value": [
+    [
+      574.0,
+      28.35
+    ],
+    [
+      894.0,
+      28.3
+    ],
+    [
+      1213.0,
+      28.25
+    ]
+  ],
+  "map_transform_pixel_to_lon": [
+    0.00017775880605298808,
+    85.22119597520087
+  ],
+  "map_transform_pixel_to_lat": [
+    -0.00015649439493732912,
+    28.43985382427567
+  ],
+  "profile_x_controls_pixel_km": [
+    [
+      715.0,
+      0.0
+    ],
+    [
+      963.0,
+      5.0
+    ],
+    [
+      1213.0,
+      10.0
+    ],
+    [
+      1463.0,
+      15.0
+    ],
+    [
+      1713.0,
+      20.0
+    ],
+    [
+      1962.0,
+      25.0
+    ]
+  ],
+  "profile_y_controls_pixel_m": [
+    [
+      1709.0,
+      5000.0
+    ],
+    [
+      1802.0,
+      4000.0
+    ],
+    [
+      1894.0,
+      3000.0
+    ],
+    [
+      1986.0,
+      2000.0
+    ]
+  ],
+  "profile_transform_pixel_to_km": [
+    0.020034314832548895,
+    -14.309252298422495
+  ],
+  "profile_transform_pixel_to_m": [
+    -10.834159883089706,
+    23518.818923979004
+  ],
+  "nominal_manual_reading_support_px": 5,
+  "interpretation_of_reading_support": "graphic reading/line-width support only, not ground-survey error/confidence interval; author map/profile schematic uncertainty not quantified",
+  "route_count": 1,
+  "route_choice": "B-C identified by author material/phase corridor, fixed before modeling, not selected for a positive model label",
+  "route_projected_length_m": 5369.677831733497,
+  "route_geodesic_polyline_length_m": 5370.3860885658905,
+  "endpoint_straight_chord_utm_m": 5304.326468344579,
+  "endpoint_forward_azimuth_deg": 331.9751696463521,
+  "route_map_length_minus_profile_x_length_m": 695.2692009332932,
+  "internal_label_profile_conflict": "B map/text label 3900m vs profile-axis node; preserve both, never silently align",
+  "DSM_sampling_performed": false
+}

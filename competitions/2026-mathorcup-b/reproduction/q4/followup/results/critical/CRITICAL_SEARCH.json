@@ -1,0 +1,162 @@
+[
+  {
+    "slice": 1,
+    "zV": 0.375,
+    "volume_m3": 336358.5661014858,
+    "initial_transitions": [
+      [
+        0,
+        64
+      ]
+    ],
+    "final_j": [
+      32,
+      36
+    ],
+    "status": "final_bracket",
+    "HF_queries": 7,
+    "sequence": [
+      {
+        "j": 0,
+        "prediction_index": 145,
+        "key": "f3056deedf7bf86e7a3fc6e43806ec6b680f971a9c80d25a28300727ff6fb978",
+        "status": "arrived",
+        "h_m": 6.055961161173099,
+        "valid": true
+      },
+      {
+        "j": 64,
+        "prediction_index": 209,
+        "key": "a54e7cf573be60c9bce89254e383079e17b71f1a4e050594e543bd8a0c64b9d0",
+        "status": "valid_no_arrival_by_horizon",
+        "h_m": 0.0,
+        "valid": true
+      },
+      {
+        "j": 128,
+        "prediction_index": 273,
+        "key": "69150a59f885b0c0b9e142a5ea3a137cfb96d99fbfa3c48cdef89e6aab0df44f",
+        "status": "valid_no_arrival_by_horizon",
+        "h_m": 0.0,
+        "valid": true
+      },
+      {
+        "j": 32,
+        "prediction_index": 177,
+        "key": "e95c20e4f95b9e81569c92f19cd5a00e4c2295063fad8e8063ced4b88377aa76",
+        "status": "arrived",
+        "h_m": 0.5316434674209166,
+        "valid": true
+      },
+      {
+        "j": 48,
+        "prediction_index": 193,
+        "key": "d8d8f212c7589f3f91e22649de336731824306f8b1555547c0be510d27f88f2b",
+        "status": "valid_no_arrival_by_horizon",
+        "h_m": 0.0,
+        "valid": true
+      },
+      {
+        "j": 40,
+        "prediction_index": 185,
+        "key": "2fc3c6f999cbacc9d68ed01e073a7f5348d231bd80357c12d52a16a511b8cf08",
+        "status": "valid_no_arrival_by_horizon",
+        "h_m": 0.0,
+        "valid": true
+      },
+      {
+        "j": 36,
+        "prediction_index": 181,
+        "key": "2a16a238c450e1bfba1d362dac3a30cd37cbbd2c1cf75ccf73b2c4c9f62a912f",
+        "status": "valid_no_arrival_by_horizon",
+        "h_m": 5.6350960722460435e-05,
+        "valid": true
+      }
+    ],
+    "final_mu_interval": [
+      0.06,
+      0.06375
+    ],
+    "discontinuity_warning": "labels bracket a discrete change; not a smooth h crossing"
+  },
+  {
+    "slice": 3,
+    "zV": 0.875,
+    "volume_m3": 672717.1322029716,
+    "initial_transitions": [
+      [
+        0,
+        64
+      ]
+    ],
+    "final_j": [
+      52,
+      56
+    ],
+    "status": "final_bracket",
+    "HF_queries": 7,
+    "sequence": [
+      {
+        "j": 0,
+        "prediction_index": 403,
+        "key": "ca62301e0a86f416987448d41d9f1882613f36695b92e4f61e2f1ccc7cd4dd40",
+        "status": "arrived",
+        "h_m": 9.22085196524718,
+        "valid": true
+      },
+      {
+        "j": 64,
+        "prediction_index": 467,
+        "key": "21b437aefa6c3f89968cb52e2e2a3202e7f93a93c9a78c63ab2d9ad17dc60118",
+        "status": "valid_no_arrival_by_horizon",
+        "h_m": 0.0,
+        "valid": true
+      },
+      {
+        "j": 128,
+        "prediction_index": 531,
+        "key": "bf857f7084df31401cdaaa66041fa92f0e7ac50a4e81a4be6d23de68ea4b832e",
+        "status": "valid_no_arrival_by_horizon",
+        "h_m": 0.0,
+        "valid": true
+      },
+      {
+        "j": 32,
+        "prediction_index": 435,
+        "key": "8e45ae8585e53d9d296bbcb9311eb34efb34d07e590a01aef06e6a0b7192b7f6",
+        "status": "arrived",
+        "h_m": 8.398510811091516,
+        "valid": true
+      },
+      {
+        "j": 48,
+        "prediction_index": 451,
+        "key": "c615e6b0c4bf2d6a96e6261793ae37787b8b30ddcf47572114bbb5048bab7604",
+        "status": "arrived",
+        "h_m": 2.5843315270721776,
+        "valid": true
+      },
+      {
+        "j": 56,
+        "prediction_index": 459,
+        "key": "6df2046ad9a55475b2fc93943006a0b6c023dbb9a6995366dee028a9664d7cf0",
+        "status": "valid_no_arrival_by_horizon",
+        "h_m": 0.0,
+        "valid": true
+      },
+      {
+        "j": 52,
+        "prediction_index": 455,
+        "key": "c2baa6fde4877b6700d82ed9668f3e6b99d1688046aadaba25376f1c7d337edd",
+        "status": "arrived",
+        "h_m": 0.39878266965517806,
+        "valid": true
+      }
+    ],
+    "final_mu_interval": [
+      0.07875,
+      0.08249999999999999
+    ],
+    "discontinuity_warning": "labels bracket a discrete change; not a smooth h crossing"
+  }
+]

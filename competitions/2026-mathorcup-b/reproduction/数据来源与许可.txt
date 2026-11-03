@@ -1,0 +1,35 @@
+数据来源与使用许可
+
+问题一
+原站数据来自当届官方附件。新增2021—2026年小时降水来自Open-Meteo Historical Weather API，明确采用ERA5产品，https://open-meteo.com/en/docs/historical-weather-api 。返回格点为28.75°N、85.25°E、4756m；不是站点或源坡实测。API数据按CC BY 4.0使用，保留Open-Meteo及ERA5/Copernicus归属，许可：https://open-meteo.com/en/licence 、https://creativecommons.org/licenses/by/4.0/ 。统一CSV添加时区和小时支持字段。features.json、reference.json为固定定义与参考配置，原站窗口和基线是已有观测资料的派生结果。
+
+问题二
+事件几何和速度读点：10.16031/j.cghc.202610008，图7b；事件事实与补充资料：10.1360/CSB-2026-1255。外地粒度及渗透率资料：10.1038/s43247-026-03983-1及其数据10.5281/zenodo.21511788，按CC BY 4.0保留归属，派生表进行了粗料校正和D10插值。本构和参考参数：10.1098/rspa.2013.0819。外部试验和条件：10.1126/science.290.5491.513、10.1038/ngeo1040、10.1029/2019JF005348；USGS目录：10.5066/P9QSZ4XO。随附表为具名事实、读点或设计参数；USGS字段目录不是已取得的同步传感器序列。v2_reused_results是明确的前期计算输入，不能改称新增实测或本次全部重算结果。
+
+问题三
+同源速度读点继承10.16031/j.cghc.202610008图7b；固定Q2配置、初态、传递系数、输入分布和延迟均保持所声明的条件身份。数据中的Q4接口示范不代表自然吉隆预警距离。具体来源与冻结输入字段同时保存在SOURCE_BINDING.json中。
+
+问题四与路线
+地形采用Copernicus GLO-30和ASTER GDEM V003分别派生的连续支持，投影EPSG:32645、高程单位m；这些是重投影和重采样后的地形资料，不是事件实测流深。Copernicus原许可、法定归属、ASTER的METI/NASA归属和相应使用条件随数据目录中的licenses原文保存。
+路线来自Shuye Huang、Chan-Mao Chen、Binhao Wang：Runout, force history, and mass estimation of the August 26 2026 Lhende Khola avalanche (central Nepal)，https://doi.org/10.5281/zenodo.22884627 。作者数据许可CC BY 4.0，原文见路线LICENSE-DATA及地形licenses目录。本项目将作者NPZ转为CSV，再作坐标转换及区段截取，未主张原作者背书。地形和路线为条件传播输入，入口过程、物性、摩阻和阈值为所声明的设计条件。
+
+官方原始赛题附件和论文全文未重复分发。所有表的原始响应、派生数据、设计参数和模拟结果分别保留其实际身份。上述DOI均可在https://doi.org/后接对应标识访问。
+
+Copernicus法定归属
+produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.
+
+Copernicus责任声明
+The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM-30.
+
+ASTER归属与条件
+ASTER GDEM is a product of Japan’s Ministry of Economy, Trade, and Industry (METI) and NASA. V003政策来源：https://www.fisheries.noaa.gov/inport/item/59575/full-list；原NASA页直接核读未完成。
+
+路线归属
+Shuye Huang, Chan-Mao Chen, Binhao Wang, far-field force inversion archive, data/derived/lhende_valley_path.npz，CC BY4.0；本项目经Q3转表、EPSG:32645投影、区段截取；原研究Runout, force history, and mass estimation of the August 26 2026 Lhende Khola avalanche (central Nepal)为准备稿，勿写成已发表。
+
+原许可文件：q4/licenses/Copernicus_GLO30_License.pdf；q4/licenses/ROUTE_LICENSE-DATA.txt。
+
+Blatten数据完整归属
+Kang, Jiahui；Lucas, Antoine；Mangeney, Anne；Gaume, Johan；Allstadt, Kate；Hibert, Clément；Toney, Liam；Vicari, Hervé；Dietze, Michael；Jacquemart, Mylène；Peruzzetto, Marc；Blatny, Lars；Kyburz, Michael Lukas；Rimpot, Joachim；Farinotti, Daniel；Walter, Fabian
+Dataset for paper "Frictional weakening in the highly mobile 2025 Blatten rock and ice avalanche in Switzerland"
+https://doi.org/10.5281/zenodo.21511788 ，CC BY 4.0。派生处理为粗料校正及D10插值。

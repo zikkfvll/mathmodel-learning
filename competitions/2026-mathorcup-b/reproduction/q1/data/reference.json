@@ -1,0 +1,6916 @@
+{
+  "source_V2_results_sha256": "6e52be609df53ae1d3ca57ce0c3d47f4680e675bafd5cf5b1c0703a8e5113066",
+  "feature_ids": [
+    "rh2_mean",
+    "t20_t2_diff",
+    "ws10_mean",
+    "warm_rate",
+    "ws20_ws2_diff",
+    "pdd",
+    "rsd_mean",
+    "vwc01",
+    "soilt01",
+    "t2_max",
+    "rld_mean",
+    "g01",
+    "p_mean"
+  ],
+  "features": [
+    {
+      "id": "rh2_mean",
+      "name": "2 m相对湿度窗口均值",
+      "label": "2 m相对湿度窗口均值",
+      "modex_original_name": "2 m 相对湿度",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "RH_2m(%)",
+          "unit": "percent",
+          "qc_column": "QC_RH_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "percent",
+      "formula": "sum(RH_i*duration_i)/sum(duration_i)，沿用D0保留值，不能重新截到100。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "air_relative_humidity",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "列单位/高度可核，小时均值支持为工作假设；没有唯一促灾方向不再阻断双侧主榜。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "不看2026哪一尾更异常来选择high或low。",
+        "相对湿度不是融水或土壤含水量。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/RH_2m(%)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "偏湿可伴随降水/水汽，偏干可伴随热干背景与蒸发需求；当前无证据在二者中预选灾害有利方向。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "2 m相对湿度窗口均值",
+      "source_grid_scale": 1000,
+      "rank_scale": 5040000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 5040
+    },
+    {
+      "id": "t20_t2_diff",
+      "name": "20 m−2 m同小时气温差窗口均值",
+      "label": "20 m−2 m同小时气温差窗口均值",
+      "modex_original_name": null,
+      "modex_original_statistic": null,
+      "modex_mechanism_score": null,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Ta_20m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_20m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Ta_2m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "degC",
+      "formula": "delta_i=Ta_20m(degree C)−Ta_2m(degree C)；仅两列同小时共同D0有效时保留delta_i；sum(delta_i*duration_i)/sum(duration_i)，分母按原窗口全部应有小时评价联合覆盖率。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "near_surface_temperature_difference_proxy",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在共同小时有效与小时均值假设下可计算",
+      "computable": true,
+      "status_reason": "固定两个清楚命名的原量差代理；上下层先共同有效作差，窗口均值要求联合覆盖≥90%，敏感性95%；目标与所有pseudo同规则。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "窗口全部应有小时；分子只计同小时两个原列均通过各自D0有效掩码的共同小时，不用两列各自支持的并集。",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true,
+        "joint_required_columns": [
+          "Ta_20m(degree C)",
+          "Ta_2m(degree C)"
+        ],
+        "pair_before_aggregation": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_PROXY: 两高度在同一小时、同一H-END/H-START条件下共同有效后作差，再在窗口内按联合有效时长求均值；不使用各层各自窗口均值相减。",
+        "A_TIME与A_MEAN同原通道；各层测高和对象不随年改变为跨年条件假设。"
+      ],
+      "limitations": [
+        "不是位温差/位温梯度，不能据1–20 m资料估计完整边界层高度。",
+        "不先取各层独立均值再相减；不按V2排名更换高度或再增同义代理。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/Ta_20m(degree C)",
+          "MET/Ta_2m(degree C)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "两列原token分别精确整数化，共同有效后精确相减与Fraction均值；不用float先做差决定并列。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "not_defined",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": null,
+      "hypothesis_direction_evidence": null,
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "new_proxy_no_inherited_single_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "explicit_operational_paired_profile_proxy",
+      "measurement_scope": "same_hour_jointly_valid_source_difference",
+      "hypothesis_name": null,
+      "source_grid_scale": 1000,
+      "rank_scale": 354777877596240000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 354777877596240
+    },
+    {
+      "id": "ws10_mean",
+      "name": "10 m风速窗口均值",
+      "label": "10 m风速窗口均值",
+      "modex_original_name": "10 m 风速",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 1,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "WS_10m(m/s)",
+          "unit": "m s-1",
+          "qc_column": "QC_WS_10m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "m s-1",
+      "formula": "sum(U_i*duration_i)/sum(duration_i)，这是标量风速均值而不是向量合成风。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "surface_wind_speed",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "列高度/单位可核，小时均值支持为工作假设；标量风速双侧异常可入主榜，不等于强触发。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "不借WS范围自动新增极值删除或低风速阈值。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/WS_10m(m/s)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "风速可调制湍流与显热/潜热交换；效应取决温湿差与方向，不能一概以高风速当强触发。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "10 m风速窗口均值",
+      "source_grid_scale": 1000,
+      "rank_scale": 184735031082359596255206473302435921057971171567747957823200000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 184735031082359596255206473302435921057971171567747957823200
+    },
+    {
+      "id": "warm_rate",
+      "name": "截止对齐24 h块均温变化率",
+      "label": "截止对齐24 h块均温变化率",
+      "modex_original_name": "升温速率",
+      "modex_original_statistic": "日均气温对时间的 OLS 斜率",
+      "modex_mechanism_score": 3,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Ta_2m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "degC day-1",
+      "formula": "将[cutoff-w,cutoff)分成w/24个互不重叠、截止对齐的24h块；各块先算覆盖达标均温y_d，以块中点实际经过日数x_d作OLS：sum((x-xbar)*(y-ybar))/sum((x-xbar)^2)。",
+      "operation": "日均气温对时间的 OLS 斜率",
+      "window_hours": [
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "不适用或定义未闭合，见限制",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "temperature_trend",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "明确采用截止对齐24h均温块代理；24h只有1个块无法估计斜率，不进入其择窗集合。",
+      "statistical_support": {
+        "support_rule": "daily_block_slope",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true,
+        "block_hours": 24,
+        "block_coverage_min": 0.9,
+        "minimum_valid_blocks": 3,
+        "valid_first_and_last_block_required": true,
+        "total_window_coverage_min": 0.9,
+        "block_coverage_sensitivity": 0.95,
+        "minimum_valid_blocks_fraction": 0.9,
+        "minimum_valid_blocks_formula": "max(3, ceil(coverage * (window_hours / 24)))",
+        "coverage_sensitivity_applies_to_blocks_and_valid_block_count": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_DAILY_BLOCK: 使用截止对齐24h块，不将其称为北京时间自然日均温；目标和所有伪事件完全相同。"
+      ],
+      "limitations": [
+        "与原文未明确日界的“日均”是显式操作性适配；若换自然日须独立分支。",
+        "至少3个有效24h块且覆盖首末块；不能用缺测后的样本序号代替经过时间。",
+        "有效24h块数还须达到ceil(coverage * w/24)，95%敏感性同步提高块覆盖与有效块个数；不是只要3块就接受长窗口。",
+        "主榜双侧，实际斜率可能为负；低历史分位必须结合实际符号区分慢升温、持平或降温，不由旧ID推断发生升温。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/Ta_2m(degree C)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "偏高表示窗口内更快升温，可提供增暖/融化加速背景；与温度水平是不同物理信息。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "截止对齐24 h块均温的升温速率",
+      "v1_name": "截止对齐24 h块均温的升温速率",
+      "source_grid_scale": 1000,
+      "rank_scale": 138949440000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 138949440
+    },
+    {
+      "id": "ws20_ws2_diff",
+      "name": "20 m−2 m同小时标量风速差窗口均值",
+      "label": "20 m−2 m同小时标量风速差窗口均值",
+      "modex_original_name": null,
+      "modex_original_statistic": null,
+      "modex_mechanism_score": null,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "WS_20m(m/s)",
+          "unit": "m s-1",
+          "qc_column": "QC_WS_20m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WS_2m(m/s)",
+          "unit": "m s-1",
+          "qc_column": "QC_WS_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "m s-1",
+      "formula": "delta_i=WS_20m(m/s)−WS_2m(m/s)；仅两列同小时共同D0有效时保留delta_i；sum(delta_i*duration_i)/sum(duration_i)，分母按原窗口全部应有小时评价联合覆盖率。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "near_surface_scalar_wind_difference_proxy",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在共同小时有效与小时均值假设下可计算",
+      "computable": true,
+      "status_reason": "固定两个清楚命名的原量差代理；上下层先共同有效作差，窗口均值要求联合覆盖≥90%，敏感性95%；目标与所有pseudo同规则。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "窗口全部应有小时；分子只计同小时两个原列均通过各自D0有效掩码的共同小时，不用两列各自支持的并集。",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true,
+        "joint_required_columns": [
+          "WS_20m(m/s)",
+          "WS_2m(m/s)"
+        ],
+        "pair_before_aggregation": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_PROXY: 两高度在同一小时、同一H-END/H-START条件下共同有效后作差，再在窗口内按联合有效时长求均值；不使用各层各自窗口均值相减。",
+        "A_TIME与A_MEAN同原通道；各层测高和对象不随年改变为跨年条件假设。"
+      ],
+      "limitations": [
+        "是两层标量速率差，不是矢量风切变、风向变化或湍流交换系数。",
+        "不先取各层独立均值再相减；不按V2排名更换高度或再增同义代理。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/WS_20m(m/s)",
+          "MET/WS_2m(m/s)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "两列原token分别精确整数化，共同有效后精确相减与Fraction均值；不用float先做差决定并列。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "not_defined",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": null,
+      "hypothesis_direction_evidence": null,
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "new_proxy_no_inherited_single_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "explicit_operational_paired_profile_proxy",
+      "measurement_scope": "same_hour_jointly_valid_source_difference",
+      "hypothesis_name": null,
+      "source_grid_scale": 1000,
+      "rank_scale": 895483388722091204273753107049367064144200355904667397512706912778755669663200000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 895483388722091204273753107049367064144200355904667397512706912778755669663200
+    },
+    {
+      "id": "pdd",
+      "name": "站点正温指数",
+      "label": "站点正温指数",
+      "modex_original_name": "站点正积温 PDD",
+      "modex_original_statistic": "窗口和",
+      "modex_mechanism_score": 3,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Ta_2m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "degC h",
+      "formula": "sum(max(T_i,0)*duration_i)；完整小时均值条件下duration_i=1 h。不将负均温小时中的瞬时正温补入。",
+      "operation": "窗口和",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "temperature_level",
+      "duplicate_information": true,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "沿用已接受小时均温正温指数定义，新增窗口/截止须重算而非继承旧分数。",
+      "statistical_support": {
+        "support_rule": "complete_interval",
+        "coverage_min": 1.0,
+        "coverage_sensitivity": null,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "量纲明确为degC h；若展示degC d仅可除以24并标换算。",
+        "与温度均值同属temperature_level，历史相关阈值合格才自动合并。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/Ta_2m(degree C)"
+        ],
+        "arithmetic_recommendation": "Exact Decimal positive-part sum of original tokens, hourly durations exactly 1; do not restore from daily means."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "偏高表示给定时段的暖积累较大，是消融热力背景代理；不等于融水量或小时内精确正温积分。",
+        "sources": [
+          "参考方法 §4.4",
+          "OLD_REVIEW §2"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "站点正温指数",
+      "source_grid_scale": 1000,
+      "rank_scale": 1000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 1
+    },
+    {
+      "id": "rsd_mean",
+      "name": "Rsd原符号短波辐射通道窗口均值",
+      "label": "Rsd原符号短波辐射通道窗口均值",
+      "modex_original_name": "入射短波 R_sd",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "RADM",
+          "column": "Rsd(W/m2)",
+          "unit": "W m-2",
+          "qc_column": "QC_Rsd",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "W m-2",
+      "formula": "sum(X_i*duration_i)/sum(duration_i)，X为该列原符号有效值；仅当联合/单列时间覆盖达标时计算，不取绝对值、不翻号。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "radiation_rsd",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在明确通道同口径假设下可计算",
+      "computable": true,
+      "status_reason": "官方辐射四分量和Rsd/W m-2列使基础短波通道可说明；在跨年同口径、同号与小时均值假设下描述原值位置。未核向下/正号不阻断本通道均值，但阻断供能量解释与净量合成。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_CHANNEL: 同名同单位基础通道在目标/历史年对应同一观测对象、相同正号和相同输出处理口径；现有同构列头不证明此事实。仅做原符号通道描述，不能据此推净能量、地表订正或完整交换量。"
+      ],
+      "limitations": [
+        "不将原符号偏高称为下行供能增强；不取绝对值、截负、翻号或套论文辐射剔除阈值。",
+        "本通道单独有效即可；净辐射另需四分量同时有效及方向映射。",
+        "详细处理链与当前CSV映射未确认；若同口径假设不成立，相应跨年历史位置结论无效。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "RADM/Rsd(W/m2)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "原token十进制精确编码，均值保留Fraction；不得据目标名次设容差，不能把V1未扫描当成不可计算。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "若定义成立，偏高为更多表面辐射输入的热力背景；站点通量不等于源区净融化能。",
+        "sources": [
+          "参考方法 §4.2,§4.4",
+          "DEFINITIONS RADM行",
+          "FLUX §2 F3"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "deferred_source_definition_or_sign",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "v1_name": "入射短波窗口均值",
+      "metadata_classification": "basic_channel_clear_derived_direction_missing",
+      "measurement_scope": "signed_source_channel_only",
+      "hypothesis_name": "入射短波窗口均值",
+      "source_grid_scale": 1000000000,
+      "rank_scale": 5550244096360350094052964365870914787396324812643202030536740335095773825442445224425314859791282840000000000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 5550244096360350094052964365870914787396324812643202030536740335095773825442445224425314859791282840
+    },
+    {
+      "id": "vwc01",
+      "name": "0.1 m体积含水量窗口均值",
+      "label": "0.1 m体积含水量窗口均值",
+      "modex_original_name": "0.1 m 体积含水量",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 3,
+      "raw_columns": [
+        {
+          "table": "SOIL",
+          "column": "VWC_0.1m(m3/m3)",
+          "unit": "m3 m-3",
+          "qc_column": "QC_VWC_0.1m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "m3 m-3",
+      "formula": "sum(VWC_i*duration_i)/sum(duration_i)，覆盖达标。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "soil_moisture_profile",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "列深度/单位与D0有效掩码已明确；小时均值支持为本轮工作假设。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "不同深度代表不同响应/储水层，预先规定duplicate_information=false；高相关本身不触发跨深度合并。",
+        "介电含水量的冻结/温度响应和传感器校准未闭合；不能直接解释为液态可动水或孔压。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "SOIL/VWC_0.1m(m3/m3)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "预设偏高表示该深度更湿的土体状态，可能与孔隙水/物质易动性有关；未证本站与源区同一含水状态。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "0.1 m体积含水量窗口均值",
+      "source_grid_scale": 10000000,
+      "rank_scale": 50400000000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 5040
+    },
+    {
+      "id": "soilt01",
+      "name": "0.1 m土温窗口均值",
+      "label": "0.1 m土温窗口均值",
+      "modex_original_name": "0.1 m 土温",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "SOIL",
+          "column": "soilT_0.1m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_soilT_0.1m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "degC",
+      "formula": "sum(Tsoil_i*duration_i)/sum(duration_i)，覆盖达标。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "shallow_soil_temperature",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "摄氏温度和深度明确；按小时均值支持工作假设。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "与空气温度不同介质/滞后过程，不仅凭高相关自动合并。",
+        "未确认冻土存在或融冻状态，不可断言已发生融冻失稳。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "SOIL/soilT_0.1m(degree C)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "预设偏高表示近表层土体更暖，可能影响融冻/物质状态；不等于源区冻土或冰体内部温度。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "0.1 m土温窗口均值",
+      "source_grid_scale": 1000000000,
+      "rank_scale": 63000000000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 63
+    },
+    {
+      "id": "t2_max",
+      "name": "2 m小时均温最大值（日最高的条件代理）",
+      "label": "2 m小时均温最大值（日最高的条件代理）",
+      "modex_original_name": "2 m 日最高气温",
+      "modex_original_statistic": "窗口最大",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Ta_2m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "degC",
+      "formula": "max(T_i) over complete hourly-mean supports in [cutoff-w,cutoff)。max(日内小时均温最大值)在相同纳入区间等于此式；不声称是真实瞬时/日最高温。",
+      "operation": "窗口最大",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "temperature_level",
+      "duplicate_information": true,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "D0无日最高原列；仅按小时均值最大值代理，不能重建小时内或自然日真正最高温。",
+      "statistical_support": {
+        "support_rule": "complete_interval",
+        "coverage_min": 1.0,
+        "coverage_sensitivity": null,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "与参考方法原名存在可识别的测量量差异；对照必须注明对齐代理。",
+        "极值对缺测敏感，主分析须完整窗口。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/Ta_2m(degree C)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "偏高表示较强短时暖背景，可能有利冰雪消融；不是经验证触发阈值。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "2 m小时均温最大值（日最高的条件代理）",
+      "source_grid_scale": 1000,
+      "rank_scale": 1000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 1
+    },
+    {
+      "id": "rld_mean",
+      "name": "Rld原符号长波辐射通道窗口均值",
+      "label": "Rld原符号长波辐射通道窗口均值",
+      "modex_original_name": "入射长波 R_ld",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "RADM",
+          "column": "Rld(W/m2)",
+          "unit": "W m-2",
+          "qc_column": "QC_rld",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "W m-2",
+      "formula": "sum(X_i*duration_i)/sum(duration_i)，X为该列原符号有效值；仅当联合/单列时间覆盖达标时计算，不取绝对值、不翻号。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "radiation_rld",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在明确通道同口径假设下可计算",
+      "computable": true,
+      "status_reason": "官方辐射四分量和Rld/W m-2列使基础长波通道可说明；在跨年同口径、同号与小时均值假设下描述原值位置。未核向下/正号不阻断本通道均值，但阻断供能量解释与净量合成。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_CHANNEL: 同名同单位基础通道在目标/历史年对应同一观测对象、相同正号和相同输出处理口径；现有同构列头不证明此事实。仅做原符号通道描述，不能据此推净能量、地表订正或完整交换量。"
+      ],
+      "limitations": [
+        "不将原符号偏高称为下行供能增强；不取绝对值、截负、翻号或套论文辐射剔除阈值。",
+        "不把长波通道直接转换成地表温度或源区融水。",
+        "详细处理链与当前CSV映射未确认；若同口径假设不成立，相应跨年历史位置结论无效。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "RADM/Rld(W/m2)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "原token十进制精确编码，均值保留Fraction；不得据目标名次设容差，不能把V1未扫描当成不可计算。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "若定义成立，偏高为更多表面辐射输入的热力背景；站点通量不等于源区净融化能。",
+        "sources": [
+          "参考方法 §4.2,§4.4",
+          "DEFINITIONS RADM行",
+          "FLUX §2 F3"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "deferred_source_definition_or_sign",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "v1_name": "入射长波窗口均值",
+      "metadata_classification": "basic_channel_clear_derived_direction_missing",
+      "measurement_scope": "signed_source_channel_only",
+      "hypothesis_name": "入射长波窗口均值",
+      "source_grid_scale": 1000,
+      "rank_scale": 269563221109067229630747369074960423874541110510281754820079111703516286783087523323660564800000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 269563221109067229630747369074960423874541110510281754820079111703516286783087523323660564800
+    },
+    {
+      "id": "g01",
+      "name": "0.1 m土壤热流原通道窗口均值",
+      "label": "0.1 m土壤热流原通道窗口均值",
+      "modex_original_name": "0.1 m 土壤热通量 G",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 1,
+      "raw_columns": [
+        {
+          "table": "SOIL",
+          "column": "G_0.1m(W/m2)",
+          "unit": "W m-2",
+          "qc_column": "QC_G_0.1m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "W m-2",
+      "formula": "sum(X_i*duration_i)/sum(duration_i)，X为该列原符号有效值；仅当联合/单列时间覆盖达标时计算，不取绝对值、不翻号。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "soil_heat_flux",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在明确通道同口径假设下可计算",
+      "computable": true,
+      "status_reason": "SOIL深度、G列及W m-2使0.1 m土壤热流原通道可说明；在跨年同口径同号、小时均值假设下描述。热流板具体配置、正向及0–0.1m储热订正未核，不阻断板位/深度通道均值，却阻断订正地表热流解释。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_CHANNEL: 同名同单位基础通道在目标/历史年对应同一观测对象、相同正号和相同输出处理口径；现有同构列头不证明此事实。仅做原符号通道描述，不能据此推净能量、地表订正或完整交换量。"
+      ],
+      "limitations": [
+        "解释上限为0.1 m深度的原通道，不能冒称已作上覆土层储热订正的地表热通量；当前资料未认证热流板型号。",
+        "不由原数值正负判断向上/向下，不以翻号、绝对值或删负规避定义。",
+        "详细处理链与当前CSV映射未确认；若同口径假设不成立，相应跨年历史位置结论无效。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "SOIL/G_0.1m(W/m2)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "原token十进制精确编码，均值保留Fraction；不得据目标名次设容差，不能把V1未扫描当成不可计算。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "没有可据当前资料固定的灾害异常单向；即使算术可做也只可探索性描述。",
+        "sources": [
+          "参考方法 §4.4",
+          "DEFINITIONS 与D0单位边界"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "v1_name": "0.1 m土壤热通量窗口均值",
+      "metadata_classification": "basic_channel_clear_surface_correction_missing",
+      "measurement_scope": "signed_source_channel_only",
+      "hypothesis_name": "0.1 m土壤热通量窗口均值",
+      "source_grid_scale": 1000000000,
+      "rank_scale": 13478161055453361481537368453748021193727055525514087741003955585175814339154376166183028240000000000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 13478161055453361481537368453748021193727055525514087741003955585175814339154376166183028240
+    },
+    {
+      "id": "p_mean",
+      "name": "近地面气压窗口均值",
+      "label": "近地面气压窗口均值",
+      "modex_original_name": "气压",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 1,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Pressure(hPa)",
+          "unit": "hPa",
+          "qc_column": "QC_Pressure",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "hPa",
+      "formula": "sum(p_i*duration_i)/sum(duration_i)，仅固定MET列，不与FLUX PA混填。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "surface_pressure_level",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "小时均值及稳定压力基准仅为跨年工作假设；不宣称站压或海平面气压已确认。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_PRESSURE: MET Pressure在各历史年与目标年具有同一未知但稳定的测量/订正基准；pressure_reference_confirmed仍false。"
+      ],
+      "limitations": [
+        "该因素是均压，不是旧G7的24h压差最大幅度，二者不得冒称相同因素。",
+        "无唯一促灾方向不影响双侧异常主榜；站压/海平面基准未确认，跨年同一基准为假设。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/Pressure(hPa)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "资料仅支持天气背景异常描述；偏高或偏低均不能直接解释成泥石流触发。",
+        "sources": [
+          "参考方法 §4.4",
+          "DEFINITIONS Pressure行",
+          "OLD_REVIEW §2"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "近地面气压窗口均值",
+      "source_grid_scale": 10,
+      "rank_scale": 2840036718056998438933485704901000510713130961996491136528730972039482389402431252712000,
+      "rank_encoding": "exact_source_grid_Fraction_then_lossless_integer_LCM",
+      "exact_common_denominator": 284003671805699843893348570490100051071313096199649113652873097203948238940243125271200
+    }
+  ],
+  "v2_primary": {
+    "candidate_ranking": [
+      {
+        "id": "rh2_mean",
+        "score_S": 0.8693548387096774,
+        "score_S_exact": "539/620",
+        "rank_min": 1,
+        "rank_max": 1,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "t20_t2_diff",
+        "score_S": 0.8540322580645161,
+        "score_S_exact": "1059/1240",
+        "rank_min": 2,
+        "rank_max": 2,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "ws10_mean",
+        "score_S": 0.8516129032258064,
+        "score_S_exact": "132/155",
+        "rank_min": 3,
+        "rank_max": 3,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "warm_rate",
+        "score_S": 0.6854838709677419,
+        "score_S_exact": "85/124",
+        "rank_min": 4,
+        "rank_max": 4,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "ws20_ws2_diff",
+        "score_S": 0.6780867630700779,
+        "score_S_exact": "3048/4495",
+        "rank_min": 5,
+        "rank_max": 5,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "pdd",
+        "score_S": 0.6080645161290322,
+        "score_S_exact": "377/620",
+        "rank_min": 6,
+        "rank_max": 6,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "rsd_mean",
+        "score_S": 0.5767059553349876,
+        "score_S_exact": "18593/32240",
+        "rank_min": 7,
+        "rank_max": 7,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "vwc01",
+        "score_S": 0.5314516129032258,
+        "score_S_exact": "659/1240",
+        "rank_min": 8,
+        "rank_max": 8,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "soilt01",
+        "score_S": 0.3879032258064516,
+        "score_S_exact": "481/1240",
+        "rank_min": 9,
+        "rank_max": 9,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "t2_max",
+        "score_S": 0.3040322580645161,
+        "score_S_exact": "377/1240",
+        "rank_min": 10,
+        "rank_max": 10,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "rld_mean",
+        "score_S": 0.3015508684863524,
+        "score_S_exact": "4861/16120",
+        "rank_min": 11,
+        "rank_max": 11,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "g01",
+        "score_S": 0.2244106699751861,
+        "score_S_exact": "1447/6448",
+        "rank_min": 12,
+        "rank_max": 12,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      },
+      {
+        "id": "p_mean",
+        "score_S": 0.0543424317617866,
+        "score_S_exact": "219/4030",
+        "rank_min": 13,
+        "rank_max": 13,
+        "score_tie_size": 1,
+        "eligible_for_top5": true
+      }
+    ],
+    "top_candidates": [
+      "rh2_mean",
+      "t20_t2_diff",
+      "ws10_mean",
+      "warm_rate",
+      "ws20_ws2_diff"
+    ],
+    "boundary_candidates": [],
+    "available_candidate_count": 13
+  },
+  "v2_factor_evidence": [
+    {
+      "id": "t2_max",
+      "label": "2 m小时均温最大值（日最高的条件代理）",
+      "unit": "degC",
+      "S": 0.3040322580645161,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 20.8,
+          "unit": "degC",
+          "q_mean": 0.9258064516129032,
+          "q_min": 0.8817204301075269,
+          "q_max": 0.9623655913978495,
+          "a_mean": 0.8516129032258064,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 20.8,
+          "unit": "degC",
+          "q_mean": 0.8548387096774194,
+          "q_min": 0.7741935483870968,
+          "q_max": 0.9193548387096774,
+          "a_mean": 0.7096774193548387,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 20.8,
+          "unit": "degC",
+          "q_mean": 0.7129032258064516,
+          "q_min": 0.5591397849462365,
+          "q_max": 0.8548387096774194,
+          "a_mean": 0.4258064516129032,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 21.59,
+          "unit": "degC",
+          "q_mean": 0.7258064516129032,
+          "q_min": 0.543010752688172,
+          "q_max": 0.9193548387096774,
+          "a_mean": 0.45161290322580644,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 14,
+            "low": 6,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 21.59,
+          "unit": "degC",
+          "q_mean": 0.5290322580645161,
+          "q_min": 0.21505376344086022,
+          "q_max": 0.8817204301075269,
+          "a_mean": 0.3053763440860215,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.9086021505376344,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9193548387096774,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9193548387096774,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.8817204301075269,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.9139784946236559,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9247311827956989,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9247311827956989,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.8817204301075269,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.9516129032258065,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9623655913978495,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9247311827956989,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9193548387096774,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 24,
+          "q": 0.9516129032258065,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9623655913978495,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9247311827956989,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9193548387096774,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 24,
+          "q": 0.9516129032258065,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.9516129032258065,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.9139784946236559,
+          "direction": "high",
+          "physical_value": 20.8
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.9086021505376344,
+          "direction": "high",
+          "physical_value": 20.8
+        }
+      ],
+      "winning_directions": [
+        "high"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": false,
+      "all_window_mean_directions": [
+        "high"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 94,
+        "low": 6,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": true,
+      "first24_of30d": 17.89,
+      "last24": 20.8,
+      "last_minus_first24": 2.91,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Ta_2m(degree C)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Ta_2m(degree C)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pdd",
+      "label": "站点正温指数",
+      "unit": "degC h",
+      "S": 0.6080645161290322,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 330.82,
+          "unit": "degC h",
+          "q_mean": 0.9612903225806452,
+          "q_min": 0.946236559139785,
+          "q_max": 0.978494623655914,
+          "a_mean": 0.9225806451612903,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 953.89,
+          "unit": "degC h",
+          "q_mean": 0.9548387096774194,
+          "q_min": 0.9247311827956989,
+          "q_max": 0.978494623655914,
+          "a_mean": 0.9096774193548387,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 2102.17,
+          "unit": "degC h",
+          "q_mean": 0.6967741935483871,
+          "q_min": 0.6129032258064516,
+          "q_max": 0.7849462365591398,
+          "a_mean": 0.3935483870967742,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 12,
+            "low": 8,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 4423.257,
+          "unit": "degC h",
+          "q_mean": 0.5096774193548387,
+          "q_min": 0.3978494623655914,
+          "q_max": 0.6021505376344086,
+          "a_mean": 0.14838709677419354,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 8755.037,
+          "unit": "degC h",
+          "q_mean": 0.36129032258064514,
+          "q_min": 0.22580645161290322,
+          "q_max": 0.4946236559139785,
+          "a_mean": 0.27741935483870966,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 72,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 953.89
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 953.89
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.956989247311828,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.956989247311828,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 72,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 953.89
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 953.89
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.956989247311828,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 953.89
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 24,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 72,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 953.89
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 953.89
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 24,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 72,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 953.89
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 72,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 953.89
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.956989247311828,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 330.82
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 72,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 953.89
+        }
+      ],
+      "winning_directions": [
+        "high"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": false,
+      "all_window_mean_directions": [
+        "high",
+        "low"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 72,
+        "low": 28,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": true,
+      "first24_of30d": 305.11,
+      "last24": 330.82,
+      "last_minus_first24": 25.71,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Ta_2m(degree C)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Ta_2m(degree C)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "warm_rate",
+      "label": "截止对齐24 h块均温变化率",
+      "unit": "degC day-1",
+      "S": 0.6854838709677419,
+      "windows": [
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 0.5522916666666666,
+          "unit": "degC day-1",
+          "q_mean": 0.8709677419354839,
+          "q_min": 0.8494623655913979,
+          "q_max": 0.8924731182795699,
+          "a_mean": 0.7419354838709677,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 0.3494494047619048,
+          "unit": "degC day-1",
+          "q_mean": 0.9483870967741935,
+          "q_min": 0.9247311827956989,
+          "q_max": 0.967741935483871,
+          "a_mean": 0.896774193548387,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 0.020001488095238096,
+          "unit": "degC day-1",
+          "q_mean": 0.7419354838709677,
+          "q_min": 0.6774193548387096,
+          "q_max": 0.8172043010752689,
+          "a_mean": 0.4838709677419355,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 0.019082360029662588,
+          "unit": "degC day-1",
+          "q_mean": 0.9354838709677419,
+          "q_min": 0.8924731182795699,
+          "q_max": 0.978494623655914,
+          "a_mean": 0.8709677419354839,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.956989247311828,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 0.019082360029662588
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 0.019082360029662588
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.956989247311828,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 0.019082360029662588
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 0.019082360029662588
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 0.019082360029662588
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.9354838709677419,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.978494623655914,
+          "direction": "high",
+          "physical_value": 0.019082360029662588
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 0.019082360029662588
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 168,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.9354838709677419,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 0.019082360029662588
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.956989247311828,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 168,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.946236559139785,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.956989247311828,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 0.3494494047619048
+        }
+      ],
+      "winning_directions": [
+        "high"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": false,
+      "all_window_mean_directions": [
+        "high"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 80,
+        "low": 0,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": false,
+      "first24_of30d": null,
+      "last24": null,
+      "last_minus_first24": null,
+      "first_last_support": [
+        {},
+        {}
+      ]
+    },
+    {
+      "id": "rsd_mean",
+      "label": "Rsd原符号短波辐射通道窗口均值",
+      "unit": "W m-2",
+      "S": 0.5767059553349876,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 347.6303756666667,
+          "unit": "W m-2",
+          "q_mean": 0.9406947890818859,
+          "q_min": 0.9119106699751861,
+          "q_max": 0.9764267990074442,
+          "a_mean": 0.8813895781637717,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 326.70987563194444,
+          "unit": "W m-2",
+          "q_mean": 0.9419354838709677,
+          "q_min": 0.9032258064516129,
+          "q_max": 1.0,
+          "a_mean": 0.8838709677419355,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 14,
+            "low": 6,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 274.3746798660714,
+          "unit": "W m-2",
+          "q_mean": 0.5449131513647643,
+          "q_min": 0.40860215053763443,
+          "q_max": 0.7253928866832092,
+          "a_mean": 0.18031430934656742,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 2,
+            "low": 18,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 260.93149257,
+          "unit": "W m-2",
+          "q_mean": 0.33225806451612905,
+          "q_min": 0.1827956989247312,
+          "q_max": 0.532258064516129,
+          "a_mean": 0.34838709677419355,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 6,
+            "low": 14,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 258.9492772908333,
+          "unit": "W m-2",
+          "q_mean": 0.3436724565756824,
+          "q_min": 0.043010752688172046,
+          "q_max": 0.5620347394540943,
+          "a_mean": 0.3655913978494624,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.9226633581472291,
+          "direction": "high",
+          "physical_value": 347.6303756666667
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9139784946236559,
+          "direction": "high",
+          "physical_value": 347.6303756666667
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.9354838709677419,
+          "direction": "high",
+          "physical_value": 326.70987563194444
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 326.70987563194444
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.9764267990074442,
+          "direction": "high",
+          "physical_value": 347.6303756666667
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 347.6303756666667
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 326.70987563194444
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 326.70987563194444
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 326.70987563194444
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 72,
+          "q": 0.9354838709677419,
+          "direction": "high",
+          "physical_value": 326.70987563194444
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.043010752688172046,
+          "direction": "low",
+          "physical_value": 258.9492772908333
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 326.70987563194444
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.9354838709677419,
+          "direction": "high",
+          "physical_value": 326.70987563194444
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 24,
+          "q": 0.9354838709677419,
+          "direction": "high",
+          "physical_value": 347.6303756666667
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.043010752688172046,
+          "direction": "low",
+          "physical_value": 258.9492772908333
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 347.6303756666667
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.967741935483871,
+          "direction": "high",
+          "physical_value": 326.70987563194444
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.9139784946236559,
+          "direction": "high",
+          "physical_value": 347.6303756666667
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 24,
+          "q": 0.9354838709677419,
+          "direction": "high",
+          "physical_value": 347.6303756666667
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 72,
+          "q": 0.9354838709677419,
+          "direction": "high",
+          "physical_value": 326.70987563194444
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.9764267990074442,
+          "direction": "high",
+          "physical_value": 347.6303756666667
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.9226633581472291,
+          "direction": "high",
+          "physical_value": 347.6303756666667
+        }
+      ],
+      "winning_directions": [
+        "high",
+        "low"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": true,
+      "all_window_mean_directions": [
+        "high",
+        "low"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 62,
+        "low": 38,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": true,
+      "first24_of30d": 264.84331204166665,
+      "last24": 347.6303756666667,
+      "last_minus_first24": 82.787063625,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Rsd(W/m2)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Rsd(W/m2)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rld_mean",
+      "label": "Rld原符号长波辐射通道窗口均值",
+      "unit": "W m-2",
+      "S": 0.3015508684863524,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 317.679625,
+          "unit": "W m-2",
+          "q_mean": 0.3054590570719603,
+          "q_min": 0.21877584780810588,
+          "q_max": 0.380066170388751,
+          "a_mean": 0.3890818858560794,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 312.62025,
+          "unit": "W m-2",
+          "q_mean": 0.18957816377171216,
+          "q_min": 0.0794044665012407,
+          "q_max": 0.27956989247311825,
+          "a_mean": 0.6208436724565757,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 12,
+            "low": 8,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 326.1213452380952,
+          "unit": "W m-2",
+          "q_mean": 0.5012406947890818,
+          "q_min": 0.3655913978494624,
+          "q_max": 0.6095947063688999,
+          "a_mean": 0.14838709677419354,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 331.26096944444447,
+          "unit": "W m-2",
+          "q_mean": 0.6878411910669975,
+          "q_min": 0.5268817204301075,
+          "q_max": 0.8345740281224152,
+          "a_mean": 0.375682382133995,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 334.9518611111111,
+          "unit": "W m-2",
+          "q_mean": 0.7794044665012407,
+          "q_min": 0.6323407775020679,
+          "q_max": 0.9871794871794872,
+          "a_mean": 0.5588089330024814,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.761373035566584,
+          "direction": "high",
+          "physical_value": 334.9518611111111
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.27956989247311825,
+          "direction": "low",
+          "physical_value": 312.62025
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.8581472291149711,
+          "direction": "high",
+          "physical_value": 334.9518611111111
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.1761786600496278,
+          "direction": "low",
+          "physical_value": 312.62025
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 72,
+          "q": 0.14392059553349876,
+          "direction": "low",
+          "physical_value": 312.62025
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.16129032258064516,
+          "direction": "low",
+          "physical_value": 312.62025
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.0794044665012407,
+          "direction": "low",
+          "physical_value": 312.62025
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.1761786600496278,
+          "direction": "low",
+          "physical_value": 312.62025
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.9871794871794872,
+          "direction": "high",
+          "physical_value": 334.9518611111111
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.8709677419354839,
+          "direction": "high",
+          "physical_value": 334.9518611111111
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.0794044665012407,
+          "direction": "low",
+          "physical_value": 312.62025
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.8581472291149711,
+          "direction": "high",
+          "physical_value": 334.9518611111111
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 0.7741935483870968,
+          "direction": "high",
+          "physical_value": 334.9518611111111
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.8709677419354839,
+          "direction": "high",
+          "physical_value": 334.9518611111111
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.16129032258064516,
+          "direction": "low",
+          "physical_value": 312.62025
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 72,
+          "q": 0.27956989247311825,
+          "direction": "low",
+          "physical_value": 312.62025
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 0.7741935483870968,
+          "direction": "high",
+          "physical_value": 334.9518611111111
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.9871794871794872,
+          "direction": "high",
+          "physical_value": 334.9518611111111
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 72,
+          "q": 0.14392059553349876,
+          "direction": "low",
+          "physical_value": 312.62025
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.761373035566584,
+          "direction": "high",
+          "physical_value": 334.9518611111111
+        }
+      ],
+      "winning_directions": [
+        "high",
+        "low"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": true,
+      "all_window_mean_directions": [
+        "high",
+        "low"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 52,
+        "low": 48,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": true,
+      "first24_of30d": 328.39683333333335,
+      "last24": 317.679625,
+      "last_minus_first24": -10.717208333333334,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Rld(W/m2)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Rld(W/m2)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vwc01",
+      "label": "0.1 m体积含水量窗口均值",
+      "unit": "m3 m-3",
+      "S": 0.5314516129032258,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 14,
+            "low": 6,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 0.08491227916666666,
+          "unit": "m3 m-3",
+          "q_mean": 0.5741935483870968,
+          "q_min": 0.45161290322580644,
+          "q_max": 0.7096774193548387,
+          "a_mean": 0.2064516129032258,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 0.09714987638888889,
+          "unit": "m3 m-3",
+          "q_mean": 0.7290322580645161,
+          "q_min": 0.5806451612903226,
+          "q_max": 0.9032258064516129,
+          "a_mean": 0.45806451612903226,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 0.12184060773809524,
+          "unit": "m3 m-3",
+          "q_mean": 0.8838709677419355,
+          "q_min": 0.8064516129032258,
+          "q_max": 0.989247311827957,
+          "a_mean": 0.7677419354838709,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 0.11488900694444444,
+          "unit": "m3 m-3",
+          "q_mean": 0.8064516129032258,
+          "q_min": 0.6774193548387096,
+          "q_max": 1.0,
+          "a_mean": 0.6129032258064516,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 0.11658793875,
+          "unit": "m3 m-3",
+          "q_mean": 0.7032258064516129,
+          "q_min": 0.5053763440860215,
+          "q_max": 1.0,
+          "a_mean": 0.4064516129032258,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.9247311827956989,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 0.11488900694444444
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 0.11658793875
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.9139784946236559,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.9139784946236559,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.8172043010752689,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.8817204301075269,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.8064516129032258,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.9139784946236559,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.8172043010752689,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.8817204301075269,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.8064516129032258,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.9139784946236559,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 168,
+          "q": 0.8924731182795699,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.8817204301075269,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.8817204301075269,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 0.11488900694444444
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 0.11658793875
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 168,
+          "q": 0.8924731182795699,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.8172043010752689,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.8172043010752689,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.9247311827956989,
+          "direction": "high",
+          "physical_value": 0.12184060773809524
+        }
+      ],
+      "winning_directions": [
+        "high"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": false,
+      "all_window_mean_directions": [
+        "high"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 94,
+        "low": 6,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": true,
+      "first24_of30d": 0.0953250625,
+      "last24": 0.08491227916666666,
+      "last_minus_first24": -0.010412783333333333,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "VWC_0.1m(m3/m3)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "VWC_0.1m(m3/m3)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soilt01",
+      "label": "0.1 m土温窗口均值",
+      "unit": "degC",
+      "S": 0.3879032258064516,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 4,
+            "low": 16,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 19.011854166666666,
+          "unit": "degC",
+          "q_mean": 0.41935483870967744,
+          "q_min": 0.25806451612903225,
+          "q_max": 0.5591397849462365,
+          "a_mean": 0.1956989247311828,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 18.207806944444446,
+          "unit": "degC",
+          "q_mean": 0.2838709677419355,
+          "q_min": 0.16129032258064516,
+          "q_max": 0.3870967741935484,
+          "a_mean": 0.432258064516129,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 17.548570833333333,
+          "unit": "degC",
+          "q_mean": 0.14193548387096774,
+          "q_min": 0.0,
+          "q_max": 0.23655913978494625,
+          "a_mean": 0.7161290322580646,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 17.92670777777778,
+          "unit": "degC",
+          "q_mean": 0.14193548387096774,
+          "q_min": 0.0,
+          "q_max": 0.23655913978494625,
+          "a_mean": 0.7161290322580646,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 18.08049652777778,
+          "unit": "degC",
+          "q_mean": 0.17419354838709677,
+          "q_min": 0.0,
+          "q_max": 0.2903225806451613,
+          "a_mean": 0.6516129032258065,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 360,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.92670777777778
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.043010752688172046,
+          "direction": "low",
+          "physical_value": 18.08049652777778
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.10752688172043011,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.92670777777778
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 360,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.92670777777778
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.043010752688172046,
+          "direction": "low",
+          "physical_value": 18.08049652777778
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.10752688172043011,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.92670777777778
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.10752688172043011,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 17.92670777777778
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 18.08049652777778
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.10752688172043011,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.10752688172043011,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 0.043010752688172046,
+          "direction": "low",
+          "physical_value": 18.08049652777778
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 168,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 17.92670777777778
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 18.08049652777778
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.043010752688172046,
+          "direction": "low",
+          "physical_value": 18.08049652777778
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.043010752688172046,
+          "direction": "low",
+          "physical_value": 18.08049652777778
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 0.043010752688172046,
+          "direction": "low",
+          "physical_value": 18.08049652777778
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.10752688172043011,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 360,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.92670777777778
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 168,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.548570833333333
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 360,
+          "q": 0.23655913978494625,
+          "direction": "low",
+          "physical_value": 17.92670777777778
+        }
+      ],
+      "winning_directions": [
+        "low"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": false,
+      "all_window_mean_directions": [
+        "low"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 4,
+        "low": 96,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": true,
+      "first24_of30d": 19.314954166666666,
+      "last24": 19.011854166666666,
+      "last_minus_first24": -0.3031,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "soilT_0.1m(degree C)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "soilT_0.1m(degree C)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g01",
+      "label": "0.1 m土壤热流原通道窗口均值",
+      "unit": "W m-2",
+      "S": 0.2244106699751861,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 5.520501125,
+          "unit": "W m-2",
+          "q_mean": 0.7317617866004963,
+          "q_min": 0.6451612903225806,
+          "q_max": 0.8110008271298594,
+          "a_mean": 0.4635235732009926,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 3.9439943611111112,
+          "unit": "W m-2",
+          "q_mean": 0.6362282878411911,
+          "q_min": 0.5161290322580645,
+          "q_max": 0.7485525227460711,
+          "a_mean": 0.27245657568238213,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 1.9587690392857142,
+          "unit": "W m-2",
+          "q_mean": 0.37344913151364767,
+          "q_min": 0.3010752688172043,
+          "q_max": 0.45037220843672454,
+          "a_mean": 0.2531017369727047,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 1.4685001736111112,
+          "unit": "W m-2",
+          "q_mean": 0.2337468982630273,
+          "q_min": 0.03225806451612903,
+          "q_max": 0.38957816377171217,
+          "a_mean": 0.5325062034739454,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 1.1075979573611112,
+          "unit": "W m-2",
+          "q_mean": 0.1771712158808933,
+          "q_min": 0.03225806451612903,
+          "q_max": 0.29528535980148884,
+          "a_mean": 0.6456575682382134,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.2630272952853598,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.06451612903225806,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.8110008271298594,
+          "direction": "high",
+          "physical_value": 5.520501125
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.7679900744416873,
+          "direction": "high",
+          "physical_value": 5.520501125
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.23076923076923078,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.03225806451612903,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.7894954507857733,
+          "direction": "high",
+          "physical_value": 5.520501125
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.7679900744416873,
+          "direction": "high",
+          "physical_value": 5.520501125
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.7464846980976013,
+          "direction": "high",
+          "physical_value": 5.520501125
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.06451612903225806,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.7894954507857733,
+          "direction": "high",
+          "physical_value": 5.520501125
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 24,
+          "q": 0.8110008271298594,
+          "direction": "high",
+          "physical_value": 5.520501125
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 360,
+          "q": 0.03225806451612903,
+          "direction": "low",
+          "physical_value": 1.4685001736111112
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 0.03225806451612903,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.06451612903225806,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.03225806451612903,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.06451612903225806,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 360,
+          "q": 0.03225806451612903,
+          "direction": "low",
+          "physical_value": 1.4685001736111112
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 0.03225806451612903,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 24,
+          "q": 0.7464846980976013,
+          "direction": "high",
+          "physical_value": 5.520501125
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.23076923076923078,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.2630272952853598,
+          "direction": "low",
+          "physical_value": 1.1075979573611112
+        }
+      ],
+      "winning_directions": [
+        "high",
+        "low"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": true,
+      "all_window_mean_directions": [
+        "high",
+        "low"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 40,
+        "low": 60,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": true,
+      "first24_of30d": 1.5022843791666667,
+      "last24": 5.520501125,
+      "last_minus_first24": 4.0182167458333335,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "G_0.1m(W/m2)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "G_0.1m(W/m2)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p_mean",
+      "label": "近地面气压窗口均值",
+      "unit": "hPa",
+      "S": 0.0543424317617866,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 620.1,
+          "unit": "hPa",
+          "q_mean": 0.5712158808933002,
+          "q_min": 0.5004135649296939,
+          "q_max": 0.6559139784946236,
+          "a_mean": 0.1424317617866005,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 620.1236111111111,
+          "unit": "hPa",
+          "q_mean": 0.611166253101737,
+          "q_min": 0.5454921422663358,
+          "q_max": 0.6881720430107527,
+          "a_mean": 0.22233250620347395,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 12,
+            "low": 8,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 619.860119047619,
+          "unit": "hPa",
+          "q_mean": 0.5831265508684863,
+          "q_min": 0.4557485525227461,
+          "q_max": 0.7419354838709677,
+          "a_mean": 0.19404466501240694,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 18,
+            "low": 2,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 619.6452777777778,
+          "unit": "hPa",
+          "q_mean": 0.6799007444168734,
+          "q_min": 0.4665012406947891,
+          "q_max": 0.9032258064516129,
+          "a_mean": 0.3732009925558313,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 18,
+            "low": 2,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 619.1105555555556,
+          "unit": "hPa",
+          "q_mean": 0.5933002481389578,
+          "q_min": 0.3974358974358974,
+          "q_max": 0.7741935483870968,
+          "a_mean": 0.22762613730355666,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 360,
+          "q": 0.5632754342431762,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.7741935483870968,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.3974358974358974,
+          "direction": "low",
+          "physical_value": 619.1105555555556
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.5955334987593052,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 360,
+          "q": 0.6923076923076923,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.9032258064516129,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.5955334987593052,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.5955334987593052,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 72,
+          "q": 0.5777502067824648,
+          "direction": "high",
+          "physical_value": 620.1236111111111
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.7741935483870968,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.5955334987593052,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.3974358974358974,
+          "direction": "low",
+          "physical_value": 619.1105555555556
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 360,
+          "q": 0.8709677419354839,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.7741935483870968,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.9032258064516129,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.7741935483870968,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 360,
+          "q": 0.8709677419354839,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 72,
+          "q": 0.5777502067824648,
+          "direction": "high",
+          "physical_value": 620.1236111111111
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 360,
+          "q": 0.6923076923076923,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 360,
+          "q": 0.5632754342431762,
+          "direction": "high",
+          "physical_value": 619.6452777777778
+        }
+      ],
+      "winning_directions": [
+        "high",
+        "low"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": true,
+      "all_window_mean_directions": [
+        "high"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 88,
+        "low": 12,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": true,
+      "first24_of30d": 617.3833333333333,
+      "last24": 620.1,
+      "last_minus_first24": 2.716666666666667,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Pressure(hPa)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Pressure(hPa)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rh2_mean",
+      "label": "2 m相对湿度窗口均值",
+      "unit": "percent",
+      "S": 0.8693548387096774,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 60.48625,
+          "unit": "percent",
+          "q_mean": 0.16774193548387098,
+          "q_min": 0.0967741935483871,
+          "q_max": 0.22580645161290322,
+          "a_mean": 0.6645161290322581,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 62.41388888888889,
+          "unit": "percent",
+          "q_mean": 0.25161290322580643,
+          "q_min": 0.16129032258064516,
+          "q_max": 0.3655913978494624,
+          "a_mean": 0.4967741935483871,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 68.15363095238095,
+          "unit": "percent",
+          "q_mean": 0.6709677419354839,
+          "q_min": 0.5806451612903226,
+          "q_max": 0.7419354838709677,
+          "a_mean": 0.3419354838709677,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 70.09297222222222,
+          "unit": "percent",
+          "q_mean": 0.9290322580645162,
+          "q_min": 0.8817204301075269,
+          "q_max": 1.0,
+          "a_mean": 0.8580645161290322,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 71.25220833333333,
+          "unit": "percent",
+          "q_mean": 1.0,
+          "q_min": 1.0,
+          "q_max": 1.0,
+          "a_mean": 1.0,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 70.09297222222222
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 70.09297222222222
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 70.09297222222222
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 70.09297222222222
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 70.09297222222222
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 70.09297222222222
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 70.09297222222222
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 70.09297222222222
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": 71.25220833333333
+        }
+      ],
+      "winning_directions": [
+        "high"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": false,
+      "all_window_mean_directions": [
+        "high",
+        "low"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 60,
+        "low": 40,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": true,
+      "first24_of30d": 66.7075,
+      "last24": 60.48625,
+      "last_minus_first24": -6.22125,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "RH_2m(%)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "RH_2m(%)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ws10_mean",
+      "label": "10 m风速窗口均值",
+      "unit": "m s-1",
+      "S": 0.8516129032258064,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 6,
+            "low": 14,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 1.960375,
+          "unit": "m s-1",
+          "q_mean": 0.4645161290322581,
+          "q_min": 0.3978494623655914,
+          "q_max": 0.5268817204301075,
+          "a_mean": 0.09032258064516129,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 12,
+            "low": 8,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 2.0103194444444443,
+          "unit": "m s-1",
+          "q_mean": 0.5096774193548387,
+          "q_min": 0.3870967741935484,
+          "q_max": 0.6129032258064516,
+          "a_mean": 0.12258064516129032,
+          "position_direction": "high",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 1.7622083333333334,
+          "unit": "m s-1",
+          "q_mean": 0.2,
+          "q_min": 0.07526881720430108,
+          "q_max": 0.3225806451612903,
+          "a_mean": 0.6,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 1.7558833333333332,
+          "unit": "m s-1",
+          "q_mean": 0.16129032258064516,
+          "q_min": 0.0,
+          "q_max": 0.26881720430107525,
+          "a_mean": 0.6774193548387096,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 1.6978497913769124,
+          "unit": "m s-1",
+          "q_mean": 0.0,
+          "q_min": 0.0,
+          "q_max": 0.0,
+          "a_mean": 1.0,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.7558833333333332
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.7558833333333332
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.6978497913769124
+        }
+      ],
+      "winning_directions": [
+        "low"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": false,
+      "all_window_mean_directions": [
+        "high",
+        "low"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 18,
+        "low": 82,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": true,
+      "first24_of30d": 1.7915833333333333,
+      "last24": 1.960375,
+      "last_minus_first24": 0.16879166666666667,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "WS_10m(m/s)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "WS_10m(m/s)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t20_t2_diff",
+      "label": "20 m−2 m同小时气温差窗口均值",
+      "unit": "degC",
+      "S": 0.8540322580645161,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": -0.5195833333333333,
+          "unit": "degC",
+          "q_mean": 0.6903225806451613,
+          "q_min": 0.6236559139784946,
+          "q_max": 0.7419354838709677,
+          "a_mean": 0.38064516129032255,
+          "position_direction": "high",
+          "raw_sign": "negative"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": -0.4975,
+          "unit": "degC",
+          "q_mean": 0.8193548387096774,
+          "q_min": 0.7634408602150538,
+          "q_max": 0.8709677419354839,
+          "a_mean": 0.6387096774193548,
+          "position_direction": "high",
+          "raw_sign": "negative"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": -0.4751190476190476,
+          "unit": "degC",
+          "q_mean": 0.9483870967741935,
+          "q_min": 0.9139784946236559,
+          "q_max": 1.0,
+          "a_mean": 0.896774193548387,
+          "position_direction": "high",
+          "raw_sign": "negative"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": -0.4887111111111111,
+          "unit": "degC",
+          "q_mean": 0.967741935483871,
+          "q_min": 0.946236559139785,
+          "q_max": 1.0,
+          "a_mean": 0.9354838709677419,
+          "position_direction": "high",
+          "raw_sign": "negative"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 20,
+            "low": 0,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": -0.4965763888888889,
+          "unit": "degC",
+          "q_mean": 1.0,
+          "q_min": 1.0,
+          "q_max": 1.0,
+          "a_mean": 1.0,
+          "position_direction": "high",
+          "raw_sign": "negative"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 168,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4751190476190476
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4887111111111111
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 168,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4751190476190476
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 360,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4887111111111111
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 1.0,
+          "direction": "high",
+          "physical_value": -0.4965763888888889
+        }
+      ],
+      "winning_directions": [
+        "high"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": false,
+      "all_window_mean_directions": [
+        "high"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 100,
+        "low": 0,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": false,
+      "first24_of30d": -0.5366666666666666,
+      "last24": -0.5195833333333333,
+      "last_minus_first24": 0.017083333333333332,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Ta_20m(degree C)",
+            "Ta_2m(degree C)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "Ta_20m(degree C)",
+            "Ta_2m(degree C)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ws20_ws2_diff",
+      "label": "20 m−2 m同小时标量风速差窗口均值",
+      "unit": "m s-1",
+      "S": 0.6780867630700779,
+      "windows": [
+        {
+          "hours": 24,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 1.3499583333333334,
+          "unit": "m s-1",
+          "q_mean": 0.3842046718576196,
+          "q_min": 0.328513162773452,
+          "q_max": 0.43010752688172044,
+          "a_mean": 0.23159065628476083,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 72,
+          "config_direction_counts": {
+            "high": 8,
+            "low": 12,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": true,
+          "physical_value": 1.4050985915492957,
+          "unit": "m s-1",
+          "q_mean": 0.4745272525027809,
+          "q_min": 0.371523915461624,
+          "q_max": 0.5698924731182796,
+          "a_mean": 0.1135335558027438,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 168,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 1.303969696969697,
+          "unit": "m s-1",
+          "q_mean": 0.24738598442714127,
+          "q_min": 0.13274008157211717,
+          "q_max": 0.3370411568409344,
+          "a_mean": 0.5052280311457175,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 360,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 1.314805633802817,
+          "unit": "m s-1",
+          "q_mean": 0.21935483870967742,
+          "q_min": 0.0,
+          "q_max": 0.3655913978494624,
+          "a_mean": 0.5612903225806452,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        },
+        {
+          "hours": 720,
+          "config_direction_counts": {
+            "high": 0,
+            "low": 20,
+            "center": 0
+          },
+          "configuration_direction_inconsistent": false,
+          "physical_value": 1.275840169731259,
+          "unit": "m s-1",
+          "q_mean": 0.03225806451612903,
+          "q_min": 0.0,
+          "q_max": 0.053763440860215055,
+          "a_mean": 0.9354838709677419,
+          "position_direction": "low",
+          "raw_sign": "positive"
+        }
+      ],
+      "winning_configurations": [
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2021,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2022,
+          "reference_years": [
+            2023,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.314805633802817
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2021,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2023,
+          "reference_years": [
+            2022,
+            2024,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 360,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.314805633802817
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2022,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2021,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2024,
+          "reference_years": [
+            2022,
+            2023,
+            2025
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2023
+          ],
+          "hours": 720,
+          "q": 0.0,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2022,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2021,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        },
+        {
+          "calibration_year": 2025,
+          "reference_years": [
+            2022,
+            2023,
+            2024
+          ],
+          "hours": 720,
+          "q": 0.053763440860215055,
+          "direction": "low",
+          "physical_value": 1.275840169731259
+        }
+      ],
+      "winning_directions": [
+        "low"
+      ],
+      "direction_inconsistent_across_winning_windows_or_configs": false,
+      "all_window_mean_directions": [
+        "low"
+      ],
+      "all_config_window_direction_counts": {
+        "high": 8,
+        "low": 92,
+        "center": 0
+      },
+      "direction_inconsistent_across_all_windows_or_configs": true,
+      "first24_of30d": 1.3772608695652173,
+      "last24": 1.3499583333333334,
+      "last_minus_first24": -0.02730253623188406,
+      "first_last_support": [
+        {
+          "expected": 24,
+          "valid": 23,
+          "coverage": 0.9583333333333334,
+          "reason": null,
+          "joint_columns": [
+            "WS_20m(m/s)",
+            "WS_2m(m/s)"
+          ]
+        },
+        {
+          "expected": 24,
+          "valid": 24,
+          "coverage": 1.0,
+          "reason": null,
+          "joint_columns": [
+            "WS_20m(m/s)",
+            "WS_2m(m/s)"
+          ]
+        }
+      ]
+    }
+  ]
+}

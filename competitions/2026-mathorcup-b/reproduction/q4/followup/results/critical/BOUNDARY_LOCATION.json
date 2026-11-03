@@ -1,0 +1,122 @@
+[
+  {
+    "seed": 137,
+    "method": "A_single_fill",
+    "slice": 1,
+    "true_bracket": [
+      0.06,
+      0.06375
+    ],
+    "predicted_zero_crossings": [
+      0.07661041384031969
+    ],
+    "mu_boundary_distance_to_true_bracket": 0.01286041384031969,
+    "prediction_has_no_crossing": false,
+    "search_status": "final_bracket"
+  },
+  {
+    "seed": 137,
+    "method": "A_single_fill",
+    "slice": 3,
+    "true_bracket": [
+      0.07875,
+      0.08249999999999999
+    ],
+    "predicted_zero_crossings": [
+      0.09996493455418833
+    ],
+    "mu_boundary_distance_to_true_bracket": 0.017464934554188336,
+    "prediction_has_no_crossing": false,
+    "search_status": "final_bracket"
+  },
+  {
+    "seed": 137,
+    "method": "B_MF_fill",
+    "slice": 1,
+    "true_bracket": [
+      0.06,
+      0.06375
+    ],
+    "predicted_zero_crossings": [
+      0.0731152697731256
+    ],
+    "mu_boundary_distance_to_true_bracket": 0.0093652697731256,
+    "prediction_has_no_crossing": false,
+    "search_status": "final_bracket"
+  },
+  {
+    "seed": 137,
+    "method": "B_MF_fill",
+    "slice": 3,
+    "true_bracket": [
+      0.07875,
+      0.08249999999999999
+    ],
+    "predicted_zero_crossings": [
+      0.11811692231857857
+    ],
+    "mu_boundary_distance_to_true_bracket": 0.035616922318578575,
+    "prediction_has_no_crossing": false,
+    "search_status": "final_bracket"
+  },
+  {
+    "seed": 137,
+    "method": "Bm_MF_count_matched",
+    "slice": 1,
+    "true_bracket": [
+      0.06,
+      0.06375
+    ],
+    "predicted_zero_crossings": [
+      0.07235908962004942
+    ],
+    "mu_boundary_distance_to_true_bracket": 0.008609089620049415,
+    "prediction_has_no_crossing": false,
+    "search_status": "final_bracket"
+  },
+  {
+    "seed": 137,
+    "method": "Bm_MF_count_matched",
+    "slice": 3,
+    "true_bracket": [
+      0.07875,
+      0.08249999999999999
+    ],
+    "predicted_zero_crossings": [
+      0.08177398518327167
+    ],
+    "mu_boundary_distance_to_true_bracket": 0,
+    "prediction_has_no_crossing": false,
+    "search_status": "final_bracket"
+  },
+  {
+    "seed": 137,
+    "method": "C_MF_active",
+    "slice": 1,
+    "true_bracket": [
+      0.06,
+      0.06375
+    ],
+    "predicted_zero_crossings": [
+      0.0675266279438381
+    ],
+    "mu_boundary_distance_to_true_bracket": 0.0037766279438380956,
+    "prediction_has_no_crossing": false,
+    "search_status": "final_bracket"
+  },
+  {
+    "seed": 137,
+    "method": "C_MF_active",
+    "slice": 3,
+    "true_bracket": [
+      0.07875,
+      0.08249999999999999
+    ],
+    "predicted_zero_crossings": [
+      0.08431519190407924
+    ],
+    "mu_boundary_distance_to_true_bracket": 0.0018151919040792497,
+    "prediction_has_no_crossing": false,
+    "search_status": "final_bracket"
+  }
+]

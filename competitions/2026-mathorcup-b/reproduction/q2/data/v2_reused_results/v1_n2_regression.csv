@@ -1,0 +1,3 @@
+case_id,v1_case_id,onset_difference_s,max_f_difference,pass
+V2_01,finite_H1_m0.54,0.0,0.0,True
+V2_07,finite_H1_m0.57,0.0,0.0,True

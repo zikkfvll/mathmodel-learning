@@ -1,0 +1,71 @@
+{
+  "Q2_initial_state_20261029_v3/q2_analysis.py": {
+    "file_sha256": "1cd6ea361496b673f3f7b2c51fbf84b8b0004c0ac37ff8a8cbf3036413870b0e",
+    "symbols": [
+      "Case",
+      "Forcing",
+      "constitutive",
+      "closure",
+      "rhs",
+      "profile",
+      "initial_classification",
+      "run_case"
+    ]
+  },
+  "work/q3/implementation_v1/q2_adapter.py": {
+    "file_sha256": "6d10c2154953c50dc21c06bdd365cc295cbfae1ed3dfcbdb86cb3aad9e044389",
+    "symbols": [
+      "audit_dense_first_hit",
+      "build_case",
+      "VelocityForcing",
+      "_cut_diagnostics",
+      "_terminal_first_hit",
+      "run_member",
+      "convergence_check"
+    ]
+  },
+  "work/q3/gp_upgrade_v2/baseline.py": {
+    "file_sha256": "b09003e7b755ec1ec7c2044e8b7646b14e587784a03fe6e075637c1c4f4777f7",
+    "symbols": [
+      "cdf",
+      "BaselineModel",
+      "shortest_set",
+      "central_set",
+      "build"
+    ]
+  },
+  "work/q3/implementation_v1/run_q3.py": {
+    "file_sha256": "092118bb12636db014fe87a336286bd12ea4a57a1d457fc1328d08ba7c087d6c",
+    "symbols": [
+      "edges_from"
+    ]
+  },
+  "work/q3/gp_upgrade_v2/run_experiment.py": {
+    "file_sha256": "27f04f65a09d789acbf5cca30dd2112a95a77b97e4197c603845f004e80fe24a",
+    "symbols": [
+      "Oracle",
+      "TwoPartGP",
+      "train",
+      "metrics",
+      "distribution_metrics"
+    ]
+  },
+  "work/q3/gp_upgrade_v2/auxiliary/connect_q4.py": {
+    "file_sha256": "b18e03d65c60f6b96de2995619ef1afe42a24840b10a8a868678b0e0f8740057",
+    "symbols": [
+      "finite",
+      "text",
+      "connect"
+    ]
+  },
+  "packaging_changes": {
+    "physics": "original eight definitions copied verbatim; material config/forcing unchanged",
+    "adapter": "seven constitutive/first-hit adapter definitions unchanged; path loaders made package-relative",
+    "ALG01": "actual supplied domain and finite-output guard",
+    "ALG02": "Decimal exact decimal endpoint width key, no rounded width",
+    "unused_threshold": "removed unsupported all-domain inverse method",
+    "STAT03": "closed candidate endpoints lo<=tau<=hi",
+    "COST02": "outer fallback loop wall incl input construction/log; solver time remains records",
+    "Q4_02": "valid_noarrival requires full finite horizon and valid prefix; scenario-target missing retained"
+  }
+}

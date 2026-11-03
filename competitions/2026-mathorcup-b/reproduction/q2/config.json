@@ -1,0 +1,113 @@
+{
+  "version": "Q2-ACTIVE-DATA-20261029-v3",
+  "hypothesis_id": "H_SATURATED_MIXED_MATRIX_CHI_ASL",
+  "method": "I&G constitutive relations + no-tension free-boundary volume-mean closure",
+  "reference": {
+    "m0": 0.54,
+    "H0": 1.0,
+    "mcrit": 0.6,
+    "rho_s": 2700.0,
+    "rho_f": 1000.0,
+    "mu": 0.01,
+    "a": 0.03,
+    "sigma0": 100.0,
+    "delta": 0.001,
+    "Kfs_transfer_m_s": 1.5e-05,
+    "water_conversion_mu_Pa_s": 0.001,
+    "theta_deg": 9.307082063566503,
+    "chi_m_inv": 0.02,
+    "initial_stress_ratio": 0.5
+  },
+  "geometry_tuple_id": "CGHC_F1a_route_with_text_labels",
+  "geometry_reason": "one fixed author B-C corridor chosen from material/phase evidence before model outcomes; map route with same-source text labels retained as proxy, profile-only tuple kept as alternative",
+  "forcing": {
+    "source_file": "data/cghc_f7b_digitized.csv",
+    "start_relative_s": 27.0,
+    "end_relative_s": 100.0,
+    "reading_velocity_error_m_s": 1.5,
+    "reading_time_error_s": 0.5,
+    "identity": "digitized_author_seismic_inverse_curve_not_local_shear_observation",
+    "chi_identity": "unknown local strain-transfer combination, inverted conditionally, not a measured parameter"
+  },
+  "finite_cases": {
+    "m0": [
+      0.54,
+      0.57,
+      0.6,
+      0.63
+    ],
+    "H0_m": [
+      0.1,
+      1.0,
+      10.0
+    ]
+  },
+  "threshold_search": {
+    "chi_min_m_inv": 1e-06,
+    "max_gamma_s_inv": 10.0,
+    "bracket_points": 15,
+    "xtol_m_inv": 1e-09
+  },
+  "numerics": {
+    "rtol": 1e-08,
+    "max_step_s": 0.5,
+    "output_step_s": 0.1
+  },
+  "actual_event_unknowns": {
+    "initial_saturation": null,
+    "m0": null,
+    "mcrit": null,
+    "H0_m": null,
+    "local_ki_m2": null,
+    "mu_Pa_s": null,
+    "chi_m_inv": null,
+    "first_whole_flow_formation_time": null,
+    "initial_mean_effective_stress_Pa": null,
+    "initial_mean_effective_ratio": null,
+    "initial_excess_pressure_profile": null
+  },
+  "scientific_status": "conditional mechanism calculation; local real-state validation unresolved",
+  "enhancement": {
+    "shape_values": [
+      2,
+      3
+    ],
+    "material_m0": [
+      0.54,
+      0.57
+    ],
+    "material_mcrit": [
+      0.54,
+      0.59,
+      0.6
+    ],
+    "window_start_s": 27,
+    "window_ends_s": [
+      60,
+      80,
+      100
+    ],
+    "diagnostic_max_step_s": 0.01,
+    "v1_reused_results": "data/v1_reused_results",
+    "criterion_origin": "closure_derived",
+    "forcing_origin": "post_event_inversion",
+    "design_is_not_actual_event": true
+  },
+  "initial_state_enhancement": {
+    "q0_values": [
+      0.17,
+      0.3,
+      0.5,
+      0.75
+    ],
+    "shape_n": 2,
+    "common_chi_design_m_inv": 0.02,
+    "v2_reference_root_m_inv": 0.0002265278784906,
+    "common_chi_comparison_m_inv": 0.0002265378784906,
+    "v2_reused_results": "data/v2_reused_results",
+    "diagnostic_max_step_s": 0.01,
+    "initial_state_identity": "mathematical structural design points; not local credible range",
+    "contract": "METHOD_FROZEN.md",
+    "matrix": "four q0 x two common chi; four q0-specific boundaries; no factorial expansion"
+  }
+}

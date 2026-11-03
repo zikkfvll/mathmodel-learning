@@ -1,0 +1,119 @@
+{
+  "final": {
+    "version": "Q3-FINAL-v3.0",
+    "candidates": [
+      {
+        "name": "strong_robust",
+        "condition": "strong",
+        "chi_m_inv": 0.02,
+        "q0": 0.5,
+        "finite_interval_s": [
+          0.775,
+          0.815
+        ],
+        "includes_no_hit": false
+      },
+      {
+        "name": "near_robust",
+        "condition": "near",
+        "chi_m_inv": 0.0002265378784906,
+        "q0": 0.5,
+        "finite_interval_s": [
+          71.4,
+          72.95
+        ],
+        "includes_no_hit": true
+      }
+    ],
+    "families": [
+      "nominal_triangular",
+      "uniform_support",
+      "lower_mode_triangular"
+    ],
+    "n_per_candidate_family": 4096,
+    "total_random_validation_labels": 24576,
+    "alpha": 0.05,
+    "familywise_delta": 0.05,
+    "number_claims": 6,
+    "per_claim_delta": 0.008333333333333333,
+    "confidence_method": "one-sided Clopper-Pearson beta lower with Bonferroni over six candidate-family claims",
+    "seed": 2026103017,
+    "seed_protocol": "SeedSequence spawn 6 independent streams in candidate-major/family-minor order",
+    "optional_stopping": false,
+    "on_fail": "retain failed result; do not change seeds, append labels, widen candidates or re-use validation to certify changed model",
+    "window": {
+      "source_start_s": 27.0,
+      "horizon_s": 73.0
+    },
+    "numerics": {
+      "method": "Radau",
+      "rtol": 1e-08,
+      "atol": [
+        1e-11,
+        1e-06,
+        1e-10
+      ],
+      "max_step_s": 0.5
+    },
+    "sample_design": "n4096 gives approximately .981 design power for p=.964297 under fixed6claims; no guarantee of pass",
+    "unknown_initial": "never count as future hit or no_hit; failures remain denominator and block certification",
+    "delays": {
+      "publication_s": [
+        0,
+        1,
+        5,
+        30,
+        60
+      ],
+      "action_s": [
+        0,
+        5,
+        15,
+        30
+      ],
+      "identity": "hypothetical relative local shear origin; action0 isolates publication,5/15/30 sensitivity only; not observed response times"
+    },
+    "cost_test_n": 600,
+    "workers": 4
+  },
+  "gp": {
+    "version": "Q3-GP-v2.0",
+    "seed": 20261030,
+    "budgets": [
+      8,
+      16,
+      32
+    ],
+    "q0": 0.5,
+    "conditions": {
+      "strong": 0.02,
+      "near": 0.0002265378784906
+    },
+    "support": [
+      -1.5,
+      1.5
+    ],
+    "horizon_s": 73.0,
+    "pool_count": 601,
+    "min_query_distance": 0.012,
+    "test_count": 600,
+    "test_protocol": "all 600 midpoint cells; training on 601 edges; min distance .0025 m/s",
+    "boundary_radius": 0.08,
+    "alpha": 0.05,
+    "delta": 0.05,
+    "classifier_length_scale": 0.45,
+    "regression_length_scale": 0.45,
+    "classifier_fallback_probability": [
+      0.35,
+      0.65
+    ],
+    "regression_fallback_std_s": {
+      "strong": 0.0005,
+      "near": 0.05
+    },
+    "final_test_use": "once after freeze; no retuning; numerical scenario test, not iid coverage certificate",
+    "probability_identity": "declared input families conditional on fixed Q2, not natural disaster probability"
+  },
+  "stage": "all",
+  "workers": 2
+}

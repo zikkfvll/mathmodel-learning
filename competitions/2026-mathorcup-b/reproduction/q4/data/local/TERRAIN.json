@@ -1,0 +1,81 @@
+{
+  "sources": {
+    "copernicus": {
+      "source": {
+        "path": "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/补充数据/吉隆数据 2/09_补充DEM/Copernicus_DSM_COG_10_N28_00_E085_00_DEM.tif",
+        "bytes": 38402839,
+        "sha256": "1590255a0ae7e8c1f49b277e287032a18a2e32c8e13c4c3298ed458f851cd3c7"
+      },
+      "original_crs": "EPSG:4326",
+      "original_transform": [
+        0.0002777777777777778,
+        0.0,
+        84.99986111111112,
+        0.0,
+        -0.0002777777777777778,
+        29.000138888888888,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": null,
+      "vertical_datum": "product documentation pending; not from geographic CRS",
+      "missing": 0
+    },
+    "aster": {
+      "source": {
+        "path": "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/补充数据/吉隆数据 2/09_补充DEM/ASTGTMV003_N28E085/ASTGTMV003_N28E085_dem.tif",
+        "bytes": 31024456,
+        "sha256": "b2cb72367681909dc19d24d5d78c4ecb147fb413cd602c1ca347e96fa10fe835"
+      },
+      "original_crs": "EPSG:4326",
+      "original_transform": [
+        0.000277777777777778,
+        0.0,
+        84.9998611111111,
+        0.0,
+        -0.000277777777777778,
+        29.0001388888889,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": null,
+      "vertical_datum": "product documentation pending; not from geographic CRS",
+      "missing": 0
+    }
+  },
+  "bounds": [
+    348000,
+    3134520,
+    350640,
+    3135840
+  ],
+  "support_resolution_m": 15,
+  "flow_grid_candidates_m": [
+    60,
+    30
+  ],
+  "entry": {
+    "x_m": 350640,
+    "y_interval_m": [
+      3135025,
+      3135055
+    ],
+    "width_m": 30,
+    "speed_m_s": 30,
+    "direction": "west",
+    "identity": "D_ONLY boundary near author node270, ~928m after C; no measured state"
+  },
+  "target": {
+    "x_m": 348720,
+    "y_range_m": [
+      3134880,
+      3135600
+    ],
+    "identity": "nested cross-section; not port"
+  },
+  "no_filling_or_elevation_correction": true,
+  "hydraulic_qualification": "pending",
+  "full_event_reconstruction": false
+}

@@ -1,0 +1,39 @@
+软件与运行命令
+
+Python 3.12。各问题依赖版本见对应requirements文件；数据准备另见prepare/requirements.txt。第四问C加速需要C99编译器。中文绘图需要可用的中文字体。以下命令在对应问题目录运行，输出目录须为新目录。
+
+问题一
+python -B sol.py --mode enhance --d1-csv data/d1_era5/era5_precipitation_hourly_2021_2026.csv --d0-cache results/d0_window_cache.json.gz --baseline-results results/baseline --output-dir new_run
+python -B draw.py --results-dir results --output-dir new_figures
+
+问题二
+python -B sol.py --output-dir new_results
+python -B draw.py --results-dir results --output-dir new_figures
+
+问题三
+python -B sol.py --data data --results results_new --workers 2
+python -B draw.py --results results --output figures_new
+
+问题四（以下从附件根目录运行）
+python -m pip install -r q4/requirements-lock.txt
+公开副本重新计算（本轮仅核读代码逻辑，未执行此命令；会调用新的30m物理解并生成新证据，耗时取决于机器）：
+python -B q4/code/sol.py decide --out q4_run/public_recompute_new --inputs q4/data/local --backend c --volume 475682.8460010884 --mu .075 --gp-state q4/data/GP_STATE.json
+
+out目录必须此前不存在。此命令不使用旧cache-entry，也不带cache-only；无需预先创建新的CACHE_ENTRY。决策程序会将新物理解及回执保存在本次新输出内。运行成功、结果分类和科学验收须看实际新输出，不能由本说明预先保证。
+
+历史原包命令（仅供未脱敏的原始正式包使用，不能在当前公开副本中当作可用的缓存回放命令）：
+python -B q4/code/sol.py decide --out q4_run/new2 --inputs q4/data/local --backend c --volume 475682.8460010884 --mu .075 --gp-state q4/data/GP_STATE.json --cache-entry q4/data/cache/new2/CACHE_ENTRY.json --cache-only
+公开副本脱敏改变了TERRAIN.json及历史RUN_RECEIPT等文本字节，旧request/receipt哈希绑定因此失效。保留这些旧材料用于学习与来源说明，不重签旧证书、不伪造新绑定。论文PDF和源码附录里的同一历史命令也受此限制。
+
+公开副本重绘已有结果：
+python -B q4/code/draw.py --root q4 --out q4_guard_figures
+python -B q4/followup/code/draw.py --root q4/followup --out q4_followup_figures
+python -B q4/base/code/draw.py --root q4/base --out q4_base_figures
+
+原始附件清理（在prepare目录内）
+python -B clean_all.py --input-root "官方附件目录" --output-dir "new_cleaned_all"
+python -B clean_data.py --input-root "官方附件目录" --output-dir "new_station_daily"
+python -B era5/download.py
+python -B route.py --output route_new.csv
+
+全清理需要使用者提供原始1—8附件，站点子入口只生成站点/日温结果；取数脚本缺原响应时会联网取得公开数据。主计算已带必要输入，通常不必重新取数或清理。

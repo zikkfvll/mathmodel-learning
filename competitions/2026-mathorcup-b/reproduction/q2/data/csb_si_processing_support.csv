@@ -1,0 +1,15 @@
+﻿method,variable,value,unit,identity,locator
+S1,waveform_id,NK.KKN..BHZ,station.channel,连续垂向地震记录，原始文件未公开取得,¶15
+S1,analysis_window,2026-08-25 18:00 / 2026-08-26 18:00,BJT,展示集中08:00–12:00；转换地面速度μm/s,¶15
+S1,RMS_band,1–10,Hz,四阶零相位Butterworth,¶16/22
+S1,RMS_window_step,30 / 10,s,处理支持；不是物理流态调整时间,¶22
+S1,STFT_window_step,60 / 10,s,Hann窗、50s重叠，1–20Hz,¶18
+S1,relative_PSD_window_step,120 / 20,s,Welch30s子窗50%重叠；频带1–3/3–6/6–10Hz,¶20
+S1,PSD_reference,2026-08-25 18:00 / 2026-08-26 06:00,BJT,参考背景PSD中位数,¶20
+S2,image_count,211,scene,Sentinel-2，2024-01至2026-08,¶27
+S2,pair_time_baseline,60–400,day,autoRIFT二维位移；不是临灾瞬时速度,¶27
+S2,matching_window,8–32,pixel,搜索范围32像素；Wallis滤波/稳定区偏移校正,¶27
+S2,output_difference_support,15,day,TICOI稳健平差、样条插值后差分输出,¶32
+S2,map_velocity_unit,m/y,m/year,图S1图例0/20/40/60，上端带箭头；不是事件体流速,图S1实图
+S3,longterm_daily_product,ECMWF/ERA5_LAND/DAILY_AGGR,dataset id,1951–2025年背景；约0.1deg；K→°C、m→mm,¶35
+S3,2026_daily_anomaly,2026-01-01 / 2026-08-21,date,同月日1976–2025共50年参照，7d平滑,¶36

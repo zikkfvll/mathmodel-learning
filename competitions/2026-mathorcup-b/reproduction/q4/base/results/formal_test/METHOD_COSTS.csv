@@ -1,0 +1,5 @@
+seed,method,LF_queries,HF_queries,physical_child_wall_sum_s,solver_wall_sum_s,compile_load_sum_s,GP_fit_wall_s,acquisition_wall_s,auxiliary_prediction_wall_s,logical_cold_start_total_s
+137,A_single_fill,0,16,526.4460633720737,496.2692335799802,13.1115120803006,,,,
+137,B_MF_fill,24,16,863.6604287046939,799.0644880374894,28.884578248951584,,,,
+137,Bm_MF_count_matched,32,16,988.165753288893,910.8304818293545,34.87039866298437,,,,
+137,C_MF_active,32,16,946.5756339984946,872.3930789153092,32.92962146177888,,,,

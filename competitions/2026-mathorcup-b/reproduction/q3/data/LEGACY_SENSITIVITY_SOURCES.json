@@ -1,0 +1,14 @@
+{
+  "legacy_unweighted_reference.csv": {
+    "source": "outputs/Q3_implementation_20261030/run_20261029T191508Z/unweighted_scenarios.csv",
+    "source_sha256": "40c8948ebf1363e1e0eca6b89932a1ebac6095a108ed5f81b286e43345f7c2d8",
+    "rows": 28,
+    "reuse_role": "24 unweighted design results plus4 admission controls; no new event count"
+  },
+  "legacy_numerical_convergence.csv": {
+    "source": "outputs/Q3_implementation_20261030/run_20261029T191508Z/numerical_convergence.json",
+    "source_sha256": "764fb5af0665096c2526ab461f8b58a070eba3ac59e41fe14f9aff2b25b5a0f2",
+    "rows": 6,
+    "reuse_role": "prior numerical controls only, not rerun or current scientific independent approval"
+  }
+}

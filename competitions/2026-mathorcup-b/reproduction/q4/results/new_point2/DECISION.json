@@ -1,0 +1,114 @@
+{
+  "request": {
+    "request_id": "47ebe488b7a4f26a6551c67ca3865336faeb6018212c4066303a63b16d567405",
+    "config": {
+      "volume_m3": 475682.8460010884,
+      "duration_s": 960.0,
+      "mu": 0.075,
+      "xi_m_s2": 500.0,
+      "speed_m_s": 30.0,
+      "entry_width_m": 30.0,
+      "shape": "triangle",
+      "terrain_name": "copernicus"
+    },
+    "numerics": {
+      "dx": 30,
+      "horizon": 1800,
+      "cfl": 0.35,
+      "dry": 0.0001,
+      "order": 2,
+      "maxdt": 2,
+      "backend": "c"
+    },
+    "inputs": [
+      {
+        "logical_id": "copernicus_support.npz",
+        "sha256": "df004dc549a6fc60a0093d916f7381da669c87d8a3a2efb91073b87a7051587d"
+      },
+      {
+        "logical_id": "aster_support.npz",
+        "sha256": "9ddbc2cc91afb48e647ea10894393fabbf8aeea62786df76aff09f571878f245"
+      },
+      {
+        "logical_id": "TERRAIN.json",
+        "sha256": "dde8572bdd83d6d1d827effb59e945e27fbdefb4932df74185f4eaadcca43486"
+      },
+      {
+        "logical_id": "mapped_path_utm.csv",
+        "sha256": "f18d194021c05d2cc66b0f4f3d76ab66b053460d86fb17c2aee787dc4a1526c0"
+      }
+    ],
+    "science": {
+      "sha256": "c39c5b77c22fa2defb903148026f06ea23374901f3b72e3515d1a6687eb3e4e5",
+      "details": {
+        "G": 9.81,
+        "functions": {
+          "hll_pair": "f96e7fde138e9467357d3eb059146cf9745e11bd97975b7cf5bb40f17f26ad32",
+          "minmod3": "91a9d5e907f75158b37f2327bb04886c5dfa5767ee3cb96af7aa2c37145b438e",
+          "muscl_faces": "103c943a15b48e22bf98ad8fc24d74b4769b2fb1a53308a05139106925192974",
+          "exact_wall_pressure": "02c0c80d8e4255187ce72866b70e7992af5a0f1088826167451dba1b567a1cb9",
+          "triangle_cdf": "9cfd65cdb2ee21994483eddafde391f5323df0539442a493486056c08554ba84",
+          "pulse_volume": "56e4ec664fbfa46edb35ea97f3e5b4a13367d75e56f5361ce143a5e7bf3cbe84",
+          "euler_step": "12793fd1b23abfbb122daf4238fa7472049b131564f9da2171c2983fac687bbf",
+          "step": "c294b89f9a27b69cda0b1bf7184f28a0a93feffd97e5f278c3689a9feca695af",
+          "energy": "45c091909811e2250511c4086937fb70bf9ce868cb2c379ad7c0a43464056a72",
+          "evolve": "c1d45cc09e985122dec0b30ee5cc31dd7c17114472f9f0f6852cc27726e3957d",
+          "sample_terrain": "3861f4600e7a61db1f7184d2729f90ad2c736aba3d32f6523ec744fb63e442fe",
+          "pilot": "5cc249c7414021c30fc5ee43d25894d41acf81d15a7386f14b95c910ce618809"
+        },
+        "C_source_sha256": "2fa9a17b9638988294c55b5225d1fca0ac1010b50963b99b2551b45d9d8200c5"
+      }
+    },
+    "target": {
+      "axis": "x",
+      "coordinate_m": 348720,
+      "tangent_interval_m": [
+        3134880,
+        3135600
+      ],
+      "criterion": "instantaneous max vertical event depth >= threshold on fixed interpolated line",
+      "threshold_m": 0.1,
+      "horizon_s": 1800,
+      "full_reach": false
+    }
+  },
+  "GP_estimate": {
+    "status": "arrived",
+    "mean_g": 0.9724595314403058,
+    "std_g": 0.24151159794837623,
+    "model_state": {
+      "path": "work/q4/followup_upgrade_20261030/seed137_critical_seal/seed137/C_MF_active/GP_STATE.json",
+      "bytes": 9351,
+      "sha256": "bbde030c0a320ccedb9631834e2bf5a0c4e3bd2fbeb43ff9f5615aa757b7cee7"
+    },
+    "authoritative": false
+  },
+  "final_status": "valid_no_arrival_by_horizon",
+  "needs_verification": false,
+  "arrival_time_bracket_s": null,
+  "verification_source": "fresh_30m_PDE",
+  "physical_evidence": {
+    "status": "valid_no_arrival_by_horizon",
+    "time_bracket_s": null,
+    "target_max_h_m": 0.0,
+    "result": {
+      "path": "work/q4/decision_guard_20261030/new_point2/physical_verification/pilot_30.json",
+      "bytes": 4042,
+      "sha256": "36a90f0b50eef97cc368d3322a81655ab04427cd48989a597ba4e0aab8e5d64d"
+    },
+    "receipt": {
+      "path": "work/q4/decision_guard_20261030/new_point2/physical_verification/RUN_RECEIPT.json",
+      "bytes": 4856,
+      "sha256": "33f9792c049702cb6e1180c5d35145ee490a8a8e856411dac792d567cd2f5547"
+    }
+  },
+  "unverified_reason": null,
+  "fresh_physical_cost": {
+    "child_wall_s": 33.53030112478882,
+    "solver_wall_s": 31.656139832921326,
+    "compile_and_load_s": 0.8321395828388631
+  },
+  "decision_wall_s": 33.59943312499672,
+  "published_from_GP": false,
+  "scope": "D_ONLY conditional physical-model verification; not natural-event zero-error guarantee"
+}

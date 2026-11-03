@@ -1,0 +1,15 @@
+﻿record_id,source,pdf_page,location,stage,clock_start_BJT,clock_end_BJT,evidence_type,notes
+T01,CGHC_10.16031/j.cghc.202610008,7,§3,main_onset_initial_seismic_estimate,10:52:07,,author_arrival_difference_inversion,distinct initial estimate
+T02,CGHC_10.16031/j.cghc.202610008,8,§3; Fig7a,main_onset_refined,10:52:19,,author_single_force_inversion,relative F7b t=0
+T03,CGHC_10.16031/j.cghc.202610008,5,Fig1b,B_absolute_marker,10:53:02,,professional_process_diagram,conflicts with Fig6 B marker; not silently merged
+T04,CGHC_10.16031/j.cghc.202610008,8,Fig6b,B_absolute_marker,10:52:30,,seismic_figure_annotation,preserve original marker
+T05,CGHC_10.16031/j.cghc.202610008,5,Fig1b,C_absolute_marker,10:54:02,,professional_process_diagram,conflicts with Fig6 and relative source timing
+T06,CGHC_10.16031/j.cghc.202610008,8,Fig6b,C_absolute_marker,10:53:46,,seismic_figure_annotation,preserve original marker
+T07,CGHC_10.16031/j.cghc.202610008,8,Fig7a,low_frequency_disappearance,10:53:59,,single_force_inversion_operational_proxy,100s after refined onset
+T08,CGHC_10.16031/j.cghc.202610008,10,§4,Purepu_passage_window,10:54:19,10:55:10,ASL_inversion,non-overlapping1min windows; start19s later than nominal1min axis labels
+T09,CGHC_10.16031/j.cghc.202610008,11,§5,Donglin_bend_passage_window,10:55:10,10:57:10,ASL_inversion,same inversion family
+T10,CGHC_10.16031/j.cghc.202610008,13,§5,port_arrival,11:00:00,,professional_synthesis_and_ASL,not local formation
+T11,CSB_10.1360/CSB-2026-1255,3,Fig3a and text,USGS_marked_event_onset,10:52:10,,instrument_event_catalog_marked_by_author,do not equate onset to fluidization
+T12,CSB_10.1360/CSB-2026-1255,3,event timing paragraph,port_video_arrival,10:59:00,,video_record_reported_by_author,approximately minute precision; differs from CGHC/SLXB11:00
+T13,SLXB_10.3724/j.slxb.20260653,10,Table3 observed/inverted column,port_video_arrival,11:00:00,,video_record_reported_by_author,author uses to constrain model
+T14,SLXB_10.3724/j.slxb.20260653,7,§3.1,port_simulated_arrival,11:00:25,,numerical_model_output,not observation; cannot independent-check the same inversion

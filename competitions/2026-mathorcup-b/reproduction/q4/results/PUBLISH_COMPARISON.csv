@@ -1,0 +1,7 @@
+request,kind,mu,volume_m3,GP_estimate,physical_status,published_status,new_PDE_queries,new_PDE_child_wall_s,original_solver_wall_s,publication_wall_s
+old_endpoint0,historical_replay_not_new_test,0.06,336358.5661014858,arrived,arrived,arrived,0,,46.444874375127256,0.030119874980300665
+old_endpoint1,historical_replay_not_new_test,0.06375,336358.5661014858,arrived,valid_no_arrival_by_horizon,valid_no_arrival_by_horizon,0,,30.135952540906146,0.02593424986116588
+old_endpoint2,historical_replay_not_new_test,0.07875,672717.1322029716,arrived,arrived,arrived,0,,32.718214959139004,0.03967912495136261
+old_endpoint3,historical_replay_not_new_test,0.08249999999999999,672717.1322029716,arrived,valid_no_arrival_by_horizon,valid_no_arrival_by_horizon,0,,38.15326000005007,0.03278895793482661
+new_point1,new_PDE_then_v2_publication,0.0675,475682.8460010884,arrived,arrived,arrived,1,33.770949749974534,31.39703508396633,0.05872408300638199
+new_point2,new_PDE_then_v2_publication,0.075,475682.8460010884,arrived,valid_no_arrival_by_horizon,valid_no_arrival_by_horizon,1,33.53030112478882,31.656139832921326,0.06651645805686712

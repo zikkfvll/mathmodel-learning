@@ -1,0 +1,29 @@
+{
+  "utc_before_labels": "2026-10-30T05:29:14.083780+00:00",
+  "analysis_sha256": "716a14b09f8bf8cab467354e3915d0d083ca3cacc826b0836212e5bd67f78765",
+  "frozen_config_sha256": "d2adfdb233dcc60d1a9fbcec6cccca7c859d0b1be0b8bd3ae5cce1d061928f9d",
+  "validation_inputs_sha256": "a550804a97b98b04b66657b5f9f586140af4989f98cf6194c1d64201516fd005",
+  "source_binding_sha256": "a38ecb78938f6cf4a669fe367824282145aecfb5a38e86b9ac5d855d505eb16a",
+  "forcing_sha256": "9a664e8f20b71750108c10f590d947151ddd66fa0b4688e77c1abd593c60ac09",
+  "q2_config_sha256": "e0bc172ab150e1347bc29ca970acba480eb6f09d38831b1976cbcb75a3772fa4",
+  "label_generator": "delivered q3_analysis.py; equivalence to original Q2 required before certification release",
+  "criterion": "each one-sided CP lower>=.95, all fixed n denominator; any unknown or initial blocks its claim",
+  "optional_stopping": false,
+  "distribution_parameters": {
+    "nominal_triangular": [
+      -1.5,
+      0.0,
+      1.5
+    ],
+    "uniform_support": [
+      -1.5,
+      1.5
+    ],
+    "lower_mode_triangular": [
+      -1.5,
+      -1.5,
+      1.5
+    ]
+  },
+  "input_construction": "max(0,U_ref_node+d) applied to every provided node, then original piecewise linear interpolation; d constant over complete path"
+}

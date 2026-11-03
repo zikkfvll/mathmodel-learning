@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "artifact_id": "Q4-FOLLOWUP-v1",
+  "scope": "D_ONLY local ~2.119km conditional PDE responses",
+  "axes": [
+    {
+      "name": "volume_m3",
+      "bounds": [
+        200000.0,
+        800000.0
+      ],
+      "scale": "log"
+    },
+    {
+      "name": "mu",
+      "bounds": [
+        0.03,
+        0.15
+      ],
+      "scale": "linear"
+    }
+  ],
+  "fixed_parameters": {
+    "duration_s": 960.0,
+    "xi_m_s2": 500.0,
+    "speed_m_s": 30.0,
+    "shape": "triangle",
+    "terrain_name": "copernicus"
+  },
+  "low_dx_m": 40.0,
+  "high_dx_m": 30.0,
+  "reference_dx_m": 15.0,
+  "horizon_s": 1800.0,
+  "h_arr_m": 0.1,
+  "response": "g=log((max_h_target+0.1)/(2*0.1)); nonnegative iff instantaneous arrival",
+  "seeds": [
+    137
+  ],
+  "initial_low": 24,
+  "initial_high": 8,
+  "passive_high_added": 8,
+  "active_high_added": 8,
+  "active_low_cap": 8,
+  "kernel": "Matern5/2",
+  "jitter": 1e-08,
+  "optimization": "three fixed starts l=.15,.4,.8; bounded L-BFGS-B maxiter100",
+  "acquisition": "boundary-weighted high-layer posterior variance reduction / fixed development cost; every fourth action uniform exploration",
+  "candidate_count": 512,
+  "integration_count": 512,
+  "test_global_seed": 93071,
+  "test_boundary_pool_seed": 81199,
+  "test_global_count": 16,
+  "test_boundary_count": 516,
+  "test_reduction_rule": "original frozen global first32 + boundary first16, before any test truth, fixed deadline revision",
+  "methods": [
+    "A_single_fill",
+    "B_MF_fill",
+    "Bm_MF_count_matched",
+    "C_MF_active"
+  ],
+  "boundary_definition": "4 fixed zV*129 mu nodes; actual slices zV3/8,7/8; initial j0,64,128; leftmost adjacent opposite classes; at most4 integer bisections",
+  "test_access": "12 models and all532 static predictions sealed before any new validation truth",
+  "test_LF_also_computed": true,
+  "unknown_policy": "unknown/failure never negative; aborted methods reported, no silent replacement",
+  "numerically_unresolved_rule": "abs(gH)<=abs(gH-gL), empirical paired discrepancy only, not rigorous bound",
+  "dependencies": [
+    {
+      "path": "work/q4/execution_upgrade_20261030/morris_development_v22/MORRIS_SUMMARY.json",
+      "bytes": 568,
+      "sha256": "c48089ce84481263ce01c5ed2eba9f45e3f94b6f28486eda37c10866c26216fc"
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/morris_development_v22/MORRIS_POLICY.json",
+      "bytes": 7110,
+      "sha256": "942b806af7a8d8cc0971f02d4c33768be1da4c2e67ba9ec4e12a398760231ceb"
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/morris_development_v22/MORRIS_QUERIES.json",
+      "bytes": 73191,
+      "sha256": "4192425c9f4ca5d222962391f12d35acc1e89f7f7da21d49ff64cbd106422120"
+    }
+  ],
+  "design_generator": {
+    "path": "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/reports/q4/followup_upgrade_20261030/source_v2/q4_analysis.py",
+    "bytes": 145009,
+    "sha256": "4608465706cabc3064526f8f438b40112a089431d7e13ecb3971ecc674606c80"
+  },
+  "solver_identity": {
+    "sha256": "d33ff3b7f0f93ae152e5d87604ecd8ca271cbafaeb6e7398d53fc5b9bdd6c97a",
+    "details": {
+      "G": 9.81,
+      "functions": {
+        "hll_pair": "f81c3db44f910179a9b7e4c8bf8c1dde04140871dde591771f42886cf3e7418b",
+        "minmod3": "91a9d5e907f75158b37f2327bb04886c5dfa5767ee3cb96af7aa2c37145b438e",
+        "muscl_faces": "103c943a15b48e22bf98ad8fc24d74b4769b2fb1a53308a05139106925192974",
+        "exact_wall_pressure": "8d9850ba8fa5e26929d5589b5930fe25486d5f531425cf7b4ba73cda47aa306e",
+        "triangle_cdf": "9cfd65cdb2ee21994483eddafde391f5323df0539442a493486056c08554ba84",
+        "pulse_volume": "56e4ec664fbfa46edb35ea97f3e5b4a13367d75e56f5361ce143a5e7bf3cbe84",
+        "euler_step": "12793fd1b23abfbb122daf4238fa7472049b131564f9da2171c2983fac687bbf",
+        "step": "c294b89f9a27b69cda0b1bf7184f28a0a93feffd97e5f278c3689a9feca695af",
+        "energy": "45c091909811e2250511c4086937fb70bf9ce868cb2c379ad7c0a43464056a72",
+        "evolve": "c1d45cc09e985122dec0b30ee5cc31dd7c17114472f9f0f6852cc27726e3957d",
+        "sample_terrain": "3861f4600e7a61db1f7184d2729f90ad2c736aba3d32f6523ec744fb63e442fe",
+        "pilot": "5cc249c7414021c30fc5ee43d25894d41acf81d15a7386f14b95c910ce618809"
+      },
+      "C_source_sha256": "2fa9a17b9638988294c55b5225d1fca0ac1010b50963b99b2551b45d9d8200c5"
+    }
+  },
+  "algorithm_identity": {
+    "sha256": "e8dd4deb8c43ecafb759bb6929764d610659f9a16a75d4beba0504c4f550f1e3",
+    "details": {
+      "matern52": "6df869fda9e2ebd577bcae7cac6ba4ffa0548a1cf7840184e3bdb943c4f41cc0",
+      "ARGP": "48251261bfcb62d09c0d02919732e1836d0c47f1ef7c5a5ee8bd39e23149f646",
+      "SingleGP": "bfe82fd80a18cc0e3e3233728ebfc22ab7fc4c59691bc66d6d073f3395fd48e7",
+      "gp_response": "800d1a3f626750f676df2728aa6b7ba92ed9849b82ce0a5a0086399c2153104e",
+      "config_from_plane": "b42a12423de67ec51cd02112e970d764b109b032826095e8fc2c9df77d5a9446",
+      "execute_physics": "6fb17d1ef1014153c77bef229b55d73ee5d658861394cefe89d1a1ae83381add",
+      "PhysicsRegistry": "dcc32d228ce83f926e2f5f75a6eaee276111c8b9c4f77899b95aafb4e29c568b",
+      "save_gp_state": "378d86ad6e252bdb9cba1be0de9a1c0bcc36829c3827b2d106331bfd4d7671af",
+      "method_predictions": "57911fb6fa6c2b40ba16bd9c9fbee7bdc1f3881addfb48234959a9aade1de1af",
+      "validate_execution": "11babdf576c1607d7253761dbbae8bf966824e049e1ac14e2d0e4bda30f06ff0",
+      "validate_prediction_models": "c20215e108475eb7226548dd82c45afc08d7f36bf4ce10c3691fcd6e6c80c44e",
+      "run_formal_training": "20161db5cb068b911551049a63914209aedd024690680036d40da5ff13508867",
+      "run_formal_test": "0d60013480cdab3f73f89ca00f7de83fb1ae480d62af19cfd4ccf0f5e15ee53d",
+      "seal_cached_seed": "7f20abd15900eecb6a87720623e399dd794030ea6d6c22ce55459b185cf830e2",
+      "load_fixed_gp": "0bdbf7207210db113dcf9f46dd81ef3590798d296d0a7300b25dbab3e83f4de0",
+      "cache_logical_id": "be28dfce155f792acb381e9e240d2c2c7a7f633f514050ef760469b2e27512b0",
+      "FollowupRegistry": "2f2fb5b969f3c3ff80c0938c38d9878ae1432d914d9576a9e016bebd6fd4fa0a",
+      "import_seed137": "faa40ba97f550e14bf970e29a9c785871782cc9e3dae4b966aa1c2639d144e38",
+      "run_followup_validation": "2e8e38e9b42fa9dab5330b7fb413a86f81f24f83487b905ebcd2f0f9f7c7c5ce",
+      "evaluate_followup": "0afc6dacca649427083a5250fc562ff142784c774a68968fa7bd55234419d9cf",
+      "seal_followup_subset": "49cf179a9c279cd813fe22bf49a2e6108dcaa4ac58dfe4d9a761ceb40851a712"
+    }
+  },
+  "execution": {
+    "order": 2,
+    "backend": "c",
+    "dry": 0.0001,
+    "cfl": 0.35,
+    "maxdt": 2.0,
+    "horizon": 1800.0,
+    "full": false,
+    "entry_width": 30.0
+  },
+  "input_assets": [
+    {
+      "logical_id": "copernicus_support.npz",
+      "sha256": "df004dc549a6fc60a0093d916f7381da669c87d8a3a2efb91073b87a7051587d",
+      "bytes": 111735
+    },
+    {
+      "logical_id": "aster_support.npz",
+      "sha256": "9ddbc2cc91afb48e647ea10894393fabbf8aeea62786df76aff09f571878f245",
+      "bytes": 111912
+    },
+    {
+      "logical_id": "TERRAIN.json",
+      "sha256": "dde8572bdd83d6d1d827effb59e945e27fbdefb4932df74185f4eaadcca43486",
+      "bytes": 2101
+    },
+    {
+      "logical_id": "mapped_path_utm.csv",
+      "sha256": "f18d194021c05d2cc66b0f4f3d76ab66b053460d86fb17c2aee787dc4a1526c0",
+      "bytes": 8121
+    }
+  ],
+  "geometry": {
+    "entry_x_m": 350640,
+    "entry_y_interval_m": [
+      3135025,
+      3135055
+    ],
+    "target_axis": "x",
+    "target_coordinate_m": 348720,
+    "target_tangent_interval_m": [
+      3134880,
+      3135600
+    ]
+  },
+  "independent_review": "pending",
+  "estimated_cost_L_s": 11.609670354053378,
+  "estimated_cost_H_s": 23.0,
+  "cost_estimate_source": "L=median actual Morris total child wall, H=prior30m representative~21s solver plus startup/IO; frozen estimates, actual costs separately retained",
+  "retained_original_test_design": {
+    "path": "reports/q4/execution_upgrade_20261030/formal_design_v23/TEST_DESIGN.json",
+    "bytes": 53085,
+    "sha256": "04e69dd0fa938bf73f4335b7e49101ebb6a82e29fc873223d6ccec91f0f21cf9"
+  },
+  "design_revision": "original96 test coordinates and original train/candidate arrays retained; only independent matched-passive LF pool added",
+  "original96_design": {
+    "path": "reports/q4/execution_upgrade_20261030/formal_design_v30/TEST_DESIGN_ORIGINAL96.json",
+    "bytes": 53085,
+    "sha256": "04e69dd0fa938bf73f4335b7e49101ebb6a82e29fc873223d6ccec91f0f21cf9"
+  },
+  "test_design": {
+    "path": "reports/q4/followup_upgrade_20261030/design_v2/TEST_DESIGN.json",
+    "bytes": 22781,
+    "sha256": "a7c18f20ac3345217aeb4f3c5329ef4a85b05283865b0cad69165af81bc17dc5"
+  },
+  "training_design": {
+    "path": "reports/q4/followup_upgrade_20261030/design_v2/TRAINING_DESIGNS.json",
+    "bytes": 230971,
+    "sha256": "5704d28310587d95a6722043ec28603188fc64aba9a43de3edcaa10728ed2646"
+  },
+  "parent_policy": {
+    "path": "reports/q4/execution_upgrade_20261030/formal_design_v30/FORMAL_POLICY.json",
+    "bytes": 8110,
+    "sha256": "5aa48ed99207f9915b49564ac86edbc8c8d312e0ebf0e9564c1d6c5e8a096592"
+  },
+  "critical_max_H": 14,
+  "critical_max_L": 4,
+  "old24_role": "historical only, never imported as new test",
+  "validation_scope": "deadline137_newcritical_only",
+  "run_new_global_truth": false,
+  "run_endpoint_low": false,
+  "deadline": "2026-10-30 18:40 Asia/Shanghai",
+  "critical_actual_slices": [
+    1,
+    3
+  ]
+}

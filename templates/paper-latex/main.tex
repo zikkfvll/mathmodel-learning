@@ -1,0 +1,43 @@
+% 编译入口：xelatex main.tex（至少两遍），或 tectonic main.tex。
+% 这是个人结构与版式模板，不是已完成或可直接提交的论文。
+\PassOptionsToPackage{fontset=none}{ctex}
+\documentclass[withoutpreface]{cumcmthesis}
+\input{personal-style.tex}
+\input{config.tex}
+\hypersetup{pdftitle={\PaperTitle},pdfauthor={},pdfsubject={个人数学建模论文结构与格式模板},pdfkeywords={\PaperKeywords},hidelinks,pageanchor=true}
+\title{\PaperTitle}
+\date{}
+\begin{document}
+\pagenumbering{roman}
+\pagestyle{empty}
+\noindent{\heiti\fontsize{10}{12}\selectfont 队伍编号：\TeamCode\hfill 赛道／题号：\TrackName}\par
+\begin{center}
+{\songti\bfseries\fontsize{16}{21}\selectfont
+\begin{tabularx}{\textwidth}{@{}l@{\quad}X@{}}
+题\quad 目 & \papertitlecontent
+\end{tabularx}}
+\end{center}
+\begin{center}
+{\heiti\bfseries\fontsize{14}{18}\selectfont 摘\quad 要：}
+\end{center}
+\input{sections/00_abstract.tex}
+\keywords{\important{\PaperKeywords}}
+\clearpage
+\setcounter{tocdepth}{2}
+\setlength{\cftsecnumwidth}{3em}
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+\pagenumbering{arabic}
+\pagestyle{plain}
+\input{sections/01_restatement.tex}
+\input{sections/02_analysis.tex}
+\input{sections/03_assumptions.tex}
+\input{sections/04_symbols.tex}
+\section{模型建立与求解}
+\input{sections/questions.tex}
+\input{sections/06_evaluation.tex}
+\input{sections/07_references.tex}
+\ifshowdisclosure\input{sections/08_disclosure.tex}\fi
+\ifshowappendix\input{sections/09_appendix.tex}\fi
+\end{document}

@@ -1,0 +1,3 @@
+tuple_id,length_m,height_drop_m,mean_gradient_dimensionless,angle_deg,transit_label_difference_s,derived_mean_speed_m_s,identity,source_location
+CGHC_F1a_route_with_text_labels,5369.677831733497,880.0,0.16388320260098527,9.307082063566503,60.0,89.49463052889162,map route digitization + same-source text-labelled endpoint heights + stage-clock labels; not measured velocity,"CGHC physicalPDF4/printed3 and physicalPDF5/printed4 Fig1a,b"
+CGHC_F1b_profile_graph_only,4674.408630800204,699.3939598049401,0.1496219126407894,8.509578313537432,60.0,77.90681051333674,same profile-diagram joint read; B elevation disagrees with text/map label; not independent physical measurement,CGHC physicalPDF5/printed4 Fig1b

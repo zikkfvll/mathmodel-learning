@@ -1,0 +1,30 @@
+{
+  "names": [
+    "volume_m3",
+    "duration_s",
+    "mu",
+    "xi_m_s2"
+  ],
+  "mu": [
+    2.4886995500727087,
+    -0.8186866831813306,
+    -7.176031278122814,
+    0.6020600967255202
+  ],
+  "mu_star": [
+    2.4886995500727087,
+    0.8186866831813306,
+    7.176031278122814,
+    0.6020600967255202
+  ],
+  "sigma": [
+    4.880018287178317,
+    1.153263981700858,
+    5.424321732461297,
+    0.6509504761324051
+  ],
+  "complete_trajectories": 8,
+  "total_trajectories": 8,
+  "role": "exploratory domain-dependent screening, not Sobol",
+  "independent_review": "pending"
+}

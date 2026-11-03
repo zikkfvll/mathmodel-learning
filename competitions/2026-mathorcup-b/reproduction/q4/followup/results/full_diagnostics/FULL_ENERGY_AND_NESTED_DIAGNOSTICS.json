@@ -1,0 +1,632 @@
+{
+  "common_reference_support": {
+    "path": "work/q4/execution_upgrade_20261030/terrain_full_v27/copernicus_support.npz",
+    "sha256": "6ee24ee3cbf3d21c269cab469eba02c505485b9027a8519001452f8d4f25e276",
+    "z0": 1738.176420404088,
+    "bounds": [
+      339840.0,
+      3128160.0,
+      350640.0,
+      3136080.0
+    ]
+  },
+  "fixed_reference_definition": "Same analytic Copernicus V=8e5,u=30,W=30,T=960 input under common numerical elevation gauge; ASTER is an independent product, not known same vertical datum.",
+  "energy_rows": [
+    {
+      "case": "copernicus_30",
+      "dx_m": 30,
+      "source_sha256": "664605eba7c19941915e1a1b1685365d8ffdb1e05d3ecfe027556a926ce74af7",
+      "old_zref": 1739.3471674326943,
+      "common_zref": 1738.176420404088,
+      "fixed_Copernicus_reference_input_energy": 8825015023.410414,
+      "gauge_invariant_dynamic_input_scale": 369688888.8888889,
+      "actual_common_gauge_input_energy": 8825015022.629507,
+      "R_final": 188451693.9920721,
+      "R_final_over_fixed_common_input": 0.021354263249655663,
+      "R_final_over_dynamic_input_scale": 0.5097575276294328,
+      "R_final_over_recorded_drag_loss": 0.06789449497269022,
+      "postpulse_net_R_increment": 368126949.78959215,
+      "postpulse_net_R_increment_over_fixed_input": 0.04171403094646858,
+      "postpulse_positive_step_R_increments_over_fixed_input": 0.04171466018504681,
+      "R_max_over_fixed_input": 0.021354263249655663,
+      "max_E_minus_cumulative_own_input": -57.537943680124954,
+      "any_E_above_cumulative_input": false,
+      "E_at_960": 7285741038.919056,
+      "max_E_gain_after_960_relative_to_960": -223120.84189796448,
+      "E_at_3600": 6237766423.310571,
+      "drag_loss_total": 2775654993.3521805,
+      "dry_clear_loss_total": 45299.95882605914,
+      "common_reference_R_invariance_max_error": 2.962350845336914e-05,
+      "phases_linear_time_interpolation": {
+        "960": {
+          "R_at_end": -179675255.79752,
+          "R_increment_since_previous_phase": -179675255.79752,
+          "E_at_end": 7285741038.919056,
+          "E_change_since_previous_phase": 7285741038.919056
+        },
+        "1800": {
+          "R_at_end": -100601419.61408164,
+          "R_increment_since_previous_phase": 79073836.18343838,
+          "E_at_end": 6607421334.381296,
+          "E_change_since_previous_phase": -678319704.5377598
+        },
+        "3600": {
+          "R_at_end": 188451693.9920721,
+          "R_increment_since_previous_phase": 289053113.6061537,
+          "E_at_end": 6237766423.310571,
+          "E_change_since_previous_phase": -369654911.07072544
+        }
+      },
+      "caveat": "Residual is a defined discrete balance defect, not continuum error; ratios to total input depend on gauge. No mass/CSV audit repeated."
+    },
+    {
+      "case": "copernicus_40",
+      "dx_m": 40,
+      "source_sha256": "664605eba7c19941915e1a1b1685365d8ffdb1e05d3ecfe027556a926ce74af7",
+      "old_zref": 1742.5532160898802,
+      "common_zref": 1738.176420404088,
+      "fixed_Copernicus_reference_input_energy": 8825015023.410414,
+      "gauge_invariant_dynamic_input_scale": 369688888.8888889,
+      "actual_common_gauge_input_energy": 8825015022.022167,
+      "R_final": 845515301.1731175,
+      "R_final_over_fixed_common_input": 0.09580893618086662,
+      "R_final_over_dynamic_input_scale": 2.287099576387971,
+      "R_final_over_recorded_drag_loss": 0.247459485629129,
+      "postpulse_net_R_increment": 1135801670.4427881,
+      "postpulse_net_R_increment_over_fixed_input": 0.12870251976113456,
+      "postpulse_positive_step_R_increments_over_fixed_input": 0.1287039264059404,
+      "R_max_over_fixed_input": 0.09580893618086662,
+      "max_E_minus_cumulative_own_input": -96.09517710381624,
+      "any_E_above_cumulative_input": false,
+      "E_at_960": 7343551739.6211405,
+      "max_E_gain_after_960_relative_to_960": -119894.05135822296,
+      "E_at_3600": 6252812764.341879,
+      "drag_loss_total": 3416782747.379921,
+      "dry_clear_loss_total": 934811.4734848473,
+      "common_reference_R_invariance_max_error": 4.398822784423828e-05,
+      "phases_linear_time_interpolation": {
+        "960": {
+          "R_at_end": -290286369.26967067,
+          "R_increment_since_previous_phase": -290286369.26967067,
+          "E_at_end": 7343551739.6211405,
+          "E_change_since_previous_phase": 7343551739.6211405
+        },
+        "1800": {
+          "R_at_end": -122879671.58235723,
+          "R_increment_since_previous_phase": 167406697.68731344,
+          "E_at_end": 6670343521.668105,
+          "E_change_since_previous_phase": -673208217.9530354
+        },
+        "3600": {
+          "R_at_end": 845515301.1731175,
+          "R_increment_since_previous_phase": 968394972.7554748,
+          "E_at_end": 6252812764.341879,
+          "E_change_since_previous_phase": -417530757.32622623
+        }
+      },
+      "caveat": "Residual is a defined discrete balance defect, not continuum error; ratios to total input depend on gauge. No mass/CSV audit repeated."
+    },
+    {
+      "case": "aster_40",
+      "dx_m": 40,
+      "source_sha256": "664605eba7c19941915e1a1b1685365d8ffdb1e05d3ecfe027556a926ce74af7",
+      "old_zref": 1753.4433108179842,
+      "common_zref": 1738.176420404088,
+      "fixed_Copernicus_reference_input_energy": 8825015023.410414,
+      "gauge_invariant_dynamic_input_scale": 369688888.8888889,
+      "actual_common_gauge_input_energy": 8811017167.49741,
+      "R_final": -37140724.25520795,
+      "R_final_over_fixed_common_input": -0.004208573487601268,
+      "R_final_over_dynamic_input_scale": -0.10046481074082457,
+      "R_final_over_recorded_drag_loss": -0.03028354751013205,
+      "postpulse_net_R_increment": 162181156.06959692,
+      "postpulse_net_R_increment_over_fixed_input": 0.01837743682468228,
+      "postpulse_positive_step_R_increments_over_fixed_input": 0.01838320196806422,
+      "R_max_over_fixed_input": 0.0026819519613910125,
+      "max_E_minus_cumulative_own_input": -91.68292164106015,
+      "any_E_above_cumulative_input": false,
+      "E_at_960": 7713694355.628959,
+      "max_E_gain_after_960_relative_to_960": -74294.75615406036,
+      "E_at_3600": 7538356592.91723,
+      "drag_loss_total": 1226432413.2693396,
+      "dry_clear_loss_total": 9087437.055632656,
+      "common_reference_R_invariance_max_error": 4.120171070098877e-05,
+      "phases_linear_time_interpolation": {
+        "960": {
+          "R_at_end": -199321880.32480487,
+          "R_increment_since_previous_phase": -199321880.32480487,
+          "E_at_end": 7713694355.628959,
+          "E_change_since_previous_phase": 7713694355.628959
+        },
+        "1800": {
+          "R_at_end": -133941376.26623988,
+          "R_increment_since_previous_phase": 65380504.05856499,
+          "E_at_end": 7583221059.537593,
+          "E_change_since_previous_phase": -130473296.09136581
+        },
+        "3600": {
+          "R_at_end": -37140724.25520795,
+          "R_increment_since_previous_phase": 96800652.01103193,
+          "E_at_end": 7538356592.91723,
+          "E_change_since_previous_phase": -44864466.620363235
+        }
+      },
+      "caveat": "Residual is a defined discrete balance defect, not continuum error; ratios to total input depend on gauge. No mass/CSV audit repeated."
+    },
+    {
+      "case": "double_40",
+      "dx_m": 40,
+      "source_sha256": "664605eba7c19941915e1a1b1685365d8ffdb1e05d3ecfe027556a926ce74af7",
+      "old_zref": 1742.5532160898802,
+      "common_zref": 1738.176420404088,
+      "fixed_Copernicus_reference_input_energy": 8825015023.410414,
+      "gauge_invariant_dynamic_input_scale": 369688888.8888889,
+      "actual_common_gauge_input_energy": 8825015017.859823,
+      "R_final": 832747958.9058541,
+      "R_final_over_fixed_common_input": 0.09436221430748794,
+      "R_final_over_dynamic_input_scale": 2.25256420718703,
+      "R_final_over_recorded_drag_loss": 0.24473967289097343,
+      "postpulse_net_R_increment": 1101842527.8782132,
+      "postpulse_net_R_increment_over_fixed_input": 0.12485446483154063,
+      "postpulse_positive_step_R_increments_over_fixed_input": 0.12513054085813033,
+      "R_max_over_fixed_input": 0.09436221430748794,
+      "max_E_minus_cumulative_own_input": -184.8229804199782,
+      "any_E_above_cumulative_input": false,
+      "E_at_960": 7418593478.536694,
+      "max_E_gain_after_960_relative_to_960": -167932.0141429901,
+      "E_at_3600": 6255176257.362804,
+      "drag_loss_total": 3402586712.1135955,
+      "dry_clear_loss_total": 7.289277469557147,
+      "common_reference_R_invariance_max_error": 4.3272972106933594e-05,
+      "phases_linear_time_interpolation": {
+        "960": {
+          "R_at_end": -269094568.972359,
+          "R_increment_since_previous_phase": -269094568.972359,
+          "E_at_end": 7418593478.536694,
+          "E_change_since_previous_phase": 7418593478.536694
+        },
+        "1800": {
+          "R_at_end": -135945903.9450616,
+          "R_increment_since_previous_phase": 133148665.0272974,
+          "E_at_end": 6691276480.582384,
+          "E_change_since_previous_phase": -727316997.9543095
+        },
+        "3600": {
+          "R_at_end": 832747958.9058541,
+          "R_increment_since_previous_phase": 968693862.8509157,
+          "E_at_end": 6255176257.362804,
+          "E_change_since_previous_phase": -436100223.2195797
+        }
+      },
+      "caveat": "Residual is a defined discrete balance defect, not continuum error; ratios to total input depend on gauge. No mass/CSV audit repeated."
+    }
+  ],
+  "flow_envelopes": {
+    "copernicus_30": {
+      "0.0": {
+        "count": 377,
+        "bounds": [
+          346620.0,
+          3135000.0,
+          350640.0,
+          3135510.0
+        ]
+      },
+      "1e-12": {
+        "count": 376,
+        "bounds": [
+          346620.0,
+          3135000.0,
+          350640.0,
+          3135510.0
+        ]
+      },
+      "1e-08": {
+        "count": 373,
+        "bounds": [
+          346650.0,
+          3135000.0,
+          350640.0,
+          3135510.0
+        ]
+      },
+      "0.0001": {
+        "count": 364,
+        "bounds": [
+          346680.0,
+          3135000.0,
+          350640.0,
+          3135510.0
+        ]
+      },
+      "0.1": {
+        "count": 335,
+        "bounds": [
+          346770.0,
+          3135000.0,
+          350640.0,
+          3135510.0
+        ]
+      }
+    },
+    "copernicus_40": {
+      "0.0": {
+        "count": 219,
+        "bounds": [
+          346560.0,
+          3135000.0,
+          350640.0,
+          3135520.0
+        ]
+      },
+      "1e-12": {
+        "count": 219,
+        "bounds": [
+          346560.0,
+          3135000.0,
+          350640.0,
+          3135520.0
+        ]
+      },
+      "1e-08": {
+        "count": 218,
+        "bounds": [
+          346560.0,
+          3135000.0,
+          350640.0,
+          3135520.0
+        ]
+      },
+      "0.0001": {
+        "count": 209,
+        "bounds": [
+          346560.0,
+          3135000.0,
+          350640.0,
+          3135520.0
+        ]
+      },
+      "0.1": {
+        "count": 196,
+        "bounds": [
+          346600.0,
+          3135000.0,
+          350640.0,
+          3135520.0
+        ]
+      }
+    }
+  },
+  "nested_proposals": [
+    {
+      "parent_Hmax_cutoff_m": "0.0",
+      "buffer_m": 240.0,
+      "crop_bounds_utm": [
+        346320.0,
+        3134760.0,
+        350640.0,
+        3135840.0
+      ],
+      "area_fraction_of_parent": 0.05454545454545454,
+      "cells": {
+        "30": [
+          36,
+          144
+        ],
+        "20": [
+          54,
+          216
+        ],
+        "15": [
+          72,
+          288
+        ]
+      },
+      "rough_cost_ratio_to_full30_30": 0.05454545454545454,
+      "rough_cost_ratio_to_full30_20": 0.18409090909090908,
+      "rough_cost_ratio_to_full30_15": 0.43636363636363634,
+      "parent_port_line_y": 3129103.736725446,
+      "port_line_inside_crop": false,
+      "east_source_boundary_unchanged": true
+    },
+    {
+      "parent_Hmax_cutoff_m": "0.0",
+      "buffer_m": 480.0,
+      "crop_bounds_utm": [
+        346080.0,
+        3134520.0,
+        350640.0,
+        3136080.0
+      ],
+      "area_fraction_of_parent": 0.08316498316498316,
+      "cells": {
+        "30": [
+          52,
+          152
+        ],
+        "20": [
+          78,
+          228
+        ],
+        "15": [
+          104,
+          304
+        ]
+      },
+      "rough_cost_ratio_to_full30_30": 0.08316498316498316,
+      "rough_cost_ratio_to_full30_20": 0.2806818181818182,
+      "rough_cost_ratio_to_full30_15": 0.6653198653198653,
+      "parent_port_line_y": 3129103.736725446,
+      "port_line_inside_crop": false,
+      "east_source_boundary_unchanged": true
+    },
+    {
+      "parent_Hmax_cutoff_m": "1e-12",
+      "buffer_m": 240.0,
+      "crop_bounds_utm": [
+        346320.0,
+        3134760.0,
+        350640.0,
+        3135840.0
+      ],
+      "area_fraction_of_parent": 0.05454545454545454,
+      "cells": {
+        "30": [
+          36,
+          144
+        ],
+        "20": [
+          54,
+          216
+        ],
+        "15": [
+          72,
+          288
+        ]
+      },
+      "rough_cost_ratio_to_full30_30": 0.05454545454545454,
+      "rough_cost_ratio_to_full30_20": 0.18409090909090908,
+      "rough_cost_ratio_to_full30_15": 0.43636363636363634,
+      "parent_port_line_y": 3129103.736725446,
+      "port_line_inside_crop": false,
+      "east_source_boundary_unchanged": true
+    },
+    {
+      "parent_Hmax_cutoff_m": "1e-12",
+      "buffer_m": 480.0,
+      "crop_bounds_utm": [
+        346080.0,
+        3134520.0,
+        350640.0,
+        3136080.0
+      ],
+      "area_fraction_of_parent": 0.08316498316498316,
+      "cells": {
+        "30": [
+          52,
+          152
+        ],
+        "20": [
+          78,
+          228
+        ],
+        "15": [
+          104,
+          304
+        ]
+      },
+      "rough_cost_ratio_to_full30_30": 0.08316498316498316,
+      "rough_cost_ratio_to_full30_20": 0.2806818181818182,
+      "rough_cost_ratio_to_full30_15": 0.6653198653198653,
+      "parent_port_line_y": 3129103.736725446,
+      "port_line_inside_crop": false,
+      "east_source_boundary_unchanged": true
+    },
+    {
+      "parent_Hmax_cutoff_m": "1e-08",
+      "buffer_m": 240.0,
+      "crop_bounds_utm": [
+        346320.0,
+        3134760.0,
+        350640.0,
+        3135840.0
+      ],
+      "area_fraction_of_parent": 0.05454545454545454,
+      "cells": {
+        "30": [
+          36,
+          144
+        ],
+        "20": [
+          54,
+          216
+        ],
+        "15": [
+          72,
+          288
+        ]
+      },
+      "rough_cost_ratio_to_full30_30": 0.05454545454545454,
+      "rough_cost_ratio_to_full30_20": 0.18409090909090908,
+      "rough_cost_ratio_to_full30_15": 0.43636363636363634,
+      "parent_port_line_y": 3129103.736725446,
+      "port_line_inside_crop": false,
+      "east_source_boundary_unchanged": true
+    },
+    {
+      "parent_Hmax_cutoff_m": "1e-08",
+      "buffer_m": 480.0,
+      "crop_bounds_utm": [
+        346080.0,
+        3134520.0,
+        350640.0,
+        3136080.0
+      ],
+      "area_fraction_of_parent": 0.08316498316498316,
+      "cells": {
+        "30": [
+          52,
+          152
+        ],
+        "20": [
+          78,
+          228
+        ],
+        "15": [
+          104,
+          304
+        ]
+      },
+      "rough_cost_ratio_to_full30_30": 0.08316498316498316,
+      "rough_cost_ratio_to_full30_20": 0.2806818181818182,
+      "rough_cost_ratio_to_full30_15": 0.6653198653198653,
+      "parent_port_line_y": 3129103.736725446,
+      "port_line_inside_crop": false,
+      "east_source_boundary_unchanged": true
+    },
+    {
+      "parent_Hmax_cutoff_m": "0.0001",
+      "buffer_m": 240.0,
+      "crop_bounds_utm": [
+        346320.0,
+        3134760.0,
+        350640.0,
+        3135840.0
+      ],
+      "area_fraction_of_parent": 0.05454545454545454,
+      "cells": {
+        "30": [
+          36,
+          144
+        ],
+        "20": [
+          54,
+          216
+        ],
+        "15": [
+          72,
+          288
+        ]
+      },
+      "rough_cost_ratio_to_full30_30": 0.05454545454545454,
+      "rough_cost_ratio_to_full30_20": 0.18409090909090908,
+      "rough_cost_ratio_to_full30_15": 0.43636363636363634,
+      "parent_port_line_y": 3129103.736725446,
+      "port_line_inside_crop": false,
+      "east_source_boundary_unchanged": true
+    },
+    {
+      "parent_Hmax_cutoff_m": "0.0001",
+      "buffer_m": 480.0,
+      "crop_bounds_utm": [
+        346080.0,
+        3134520.0,
+        350640.0,
+        3136080.0
+      ],
+      "area_fraction_of_parent": 0.08316498316498316,
+      "cells": {
+        "30": [
+          52,
+          152
+        ],
+        "20": [
+          78,
+          228
+        ],
+        "15": [
+          104,
+          304
+        ]
+      },
+      "rough_cost_ratio_to_full30_30": 0.08316498316498316,
+      "rough_cost_ratio_to_full30_20": 0.2806818181818182,
+      "rough_cost_ratio_to_full30_15": 0.6653198653198653,
+      "parent_port_line_y": 3129103.736725446,
+      "port_line_inside_crop": false,
+      "east_source_boundary_unchanged": true
+    }
+  ],
+  "input_bindings": [
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_30/pilot_30.json",
+      "sha256": "eeb587375e2bfd50bad64f5f8b1691e93a17a6a50456dbf270626af79eb05303",
+      "bytes": 4082
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_30/pilot_30_budget.npz",
+      "sha256": "e9dff25a93115918a7d524f7f66b470996b3f8dec7de952262f893f588bbfd17",
+      "bytes": 2348951
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_30/pilot_30.npz",
+      "sha256": "8d19d17945dd709edcdece585cdcc69a9f5cd3eeeae8eeaaa6cd7bd5ca3ffb64",
+      "bytes": 1950357
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_30/ENTRY_FACE.json",
+      "sha256": "c3c9247fa000e544734f8790b8ee691c1ded89be6dd07b414ce61b7b4fe52da3",
+      "bytes": 5825
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_40/pilot_40.json",
+      "sha256": "1ff963b49be2575d88fee8cc548e62342cabb7664ffa495424ef7b7eccc62ce2",
+      "bytes": 4085
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_40/pilot_40_budget.npz",
+      "sha256": "a39c71ce6196a530d352afa7467babe714ab24431a5b89f791a2dc4a9d45a2f7",
+      "bytes": 1598505
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_40/pilot_40.npz",
+      "sha256": "b5f5530f34a23f46e85b1fb77ec8bcf2c8baefd7c95cb749a58df43ba62809af",
+      "bytes": 1135654
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_40/ENTRY_FACE.json",
+      "sha256": "1296a786afa0c86d8b1c4fa8ded76530dcf8e8ece207a496d7e199b3159e6c59",
+      "bytes": 5797
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/aster_40/pilot_40.json",
+      "sha256": "8f7c36298e475ddbaa14624564a71e67746673f6fb1b6c3dc3ffceed09789642",
+      "bytes": 4086
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/aster_40/pilot_40_budget.npz",
+      "sha256": "05998effb8f8250ec8c107e28d21bd229f40871de7a81ee352b9472b6a40d629",
+      "bytes": 1545144
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/aster_40/pilot_40.npz",
+      "sha256": "9e42a2ece190b59de9056af395f86eabd1307a063264981893e17181962dbeeb",
+      "bytes": 927684
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/aster_40/ENTRY_FACE.json",
+      "sha256": "dfa5c0262b0b94013d734207c000fcd60c04b3da866c78d6710482046a10e69c",
+      "bytes": 5792
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/double_40/pilot_40.json",
+      "sha256": "0787075a5fdd3b050f391c970fc03268a0883609747fb18823a91f5ed0d4263c",
+      "bytes": 4121
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/double_40/pilot_40_budget.npz",
+      "sha256": "072d14731692dbd6a0f9bd5b76165683fd8510c3aac295d368af7ff927888cfb",
+      "bytes": 1593881
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/double_40/pilot_40.npz",
+      "sha256": "a55bae821fa7cf680074ad68d57bfbe006d50eec1f1425e7dc0a22f8cc8fd227",
+      "bytes": 1139769
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/double_40/ENTRY_FACE.json",
+      "sha256": "1296a786afa0c86d8b1c4fa8ded76530dcf8e8ece207a496d7e199b3159e6c59",
+      "bytes": 5797
+    }
+  ]
+}

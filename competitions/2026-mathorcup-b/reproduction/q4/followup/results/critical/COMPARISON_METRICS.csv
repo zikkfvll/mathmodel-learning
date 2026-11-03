@@ -1,0 +1,9 @@
+seed,method,stratum,n,valid_n,unknown_n,TP,FN,FP,TN,disagreement_rate,arrival_miss_rate,RMSE_g,RMSE_raw_margin_m
+137,A_single_fill,new_global,0,0,0,0,0,0,0,,,,
+137,A_single_fill,real_critical_endpoints,4,4,0,2,0,2,0,0.5,0.0,1.7786721100425051,0.9520493390112398
+137,B_MF_fill,new_global,0,0,0,0,0,0,0,,,,
+137,B_MF_fill,real_critical_endpoints,4,4,0,2,0,2,0,0.5,0.0,2.104124910461249,1.796309798606069
+137,Bm_MF_count_matched,new_global,0,0,0,0,0,0,0,,,,
+137,Bm_MF_count_matched,real_critical_endpoints,4,4,0,2,0,1,1,0.25,0.0,1.0912578116503577,0.45808247258831863
+137,C_MF_active,new_global,0,0,0,0,0,0,0,,,,
+137,C_MF_active,real_critical_endpoints,4,4,0,2,0,2,0,0.5,0.0,0.8995448421559075,0.27561619461614423

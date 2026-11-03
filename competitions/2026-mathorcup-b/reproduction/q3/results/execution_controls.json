@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "ALG01_incomplete_support_unknown": true,
+    "ALG02_strict_tiny_width_primary": true,
+    "no_benefit_no_hit_category": true,
+    "closed_lower_and_upper": true,
+    "closed_interval_outside_excluded": true,
+    "nonhit_categories_not_future_hits": true,
+    "strong_hit": true,
+    "strong_hit_nonhit_no_time": true,
+    "near_hit": true,
+    "near_hit_nonhit_no_time": true,
+    "no_hit": true,
+    "no_hit_nonhit_no_time": true,
+    "initial": true,
+    "initial_nonhit_no_time": true,
+    "invalid_initial": true,
+    "invalid_initial_nonhit_no_time": true,
+    "nan_initial_rejected": true,
+    "tangent_not_no_hit": true
+  },
+  "all_passed": true,
+  "independent_review": "pending"
+}

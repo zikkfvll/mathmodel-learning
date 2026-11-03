@@ -1,0 +1,9 @@
+seed,method,stratum,n,valid_n,unknown_n,TP,FN,FP,TN,disagreement_rate,arrival_miss_rate,RMSE_g,MAE_g,RMSE_raw_margin_m,numerically_unresolved_n,true_arrival_n,time_proxy
+137,A_single_fill,global,16,16,0,4,0,3,9,0.1875,0.0,0.646570307279007,0.41802184873935566,1.5506395670353497,0,4,not_modelled; physical arrival brackets separately retained
+137,A_single_fill,development_predicted_boundary,8,8,0,0,0,2,6,0.25,,0.5422991110264704,0.3021013862161156,0.09923015937621864,0,0,not_modelled; physical arrival brackets separately retained
+137,B_MF_fill,global,16,16,0,4,0,2,10,0.125,0.0,0.7970563555528133,0.4028067343877615,1.7359014193414806,0,4,not_modelled; physical arrival brackets separately retained
+137,B_MF_fill,development_predicted_boundary,8,8,0,0,0,2,6,0.25,,1.0520275683601572,0.6042499819862946,0.3548922191353622,0,0,not_modelled; physical arrival brackets separately retained
+137,Bm_MF_count_matched,global,16,16,0,4,0,1,11,0.0625,0.0,0.30944820310990695,0.1897908126626132,0.5321099479359295,0,4,not_modelled; physical arrival brackets separately retained
+137,Bm_MF_count_matched,development_predicted_boundary,8,8,0,0,0,0,8,0.0,,0.24678200096409153,0.167759766472614,0.008403496025557435,0,0,not_modelled; physical arrival brackets separately retained
+137,C_MF_active,global,16,16,0,4,0,0,12,0.0,0.0,0.3041498841496452,0.1705492692628654,1.647855862374143,0,4,not_modelled; physical arrival brackets separately retained
+137,C_MF_active,development_predicted_boundary,8,8,0,0,0,0,8,0.0,,0.09733620987116366,0.07139723349594018,0.004802327854526875,0,0,not_modelled; physical arrival brackets separately retained

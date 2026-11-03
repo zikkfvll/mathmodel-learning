@@ -1,0 +1,20 @@
+{
+  "stopped_utc": "2026-10-30T10:35:50.749880+00:00",
+  "seeds": {
+    "137": "complete_four_reused",
+    "271": "complete_four",
+    "503": "partial_labels_no_complete_models"
+  },
+  "complete_models": 8,
+  "new_train_registered_queries": 48,
+  "new_train_H": 24,
+  "new_train_L": 24,
+  "three_seed_stability_completed": false,
+  "critical_primary_models": "pretruth_sealed137_four_only",
+  "new_global_truth_queries": 0,
+  "endpoint_L_queries": 0,
+  "full_half_cfl": "cancelled_for_deadline",
+  "full_training_status": "interrupted_after271_complete;503partial, not pass",
+  "separate503_cache_job_completed_queries": 11,
+  "note": "separate partial503 job may overlap later main-job503 coordinates; physical costs must retain both actual receipts, do not sum as unique model labels"
+}

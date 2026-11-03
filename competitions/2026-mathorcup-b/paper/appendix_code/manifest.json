@@ -1,0 +1,125 @@
+{
+  "team_id": "MCB2601474",
+  "track": "B",
+  "code_files": [
+    {
+      "path": "prepare/clean_all.py",
+      "sha256": "3c80ae3264190b182862d8b6833112ef71ab8a7e1ed1979d15e2661b4f7c5db3",
+      "bytes": 8014,
+      "lines": 140
+    },
+    {
+      "path": "prepare/clean_data.py",
+      "sha256": "bad8632d84e7566645cb38616d2b69c3c72544c8ea1b7b869342f3a45ac5b014",
+      "bytes": 26509,
+      "lines": 474
+    },
+    {
+      "path": "prepare/era5/download.py",
+      "sha256": "2f16fb959085f5d6ac9548a7857e34e2e090b62082608db186142f344aa164e6",
+      "bytes": 6318,
+      "lines": 128
+    },
+    {
+      "path": "prepare/netcdf_cleaning.py",
+      "sha256": "8a3441ef86688329509753ab803e294455e64abe0dd2e71a0b53cbb059066345",
+      "bytes": 12027,
+      "lines": 195
+    },
+    {
+      "path": "prepare/quality_diagnostics.py",
+      "sha256": "7ac8b609931075ba77b899666d76448a75dd42c21b5f4996f133a7dafb30b05c",
+      "bytes": 8345,
+      "lines": 174
+    },
+    {
+      "path": "prepare/quality_policy.py",
+      "sha256": "0325c9049383b821589e8a10ad6bf1ec7dec0cfb582ddd7cc203056c2424b062",
+      "bytes": 7528,
+      "lines": 147
+    },
+    {
+      "path": "prepare/raster_cleaning.py",
+      "sha256": "5bc6e240d62742e96bfdd31ec5cf1051084237505947e3834677b9b752896942",
+      "bytes": 22721,
+      "lines": 411
+    },
+    {
+      "path": "prepare/route.py",
+      "sha256": "16c07efe97797b952fe6297b6a801832af141b9e285f44e1239e55e61b75cc8e",
+      "bytes": 1082,
+      "lines": 36
+    },
+    {
+      "path": "prepare/vector_cleaning.py",
+      "sha256": "87ed0789bc42d67dd129a8c7e072f7a404c50128b64621944e7633e6686e0797",
+      "bytes": 28134,
+      "lines": 500
+    },
+    {
+      "path": "q1/draw.py",
+      "sha256": "1d48e6558b5e75b6ed26ef91c0d75df52183fe3ca848747bf3da50835a6a5002",
+      "bytes": 33384,
+      "lines": 492
+    },
+    {
+      "path": "q1/sol.py",
+      "sha256": "aa482377f3bf9e02016db9cb137fcec343f1cfd6b6e9be197499157bcb7dbbe3",
+      "bytes": 204847,
+      "lines": 3241
+    },
+    {
+      "path": "q2/draw.py",
+      "sha256": "fad3198ef67344d88287fbcbb854aeafcdec29d9baf3269cc190a31bbea68695",
+      "bytes": 16026,
+      "lines": 231
+    },
+    {
+      "path": "q2/sol.py",
+      "sha256": "01b1c73c9af1dc3ba405dbfaa079da747209fecc862d542cc3e8a285820ad9fc",
+      "bytes": 34345,
+      "lines": 554
+    },
+    {
+      "path": "q3/draw.py",
+      "sha256": "2d53cbe60add17528a9a5a6c955f3e5a7194f975eaea8df75c6f7c257cbca214",
+      "bytes": 58595,
+      "lines": 927
+    },
+    {
+      "path": "q3/sol.py",
+      "sha256": "7aed4d0b50d018811e4192005396d9b4fe88a5bef7136e180ec62d445617e509",
+      "bytes": 121932,
+      "lines": 2360
+    },
+    {
+      "path": "q4/base/code/draw.py",
+      "sha256": "3db7c17aa70c851655816cad97230fa7a7c6bfe8172da2f046eda599c7fd101f",
+      "bytes": 9438,
+      "lines": 164
+    },
+    {
+      "path": "q4/code/draw.py",
+      "sha256": "39db6f94d7c51431688da2b9d9de1eb9fca32232a9dd80a3a35619ae6edd3b1e",
+      "bytes": 2224,
+      "lines": 28
+    },
+    {
+      "path": "q4/code/sol.py",
+      "sha256": "764a6998686d9ee11fc5bab5edea65ed53b4aedeba7b8f6816ee8b308111c246",
+      "bytes": 149325,
+      "lines": 1868
+    },
+    {
+      "path": "q4/followup/code/draw.py",
+      "sha256": "72fab3c010b8a49a9238ac46c731fa93104a5de73319d233029fdd7201f0ff33",
+      "bytes": 3058,
+      "lines": 38
+    }
+  ],
+  "commands": {
+    "path": "软件与运行命令.txt",
+    "sha256": "8b48729ca70aef1a6f7ff7769d8c6c28563d9fd3b5513dd1d7547ef6f893da7b",
+    "bytes": 1840
+  }
+}

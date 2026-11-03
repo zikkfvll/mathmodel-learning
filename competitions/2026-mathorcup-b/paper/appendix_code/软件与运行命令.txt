@@ -1,0 +1,30 @@
+软件与运行命令
+
+Python 3.12。各问题依赖版本见对应requirements文件；数据准备另见prepare/requirements.txt。第四问C加速需要C99编译器。中文绘图需要可用的中文字体。以下命令在对应问题目录运行，输出目录须为新目录。
+
+问题一
+python -B sol.py --mode enhance --d1-csv data/d1_era5/era5_precipitation_hourly_2021_2026.csv --d0-cache results/d0_window_cache.json.gz --baseline-results results/baseline --output-dir new_run
+python -B draw.py --results-dir results --output-dir new_figures
+
+问题二
+python -B sol.py --output-dir new_results
+python -B draw.py --results-dir results --output-dir new_figures
+
+问题三
+python -B sol.py --data data --results results_new --workers 2
+python -B draw.py --results results --output figures_new
+
+问题四（以下从附件根目录运行）
+python -m pip install -r q4/requirements-lock.txt
+python -B q4/code/sol.py decide --out q4_run/new2 --inputs q4/data/local --backend c --volume 475682.8460010884 --mu .075 --gp-state q4/data/GP_STATE.json --cache-entry q4/data/cache/new2/CACHE_ENTRY.json --cache-only
+python -B q4/code/draw.py --root q4 --out q4_guard_figures
+python -B q4/followup/code/draw.py --root q4/followup --out q4_followup_figures
+python -B q4/base/code/draw.py --root q4/base --out q4_base_figures
+
+原始附件清理（在prepare目录内）
+python -B clean_all.py --input-root "官方附件目录" --output-dir "new_cleaned_all"
+python -B clean_data.py --input-root "官方附件目录" --output-dir "new_station_daily"
+python -B era5/download.py
+python -B route.py --output route_new.csv
+
+全清理需要使用者提供原始1—8附件，站点子入口只生成站点/日温结果；取数脚本缺原响应时会联网取得公开数据。主计算已带必要输入，通常不必重新取数或清理。

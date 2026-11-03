@@ -1,0 +1,7 @@
+regime,parameter,finite_step_count,total_step_count,derivative_min,derivative_max,relative_step_spread,identity
+strong,offset_m_s,3,3,-0.012514832220200667,-0.012514832133270204,6.946194856691073e-09,"step variation diagnostic, not a rigorous derivative error bound"
+strong,q0,3,3,1.4713081510131507,1.4713081716838383,1.4049189810721644e-08,"step variation diagnostic, not a rigorous derivative error bound"
+strong,chi_relative,3,3,-39.47395309781554,-39.469961674670756,0.00010112214715035613,"step variation diagnostic, not a rigorous derivative error bound"
+near,offset_m_s,3,3,-1.1335007589501345,-1.130301098982045,0.00282580967463954,"step variation diagnostic, not a rigorous derivative error bound"
+near,q0,2,3,124.3163281806403,124.37514327956478,0.00047299650912150564,"step variation diagnostic, not a rigorous derivative error bound"
+near,chi_relative,0,3,,,,"step variation diagnostic, not a rigorous derivative error bound"

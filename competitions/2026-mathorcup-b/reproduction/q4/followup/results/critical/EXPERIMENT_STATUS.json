@@ -1,0 +1,15 @@
+{
+  "methods": 4,
+  "seeds": [
+    137
+  ],
+  "new_global_coordinates": 16,
+  "new_global_points_actually_queried": 0,
+  "critical_potential_coordinates": 516,
+  "actual_critical_H": 14,
+  "actual_endpoint_H": 4,
+  "actual_endpoint_pairs": 0,
+  "historical24_used_as_new_test": false,
+  "test_returned_to_training": false,
+  "independent_review": "pending"
+}

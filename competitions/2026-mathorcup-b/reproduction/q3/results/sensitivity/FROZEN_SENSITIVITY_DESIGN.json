@@ -1,0 +1,100 @@
+{
+  "utc_before_queries": "2026-10-30T05:39:46.269563+00:00",
+  "design": {
+    "version": "Q3-SENSITIVITY-v4.0",
+    "q0_design": [
+      0.17,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.48,
+      0.49,
+      0.495,
+      0.5,
+      0.505,
+      0.51,
+      0.52,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75
+    ],
+    "offset_grid_count": 17,
+    "offset_support_m_s": [
+      -1.5,
+      1.5
+    ],
+    "conditions": {
+      "strong": 0.02,
+      "near": 0.0002265378784906
+    },
+    "chi_multipliers": [
+      0.9,
+      0.95,
+      0.99,
+      1.0,
+      1.01,
+      1.05,
+      1.1
+    ],
+    "chi_offset_design_m_s": [
+      -1.5,
+      0.0,
+      1.5
+    ],
+    "derivative_steps": {
+      "offset_m_s": [
+        0.0005,
+        0.001,
+        0.002
+      ],
+      "q0": [
+        1e-06,
+        1e-05,
+        0.0001
+      ],
+      "chi_relative": [
+        0.0001,
+        0.001,
+        0.01
+      ]
+    },
+    "support_halfwidths_m_s": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "probability_targets": [
+      0.9,
+      0.95,
+      0.99
+    ],
+    "families": [
+      "nominal_triangular",
+      "uniform_support",
+      "lower_mode_triangular"
+    ],
+    "q0_chi_identity": "unweighted mathematical design conditions, not empirical credible ranges or random parameters",
+    "scope": "fixed Q2 material/equations/threshold/time window; no new natural-event coverage or changed final candidates",
+    "state_rule": "finite tau only for hit; initial/unknown separate; no_hit never filled with horizon",
+    "certification_rule": "new support/target/initial/chi sensitivities do not inherit frozen final CP certificate"
+  },
+  "analysis_source_sha256": "716a14b09f8bf8cab467354e3915d0d083ca3cacc826b0836212e5bd67f78765",
+  "engine_source_sha256": "716a14b09f8bf8cab467354e3915d0d083ca3cacc826b0836212e5bd67f78765",
+  "engine_source_file": "q3_analysis.py",
+  "input_sha256": {
+    "q2_config.json": "e0bc172ab150e1347bc29ca970acba480eb6f09d38831b1976cbcb75a3772fa4",
+    "forcing.csv": "9a664e8f20b71750108c10f590d947151ddd66fa0b4688e77c1abd593c60ac09",
+    "frozen_validation.json": "d2adfdb233dcc60d1a9fbcec6cccca7c859d0b1be0b8bd3ae5cce1d061928f9d"
+  },
+  "core_baseline_sha256": {
+    "strong": "7e6d35ab9604988076dee21c1df958499d24537e4642c250a185dd7e84c15f4a",
+    "near": "a350fb80dd6d9a0bebce358c40503b12eeebc01cf3d53efaabe28af066bd5324"
+  },
+  "raw_scenario_draws": "none; fixed design grid, no Monte Carlo probability assigned",
+  "scientific_boundary": "certified main candidate endpoints/seed/n/material/threshold unchanged"
+}

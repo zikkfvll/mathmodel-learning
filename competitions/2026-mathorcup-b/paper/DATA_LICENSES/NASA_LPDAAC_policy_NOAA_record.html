@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44FQGBN8G1"></script>
+  <script>
+    globalThis.dataLayer = globalThis.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-44FQGBN8G1');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MODIS, Aster, VIIRS (NASA) Data Information, Citation, and Rights Policies | InPort</title>
+  <meta name="description" content="Data Distribution Policy:
+All LP DAAC current data and products acquired through the LP DAAC have no restrictions on reuse, sale, or redistribution.
+
+ASTE...">
+  
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/inport/images/inport-icon-32.png">
+  <link href="/inport/css/inport-rd.css?v=6.1.0"
+        rel="stylesheet">
+
+  
+  
+    <link rel="canonical" href="https://www.fisheries.noaa.gov/inport/item/59575"><link rel="stylesheet" href="/inport/css/slide-menu.css?v=6.1.0">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+        integrity="sha512-Zcn6bjR/8RZbLEpLIeOwNtzREBAJnUKESxces60Mpoj+2okopSAcSUIUOseddDm0cxnGQzxIR7vJgsLZbdLE3w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+  
+
+  
+  
+
+  
+    <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
+    <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA&pua=UA-23806328-1&yt=true&exts=aac,arc,arj,asf,asx,bin,flv,gif,gzip,hqx,jar,mp2,msp,phps,qt,qutm,mxd,ram,sea,sit,tar,torrent,tsv,wav,wpd,xml,z"></script>
+  
+</head>
+<body>
+
+<div id="slideMenuLayout">
+  <a href="#slideMenuLayout" id="slideMenuLink" class="menu-link" style="outline: 0;"><img src="/inport/images/icons/icon-slide-menu.png" width="14" height="12" alt="Slide Menu"></a>
+
+  <div id="slideMenu">
+    <div class="pure-menu pure-menu-open">
+      <span class="pure-menu-heading">Jump to Section...</span>
+      <ul>
+        <li>
+          <a class="scrollPage" href="#itemIdentification">Item Identification</a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="scrollPage" href="#catalogDetails">Catalog Details</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header>
+  <div class="system-notices">
+    <div class="fixed-page-fit">
+      
+      
+    </div>
+  </div>
+
+  <div class="fixed-page-fit fixed-header-style cf">
+    <div class="logo-bar">
+      <div class="left">
+        <a href="/inport/"><img
+            class="logo" src="/inport/images/inport-logo.png"
+            width="126" height="64" alt="InPort"
+            title="InPort - NMFS Enterprise Data Management Program"></a>
+      </div>
+      <div class="right">
+
+        <div class="mobile-header-icons">
+          
+          <a href="/inport/search"><img
+              class="mobile-header-icon"
+              src="/inport/images/icons/icon-nav-search.png" width="60" height="60" alt="Search"></a>
+          <a href="/inport/help"><img
+              class="mobile-header-icon"
+              src="/inport/images/icons/icon-nav-help.png" width="60" height="60" alt="Help"></a>
+          <span id="mobileNavToggle"><img
+              class="mobile-header-icon"
+              src="/inport/images/icons/icon-nav-hamburger.png" width="60" height="60" alt="Show/Hide Menu"></span>
+        </div>
+
+        <form class="header-search-form"
+              method="get" action="/inport/q">
+          <input type="text" class="field header-search-field"
+                 aria-label="Search the InPort Catalog"
+                 name="keywords" id="quickKeywords" placeholder="Enter Keywords / Cat ID...">
+          <input type="submit" class="button small-button" value="Search">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <nav class="fixed-page-fit fixed-header-style">
+    <div id="mobileNav" style="display: none;">
+      <ul>
+        
+        <li><a
+            href="/inport/login">Login</a></li>
+
+        
+        
+        <li>
+          <a href="/inport/organizations/nmfs">NMFS</a>
+        </li>
+
+        
+        
+        <li>
+          <a href="/inport/organizations/nos">NOS</a>
+        </li>
+
+        
+        
+        <li>
+          <a href="/inport/organizations/partners">Partners</a>
+        </li>
+
+        <li><a href="/inport/stats">Stats</a></li>
+        
+        
+        
+        <li><a
+            href="/inport/about">About InPort</a></li>
+        <li><a href="/inport/contact">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="nav" class="header-bar cf">
+      <ul class="sf-menu left">
+        
+        <li>
+          <a href="/inport/login">Login</a>
+        </li>
+        <li><span>Catalog</span>
+          <ul class="submenu">
+            
+            <li>
+              <a href="/inport/organizations/nmfs">NMFS</a>
+            </li>
+            
+            <li>
+              <a href="/inport/organizations/nos">NOS</a>
+            </li>
+            
+            <li>
+              <a href="/inport/organizations/partners">Partners</a>
+            </li>
+            <li><a href="/inport/organizations">All Organizations</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="/inport/search">Search</a></li>
+        <li><a href="/inport/stats">Stats</a></li>
+
+        
+
+        <li><a href="/inport/help">Help</a>
+          <ul class="submenu">
+            <li><a href="/inport/about">About InPort</a></li>
+            <li><a href="/inport/contact">Contact / Support / Training</a></li>
+            <li><a href="/inport/help">Help Guides</a></li>
+            <li><a href="/inport/help/xml-loader">InPort XML Loader</a></li>
+            <li><a href="/inport/help/components">Components</a></li>
+          </ul>
+        </li>
+
+        
+      </ul>
+
+      <div class="user-display right">
+        
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <main>
+    <div class="fixed-page-fit fixed-page-main">
+
+      
+  <header class="page-header">
+    
+
+    <div class="breadcrumbs">
+      
+        
+          <a href="/inport/item/37115"
+             class="icon icon-mprj">ORR Metadata Library</a> &gt;
+        
+          <a href="/inport/item/37257"
+             class="icon icon-prj">Assessment and Restoration Division</a> &gt;
+        
+          <a href="/inport/item/59505"
+             class="icon icon-prj">OSPO Satellite Analysis Branch</a> &gt;
+        
+          <a href="/inport/item/59507"
+             class="icon icon-ds">Imagery for Requested MPSR</a> &gt;
+        
+      
+      
+    </div>
+
+    <h1 class="force-break" style="margin-top: 2px;">MODIS, Aster, VIIRS (NASA) Data Information, Citation, and Rights Policies</h1>
+    <strong><span class="icon icon-doc">
+          <span>Document</span>
+          (<span>DOC</span>)</span></strong>&nbsp;
+    |&nbsp; <strong><span>Office of Response and Restoration</span>
+    (<span>ORR</span>)</strong><br>
+    <span title="The Globally Unique IDentifier (GUID) uniquely identifies InPort records in external systems. It is derived from the InPort namespace and the Catalog Item ID.">GUID: <span>gov.noaa.nmfs.inport:59575</span></span>&nbsp;
+    |&nbsp; Updated: <span>August 9, 2022</span>&nbsp;
+    
+    |&nbsp; <span>Published / External</span>&nbsp;
+    
+
+  </header>
+
+
+      
+  <div class="page-header-bar cf">
+    <ul class="page-header-options left">
+      
+      <li>
+        <span id="viewAsButton"><span class="icon icon-menu-arrow">View As</span></span>
+        <ul class="options-menu" id="viewAsMenu" style="display: none;">
+          
+          <li>
+            <a href="/inport/item/59575" title="View Catalog Item in Tabbed format"><span class="icon icon-tab">Tabbed View</span></a>
+          </li>
+          
+          <li><span class="menu-item"><strong>EXPORTS</strong></span></li>
+          <li><a href="/inport/item/59575/inport-xml" title="View the InPort XML format"><span class="icon icon-xml">InPort XML</span></a></li>
+          
+          
+          
+        </ul>
+      </li>
+      
+    
+    <li>
+      <a href="/inport/hierarchy?select=59575"><span class="icon icon-tree" title="View this Catalog Item within the Catalog Hierarchy">View in Hierarchy</span></a>
+    </li>
+    
+  
+    </ul>
+  </div>
+
+
+      <div class="col-1">
+
+        
+  
+
+
+        
+
+        
+
+        
+  <!-- Section: Item Identification -->
+  <div id="itemIdentification" class="section metadataSection">
+    <div class="section__header sh">
+  <h2 class="sh__main" id="headerItemIdentification">Item Identification</h2>
+  
+  
+  
+  
+  
+
+</div>
+    <div class="section__content">
+      
+  
+
+      <table class="name-value-table" aria-labelledby="headerItemIdentification">
+        <tr>
+  <th scope="col">
+    Title:
+  </th>
+  <td class="ellipsisize">MODIS, Aster, VIIRS (NASA) Data Information, Citation, and Rights Policies</td>
+</tr>
+        
+        
+        
+        
+          
+        
+        
+        
+          
+        
+        
+        
+          
+        
+        <tr>
+  <th scope="col">
+    Abstract:
+  </th>
+  <td class="small">
+    
+  <p>Data Distribution Policy:</p>
+  <p>All LP DAAC current data and products acquired through the LP DAAC have no restrictions on reuse, sale, or redistribution.</p>
+  <p>ASTER GDEM Version 3 (ASTGTM V003) was released on August, 5, 2019 and contains no redistribution requirements. The LP DAAC kindly requests that you properly cite the data in your research. Pre-populated citations for the product can be found on the DOI Landing Page for the product under the &quot;Citation&quot; section. Users are encouraged to use ASTER GDEM Version 3 going forward as ASTER GDEM Version 2 data are no longer available from the LP DAAC. </p>
+  <p>Previously ASTER GDEM Version 2 (ASTGTM V002) data required users to agree to only redistribute data products to individuals within their organization or project of intended use, or in response to disasters in support ofthe GEO Disaster Theme prior to downloading data. In addition, the following sentence was required to be included in publications that used the data: &quot;ASTER GDEM is a product of Japan’s Ministry of Economy, Trade, and Industry (METI) and NASA.&quot; Projects that are continuing to use ASTER GDEM Version 2 data are required to continue following these redistribution and citation requirements. &quot;  </p>
+  <p>Full text is linked in the notes.</p>
+  <p>Data Information and Policy:</p>
+  <p>NASA&#39;s Earth Science program was established to use the advanced technology of NASA to understand and protect our home planet by using our view from space to study the Earth system and improve prediction of Earth system change. To meet this challenge, NASA promotes the full and open sharing of all data with the research and applications communities, private industry, academia, and the general public. The greater the availability of the data, the more quickly and effectively the user communities can utilize the information to address basic Earth science questions and provide the basis for developing innovative practical applications to benefit the general public.</p>
+  <p>A common set of carefully crafted data exchange and access principles was created by the Japanese, European and U.S. International Earth Observing System (IEOS) partners during the 1990s and the early years of the 21st century. From these principles, NASA has adopted the following data policy (in this context the term &#39;data&#39; includes observation data, metadata, products, information, algorithms, including scientific source code, documentation, models, images, and research results). </p>
+  <p>Full text is linked in the notes.</p>
+  <p>Data Rights &amp; Related Issues:</p>
+  <p>In order to implement our data policy tenet that algorithms, including scientific source code, be included in the term data, and be shared fully and openly, the following alternate “Data Rights” clause was created by NASA to include in Cooperative Agreements and Contracts with data providers supported by NASA.</p>
+  <p>Full text is linked in the notes.</p>
+
+  </td>
+</tr>
+        
+        <tr>
+  <th scope="col">
+    Notes:
+  </th>
+  <td class="small">
+    
+  <p>Data Distribution Policy:</p>
+  <p>https://lpdaac.usgs.gov/data/data-citation-and-policies/</p>
+  <p>Data Information and Policy:</p>
+  <p>https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/</p>
+  <p>Data Rights &amp; Related Issues:</p>
+  <p>https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/data-rights-related-issues</p>
+
+  </td>
+</tr>
+        
+        
+        
+        
+        
+      </table>
+    </div>
+  </div><!-- .section Item Identification -->
+
+
+
+        <!-- Section: Keywords -->
+        
+
+        <!-- Section: Physical Location -->
+        
+
+        <!-- Section: Data Set -->
+        
+
+        <!-- Section: Document -->
+        
+
+        <!-- Section: Entity -->
+        
+
+        <!-- Section: Data Attributes -->
+        
+
+        <!-- Section: Procedure -->
+        
+
+        <!-- Section: Project -->
+        
+
+        <!-- Section: Publication Info -->
+        
+
+        <!-- Section: Support Roles -->
+        
+
+        <!-- Section: Extents -->
+        
+
+        <!-- Section: Spatial Info -->
+        
+
+        <!-- Section: Access Info -->
+        
+
+        <!-- Section: Distribution Info -->
+        
+
+        <!-- Section: Archive Info -->
+        
+
+        <!-- Section: URLs -->
+        
+
+        <!-- Section: Activity Log -->
+        
+
+        <!-- Section: Issues -->
+        
+
+        <!-- Section: Technical Environment -->
+        
+
+        <!-- Section: Data Quality -->
+        
+
+        <!-- Section: Data Management -->
+        
+
+        <!-- Section: Lineage -->
+        
+
+        <!-- Section: Acquisition Info -->
+        
+
+        <!-- Section: Acronyms -->
+        
+
+        <!-- Section: Glossary -->
+        
+
+        <!-- Section: FAQs -->
+        
+
+        <!-- Section: Child Items -->
+        
+
+        <!-- Section: Related Items -->
+        
+
+        <!-- Section: Catalog Details -->
+        <div id="catalogDetails" class="section">
+          <div class="section-header">
+  <h2 id="headerCatalogDetails">Catalog Details</h2>
+  
+  
+  
+  
+  
+
+</div>
+          
+  
+
+          
+  <table class="name-value-table" aria-labelledby="headerCatalogDetails">
+    <tr>
+  <th scope="col">
+    Catalog Item ID:
+  </th>
+  <td class="ellipsisize">59575</td>
+</tr>
+    <tr>
+  <th scope="col">
+    <span title="The Globally Unique IDentifier (GUID) uniquely identifies InPort records in external systems. It is derived from the InPort namespace and the Catalog Item ID.">GUID:</span>
+  </th>
+  <td class="ellipsisize">gov.noaa.nmfs.inport:59575</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Created By:
+  </th>
+  <td class="ellipsisize">Terrance Wang</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Created:
+  </th>
+  <td class="ellipsisize">2020-05-11 15:23+0000</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Last Modified By:
+  </th>
+  <td class="ellipsisize">SysAdmin InPortAdmin</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Last Modified:
+  </th>
+  <td class="ellipsisize">2022-08-09 17:11+0000</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Record Published:
+  </th>
+  <td class="ellipsisize">2020-05-12</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Owner Org:
+  </th>
+  <td class="ellipsisize">ORR</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Publication Status:
+  </th>
+  <td class="ellipsisize">Published Externally</td>
+</tr>
+    
+    <tr>
+  <th scope="col">
+    Do Not Publish?:
+  </th>
+  <td class="ellipsisize">N</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Last Review Date:
+  </th>
+  <td class="ellipsisize">2020-05-12</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Review Frequency:
+  </th>
+  <td class="ellipsisize">1 Year</td>
+</tr>
+    <tr>
+  <th scope="col">
+    Metadata Next Review Date:
+  </th>
+  <td class="ellipsisize">2021-05-12</td>
+</tr>
+  </table>
+  
+
+        </div><!-- .section Catalog Details -->
+
+        <!-- Empty Section Displays -->
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+      </div> <!-- .col-1 -->
+
+    </div>
+  </main>
+
+</div> <!-- #slideMenuLayout -->
+
+
+  <footer>
+    <div class="fixed-page-fit">
+      <nav>
+        <a href="/inport/about">About InPort</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/contact">Contact</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/release-notes">Release Notes</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/system-availability">System Availability</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/privacy">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/security">Security</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="/inport/pra">Paperwork Reduction Act</a>
+      </nav>
+      <div class="cf">
+        <div class="org-seals">
+          <ul>
+            <li><a href="https://www.fisheries.noaa.gov/national/commercial-fishing/fisheries-information-system-program" title="Fisheries Information System"
+                   rel="noopener" target="_blank"><img
+                src="/inport/images/fis-seal.png" width="52" height="53" alt="FIS"/></a></li>
+            <li><a href="https://www.fisheries.noaa.gov/" title="NOAA Fisheries"
+                   rel="noopener" target="_blank"><img
+                class="footerSeal" src="/inport/images/noaa-fisheries-seal.png"
+                width="52" height="53" alt="NOAA Fisheries"/></a></li>
+            <li><a href="https://www.noaa.gov/" title="National Oceanic &amp; Atmospheric Administration"
+                   rel="noopener" target="_blank"><img
+                class="footerSeal" src="/inport/images/noaa-seal.png"
+                width="52" height="53" alt="NOAA"/></a></li>
+            <li><a href="https://www.commerce.gov/" title="U.S. Department of Commerce"
+                   rel="noopener" target="_blank"><img
+                class="footerSeal" src="/inport/images/doc-seal.png"
+                width="52" height="53" alt="Department of Commerce"/></a></li>
+          </ul>
+        </div>
+        <div class="app-info">
+          <img src="/inport/images/inport-logo-footer.png" width="94" height="48" alt="InPort Logo">
+          <div class="release-info">
+            <strong class="x-small">Release 6.1.0</strong><br>
+            <span class="xx-small">Build FINAL (2026-10-29 18:36 UTC)</span>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .fixed-page-fit -->
+  </footer>
+
+  <!-- Script Includes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+          integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
+  <script src="/inport/js/inport.js?v=6.1.0"></script>
+
+
+
+  <script>
+  const viewAsMenu = $('#viewAsMenu').hide();
+   const itemMenu = $('#itemMenu').hide(); 
+   const rolesMenu = $('#rolesMenu').hide(); 
+
+  $(function() {
+    $('#viewAsButton').on('click', function() {
+       itemMenu.hide(); 
+      viewAsMenu.toggle();
+       rolesMenu.hide(); 
+      $(document).one('click', function() {
+        viewAsMenu.hide();
+      });
+      return false;
+    });
+
+    
+    $('#itemButton').on('click', function() {
+      itemMenu.toggle();
+      viewAsMenu.hide();
+       rolesMenu.hide(); 
+      $(document).one('click', function() {
+        itemMenu.hide();
+      });
+      return false;
+    });
+    
+
+    
+    $('#rolesButton').on('click', function() {
+       itemMenu.hide(); 
+      rolesMenu.toggle();
+      viewAsMenu.hide();
+      $(document).one('click', function() {
+        rolesMenu.hide();
+      });
+      return false;
+    });
+    
+  });
+</script>
+
+
+<script>
+  $(function() {
+    $('#slideMenuLink').on('click', function(e) {
+      e.preventDefault();
+      $('#slideMenuLayout').toggleClass('active');
+      $('#slideMenu').toggleClass('active');
+      $('#slideMenuLink').toggleClass('active');
+    });
+
+    $('.scrollPage').on('click', function() {
+      const elementClicked = $(this).attr('href');
+      const destination = $(elementClicked).offset().top;
+      $('html:not(:animated),body:not(:animated)').animate({ scrollTop: destination - 5 }, 500);
+      return false;
+    });
+
+    // Expand CRS links
+    $(document).on('click', '.crs-more-link', function() {
+      const $link = $(this);
+      $($link.data('contentId')).show();
+      $($link.data('moreRowId')).hide();
+      return false;
+    });
+  });
+</script>
+
+
+
+<script src="/inport/js/species.js?v=6.1.0"></script>
+
+</body>
+</html>

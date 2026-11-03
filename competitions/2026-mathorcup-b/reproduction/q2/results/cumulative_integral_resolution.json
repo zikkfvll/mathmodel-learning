@@ -1,0 +1,6 @@
+{
+  "reference_design_coarse_max_identity_residual": 1.9676581891614475e-09,
+  "reference_design_fine_max_identity_residual": 2.0160007274672154e-09,
+  "coarse_to_fine_max_residual_ratio": 0.976020574969483,
+  "identity_is_not_physics_validation": true
+}

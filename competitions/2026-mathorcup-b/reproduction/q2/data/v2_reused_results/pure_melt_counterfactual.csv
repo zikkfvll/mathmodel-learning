@@ -1,0 +1,5 @@
+hypothesis,raw_reported_basis,ice_fraction_condition,assumed_final_porosity,max_melt_water_per_rock_volume,water_needed_per_rock_volume,pore_filling_fraction_upper_bound,additional_water_per_rock_volume,identity
+constituent_volume_all_ice_melt_no_other_water,unknown,0.1,0.45999999999999996,0.10188888888888889,0.8518518518518517,0.11960869565217393,0.7499629629629628,necessary inventory test only; not a formation classifier
+constituent_volume_all_ice_melt_no_other_water,unknown,0.15,0.45999999999999996,0.16182352941176473,0.8518518518518517,0.18996675191815862,0.690028322440087,necessary inventory test only; not a formation classifier
+constituent_mass_all_ice_melt_no_other_water,unknown,0.1,0.45999999999999996,0.3,0.8518518518518517,0.3521739130434783,0.5518518518518518,necessary inventory test only; not a formation classifier
+constituent_mass_all_ice_melt_no_other_water,unknown,0.15,0.45999999999999996,0.47647058823529415,0.8518518518518517,0.5593350383631714,0.3753812636165576,necessary inventory test only; not a formation classifier

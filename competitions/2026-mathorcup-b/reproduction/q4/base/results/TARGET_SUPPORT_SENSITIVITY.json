@@ -1,0 +1,41 @@
+{
+  "source_field": "work/q4/execution_upgrade_20261030/base30_v30/pilot_30.npz",
+  "source_sha256": "a4ebe3ef63a960034d68815838b83e3c89884231d05447442a3dc97b304b41db",
+  "scope": "same stored v30 field, alternative cross-section support, snapshot-only lower-bound peak and first observed exceedance; not exact first-arrival bracket",
+  "nominal_snapshot_interval_s": 30,
+  "results": [
+    {
+      "target_x_m": 348660.0,
+      "tangent_interval_m": [
+        3134880,
+        3135600
+      ],
+      "snapshot_peak_h_lower_bound_m": 4.183393116166842,
+      "first_recorded_exceedance_time_s": 840.0114566799298,
+      "temporal_snapshot_count": 61,
+      "is_stepwise_arrival_time": false
+    },
+    {
+      "target_x_m": 348720.0,
+      "tangent_interval_m": [
+        3134880,
+        3135600
+      ],
+      "snapshot_peak_h_lower_bound_m": 10.019566749705518,
+      "first_recorded_exceedance_time_s": 750.0686336090744,
+      "temporal_snapshot_count": 61,
+      "is_stepwise_arrival_time": false
+    },
+    {
+      "target_x_m": 348780.0,
+      "tangent_interval_m": [
+        3134880,
+        3135600
+      ],
+      "snapshot_peak_h_lower_bound_m": 19.066476703509593,
+      "first_recorded_exceedance_time_s": 690.1067515618374,
+      "temporal_snapshot_count": 61,
+      "is_stepwise_arrival_time": false
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "calibration_reference": "digitization_fixed_inputs.json: first panel (Figure 3)",
+  "sensor_vertical_depth_cm": 67,
+  "head_error_cm": 4,
+  "reason": "same-depth early comparison to dense67; later loose67 trough/curve crossing deliberately not digitized",
+  "points": [
+    {
+      "pixel_x": 485,
+      "pixel_y_head": 916.5
+    },
+    {
+      "pixel_x": 603,
+      "pixel_y_head": 895
+    },
+    {
+      "pixel_x": 668,
+      "pixel_y_head": 834
+    },
+    {
+      "pixel_x": 734,
+      "pixel_y_head": 819
+    }
+  ]
+}

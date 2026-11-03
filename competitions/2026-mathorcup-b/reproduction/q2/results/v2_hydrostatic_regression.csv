@@ -1,0 +1,3 @@
+case_id,regime,source_case,source_regime,onset_difference_s,Gamma_hit_difference,pass
+V3_Q03,common_design,V2_01,design,0.0,0.0,True
+V3_Q03,common_comparison,V2_01,critical_upper_neighbor,0.0,0.0,True

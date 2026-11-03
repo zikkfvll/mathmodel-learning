@@ -1,0 +1,315 @@
+{
+  "scope": "offline diagnostics; no new PDE; four original cases plus half-CFL only after actual complete files",
+  "energy_gauge": {
+    "z0_m": 1738.176420404088,
+    "fixed_analytic_Copernicus_Ein_per_density": 8825015023.410414,
+    "unit": "m5/s2 (energy divided by density)",
+    "cross_product_datum": "ASTER vertical datum not established equal"
+  },
+  "energy_rows": [
+    {
+      "case": "copernicus_30",
+      "dx_m": 30,
+      "R_final": 188451693.9920721,
+      "R_over_fixed_input_pct": 2.1354263249655663,
+      "R_over_drag_pct": 6.789449497269021,
+      "R_960_over_fixed_input_pct": -2.035976769681292,
+      "post960_R_net_over_fixed_input_pct": 4.171403094646858,
+      "post960_positive_step_count_E": 0,
+      "post960_max_step_deltaE": -9767.545582771301,
+      "max_E_minus_own_cumulative_input": -57.537943680124954,
+      "E_final_common_gauge": 6237766423.310571,
+      "drag_loss": 2775654993.3521805,
+      "clear_loss": 45299.95882605914,
+      "Ein_common_gauge": 8825015022.629505,
+      "peak_h_m": 22.18048288323392,
+      "target_peak_h_m": 0.0,
+      "final_motion_state": "moving"
+    },
+    {
+      "case": "copernicus_40",
+      "dx_m": 40,
+      "R_final": 845515301.1731175,
+      "R_over_fixed_input_pct": 9.580893618086662,
+      "R_over_drag_pct": 24.7459485629129,
+      "R_960_over_fixed_input_pct": -3.289358358026794,
+      "post960_R_net_over_fixed_input_pct": 12.870251976113455,
+      "post960_positive_step_count_E": 0,
+      "post960_max_step_deltaE": -9417.70113658905,
+      "max_E_minus_own_cumulative_input": -96.09517710381624,
+      "E_final_common_gauge": 6252812764.341879,
+      "drag_loss": 3416782747.379921,
+      "clear_loss": 934811.4734848473,
+      "Ein_common_gauge": 8825015022.022167,
+      "peak_h_m": 23.570635441599972,
+      "target_peak_h_m": 0.0,
+      "final_motion_state": "moving"
+    },
+    {
+      "case": "aster_40",
+      "dx_m": 40,
+      "R_final": -37140724.25520795,
+      "R_over_fixed_input_pct": -0.42085734876012676,
+      "R_over_drag_pct": -3.0283547510132047,
+      "R_960_over_fixed_input_pct": -2.258601031228355,
+      "post960_R_net_over_fixed_input_pct": 1.8377436824682283,
+      "post960_positive_step_count_E": 0,
+      "post960_max_step_deltaE": -1788.4804611206055,
+      "max_E_minus_own_cumulative_input": -91.68292164105969,
+      "E_final_common_gauge": 7538356592.91723,
+      "drag_loss": 1226432413.2693396,
+      "clear_loss": 9087437.055632656,
+      "Ein_common_gauge": 8811017167.49741,
+      "peak_h_m": 29.088694727491337,
+      "target_peak_h_m": 0.0,
+      "final_motion_state": "moving"
+    },
+    {
+      "case": "double_40",
+      "dx_m": 40,
+      "R_final": 832747958.9058541,
+      "R_over_fixed_input_pct": 9.436221430748793,
+      "R_over_drag_pct": 24.47396728909734,
+      "R_960_over_fixed_input_pct": -3.0492250524052684,
+      "post960_R_net_over_fixed_input_pct": 12.485446483154062,
+      "post960_positive_step_count_E": 0,
+      "post960_max_step_deltaE": -9513.462691307068,
+      "max_E_minus_own_cumulative_input": -184.8229804199782,
+      "E_final_common_gauge": 6255176257.362804,
+      "drag_loss": 3402586712.1135955,
+      "clear_loss": 7.289277469557147,
+      "Ein_common_gauge": 8825015017.859823,
+      "peak_h_m": 23.68637402973814,
+      "target_peak_h_m": 0.0,
+      "final_motion_state": "moving"
+    }
+  ],
+  "storage_bins_utm": {
+    "A_contains_P30": [
+      346440.0,
+      3134880.0,
+      348240.0,
+      3135720.0
+    ],
+    "B_contains_P40": [
+      348240.0,
+      3134880.0,
+      349200.0,
+      3135720.0
+    ],
+    "C_upstream_contains_ASTER_peak": [
+      349200.0,
+      3134880.0,
+      350640.0,
+      3135720.0
+    ]
+  },
+  "storage_bins_note": "post-hoc finite rectangular partitions, not hydrological basins; boundaries multiples120m on same parent support",
+  "storage_rows": [
+    {
+      "case": "copernicus_30",
+      "total_final_m3": 799999.9999999991,
+      "A_contains_P30_m3": 419733.89177224145,
+      "B_contains_P40_m3": 262455.0449953171,
+      "C_upstream_contains_ASTER_peak_m3": 117811.06323244059,
+      "outside_bins_m3": 0.0
+    },
+    {
+      "case": "copernicus_40",
+      "total_final_m3": 800000.0000000006,
+      "A_contains_P30_m3": 407387.1186755621,
+      "B_contains_P40_m3": 279893.37545041315,
+      "C_upstream_contains_ASTER_peak_m3": 112719.50587402533,
+      "outside_bins_m3": 0.0
+    },
+    {
+      "case": "aster_40",
+      "total_final_m3": 800000.0000000012,
+      "A_contains_P30_m3": 0.0,
+      "B_contains_P40_m3": 0.0,
+      "C_upstream_contains_ASTER_peak_m3": 800000.0000000012,
+      "outside_bins_m3": 0.0
+    },
+    {
+      "case": "double_40",
+      "total_final_m3": 800000.0000000005,
+      "A_contains_P30_m3": 406695.8407637687,
+      "B_contains_P40_m3": 280439.3774853197,
+      "C_upstream_contains_ASTER_peak_m3": 112864.78175091196,
+      "outside_bins_m3": 0.0
+    }
+  ],
+  "half_CFL_status": {
+    "status": "cancelled_not_completed_not_evaluated",
+    "root_instruction": "2026-10-30 revised 18:40 user deadline; stop and do not wait for half-CFL",
+    "complete_named_files_present_when_reviewed": false,
+    "note": "No PDE launched by reviewer; no incomplete output used. This status is not a claim of successful completion or of verified process shutdown."
+  },
+  "v30_v31_physical_source_comparison": {
+    "selected_solver_functions_and_C_and_G_equal": true,
+    "old": {
+      "hll_pair": "584f788655cf05a65ce1b22f550634d299f1182f0aaa7dd77f17c86814e7a298",
+      "minmod3": "96377199bc8d84a5b7644cc193b9eab88b5792e831c999f3c5a9fbbee9935b42",
+      "muscl_faces": "2777a846117a40fc9f2b6ecbdd3ba3843dde37283fbccf269c5b07694c9ef097",
+      "exact_wall_pressure": "45e89cc4b712463a46b9765082446bd92b1f78526192a8231f59f64097af0404",
+      "triangle_cdf": "39f01203c5f5e93dd9ce465477cac5b486deec2c7abefc7c36dc64946028cc69",
+      "pulse_volume": "0ffd656576b391e340c4d922368ae5c6018291c551f96ec713b4faa0c7929e4a",
+      "euler_step": "4d44e9984b5ffe551513288335ef31146dca6a3778be4ab605b10108ba363675",
+      "step": "b0c7ac7aa417a80a14459850c20f4e408c730e795e81b3518f20290d88e44d3d",
+      "energy": "a3fbac09ebd7de41e0cf84f28fe6b2e7a3766b8f877a11822b2b91b2c20787a3",
+      "evolve": "b9a3967660b05d9f81222d8dd77cf403687458391d9c92032e12705f48afdd11",
+      "sample_terrain": "41567917d42b590a24b3dda196a5ec749ab5faa30990f3ff31efe3daabc007b4",
+      "pilot": "2e5625a9649e353874f775f05a8385997a50bbce635004b405b94f14de3324e1",
+      "G": "b5b626baa50457c2bfab6d6e22f453fadb814c83d75e1d3f58efe0f4810b36b0",
+      "SOURCE": "4e6abb3f6248dd927fbeabda2d2bce8f9c0b4ffda228b7d34e5dc131efe307c1"
+    },
+    "new": {
+      "hll_pair": "584f788655cf05a65ce1b22f550634d299f1182f0aaa7dd77f17c86814e7a298",
+      "minmod3": "96377199bc8d84a5b7644cc193b9eab88b5792e831c999f3c5a9fbbee9935b42",
+      "muscl_faces": "2777a846117a40fc9f2b6ecbdd3ba3843dde37283fbccf269c5b07694c9ef097",
+      "exact_wall_pressure": "45e89cc4b712463a46b9765082446bd92b1f78526192a8231f59f64097af0404",
+      "triangle_cdf": "39f01203c5f5e93dd9ce465477cac5b486deec2c7abefc7c36dc64946028cc69",
+      "pulse_volume": "0ffd656576b391e340c4d922368ae5c6018291c551f96ec713b4faa0c7929e4a",
+      "euler_step": "4d44e9984b5ffe551513288335ef31146dca6a3778be4ab605b10108ba363675",
+      "step": "b0c7ac7aa417a80a14459850c20f4e408c730e795e81b3518f20290d88e44d3d",
+      "energy": "a3fbac09ebd7de41e0cf84f28fe6b2e7a3766b8f877a11822b2b91b2c20787a3",
+      "evolve": "b9a3967660b05d9f81222d8dd77cf403687458391d9c92032e12705f48afdd11",
+      "sample_terrain": "41567917d42b590a24b3dda196a5ec749ab5faa30990f3ff31efe3daabc007b4",
+      "pilot": "2e5625a9649e353874f775f05a8385997a50bbce635004b405b94f14de3324e1",
+      "G": "b5b626baa50457c2bfab6d6e22f453fadb814c83d75e1d3f58efe0f4810b36b0",
+      "SOURCE": "4e6abb3f6248dd927fbeabda2d2bce8f9c0b4ffda228b7d34e5dc131efe307c1"
+    },
+    "cancelled_task_full_source": {
+      "path": "work/q4/followup_upgrade_20261030/full30_half_cfl/SOURCE_SNAPSHOT.py",
+      "sha256": "53e0a2f97a4da2c14d08233593ec254260dbabfaf5d09a6264fc76e977ff5824",
+      "bytes": 132063
+    }
+  },
+  "input_bindings": [
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_30/pilot_30.json",
+      "sha256": "eeb587375e2bfd50bad64f5f8b1691e93a17a6a50456dbf270626af79eb05303",
+      "bytes": 4082
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_30/pilot_30.npz",
+      "sha256": "8d19d17945dd709edcdece585cdcc69a9f5cd3eeeae8eeaaa6cd7bd5ca3ffb64",
+      "bytes": 1950357
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_30/pilot_30_budget.npz",
+      "sha256": "e9dff25a93115918a7d524f7f66b470996b3f8dec7de952262f893f588bbfd17",
+      "bytes": 2348951
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_30/ENTRY_FACE.json",
+      "sha256": "c3c9247fa000e544734f8790b8ee691c1ded89be6dd07b414ce61b7b4fe52da3",
+      "bytes": 5825
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_30/RUN_RECEIPT.json",
+      "sha256": "ac12c626dc505c3b8d88237306c6ee31dd27d9d03e842df0da84f3ae4572c594",
+      "bytes": 4236
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_30/SOURCE_SNAPSHOT.py",
+      "sha256": "664605eba7c19941915e1a1b1685365d8ffdb1e05d3ecfe027556a926ce74af7",
+      "bytes": 126654
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_40/pilot_40.json",
+      "sha256": "1ff963b49be2575d88fee8cc548e62342cabb7664ffa495424ef7b7eccc62ce2",
+      "bytes": 4085
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_40/pilot_40.npz",
+      "sha256": "b5f5530f34a23f46e85b1fb77ec8bcf2c8baefd7c95cb749a58df43ba62809af",
+      "bytes": 1135654
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_40/pilot_40_budget.npz",
+      "sha256": "a39c71ce6196a530d352afa7467babe714ab24431a5b89f791a2dc4a9d45a2f7",
+      "bytes": 1598505
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_40/ENTRY_FACE.json",
+      "sha256": "1296a786afa0c86d8b1c4fa8ded76530dcf8e8ece207a496d7e199b3159e6c59",
+      "bytes": 5797
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_40/RUN_RECEIPT.json",
+      "sha256": "520cf5a401c948c9db3574122e9a816567c0d44c5f5c685c5c4cec4d6cdb79ef",
+      "bytes": 4236
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/copernicus_40/SOURCE_SNAPSHOT.py",
+      "sha256": "664605eba7c19941915e1a1b1685365d8ffdb1e05d3ecfe027556a926ce74af7",
+      "bytes": 126654
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/aster_40/pilot_40.json",
+      "sha256": "8f7c36298e475ddbaa14624564a71e67746673f6fb1b6c3dc3ffceed09789642",
+      "bytes": 4086
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/aster_40/pilot_40.npz",
+      "sha256": "9e42a2ece190b59de9056af395f86eabd1307a063264981893e17181962dbeeb",
+      "bytes": 927684
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/aster_40/pilot_40_budget.npz",
+      "sha256": "05998effb8f8250ec8c107e28d21bd229f40871de7a81ee352b9472b6a40d629",
+      "bytes": 1545144
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/aster_40/ENTRY_FACE.json",
+      "sha256": "dfa5c0262b0b94013d734207c000fcd60c04b3da866c78d6710482046a10e69c",
+      "bytes": 5792
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/aster_40/RUN_RECEIPT.json",
+      "sha256": "df5fe545f6f26c49f74be0eb4dfd6d789e0179c377fb880becd87d8e8213d162",
+      "bytes": 4230
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/aster_40/SOURCE_SNAPSHOT.py",
+      "sha256": "664605eba7c19941915e1a1b1685365d8ffdb1e05d3ecfe027556a926ce74af7",
+      "bytes": 126654
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/double_40/pilot_40.json",
+      "sha256": "0787075a5fdd3b050f391c970fc03268a0883609747fb18823a91f5ed0d4263c",
+      "bytes": 4121
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/double_40/pilot_40.npz",
+      "sha256": "a55bae821fa7cf680074ad68d57bfbe006d50eec1f1425e7dc0a22f8cc8fd227",
+      "bytes": 1139769
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/double_40/pilot_40_budget.npz",
+      "sha256": "072d14731692dbd6a0f9bd5b76165683fd8510c3aac295d368af7ff927888cfb",
+      "bytes": 1593881
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/double_40/ENTRY_FACE.json",
+      "sha256": "1296a786afa0c86d8b1c4fa8ded76530dcf8e8ece207a496d7e199b3159e6c59",
+      "bytes": 5797
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/double_40/RUN_RECEIPT.json",
+      "sha256": "89dab726a36e61581f85f20e2c72c6b34341cd34dcd54b4672dde2833504a4d3",
+      "bytes": 4233
+    },
+    {
+      "path": "work/q4/execution_upgrade_20261030/full_v30/double_40/SOURCE_SNAPSHOT.py",
+      "sha256": "664605eba7c19941915e1a1b1685365d8ffdb1e05d3ecfe027556a926ce74af7",
+      "bytes": 126654
+    },
+    {
+      "path": "work/q4/followup_upgrade_20261030/full30_half_cfl/SOURCE_SNAPSHOT.py",
+      "sha256": "53e0a2f97a4da2c14d08233593ec254260dbabfaf5d09a6264fc76e977ff5824",
+      "bytes": 132063
+    }
+  ]
+}

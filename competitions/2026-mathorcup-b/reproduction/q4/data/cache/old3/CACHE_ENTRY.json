@@ -1,0 +1,274 @@
+{
+  "schema": "strict-physical-verification-cache-v1",
+  "request": {
+    "request_id": "6515b572383341885eac50e9bb55f834019cf8e98c6e88f880f103ddb1e0009b",
+    "config": {
+      "volume_m3": 672717.1322029716,
+      "duration_s": 960.0,
+      "mu": 0.08249999999999999,
+      "xi_m_s2": 500.0,
+      "speed_m_s": 30.0,
+      "entry_width_m": 30.0,
+      "shape": "triangle",
+      "terrain_name": "copernicus"
+    },
+    "numerics": {
+      "dx": 30.0,
+      "horizon": 1800.0,
+      "cfl": 0.35,
+      "dry": 0.0001,
+      "maxdt": 2.0,
+      "order": 2,
+      "backend": "c"
+    },
+    "inputs": [
+      {
+        "logical_id": "copernicus_support.npz",
+        "sha256": "df004dc549a6fc60a0093d916f7381da669c87d8a3a2efb91073b87a7051587d"
+      },
+      {
+        "logical_id": "aster_support.npz",
+        "sha256": "9ddbc2cc91afb48e647ea10894393fabbf8aeea62786df76aff09f571878f245"
+      },
+      {
+        "logical_id": "TERRAIN.json",
+        "sha256": "dde8572bdd83d6d1d827effb59e945e27fbdefb4932df74185f4eaadcca43486"
+      },
+      {
+        "logical_id": "mapped_path_utm.csv",
+        "sha256": "f18d194021c05d2cc66b0f4f3d76ab66b053460d86fb17c2aee787dc4a1526c0"
+      }
+    ],
+    "science": {
+      "sha256": "d33ff3b7f0f93ae152e5d87604ecd8ca271cbafaeb6e7398d53fc5b9bdd6c97a",
+      "details": {
+        "G": 9.81,
+        "functions": {
+          "hll_pair": "f81c3db44f910179a9b7e4c8bf8c1dde04140871dde591771f42886cf3e7418b",
+          "minmod3": "91a9d5e907f75158b37f2327bb04886c5dfa5767ee3cb96af7aa2c37145b438e",
+          "muscl_faces": "103c943a15b48e22bf98ad8fc24d74b4769b2fb1a53308a05139106925192974",
+          "exact_wall_pressure": "8d9850ba8fa5e26929d5589b5930fe25486d5f531425cf7b4ba73cda47aa306e",
+          "triangle_cdf": "9cfd65cdb2ee21994483eddafde391f5323df0539442a493486056c08554ba84",
+          "pulse_volume": "56e4ec664fbfa46edb35ea97f3e5b4a13367d75e56f5361ce143a5e7bf3cbe84",
+          "euler_step": "12793fd1b23abfbb122daf4238fa7472049b131564f9da2171c2983fac687bbf",
+          "step": "c294b89f9a27b69cda0b1bf7184f28a0a93feffd97e5f278c3689a9feca695af",
+          "energy": "45c091909811e2250511c4086937fb70bf9ce868cb2c379ad7c0a43464056a72",
+          "evolve": "c1d45cc09e985122dec0b30ee5cc31dd7c17114472f9f0f6852cc27726e3957d",
+          "sample_terrain": "3861f4600e7a61db1f7184d2729f90ad2c736aba3d32f6523ec744fb63e442fe",
+          "pilot": "5cc249c7414021c30fc5ee43d25894d41acf81d15a7386f14b95c910ce618809"
+        },
+        "C_source_sha256": "2fa9a17b9638988294c55b5225d1fca0ac1010b50963b99b2551b45d9d8200c5"
+      }
+    },
+    "target": {
+      "axis": "x",
+      "coordinate_m": 348720,
+      "tangent_interval_m": [
+        3134880,
+        3135600
+      ],
+      "criterion": "instantaneous max vertical event depth >= threshold on fixed interpolated line",
+      "threshold_m": 0.1,
+      "horizon_s": 1800.0,
+      "full_reach": false
+    }
+  },
+  "source_certificate": {
+    "source": {
+      "path": "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/reports/q4/followup_upgrade_20261030/source_v2/q4_analysis.py",
+      "bytes": 145009,
+      "sha256": "4608465706cabc3064526f8f438b40112a089431d7e13ecb3971ecc674606c80"
+    },
+    "science": {
+      "sha256": "d33ff3b7f0f93ae152e5d87604ecd8ca271cbafaeb6e7398d53fc5b9bdd6c97a",
+      "details": {
+        "G": 9.81,
+        "functions": {
+          "hll_pair": "f81c3db44f910179a9b7e4c8bf8c1dde04140871dde591771f42886cf3e7418b",
+          "minmod3": "91a9d5e907f75158b37f2327bb04886c5dfa5767ee3cb96af7aa2c37145b438e",
+          "muscl_faces": "103c943a15b48e22bf98ad8fc24d74b4769b2fb1a53308a05139106925192974",
+          "exact_wall_pressure": "8d9850ba8fa5e26929d5589b5930fe25486d5f531425cf7b4ba73cda47aa306e",
+          "triangle_cdf": "9cfd65cdb2ee21994483eddafde391f5323df0539442a493486056c08554ba84",
+          "pulse_volume": "56e4ec664fbfa46edb35ea97f3e5b4a13367d75e56f5361ce143a5e7bf3cbe84",
+          "euler_step": "12793fd1b23abfbb122daf4238fa7472049b131564f9da2171c2983fac687bbf",
+          "step": "c294b89f9a27b69cda0b1bf7184f28a0a93feffd97e5f278c3689a9feca695af",
+          "energy": "45c091909811e2250511c4086937fb70bf9ce868cb2c379ad7c0a43464056a72",
+          "evolve": "c1d45cc09e985122dec0b30ee5cc31dd7c17114472f9f0f6852cc27726e3957d",
+          "sample_terrain": "3861f4600e7a61db1f7184d2729f90ad2c736aba3d32f6523ec744fb63e442fe",
+          "pilot": "5cc249c7414021c30fc5ee43d25894d41acf81d15a7386f14b95c910ce618809"
+        },
+        "C_source_sha256": "2fa9a17b9638988294c55b5225d1fca0ac1010b50963b99b2551b45d9d8200c5"
+      }
+    },
+    "binding_source": {
+      "path": "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/reports/q4/decision_guard_20261030/source_v4/q4_analysis.py",
+      "bytes": 155156,
+      "sha256": "b056fa8f14ca4bde64dc73308406e907df715537a97a9266ba7ad6c161f3f79f"
+    }
+  },
+  "result": {
+    "package_path": "evidence/pilot_30.json",
+    "sha256": "09f0d79546b6b632b599f0d14bf954719cc7337885f568c52aaead0dcf7bbf37"
+  },
+  "receipt": {
+    "package_path": "evidence/RUN_RECEIPT.json",
+    "sha256": "03daf475a19ec5aecc88ad6d43454dd3a00f3925f53a648fc503c7ed0a131f04"
+  },
+  "bound_physical_status": "valid_no_arrival_by_horizon",
+  "identity_derivation": {
+    "kind": "comment_docstring_cleanup_equivalent_science",
+    "original_entry": {
+      "package_path": "ORIGINAL_CACHE_ENTRY.json",
+      "sha256": "dea518d78231ac88f4578f8ac82d17446e39dfd36db62839be757dc107e838bb"
+    },
+    "original_source_certificate": {
+      "source": {
+        "path": "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/reports/q4/followup_upgrade_20261030/source_v2/q4_analysis.py",
+        "bytes": 145009,
+        "sha256": "4608465706cabc3064526f8f438b40112a089431d7e13ecb3971ecc674606c80"
+      },
+      "science": {
+        "sha256": "c39c5b77c22fa2defb903148026f06ea23374901f3b72e3515d1a6687eb3e4e5",
+        "details": {
+          "G": 9.81,
+          "functions": {
+            "hll_pair": "f96e7fde138e9467357d3eb059146cf9745e11bd97975b7cf5bb40f17f26ad32",
+            "minmod3": "91a9d5e907f75158b37f2327bb04886c5dfa5767ee3cb96af7aa2c37145b438e",
+            "muscl_faces": "103c943a15b48e22bf98ad8fc24d74b4769b2fb1a53308a05139106925192974",
+            "exact_wall_pressure": "02c0c80d8e4255187ce72866b70e7992af5a0f1088826167451dba1b567a1cb9",
+            "triangle_cdf": "9cfd65cdb2ee21994483eddafde391f5323df0539442a493486056c08554ba84",
+            "pulse_volume": "56e4ec664fbfa46edb35ea97f3e5b4a13367d75e56f5361ce143a5e7bf3cbe84",
+            "euler_step": "12793fd1b23abfbb122daf4238fa7472049b131564f9da2171c2983fac687bbf",
+            "step": "c294b89f9a27b69cda0b1bf7184f28a0a93feffd97e5f278c3689a9feca695af",
+            "energy": "45c091909811e2250511c4086937fb70bf9ce868cb2c379ad7c0a43464056a72",
+            "evolve": "c1d45cc09e985122dec0b30ee5cc31dd7c17114472f9f0f6852cc27726e3957d",
+            "sample_terrain": "3861f4600e7a61db1f7184d2729f90ad2c736aba3d32f6523ec744fb63e442fe",
+            "pilot": "5cc249c7414021c30fc5ee43d25894d41acf81d15a7386f14b95c910ce618809"
+          },
+          "C_source_sha256": "2fa9a17b9638988294c55b5225d1fca0ac1010b50963b99b2551b45d9d8200c5"
+        }
+      },
+      "binding_source": {
+        "path": "/Users/USER/大学/竞赛/数学建模/2026 MathorCup 大数据/reports/q4/decision_guard_20261030/source_v4/q4_analysis.py",
+        "bytes": 155156,
+        "sha256": "b056fa8f14ca4bde64dc73308406e907df715537a97a9266ba7ad6c161f3f79f"
+      }
+    },
+    "original_request_id": "f7ae96d6a36c6c75a5085121b9ec8dde07062878b4668fe60f8e8e0526f3f721",
+    "original_science": {
+      "sha256": "c39c5b77c22fa2defb903148026f06ea23374901f3b72e3515d1a6687eb3e4e5",
+      "details": {
+        "G": 9.81,
+        "functions": {
+          "hll_pair": "f96e7fde138e9467357d3eb059146cf9745e11bd97975b7cf5bb40f17f26ad32",
+          "minmod3": "91a9d5e907f75158b37f2327bb04886c5dfa5767ee3cb96af7aa2c37145b438e",
+          "muscl_faces": "103c943a15b48e22bf98ad8fc24d74b4769b2fb1a53308a05139106925192974",
+          "exact_wall_pressure": "02c0c80d8e4255187ce72866b70e7992af5a0f1088826167451dba1b567a1cb9",
+          "triangle_cdf": "9cfd65cdb2ee21994483eddafde391f5323df0539442a493486056c08554ba84",
+          "pulse_volume": "56e4ec664fbfa46edb35ea97f3e5b4a13367d75e56f5361ce143a5e7bf3cbe84",
+          "euler_step": "12793fd1b23abfbb122daf4238fa7472049b131564f9da2171c2983fac687bbf",
+          "step": "c294b89f9a27b69cda0b1bf7184f28a0a93feffd97e5f278c3689a9feca695af",
+          "energy": "45c091909811e2250511c4086937fb70bf9ce868cb2c379ad7c0a43464056a72",
+          "evolve": "c1d45cc09e985122dec0b30ee5cc31dd7c17114472f9f0f6852cc27726e3957d",
+          "sample_terrain": "3861f4600e7a61db1f7184d2729f90ad2c736aba3d32f6523ec744fb63e442fe",
+          "pilot": "5cc249c7414021c30fc5ee43d25894d41acf81d15a7386f14b95c910ce618809"
+        },
+        "C_source_sha256": "2fa9a17b9638988294c55b5225d1fca0ac1010b50963b99b2551b45d9d8200c5"
+      }
+    },
+    "canonical_guard_source_sha256": "b056fa8f14ca4bde64dc73308406e907df715537a97a9266ba7ad6c161f3f79f",
+    "cleaned_submission_source_sha256": "764a6998686d9ee11fc5bab5edea65ed53b4aedeba7b8f6816ee8b308111c246",
+    "scientific_function_checks": [
+      {
+        "name": "hll_pair",
+        "normalized_AST_sha256": "f81c3db44f910179a9b7e4c8bf8c1dde04140871dde591771f42886cf3e7418b",
+        "equal": true
+      },
+      {
+        "name": "minmod3",
+        "normalized_AST_sha256": "91a9d5e907f75158b37f2327bb04886c5dfa5767ee3cb96af7aa2c37145b438e",
+        "equal": true
+      },
+      {
+        "name": "muscl_faces",
+        "normalized_AST_sha256": "103c943a15b48e22bf98ad8fc24d74b4769b2fb1a53308a05139106925192974",
+        "equal": true
+      },
+      {
+        "name": "exact_wall_pressure",
+        "normalized_AST_sha256": "8d9850ba8fa5e26929d5589b5930fe25486d5f531425cf7b4ba73cda47aa306e",
+        "equal": true
+      },
+      {
+        "name": "triangle_cdf",
+        "normalized_AST_sha256": "9cfd65cdb2ee21994483eddafde391f5323df0539442a493486056c08554ba84",
+        "equal": true
+      },
+      {
+        "name": "pulse_volume",
+        "normalized_AST_sha256": "56e4ec664fbfa46edb35ea97f3e5b4a13367d75e56f5361ce143a5e7bf3cbe84",
+        "equal": true
+      },
+      {
+        "name": "euler_step",
+        "normalized_AST_sha256": "12793fd1b23abfbb122daf4238fa7472049b131564f9da2171c2983fac687bbf",
+        "equal": true
+      },
+      {
+        "name": "step",
+        "normalized_AST_sha256": "c294b89f9a27b69cda0b1bf7184f28a0a93feffd97e5f278c3689a9feca695af",
+        "equal": true
+      },
+      {
+        "name": "energy",
+        "normalized_AST_sha256": "45c091909811e2250511c4086937fb70bf9ce868cb2c379ad7c0a43464056a72",
+        "equal": true
+      },
+      {
+        "name": "evolve",
+        "normalized_AST_sha256": "c1d45cc09e985122dec0b30ee5cc31dd7c17114472f9f0f6852cc27726e3957d",
+        "equal": true
+      },
+      {
+        "name": "sample_terrain",
+        "normalized_AST_sha256": "3861f4600e7a61db1f7184d2729f90ad2c736aba3d32f6523ec744fb63e442fe",
+        "equal": true
+      },
+      {
+        "name": "pilot",
+        "normalized_AST_sha256": "5cc249c7414021c30fc5ee43d25894d41acf81d15a7386f14b95c910ce618809",
+        "equal": true
+      }
+    ],
+    "C_source_sha256": "2fa9a17b9638988294c55b5225d1fca0ac1010b50963b99b2551b45d9d8200c5",
+    "guard_checks": [
+      {
+        "name": "decision_request",
+        "normalized_AST_equal": true
+      },
+      {
+        "name": "physical_evidence_check",
+        "normalized_AST_equal": true
+      },
+      {
+        "name": "bind_decision_cache",
+        "normalized_AST_equal": true
+      },
+      {
+        "name": "load_decision_cache",
+        "normalized_AST_equal": true
+      },
+      {
+        "name": "run_decision",
+        "normalized_AST_equal": true
+      }
+    ],
+    "changed_original_fields": [
+      "request.science",
+      "request.request_id",
+      "source_certificate.science"
+    ],
+    "source_receipt_and_result_bytes_unchanged": true,
+    "original_PDE_executed_by_cleaned_source": false
+  }
+}

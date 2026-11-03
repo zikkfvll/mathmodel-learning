@@ -1,0 +1,19 @@
+attribute,definition,unit_or_domain,status
+Time(s),"Elapsed time, in seconds, since the beginning of experiment.",time in seconds,metadata_only_payload_not_obtained
+Thickness_2.5m(m),"Flow thickness, measured normal to the flume bed at a position 2.5 meters downslope from the foot of the flume headgate.",Thickness in meters,metadata_only_payload_not_obtained
+Nstress_-2.9m(kPa),Normal stress at the bed of the flume measured 2.9 meters upslope from the foot of the flume headgate.,Normal stress in kilopascals,metadata_only_payload_not_obtained
+Sstress_-2.3m(kPa),Shear stress at the bed of the flume measured 2.3 meters upslope from the foot of the flume headgate.,Shear stress in kilopascals,metadata_only_payload_not_obtained
+PPa_-2.9m(kPa),"Pore pressure at the bed of the flume, measured by one of four sensors positioned 2.9 m upslope from the foot of the flume headgate.",Pore pressure in kilopascals,metadata_only_payload_not_obtained
+PPb_-2.9m(kPa),"Pore pressure at the bed of the flume, measured by one of four sensors positioned 2.9 meters upslope from the foot of the flume headgate.",Pore pressure in kilopascals,metadata_only_payload_not_obtained
+PPc_-2.9m(kPa),"Pore pressure at the bed of the flume, measured by one of four sensors positioned 2.9 meters upslope from the foot of the flume headgate.",Pore pressure in kilopascals,metadata_only_payload_not_obtained
+PPd_-2.9m(kPa),"Pore pressure at the bed of the flume, measured by one of four sensors positioned 2.9 meters upslope from the foot of the flume headgate.",Pore pressure in kilopascals,metadata_only_payload_not_obtained
+PP_98DD(kPa),Pore pressure within the sediment prizm.,Pore pressure in kilopascals,metadata_only_payload_not_obtained
+PP_98CC(kPa),Pore pressure within the sediment prizm.,Pore pressure in kilopascals,metadata_only_payload_not_obtained
+PP_98E(kPa),Pore pressure within the sediment prizm.,Pore pressure in kilopascals,metadata_only_payload_not_obtained
+PP_98H(kPa),Pore pressure within the sediment prizm.,Pore pressure in kilopascals,metadata_only_payload_not_obtained
+PP_98F(kPa),Pore pressure within the sediment prizm.,Pore pressure in kilopascals,metadata_only_payload_not_obtained
+PP_98U(kPa),Pore pressure within the sediment prizm.,Pore pressure in kilopascals,metadata_only_payload_not_obtained
+PP_98KK(kPa),Pore pressure within the sediment prizm.,Pore pressure in kilopascals,metadata_only_payload_not_obtained
+PP_98D(kPa),Pore pressure within the sediment prizm.,Pore pressure in kilopascals,metadata_only_payload_not_obtained
+Thickness_-2.3m(m),"Flow thickness, measured normal to the flume bed at a position 2.3 meters upslope from the foot of the flume headgate.",Thickness in meters,metadata_only_payload_not_obtained
+N/A,Camera 1 and camera 2 folders contain corresponding images from different vantage points at the same time frame,N/A,metadata_only_payload_not_obtained

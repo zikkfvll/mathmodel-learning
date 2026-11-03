@@ -1,0 +1,14 @@
+﻿id,label,old_rank_min,enhanced_rank_min,common_old_only_rank_min,S_old,S_enhanced,score_exact_unchanged,change_reason
+rh2_mean,2 m相对湿度窗口均值,1,2,1,0.8693548387096774,0.8693548387096774,True,candidate addition only; marginal definition and own historical support unchanged
+t20_t2_diff,20 m−2 m同小时气温差窗口均值,2,3,2,0.8540322580645161,0.8540322580645161,True,candidate addition only; marginal definition and own historical support unchanged
+ws10_mean,10 m风速窗口均值,3,4,3,0.8516129032258064,0.8516129032258064,True,candidate addition only; marginal definition and own historical support unchanged
+warm_rate,截止对齐24 h块均温变化率,4,6,4,0.6854838709677419,0.6854838709677419,True,candidate addition only; marginal definition and own historical support unchanged
+ws20_ws2_diff,20 m−2 m同小时标量风速差窗口均值,5,7,5,0.6780867630700779,0.6780867630700779,True,candidate addition only; marginal definition and own historical support unchanged
+pdd,站点正温指数,6,9,6,0.6080645161290322,0.6080645161290322,True,candidate addition only; marginal definition and own historical support unchanged
+rsd_mean,Rsd原符号短波辐射通道窗口均值,7,10,7,0.5767059553349876,0.5767059553349876,True,candidate addition only; marginal definition and own historical support unchanged
+vwc01,0.1 m体积含水量窗口均值,8,11,8,0.5314516129032258,0.5314516129032258,True,candidate addition only; marginal definition and own historical support unchanged
+soilt01,0.1 m土温窗口均值,9,12,9,0.3879032258064516,0.3879032258064516,True,candidate addition only; marginal definition and own historical support unchanged
+t2_max,2 m小时均温最大值（日最高的条件代理）,10,13,10,0.3040322580645161,0.3040322580645161,True,candidate addition only; marginal definition and own historical support unchanged
+rld_mean,Rld原符号长波辐射通道窗口均值,11,14,11,0.3015508684863524,0.3015508684863524,True,candidate addition only; marginal definition and own historical support unchanged
+g01,0.1 m土壤热流原通道窗口均值,12,16,12,0.2244106699751861,0.2244106699751861,True,candidate addition only; marginal definition and own historical support unchanged
+p_mean,近地面气压窗口均值,13,17,13,0.0543424317617866,0.0543424317617866,True,candidate addition only; marginal definition and own historical support unchanged

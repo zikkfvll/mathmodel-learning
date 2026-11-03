@@ -1,0 +1,8 @@
+# 最终论文版本记录
+
+- main.tex：b4271fbc11556437b7d09484aee678765c5521fa21670028d9b0a2468635cdfe
+- main.pdf：8d31d755ac34e72791fbc606e8cfb91ac0bf1db54ffb0bc6bb8593fc9dee4c37
+- paper.md：305f472808b260df6b33aeba239de37b9923186457a3ca5c1516753c06b3fa6d
+- paper_text.md：b61e568abb96e1b30c0e0c177d62750ea23f6532c228e35cb9b2272d29c5cd9f
+
+PDF共313页，摘要、目录、正文、参考文献及文后声明合计30页，完整附录283页。摘要及正文已按最新要求清理状态性措辞；两份Markdown已清理排版指令残留。28公式、14表、19源码及用户路线图保持对应版本，未重算结果。

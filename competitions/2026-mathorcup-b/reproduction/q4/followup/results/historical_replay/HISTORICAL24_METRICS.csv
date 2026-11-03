@@ -1,0 +1,17 @@
+evaluation_role,seed,method,stratum,n,valid_n,unknown_n,TP,FN,FP,TN,disagreement_rate,arrival_miss_rate,RMSE_g,MAE_g,RMSE_raw_margin_m,true_arrival_n
+descriptive_historical24_replay_not_new_blind_test,137,A_single_fill,global,16,16,0,4,0,3,9,0.1875,0.0,0.646570307279007,0.41802184873935566,1.5506395670353494,4
+descriptive_historical24_replay_not_new_blind_test,137,A_single_fill,development_predicted_boundary,8,8,0,0,0,2,6,0.25,,0.5422991110264704,0.3021013862161156,0.09923015937621864,0
+descriptive_historical24_replay_not_new_blind_test,137,B_MF_fill,global,16,16,0,4,0,2,10,0.125,0.0,0.7970563555528121,0.4028067343877606,1.7359014193414861,4
+descriptive_historical24_replay_not_new_blind_test,137,B_MF_fill,development_predicted_boundary,8,8,0,0,0,2,6,0.25,,1.0520275683601565,0.6042499819862965,0.3548922191353612,0
+descriptive_historical24_replay_not_new_blind_test,137,Bm_MF_count_matched,global,16,16,0,4,0,1,11,0.0625,0.0,0.30944820310990695,0.1897908126626132,0.532109947935929,4
+descriptive_historical24_replay_not_new_blind_test,137,Bm_MF_count_matched,development_predicted_boundary,8,8,0,0,0,0,8,0.0,,0.24678200096409153,0.167759766472614,0.008403496025557435,0
+descriptive_historical24_replay_not_new_blind_test,137,C_MF_active,global,16,16,0,4,0,0,12,0.0,0.0,0.3041498841496452,0.1705492692628654,1.6478558623741428,4
+descriptive_historical24_replay_not_new_blind_test,137,C_MF_active,development_predicted_boundary,8,8,0,0,0,0,8,0.0,,0.09733620987116366,0.07139723349594018,0.004802327854526875,0
+descriptive_historical24_replay_not_new_blind_test,271,A_single_fill,global,16,16,0,4,0,1,11,0.0625,0.0,0.36777455476664345,0.22623252031465185,1.4085524420013256,4
+descriptive_historical24_replay_not_new_blind_test,271,A_single_fill,development_predicted_boundary,8,8,0,0,0,1,7,0.125,,0.35002298715404195,0.27110450734038055,0.047556892498602475,0
+descriptive_historical24_replay_not_new_blind_test,271,B_MF_fill,global,16,16,0,4,0,1,11,0.0625,0.0,0.5071699421456042,0.27515233835088065,1.9187007149896205,4
+descriptive_historical24_replay_not_new_blind_test,271,B_MF_fill,development_predicted_boundary,8,8,0,0,0,1,7,0.125,,0.4030583536587585,0.3502600002959497,0.05159179158676628,0
+descriptive_historical24_replay_not_new_blind_test,271,Bm_MF_count_matched,global,16,16,0,4,0,1,11,0.0625,0.0,0.3626904935271716,0.18615352929158907,0.6337698292086208,4
+descriptive_historical24_replay_not_new_blind_test,271,Bm_MF_count_matched,development_predicted_boundary,8,8,0,0,0,1,7,0.125,,0.37749180816500094,0.23173687387878872,0.05651265747027148,0
+descriptive_historical24_replay_not_new_blind_test,271,C_MF_active,global,16,16,0,4,0,0,12,0.0,0.0,0.1920375940289469,0.11126928149412303,0.5744981420292649,4
+descriptive_historical24_replay_not_new_blind_test,271,C_MF_active,development_predicted_boundary,8,8,0,0,0,0,8,0.0,,0.28591306831578417,0.2247746404945879,0.007886766177644179,0

@@ -1,0 +1,11 @@
+q0,s_init_Pa,qcrit,qmax,initial_status,initial_fluid_supported_fraction,initial_condition_satisfied,dynamic_first_hit_elapsed_s,identity,root_search_in_this_classification_record,separate_dynamic_boundary_table,Gamma_initial_condition
+0.0,0.0,0.16666666666666666,0.8631082062454611,initial_closure_limit,1.0,,,mathematical closure admission only; not local observed or credible range,False,,
+0.1,888.7028147369173,0.16666666666666666,0.8631082062454611,initial_positive_thickness_layer,0.2254033307585166,True,,mathematical closure admission only; not local observed or credible range,False,,0.0
+0.16666666666666666,1481.171357894862,0.16666666666666666,0.8631082062454611,initial_first_layer_boundary,0.0,True,,mathematical closure admission only; not local observed or credible range,False,,0.0
+0.17,1510.7947850527594,0.16666666666666666,0.8631082062454611,admissible_unreached_initial_state,0.0,False,,mathematical closure admission only; not local observed or credible range,False,initial_state_boundary.csv,
+0.3,2666.1084442107517,0.16666666666666666,0.8631082062454611,admissible_unreached_initial_state,0.0,False,,mathematical closure admission only; not local observed or credible range,False,initial_state_boundary.csv,
+0.5,4443.514073684586,0.16666666666666666,0.8631082062454611,admissible_unreached_initial_state,0.0,False,,mathematical closure admission only; not local observed or credible range,False,initial_state_boundary.csv,
+0.75,6665.271110526879,0.16666666666666666,0.8631082062454611,admissible_unreached_initial_state,0.0,False,,mathematical closure admission only; not local observed or credible range,False,initial_state_boundary.csv,
+0.8631082062454611,7670.46692312873,0.16666666666666666,0.8631082062454611,initial_saturation_boundary,0.0,False,,mathematical closure admission only; not local observed or credible range,False,,
+0.8632082062454611,7671.355625943466,0.16666666666666666,0.8631082062454611,invalid_initial_state,,,,mathematical closure admission only; not local observed or credible range,False,,
+-0.01,-88.87028147369172,0.16666666666666666,0.8631082062454611,invalid_initial_state,,,,mathematical closure admission only; not local observed or credible range,False,,

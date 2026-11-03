@@ -1,0 +1,558 @@
+{
+  "version": "Q3-STRENGTHENED-v4.0",
+  "base_certification_version": "Q3-FINAL-v3.0",
+  "sensitivity": {
+    "version": "Q3-SENSITIVITY-v4.0",
+    "conditions": {
+      "strong": 0.02,
+      "near": 0.0002265378784906
+    },
+    "unique_new_Q2_calls": 714,
+    "cache_reuse_requests": 18,
+    "phase_rows": 646,
+    "phase_states": {
+      "strong": {
+        "hit": 323
+      },
+      "near": {
+        "hit": 179,
+        "no_hit": 144
+      }
+    },
+    "chi_rows": 42,
+    "derivative_rows": 18,
+    "crossing_amplification": [
+      {
+        "regime": "strong",
+        "status": "hit",
+        "tau_s": 0.79246356069726,
+        "qdot_cross_s_inv": -0.23357028512607864,
+        "seconds_per_0_001_q": 0.004281366525113463,
+        "horizon_slack_s": 72.20753643930274,
+        "positive_0_001_q_linear_delay_exceeds_horizon": false,
+        "shear_qdot_s_inv": -0.23357463694488875,
+        "drainage_qdot_s_inv": 4.351818810099865e-06,
+        "mechanism_sum_qdot_s_inv": -0.23357028512607866,
+        "mechanism_sum_abs_difference": 2.7755575615628914e-17,
+        "drainage_to_abs_shear_ratio": 1.8631384241974286e-05,
+        "hit_gamma_s_inv": 1.2518638891189868,
+        "identity": "first-order transversal response to a hypothetical state error; no state-error distribution assigned"
+      },
+      {
+        "regime": "near",
+        "status": "hit",
+        "tau_s": 72.99709511735144,
+        "qdot_cross_s_inv": -0.00278888809978427,
+        "seconds_per_0_001_q": 0.3585658385065193,
+        "horizon_slack_s": 0.0029048826485649215,
+        "positive_0_001_q_linear_delay_exceeds_horizon": true,
+        "shear_qdot_s_inv": -0.002793237375555522,
+        "drainage_qdot_s_inv": 4.349275771252188e-06,
+        "mechanism_sum_qdot_s_inv": -0.00278888809978427,
+        "mechanism_sum_abs_difference": 0.0,
+        "drainage_to_abs_shear_ratio": 0.001557073455093375,
+        "hit_gamma_s_inv": 0.014588907761604146,
+        "identity": "first-order transversal response to a hypothetical state error; no state-error distribution assigned"
+      }
+    ],
+    "near_to_strong_amplification_ratio": 83.75032513643917,
+    "nominal_horizon_slack_s": {
+      "strong": 72.20753643930274,
+      "near": 0.0029048826485649215
+    },
+    "linearization_boundary": "state-error time amplification applies to transverse local roots only; if delay exceeds horizon slack retain category transition, not a finite in-window confidence band",
+    "derivative_step_stability": [
+      {
+        "regime": "strong",
+        "parameter": "offset_m_s",
+        "finite_step_count": 3,
+        "total_step_count": 3,
+        "derivative_min": -0.012514832220200667,
+        "derivative_max": -0.012514832133270204,
+        "relative_step_spread": 6.946194856691073e-09,
+        "identity": "step variation diagnostic, not a rigorous derivative error bound"
+      },
+      {
+        "regime": "strong",
+        "parameter": "q0",
+        "finite_step_count": 3,
+        "total_step_count": 3,
+        "derivative_min": 1.4713081510131507,
+        "derivative_max": 1.4713081716838383,
+        "relative_step_spread": 1.4049189810721644e-08,
+        "identity": "step variation diagnostic, not a rigorous derivative error bound"
+      },
+      {
+        "regime": "strong",
+        "parameter": "chi_relative",
+        "finite_step_count": 3,
+        "total_step_count": 3,
+        "derivative_min": -39.47395309781554,
+        "derivative_max": -39.469961674670756,
+        "relative_step_spread": 0.00010112214715035613,
+        "identity": "step variation diagnostic, not a rigorous derivative error bound"
+      },
+      {
+        "regime": "near",
+        "parameter": "offset_m_s",
+        "finite_step_count": 3,
+        "total_step_count": 3,
+        "derivative_min": -1.1335007589501345,
+        "derivative_max": -1.130301098982045,
+        "relative_step_spread": 0.00282580967463954,
+        "identity": "step variation diagnostic, not a rigorous derivative error bound"
+      },
+      {
+        "regime": "near",
+        "parameter": "q0",
+        "finite_step_count": 2,
+        "total_step_count": 3,
+        "derivative_min": 124.3163281806403,
+        "derivative_max": 124.37514327956478,
+        "relative_step_spread": 0.00047299650912150564,
+        "identity": "step variation diagnostic, not a rigorous derivative error bound"
+      },
+      {
+        "regime": "near",
+        "parameter": "chi_relative",
+        "finite_step_count": 0,
+        "total_step_count": 3,
+        "derivative_min": null,
+        "derivative_max": null,
+        "relative_step_spread": null,
+        "identity": "step variation diagnostic, not a rigorous derivative error bound"
+      }
+    ],
+    "checks": {
+      "no_nonhit_finite_times": true,
+      "phase_grid_complete": true,
+      "chi_design_complete": true,
+      "mass_closure": true,
+      "original_fullsupport_reweight_equal": true,
+      "reused_nominal_reference_equal": true,
+      "mechanism_qdot_sum_matches": true,
+      "source_unchanged_during_sensitivity": true
+    },
+    "reweight_checks": [
+      {
+        "regime": "strong",
+        "original_fullsupport_CDF_max_abs_difference": 0.0,
+        "pass": true
+      },
+      {
+        "regime": "near",
+        "original_fullsupport_CDF_max_abs_difference": 0.0,
+        "pass": true
+      }
+    ],
+    "nominal_reference_checks": [
+      {
+        "regime": "strong",
+        "offset_m_s": -1.5,
+        "prior_status": "hit",
+        "current_status": "hit",
+        "tau_abs_difference_s": 0.0,
+        "pass": true
+      },
+      {
+        "regime": "strong",
+        "offset_m_s": 0.0,
+        "prior_status": "hit",
+        "current_status": "hit",
+        "tau_abs_difference_s": 0.0,
+        "pass": true
+      },
+      {
+        "regime": "strong",
+        "offset_m_s": 1.5,
+        "prior_status": "hit",
+        "current_status": "hit",
+        "tau_abs_difference_s": 0.0,
+        "pass": true
+      },
+      {
+        "regime": "near",
+        "offset_m_s": -1.5,
+        "prior_status": "no_hit",
+        "current_status": "no_hit",
+        "tau_abs_difference_s": null,
+        "pass": true
+      },
+      {
+        "regime": "near",
+        "offset_m_s": 0.0,
+        "prior_status": "hit",
+        "current_status": "hit",
+        "tau_abs_difference_s": 0.0,
+        "pass": true
+      },
+      {
+        "regime": "near",
+        "offset_m_s": 1.5,
+        "prior_status": "hit",
+        "current_status": "hit",
+        "tau_abs_difference_s": 0.0,
+        "pass": true
+      }
+    ],
+    "independent_review": "pending; execution self-check only",
+    "probability_boundary": "new support/target/initial/chi sensitivities do not inherit frozen final CP certificate",
+    "interpretation": "q0/chi/offset grid is unweighted, not event probability; finite derivatives only where two sides hit"
+  },
+  "started_utc": "2026-10-30T05:26:39.880038+00:00",
+  "completed_utc": "2026-10-30T05:40:16.143663+00:00",
+  "wall_s": 816.2690184172243,
+  "execution_stage": "all",
+  "random_validation": {
+    "version": "Q3-FINAL-v3.0",
+    "status": "completed_fixed_n",
+    "alpha": 0.05,
+    "familywise_delta": 0.05,
+    "per_claim_delta": 0.008333333333333333,
+    "claims": [
+      {
+        "regime": "strong",
+        "candidate": "strong_robust",
+        "family": "nominal_triangular",
+        "n": 4096,
+        "k": 4090,
+        "empirical_mass": 0.99853515625,
+        "lower_bound": 0.9963757473690618,
+        "unknown": 0,
+        "initial": 0,
+        "passed": true
+      },
+      {
+        "regime": "strong",
+        "candidate": "strong_robust",
+        "family": "uniform_support",
+        "n": 4096,
+        "k": 3999,
+        "empirical_mass": 0.976318359375,
+        "lower_bound": 0.9700025484701945,
+        "unknown": 0,
+        "initial": 0,
+        "passed": true
+      },
+      {
+        "regime": "strong",
+        "candidate": "strong_robust",
+        "family": "lower_mode_triangular",
+        "n": 4096,
+        "k": 4094,
+        "empirical_mass": 0.99951171875,
+        "lower_bound": 0.997893287619358,
+        "unknown": 0,
+        "initial": 0,
+        "passed": true
+      },
+      {
+        "regime": "near",
+        "candidate": "near_robust",
+        "family": "nominal_triangular",
+        "n": 4096,
+        "k": 3979,
+        "empirical_mass": 0.971435546875,
+        "lower_bound": 0.9645841840408961,
+        "unknown": 0,
+        "initial": 0,
+        "passed": true
+      },
+      {
+        "regime": "near",
+        "candidate": "near_robust",
+        "family": "uniform_support",
+        "n": 4096,
+        "k": 3947,
+        "empirical_mass": 0.963623046875,
+        "lower_bound": 0.9560105835981271,
+        "unknown": 0,
+        "initial": 0,
+        "passed": true
+      },
+      {
+        "regime": "near",
+        "candidate": "near_robust",
+        "family": "lower_mode_triangular",
+        "n": 4096,
+        "k": 4047,
+        "empirical_mass": 0.988037109375,
+        "lower_bound": 0.9833185724189604,
+        "unknown": 0,
+        "initial": 0,
+        "passed": true
+      }
+    ],
+    "all_passed": true,
+    "wall_s": 632.1629858331289,
+    "bindings_sha256": "fd25d06bbd4f2050e66c24c15bc3ea62583ae8d051fa6e7991c1fac59f474b15",
+    "identity": "new independent declared-input iid Q2 simulation validation; not natural-event coverage"
+  },
+  "conditions": {
+    "strong": 0.02,
+    "near": 0.0002265378784906
+  },
+  "candidate_sets": [
+    {
+      "name": "strong_robust",
+      "condition": "strong",
+      "chi_m_inv": 0.02,
+      "q0": 0.5,
+      "finite_interval_s": [
+        0.775,
+        0.815
+      ],
+      "includes_no_hit": false
+    },
+    {
+      "name": "near_robust",
+      "condition": "near",
+      "chi_m_inv": 0.0002265378784906,
+      "q0": 0.5,
+      "finite_interval_s": [
+        71.4,
+        72.95
+      ],
+      "includes_no_hit": true
+    }
+  ],
+  "cost": {
+    "baseline_cost": {
+      "strong": {
+        "construction_wall_s": 1.2947545000351965,
+        "continuous_integral_set_wall_s": 1.5617188750766218,
+        "q2_calls": 97
+      },
+      "near": {
+        "construction_wall_s": 7.133473417023197,
+        "continuous_integral_set_wall_s": 0.9121229590382427,
+        "q2_calls": 124
+      }
+    },
+    "gp_unique_train_and_diagnostic_calls": 1307,
+    "baseline_calls": 221,
+    "gp_fallback_calls": 1482
+  },
+  "q4_summary": {
+    "schema_version": 1,
+    "inventory_utc": "2026-10-29T20:55:25.597042+00:00",
+    "q4_real_joint_arrivals_available": false,
+    "absolute_arrival_available": false,
+    "geographic_warning_radius_available": false,
+    "old_ideal_docx": {
+      "source_filename": "Q4_论文_吉隆泥石流仿真1.docx",
+      "sha256": "1bc4d481c1ea5f40d9e2a9b928fc5746cd8ff237935b30fbf863f4eec7301701",
+      "source_paragraphs": [
+        13,
+        14,
+        248,
+        254,
+        266,
+        268,
+        304,
+        503
+      ],
+      "scope": "reported 2D ideal valley, paper figures/summary, no original field arrays or executable source in located materials",
+      "reported_horizon_s": 150,
+      "reported_front_m": 1565,
+      "front_is_local_prediction": false,
+      "arrival_definition": "first h > 0.2 m",
+      "legacy_Q3": "PDD7 8 leads with old nominal weather error bands; not current local q=1/6 first hit"
+    },
+    "later_representative_dem_docx": {
+      "source_filename": "Q4_论文1111.docx",
+      "project_snapshot": "reports/q4/design_v1/teammates/Q4_论文1111.docx",
+      "sha256": "2c6b5c48e2cde1bc6607b3bd6b747c2818747b6ac002ed1932946143dbbd71f7",
+      "scope": "reported 1D real-DEM representative path; no source solver, DEM profile array, or target arrival table delivered",
+      "reported_path_length_m": 3429,
+      "reported_drop_m": 1808,
+      "reported_front120_m_text": 2095,
+      "reported_front120_m_same_parameters_appendix": 1940,
+      "reported_umax_m_s_text": 35.3,
+      "reported_umax_m_s_same_parameters_appendix": 27.8,
+      "baseline_identity_conflict": true,
+      "grid_converged": false,
+      "Q3_connected": false,
+      "upstream_Q2": "older Takahashi TU02 condition, not frozen Q2 local dynamical v3"
+    },
+    "teammate_markdown": {
+      "source_filename": "Q4_paper.md",
+      "project_snapshot": "reports/q4/design_v1/teammates/Q4_paper.md",
+      "sha256": "1ed1abcb6258f9acbe5da8f2c1dfe7af4455d77cd3d86dad2209ad1cf50a1619",
+      "claimed_code_directory": "q4_code/",
+      "claimed_output_directory": "out/Q4/",
+      "code_and_outputs_in_project": false,
+      "claimed_path_m": 24160,
+      "scope": "reported 1D/particle geometric reconstruction; cannot use unbound summary as arrival input"
+    },
+    "current_design_status": {
+      "path": "outputs/Q4_design_20261030/STATUS.json",
+      "sha256": "b83431e9168f50578943bcaa3b590fe0cd1dbed9eea22891210aec8eef6933d1",
+      "formal_local_simulation": "not_run",
+      "actual_Q4_joint_scenarios_supplied": false,
+      "reusable_real_executions": [
+        "synthetic wet/dry HLL and Ritter checks, source+NPZ+receipts",
+        "uniform8degree slope scalar response and MF-GP pilot, source+NPZ+receipts",
+        "bounded terrain/path diagnostics, source+JSON+receipts"
+      ],
+      "these_are_local_arrivals": false
+    },
+    "missing_files": [
+      "original ideal valley solver/config/arrival-time raster and scenario log supporting1565m",
+      "representative D8 profile coordinates/elevation arrays and actual solver/config/log",
+      "per-scenario target arrival table including target geometry, criterion and horizon statuses",
+      "MD q4_code/ and out/Q4/ including45-scenario CSV and709-node path"
+    ],
+    "missing_joint_fields": [
+      "current_Q3 scenario/member_id and full input hash",
+      "entry geometry/CRS and same initial h/u/volume/material",
+      "bridge evidence between local first-hit T_L and propagation entry T_in",
+      "joint time-origin identity",
+      "target geometry/CRS/distance origin",
+      "arrival h threshold and footprint support",
+      "arrival brackets plus failure/unknown/valid-noarrival statuses",
+      "publication timestamp and action delay when actual L_A requested"
+    ],
+    "not_substitutes": [
+      "weather grid size",
+      "B-C line length",
+      "author mapped path length",
+      "1565m ideal front",
+      "2095m representative-path reported front",
+      "uniform-slope analytic demonstration distance"
+    ],
+    "execution_scope": "targeted inventory, OOXML/table extraction, existing-source readback; no local Q4 propagation rerun; core independent acceptance pending",
+    "existing_five_point_ODE_demo": {
+      "status": "fixed_existing_synthetic_Q4_response",
+      "source_project_path": "reports/q4/design_v1/algorithm_upgrade_v2/independent/INDEPENDENT_REPAIR_RESULTS.json",
+      "source_sha256": "70e38c7cf9641df92e9c3fe5ae76e943e76cd3fe17a2a7134d3fea7aef07ffc6",
+      "source_key": "multiple_point_ODE_check",
+      "scope": "existing scalar8degree-slope ODE/closed-form comparison; no local geographic validity",
+      "source_evidence_role": "previous independent scalar check only; not current Q3 scientific acceptance",
+      "points": [
+        {
+          "scenario_id": "Q4_EXISTING_ODE5_01",
+          "normalized_point": [
+            0.0,
+            0.0
+          ],
+          "mu": 0.03,
+          "xi_m_s2": 200.0,
+          "thickness_m": 2.0,
+          "slope_deg": 8.0,
+          "target_id": "synthetic_along_slope_1000m",
+          "target_distance_m": 1000.0,
+          "distance_definition": "along_uniform_inclined_plane_not_map_radius",
+          "horizon_s": 180.0,
+          "target_arrival_status": "arrived",
+          "travel_time_s": 155.39477279593586,
+          "front_at_horizon_m": 1162.8152696606044,
+          "closed_form_vs_ODE_margin_abs_difference": 3.5083047578154947e-14,
+          "run_termination_status": "time_horizon",
+          "prefix_review_status": "pass_for_declared_scalar_ODE_check"
+        },
+        {
+          "scenario_id": "Q4_EXISTING_ODE5_02",
+          "normalized_point": [
+            0.0,
+            1.0
+          ],
+          "mu": 0.03,
+          "xi_m_s2": 2000.0,
+          "thickness_m": 2.0,
+          "slope_deg": 8.0,
+          "target_id": "synthetic_along_slope_1000m",
+          "target_distance_m": 1000.0,
+          "distance_definition": "along_uniform_inclined_plane_not_map_radius",
+          "horizon_s": 180.0,
+          "target_arrival_status": "arrived",
+          "travel_time_s": 61.25996026913375,
+          "front_at_horizon_m": 3483.891014510463,
+          "closed_form_vs_ODE_margin_abs_difference": 2.6645352591003757e-15,
+          "run_termination_status": "time_horizon",
+          "prefix_review_status": "pass_for_declared_scalar_ODE_check"
+        },
+        {
+          "scenario_id": "Q4_EXISTING_ODE5_03",
+          "normalized_point": [
+            1.0,
+            0.0
+          ],
+          "mu": 0.13,
+          "xi_m_s2": 200.0,
+          "thickness_m": 2.0,
+          "slope_deg": 8.0,
+          "target_id": "synthetic_along_slope_1000m",
+          "target_distance_m": 1000.0,
+          "distance_definition": "along_uniform_inclined_plane_not_map_radius",
+          "horizon_s": 180.0,
+          "target_arrival_status": "valid_no_arrival_by_horizon",
+          "travel_time_s": null,
+          "front_at_horizon_m": 339.5410694196451,
+          "closed_form_vs_ODE_margin_abs_difference": 3.3306690738754696e-16,
+          "run_termination_status": "time_horizon",
+          "prefix_review_status": "pass_for_declared_scalar_ODE_check"
+        },
+        {
+          "scenario_id": "Q4_EXISTING_ODE5_04",
+          "normalized_point": [
+            1.0,
+            1.0
+          ],
+          "mu": 0.13,
+          "xi_m_s2": 2000.0,
+          "thickness_m": 2.0,
+          "slope_deg": 8.0,
+          "target_id": "synthetic_along_slope_1000m",
+          "target_distance_m": 1000.0,
+          "distance_definition": "along_uniform_inclined_plane_not_map_radius",
+          "horizon_s": 180.0,
+          "target_arrival_status": "valid_no_arrival_by_horizon",
+          "travel_time_s": null,
+          "front_at_horizon_m": 881.8246503101421,
+          "closed_form_vs_ODE_margin_abs_difference": 2.55351295663786e-15,
+          "run_termination_status": "time_horizon",
+          "prefix_review_status": "pass_for_declared_scalar_ODE_check"
+        },
+        {
+          "scenario_id": "Q4_EXISTING_ODE5_05",
+          "normalized_point": [
+            0.6,
+            0.3
+          ],
+          "mu": 0.09,
+          "xi_m_s2": 399.0524629937759,
+          "thickness_m": 2.0,
+          "slope_deg": 8.0,
+          "target_id": "synthetic_along_slope_1000m",
+          "target_distance_m": 1000.0,
+          "distance_definition": "along_uniform_inclined_plane_not_map_radius",
+          "horizon_s": 180.0,
+          "target_arrival_status": "arrived",
+          "travel_time_s": 167.1465661890269,
+          "front_at_horizon_m": 1081.2356676134336,
+          "closed_form_vs_ODE_margin_abs_difference": 0.0,
+          "run_termination_status": "time_horizon",
+          "prefix_review_status": "pass_for_declared_scalar_ODE_check"
+        }
+      ],
+      "synthetic_bridge": {
+        "T_in_equals_T_L_plus_s": 0.0,
+        "identity": "explicit hypothetical stage bridge for demonstration only; not evidence local first hit forms whole flow",
+        "not_a_natural_time_prediction": true
+      },
+      "joint_weights": null,
+      "formal_Q3_candidates_to_use": "read current frozen candidate list at runtime; never splice marginal quantiles",
+      "unknown_and_nohit": "preserve Q3 no-hit category and unknown; Q4 absent by180s is window-censored, never permanent safe"
+    },
+    "previous_sixteen_point_derived_demo": {
+      "formal_use": false,
+      "identity": "development exploratory derivation; use existing five ODE checks instead for final demonstration"
+    },
+    "paper_text": "既有Q4原稿确已报告Voellmy二维理想沟谷传播及首次h>0.2m到达时间场：150秒前锋约1565米，但明确不是实际吉隆地形；原始到达数组及对应可执行实现未取得。后版代表DEM稿的120秒前锋正文2095米与同参数附表1940米冲突，且均未接当前Q3，故不选择其中一组充当正式当地传播结果。\n\n本章复用既有8°常坡、h=2米、固定1000米目标的五个独立ODE核对结果：三例在180秒内到达，两例仅为该窗未达。显式假设T_in=T_L+0后，逐个无权重传播情景将局部候选集平移为目标到达与行动余量，结果见条件演示表及图。这完成固定1000米测试目标的条件空间输出；不推断连续危险影响范围、停距或实际吉隆预警半径，亦不把未达成员赋予无限提前量。"
+  },
+  "method_choice": "adaptive_piecewise_integration_primary; GP actual comparison and optional accelerator",
+  "independent_review": "pending",
+  "natural_event_coverage": "not identified",
+  "self_contained_source_sha256": "716a14b09f8bf8cab467354e3915d0d083ca3cacc826b0836212e5bd67f78765"
+}

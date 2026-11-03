@@ -1,0 +1,136 @@
+{
+  "steps": 6483,
+  "wall_s": 38.15326000005007,
+  "min_h": 0.0,
+  "mass_error_abs_m3": 1.979060471057892e-09,
+  "mass_error_rel": 2.9418909915033567e-15,
+  "momentum_error_abs": 4.434310838519195e-06,
+  "momentum_error_rel": 6.368800271214632e-15,
+  "initial": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "final": [
+    672717.1322029716,
+    -84800.08749435535,
+    -16619.788505508037
+  ],
+  "boundary_integral": [
+    -672717.1322029706,
+    20592337.450304605,
+    0.0
+  ],
+  "bed_impulse": [
+    -662073663.7067584,
+    -134829078.90362242
+  ],
+  "friction_impulse": [
+    682581269.3468195,
+    134812456.14424255
+  ],
+  "dry_clear_impulse": [
+    -68.2772471684318,
+    2.9708736630288164
+  ],
+  "inlet_volume_m3": 672717.1322029706,
+  "min_inlet_Fr": 7.676325162708132,
+  "total_inflow_m3": 672717.1322029706,
+  "total_outflow_m3": 0.0,
+  "dry_threshold_m": 0.0001,
+  "outflow_by_side_m3": {
+    "west": 0.0,
+    "east": 0.0,
+    "north": 0.0,
+    "south": 0.0
+  },
+  "illegal_outflow_m3": 0.0,
+  "first_significant_illegal_outflow_s": null,
+  "illegal_outflow_threshold_m3": 0.6727171322029716,
+  "whole_window_valid": true,
+  "valid_until_s": 1800.0,
+  "inlet_advective_impulse_west_per_density": 20181513.966089133,
+  "inlet_pressure_impulse_west_per_density": 410661.854804987,
+  "prescribed_inflow_pressure_impulse_west_per_density": 114184.64104157872,
+  "closed_gate_pressure_impulse_west_per_density": 296477.21376340766,
+  "legacy_inlet_pressure_definition": "total inlet-strip pressure including post-pulse closed gate; not solely prescribed inflow",
+  "energy_in_per_density": 2325250842.700516,
+  "energy_final_per_density": 1160165470.9570565,
+  "energy_reference_elevation_m": 2510.127062538267,
+  "energy_initial_per_density": 0.0,
+  "energy_boundary_outward_per_density": -2325250842.700516,
+  "friction_energy_loss_per_density": 1098934102.4151247,
+  "dry_clear_energy_loss_per_density": 54008.40337148416,
+  "maximum_energy_per_density": 1324060373.8743942,
+  "energy_residual_per_density": -66097260.92496356,
+  "energy_status": "first-order boundary head flux; residual combines transport dissipation, bed discretization and source splitting; no exact entropy claim",
+  "independent_review": "pending",
+  "dx_m": 30.0,
+  "shape": [
+    44,
+    88
+  ],
+  "target_max_h": 0.0,
+  "threshold_arrivals": {
+    "0.05": {
+      "status": "valid_no_arrival_by_horizon",
+      "time_bracket_s": null
+    },
+    "0.1": {
+      "status": "valid_no_arrival_by_horizon",
+      "time_bracket_s": null
+    },
+    "0.2": {
+      "status": "valid_no_arrival_by_horizon",
+      "time_bracket_s": null
+    }
+  },
+  "status": "valid_no_arrival_by_horizon",
+  "run_termination": "time_horizon",
+  "final_motion_state": "moving",
+  "terrain_qualification": "pending",
+  "full_reach": false,
+  "legal_exit_geometry": {
+    "side": "west",
+    "interval_m": [
+      3134880,
+      3135600
+    ]
+  },
+  "arrival_support": {
+    "axis": "x",
+    "coordinate_m": 348720,
+    "interpolation_columns": [
+      23,
+      24
+    ],
+    "interpolation_weights": [
+      0.5,
+      0.5
+    ],
+    "crs": "EPSG:32645",
+    "tangent_interval_m": [
+      3134880,
+      3135600
+    ],
+    "criterion": "instantaneous maximum vertical event depth >= threshold on fixed interpolated line"
+  },
+  "field_convention": "saved U=(h,hu_east,hu_south); north momentum=-hu_south; lengths m, times s, velocity m/s",
+  "peak_h_anywhere_m": 22.838555764282425,
+  "maximum_speed_m_s": 21.318778444825004,
+  "inundated_area_m2": 158400.0,
+  "pulse_definition": "single triangle in [0,T]",
+  "target_Q_downstream_max_m3_s": -0.0,
+  "target_Q_downstream_min_m3_s": -0.0,
+  "target_peak_h_paired": {
+    "time_s": null,
+    "h_m": 0.0,
+    "u_east_m_s": null,
+    "u_north_m_s": null,
+    "tangent_coordinate_m": null
+  },
+  "speed_envelope_for_figures": "max speed computed only at steps with local event h>=0.1m; raw max_speed separately retained",
+  "loads_not_computed": true,
+  "ever_threshold_coverage_area_m2": 158400.0,
+  "final_threshold_inundated_area_m2": 118800.0
+}

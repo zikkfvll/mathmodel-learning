@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "inventory_utc": "2026-10-29T20:55:25.597042+00:00",
+  "q4_real_joint_arrivals_available": false,
+  "absolute_arrival_available": false,
+  "geographic_warning_radius_available": false,
+  "old_ideal_docx": {
+    "source_filename": "Q4_论文_吉隆泥石流仿真1.docx",
+    "sha256": "1bc4d481c1ea5f40d9e2a9b928fc5746cd8ff237935b30fbf863f4eec7301701",
+    "source_paragraphs": [
+      13,
+      14,
+      248,
+      254,
+      266,
+      268,
+      304,
+      503
+    ],
+    "scope": "reported 2D ideal valley, paper figures/summary, no original field arrays or executable source in located materials",
+    "reported_horizon_s": 150,
+    "reported_front_m": 1565,
+    "front_is_local_prediction": false,
+    "arrival_definition": "first h > 0.2 m",
+    "legacy_Q3": "PDD7 8 leads with old nominal weather error bands; not current local q=1/6 first hit"
+  },
+  "later_representative_dem_docx": {
+    "source_filename": "Q4_论文1111.docx",
+    "project_snapshot": "reports/q4/design_v1/teammates/Q4_论文1111.docx",
+    "sha256": "2c6b5c48e2cde1bc6607b3bd6b747c2818747b6ac002ed1932946143dbbd71f7",
+    "scope": "reported 1D real-DEM representative path; no source solver, DEM profile array, or target arrival table delivered",
+    "reported_path_length_m": 3429,
+    "reported_drop_m": 1808,
+    "reported_front120_m_text": 2095,
+    "reported_front120_m_same_parameters_appendix": 1940,
+    "reported_umax_m_s_text": 35.3,
+    "reported_umax_m_s_same_parameters_appendix": 27.8,
+    "baseline_identity_conflict": true,
+    "grid_converged": false,
+    "Q3_connected": false,
+    "upstream_Q2": "older Takahashi TU02 condition, not frozen Q2 local dynamical v3"
+  },
+  "teammate_markdown": {
+    "source_filename": "Q4_paper.md",
+    "project_snapshot": "reports/q4/design_v1/teammates/Q4_paper.md",
+    "sha256": "1ed1abcb6258f9acbe5da8f2c1dfe7af4455d77cd3d86dad2209ad1cf50a1619",
+    "claimed_code_directory": "q4_code/",
+    "claimed_output_directory": "out/Q4/",
+    "code_and_outputs_in_project": false,
+    "claimed_path_m": 24160,
+    "scope": "reported 1D/particle geometric reconstruction; cannot use unbound summary as arrival input"
+  },
+  "current_design_status": {
+    "path": "outputs/Q4_design_20261030/STATUS.json",
+    "sha256": "b83431e9168f50578943bcaa3b590fe0cd1dbed9eea22891210aec8eef6933d1",
+    "formal_local_simulation": "not_run",
+    "actual_Q4_joint_scenarios_supplied": false,
+    "reusable_real_executions": [
+      "synthetic wet/dry HLL and Ritter checks, source+NPZ+receipts",
+      "uniform8degree slope scalar response and MF-GP pilot, source+NPZ+receipts",
+      "bounded terrain/path diagnostics, source+JSON+receipts"
+    ],
+    "these_are_local_arrivals": false
+  },
+  "missing_files": [
+    "original ideal valley solver/config/arrival-time raster and scenario log supporting1565m",
+    "representative D8 profile coordinates/elevation arrays and actual solver/config/log",
+    "per-scenario target arrival table including target geometry, criterion and horizon statuses",
+    "MD q4_code/ and out/Q4/ including45-scenario CSV and709-node path"
+  ],
+  "missing_joint_fields": [
+    "current_Q3 scenario/member_id and full input hash",
+    "entry geometry/CRS and same initial h/u/volume/material",
+    "bridge evidence between local first-hit T_L and propagation entry T_in",
+    "joint time-origin identity",
+    "target geometry/CRS/distance origin",
+    "arrival h threshold and footprint support",
+    "arrival brackets plus failure/unknown/valid-noarrival statuses",
+    "publication timestamp and action delay when actual L_A requested"
+  ],
+  "not_substitutes": [
+    "weather grid size",
+    "B-C line length",
+    "author mapped path length",
+    "1565m ideal front",
+    "2095m representative-path reported front",
+    "uniform-slope analytic demonstration distance"
+  ],
+  "execution_scope": "targeted inventory, OOXML/table extraction, existing-source readback; no local Q4 propagation rerun; core independent acceptance pending",
+  "existing_five_point_ODE_demo": {
+    "status": "fixed_existing_synthetic_Q4_response",
+    "source_project_path": "reports/q4/design_v1/algorithm_upgrade_v2/independent/INDEPENDENT_REPAIR_RESULTS.json",
+    "source_sha256": "70e38c7cf9641df92e9c3fe5ae76e943e76cd3fe17a2a7134d3fea7aef07ffc6",
+    "source_key": "multiple_point_ODE_check",
+    "scope": "existing scalar8degree-slope ODE/closed-form comparison; no local geographic validity",
+    "source_evidence_role": "previous independent scalar check only; not current Q3 scientific acceptance",
+    "points": [
+      {
+        "scenario_id": "Q4_EXISTING_ODE5_01",
+        "normalized_point": [
+          0.0,
+          0.0
+        ],
+        "mu": 0.03,
+        "xi_m_s2": 200.0,
+        "thickness_m": 2.0,
+        "slope_deg": 8.0,
+        "target_id": "synthetic_along_slope_1000m",
+        "target_distance_m": 1000.0,
+        "distance_definition": "along_uniform_inclined_plane_not_map_radius",
+        "horizon_s": 180.0,
+        "target_arrival_status": "arrived",
+        "travel_time_s": 155.39477279593586,
+        "front_at_horizon_m": 1162.8152696606044,
+        "closed_form_vs_ODE_margin_abs_difference": 3.5083047578154947e-14,
+        "run_termination_status": "time_horizon",
+        "prefix_review_status": "pass_for_declared_scalar_ODE_check"
+      },
+      {
+        "scenario_id": "Q4_EXISTING_ODE5_02",
+        "normalized_point": [
+          0.0,
+          1.0
+        ],
+        "mu": 0.03,
+        "xi_m_s2": 2000.0,
+        "thickness_m": 2.0,
+        "slope_deg": 8.0,
+        "target_id": "synthetic_along_slope_1000m",
+        "target_distance_m": 1000.0,
+        "distance_definition": "along_uniform_inclined_plane_not_map_radius",
+        "horizon_s": 180.0,
+        "target_arrival_status": "arrived",
+        "travel_time_s": 61.25996026913375,
+        "front_at_horizon_m": 3483.891014510463,
+        "closed_form_vs_ODE_margin_abs_difference": 2.6645352591003757e-15,
+        "run_termination_status": "time_horizon",
+        "prefix_review_status": "pass_for_declared_scalar_ODE_check"
+      },
+      {
+        "scenario_id": "Q4_EXISTING_ODE5_03",
+        "normalized_point": [
+          1.0,
+          0.0
+        ],
+        "mu": 0.13,
+        "xi_m_s2": 200.0,
+        "thickness_m": 2.0,
+        "slope_deg": 8.0,
+        "target_id": "synthetic_along_slope_1000m",
+        "target_distance_m": 1000.0,
+        "distance_definition": "along_uniform_inclined_plane_not_map_radius",
+        "horizon_s": 180.0,
+        "target_arrival_status": "valid_no_arrival_by_horizon",
+        "travel_time_s": null,
+        "front_at_horizon_m": 339.5410694196451,
+        "closed_form_vs_ODE_margin_abs_difference": 3.3306690738754696e-16,
+        "run_termination_status": "time_horizon",
+        "prefix_review_status": "pass_for_declared_scalar_ODE_check"
+      },
+      {
+        "scenario_id": "Q4_EXISTING_ODE5_04",
+        "normalized_point": [
+          1.0,
+          1.0
+        ],
+        "mu": 0.13,
+        "xi_m_s2": 2000.0,
+        "thickness_m": 2.0,
+        "slope_deg": 8.0,
+        "target_id": "synthetic_along_slope_1000m",
+        "target_distance_m": 1000.0,
+        "distance_definition": "along_uniform_inclined_plane_not_map_radius",
+        "horizon_s": 180.0,
+        "target_arrival_status": "valid_no_arrival_by_horizon",
+        "travel_time_s": null,
+        "front_at_horizon_m": 881.8246503101421,
+        "closed_form_vs_ODE_margin_abs_difference": 2.55351295663786e-15,
+        "run_termination_status": "time_horizon",
+        "prefix_review_status": "pass_for_declared_scalar_ODE_check"
+      },
+      {
+        "scenario_id": "Q4_EXISTING_ODE5_05",
+        "normalized_point": [
+          0.6,
+          0.3
+        ],
+        "mu": 0.09,
+        "xi_m_s2": 399.0524629937759,
+        "thickness_m": 2.0,
+        "slope_deg": 8.0,
+        "target_id": "synthetic_along_slope_1000m",
+        "target_distance_m": 1000.0,
+        "distance_definition": "along_uniform_inclined_plane_not_map_radius",
+        "horizon_s": 180.0,
+        "target_arrival_status": "arrived",
+        "travel_time_s": 167.1465661890269,
+        "front_at_horizon_m": 1081.2356676134336,
+        "closed_form_vs_ODE_margin_abs_difference": 0.0,
+        "run_termination_status": "time_horizon",
+        "prefix_review_status": "pass_for_declared_scalar_ODE_check"
+      }
+    ],
+    "synthetic_bridge": {
+      "T_in_equals_T_L_plus_s": 0.0,
+      "identity": "explicit hypothetical stage bridge for demonstration only; not evidence local first hit forms whole flow",
+      "not_a_natural_time_prediction": true
+    },
+    "joint_weights": null,
+    "formal_Q3_candidates_to_use": "read current frozen candidate list at runtime; never splice marginal quantiles",
+    "unknown_and_nohit": "preserve Q3 no-hit category and unknown; Q4 absent by180s is window-censored, never permanent safe"
+  },
+  "previous_sixteen_point_derived_demo": {
+    "formal_use": false,
+    "identity": "development exploratory derivation; use existing five ODE checks instead for final demonstration"
+  },
+  "paper_text": "既有Q4原稿确已报告Voellmy二维理想沟谷传播及首次h>0.2m到达时间场：150秒前锋约1565米，但明确不是实际吉隆地形；原始到达数组及对应可执行实现未取得。后版代表DEM稿的120秒前锋正文2095米与同参数附表1940米冲突，且均未接当前Q3，故不选择其中一组充当正式当地传播结果。\n\n本章复用既有8°常坡、h=2米、固定1000米目标的五个独立ODE核对结果：三例在180秒内到达，两例仅为该窗未达。显式假设T_in=T_L+0后，逐个无权重传播情景将局部候选集平移为目标到达与行动余量，结果见条件演示表及图。这完成固定1000米测试目标的条件空间输出；不推断连续危险影响范围、停距或实际吉隆预警半径，亦不把未达成员赋予无限提前量。"
+}

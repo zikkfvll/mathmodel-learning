@@ -1,0 +1,130 @@
+{
+  "source_pdf": "source_existing_transfer.pdf",
+  "source_sha256": "304230dfb93b3a1372f9af8b3968595282752e53321b0c799fd7694e5626655f",
+  "method": "manual sparse pixel selection on actual 250-dpi rendered original figures; no interpolation into dense time series",
+  "panels": [
+    {
+      "experiment_id": "Iverson2000_loose_Fig3",
+      "figure": "3",
+      "crop_file": "figure3_crop.png",
+      "pdf_page": 2,
+      "journal_page": 514,
+      "crop_box_on_page_png": [
+        840,
+        1350,
+        1740,
+        2550
+      ],
+      "time_calibration": {
+        "pixel_x0": 472,
+        "water_time0_s": 2780,
+        "pixel_x1": 862,
+        "water_time1_s": 2783
+      },
+      "displacement_calibration": {
+        "pixel_y0": 322,
+        "displacement0_m": 0,
+        "pixel_y1": 108,
+        "displacement1_m": 2
+      },
+      "head_calibration": {
+        "pixel_y0": 991,
+        "head0_cm": 0,
+        "pixel_y1": 762,
+        "head1_cm": 80
+      },
+      "pressure_sensor_vertical_depth_cm": 50,
+      "reference_water_time_s": 2780,
+      "time_error_s": 0.05,
+      "displacement_error_m": 0.06,
+      "head_error_cm": 3,
+      "curve_identification": "50cm curve, second pressure trace from top up to approximately 2782.5 s; late 67cm trough not digitized",
+      "points": [
+        {
+          "pixel_x": 485,
+          "pixel_y_displacement": 312,
+          "pixel_y_head": 952
+        },
+        {
+          "pixel_x": 603,
+          "pixel_y_displacement": 311,
+          "pixel_y_head": 945
+        },
+        {
+          "pixel_x": 668,
+          "pixel_y_displacement": 301.5,
+          "pixel_y_head": 920.5
+        },
+        {
+          "pixel_x": 734,
+          "pixel_y_displacement": 264,
+          "pixel_y_head": 865
+        },
+        {
+          "pixel_x": 799,
+          "pixel_y_displacement": 203,
+          "pixel_y_head": 822
+        }
+      ]
+    },
+    {
+      "experiment_id": "Iverson2000_dense_Fig4",
+      "figure": "4",
+      "crop_file": "figure4_crop.png",
+      "pdf_page": 3,
+      "journal_page": 515,
+      "crop_box_on_page_png": [
+        430,
+        650,
+        1350,
+        1800
+      ],
+      "time_calibration": {
+        "pixel_x0": 452,
+        "water_time0_s": 14640,
+        "pixel_x1": 841,
+        "water_time1_s": 15540
+      },
+      "displacement_calibration": {
+        "pixel_y0": 278,
+        "displacement0_m": 0,
+        "pixel_y1": 62,
+        "displacement1_m": 2
+      },
+      "head_calibration": {
+        "pixel_y0": 945,
+        "head0_cm": 0,
+        "pixel_y1": 718,
+        "head1_cm": 80
+      },
+      "pressure_sensor_vertical_depth_cm": 67,
+      "reference_water_time_s": 14640,
+      "time_error_s": 10,
+      "displacement_error_m": 0.04,
+      "head_error_cm": 3,
+      "curve_identification": "upper 67cm pressure trace during first A slip; later crossing/spikes not digitized",
+      "points": [
+        {
+          "pixel_x": 480,
+          "pixel_y_displacement": 278,
+          "pixel_y_head": 795
+        },
+        {
+          "pixel_x": 555,
+          "pixel_y_displacement": 277,
+          "pixel_y_head": 796
+        },
+        {
+          "pixel_x": 582,
+          "pixel_y_displacement": 273,
+          "pixel_y_head": 810
+        },
+        {
+          "pixel_x": 608,
+          "pixel_y_displacement": 267,
+          "pixel_y_head": 820
+        }
+      ]
+    }
+  ]
+}

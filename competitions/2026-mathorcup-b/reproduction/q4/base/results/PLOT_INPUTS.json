@@ -1,0 +1,10 @@
+{
+  "morris": "results/morris/MORRIS_SUMMARY.json",
+  "hydrograph": "results/local_base30/pilot_30.npz",
+  "full_field": "results/full/copernicus_40/pilot_40.npz",
+  "full_route": "data/full/mapped_path_utm.csv",
+  "inverse": "results/inverse/INVERSE_SEARCH.npz",
+  "metrics": "results/formal_test/COMPARISON_METRICS.csv",
+  "costs": "results/formal_test/METHOD_COSTS.csv",
+  "surface": "results/formal_seal/seed137/C_MF_active/SURFACE_PREDICTIONS.npz"
+}

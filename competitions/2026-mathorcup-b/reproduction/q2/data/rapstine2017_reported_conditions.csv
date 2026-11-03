@@ -1,0 +1,25 @@
+experiment,quantity,value,unit,source_locator,status,limitation
+2017-05-17,sediment_volume,6,m3,Paper section3.1,reported_setup,
+2017-05-17,slope_angle,31,degree,Paper abstract/section3.1,reported_setup,
+2017-05-17,sand_fraction,89,percent_by_volume,Paper section3.1,reported_setup,not mass percent; differs from prior Iverson2000 reporting basis
+2017-05-17,silt_fraction,6,percent_by_volume,Paper section3.1,reported_setup,
+2017-05-17,clay_fraction,5,percent_by_volume,Paper section3.1,reported_setup,
+2017-05-17,mean_dry_bulk_density,1.20,g/cm3,Paper section3.1,reported_setup,not initial wet bulk density
+2017-05-17,retaining_wall_height,0.65,m,Paper section3.1,reported_setup,normal to flume bed
+2017-05-17,video_frame_rate,29.97,Hz,Paper abstract/section3,reported_setup,
+2017-05-17,prior_surface_sprinkling,12,min,Paper section3.1,reported_setup,
+2017-05-17,pause_before_groundwater,2,min,Paper section3.1,reported_setup,
+2017-05-17,groundwater_duration_to_failure,50,min,Paper section3.1,reported_setup,
+2017-05-17,pore_sensor_count,6,count,Paper section3.1/4.2,reported_setup,
+2017-05-17,initial_pore_pressure_lower_bound,0,kPa,Paper section4.2,reported_strict_bound,pressure is >0 and <2.5 kPa several seconds before failure; no digitized individual value
+2017-05-17,initial_pore_pressure_upper_bound,2.5,kPa,Paper section4.2,reported_strict_bound,not saturated hydrostatic initial condition
+2017-05-17,maximum_meaningful_postfailure_pore_window,2,s,Paper section4.2,approximate_physical_limit,sensors pulled by tethers thereafter
+2017-05-17,upslope_deep_sensor_depth,0.69,m,Paper section4.2,reported_sensor_depth,
+2017-05-17,upslope_shallow_sensor_depth,0.58,m,Paper section4.2,reported_sensor_depth,
+2017-05-17,postulated_hydraulic_permeability_low,1e-11,m2,Paper section4.3,author_assumption,close to prior static-specimen measurement; not measured during current failure
+2017-05-17,postulated_hydraulic_permeability_high,1e-7,m2,Paper section4.3,author_assumption,postulated value during motion; cannot call measured local K
+2017-05-17,pore_fluid_viscosity,0.001,Pa_s,Paper section4.3,author_assumption,pure water
+2017-05-17,pore_fluid_density,1000,kg/m3,Paper section4.3,author_assumption,pure water
+2017-05-17,upslope_normalized_crosscorrelation,0.230,dimensionless,Paper section4.3,author_result,not our model validation score
+2017-05-17,midslope_normalized_crosscorrelation,0.868,dimensionless,Paper section4.3,author_result,not our model validation score
+2017-05-17,downslope_normalized_crosscorrelation,0.885,dimensionless,Paper section4.3,author_result,not our model validation score

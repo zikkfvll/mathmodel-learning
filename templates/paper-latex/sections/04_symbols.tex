@@ -1,0 +1,23 @@
+\section{符号说明}
+\renewcommand{\thetable}{\arabic{table}}
+\begin{table}[htbp]
+\centering
+\caption{主要符号及含义（格式示例）}\label{tab:symbols}
+\fontsize{9.5}{12}\selectfont
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{p{39mm}X}
+\toprule
+符号 & 含义 \\
+\midrule
+$\mathbf{x}$ & 决策变量或状态向量；各分量单位在首次定义处说明 \\
+$\theta$ & 模型参数向量；填写参数含义、单位与依据 \\
+$\mathcal{D}$ & 本问实际使用的数据集合及其支持范围 \\
+$\mathcal{X}$ & 满足本问约束的可行域 \\
+$f$ & 与本问目标对应的函数；量纲由实际定义确定 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\FloatBarrier
+\renewcommand{\thetable}{1-\arabic{table}}
+\setcounter{table}{0}
+\templatehint{这些符号只演示符号表版式，不能据此预设后续题目的变量或模型。}

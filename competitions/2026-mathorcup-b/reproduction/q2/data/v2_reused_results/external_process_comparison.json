@@ -1,0 +1,8 @@
+{
+  "study_count": 1,
+  "erodible_bed_experiments": 8,
+  "bare_bed_controls": 2,
+  "theta_erosion_fraction_pearson_descriptive": 0.8627366937353246,
+  "theta_front_speed_pearson_descriptive": 0.8781020626665245,
+  "identity": "already formed inflow entrainment response; no local or first-formation validation"
+}

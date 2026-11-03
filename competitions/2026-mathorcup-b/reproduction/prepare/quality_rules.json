@@ -1,0 +1,67 @@
+{
+  "version": "Q1-PHASE-C-20261024-v0.1",
+  "station_sentinel_tokens": [
+    "9999.9 exact Decimal from original token"
+  ],
+  "daily_sentinel_tokens": [],
+  "source_qc_dictionary": {
+    "0": "correct",
+    "1": "suspicious",
+    "2": "wrong",
+    "4": "source_imputed",
+    "8": "missing",
+    "9": "uncontrolled"
+  },
+  "main_allowed_qc_codes": [
+    0
+  ],
+  "no_source_qc": "retain_flagged",
+  "station_timezone": "Asia/Shanghai",
+  "time_support": "pending; leave interval_start/end, aggregation and available_at empty",
+  "empirical_thresholds": null,
+  "physical_rules": {
+    "temperature_C": {
+      "pattern": "Ta_*, soilT_*, T_SONIC(deg C)",
+      "lower": -273.15,
+      "lower_inclusive": false,
+      "evidence": "explicit Celsius column units; necessary absolute-zero condition"
+    },
+    "pressure": {
+      "columns": [
+        "Pressure(hPa)"
+      ],
+      "lower": 0,
+      "lower_inclusive": false,
+      "evidence": "MET source near-surface pressure only; necessary positive domain, level/reference/support pending"
+    },
+    "vwc": {
+      "pattern": "VWC_*(m3/m3)",
+      "lower": 0,
+      "upper": 1,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "evidence": "explicit volumetric fraction column unit; necessary fraction domain only"
+    }
+  },
+  "conditional_flags_only": {
+    "Precip(mm)": "negative -> precip_nonnegative_definition_pending; no hard bound before amount/counter semantics",
+    "USTAR(m/s)": "negative -> ustar_nonnegative_definition_pending; no hard bound before source definition",
+    "Rsd/Rsu/Rld/Rlu": "negative -> radiation_direction_noise_pending; no clipping",
+    "PA(kPa)": "all tokens -> pa_definition_reference_pending; physical not_evaluated"
+  },
+  "disposition_priority": [
+    "quarantine_structure",
+    "quarantine_source_qc",
+    "quarantine_physical",
+    "hold_time_label_conflict",
+    "retain_physical_pending",
+    "retain_screened_candidate"
+  ],
+  "evidence": [
+    "reports/independent_review/b20261024_01/reviews/model/references/tpdc_station_metadata.json",
+    "reports/evidence_followup/route_v0.2/station/STATION_EVIDENCE_FOLLOWUP.md",
+    "reports/evidence_followup/route_v0.2/independent_review/QUALITY_API_REVIEW.md"
+  ],
+  "daily_policy": "numeric/date inventory only; no unit, sentinel, timezone or station-QC rule transferred",
+  "parser_policy": "reports/q1/review_phase_b/v0.2/PARSER_AND_PA_DECISION.md; grammar and numerical conversion states in phase_c/IMPLEMENTATION_CONTRACT.md"
+}

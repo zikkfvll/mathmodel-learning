@@ -1,0 +1,3592 @@
+{
+  "schema_version": "q1_feature_dictionary_v2.0",
+  "description": "看过V1目标结果和独立审核后的修订：合格主榜统一双侧异常，原24项顺序不变，局部恢复6项原符号基础通道并预定2项共同小时有效的近地层代理；不称事前盲定。",
+  "data_version": "D0: official attachments 01-08 existing cleaned_all; Q1 temporal features use attachment01 only",
+  "sources": [
+    {
+      "id": "TASK",
+      "path": "reports/q1/formal_implementation_v2/TASK.md",
+      "sha256": "b68cc258523191f7c6a76d44ae530f7e22fc15c39d865a6ae6b538ed0007cfae",
+      "use": "current_metadata_and_revision_evidence"
+    },
+    {
+      "id": "V1_DICTIONARY",
+      "path": "outputs/q1_formal/results/feature_dictionary.json",
+      "sha256": "ca0dfb8fb90fed3eb784237c9c842d40b31a5eb846d867e09d93889a5fbab4d8",
+      "use": "current_metadata_and_revision_evidence"
+    },
+    {
+      "id": "V1_REVIEW",
+      "path": "work/q1/formal_implementation_review_v1/REVIEW.md",
+      "sha256": "af049a4b79ce581dc711c9b1353dce13657e907e7ac9ddfa6dfb678da27997cf",
+      "use": "current_metadata_and_revision_evidence"
+    },
+    {
+      "id": "D0",
+      "path": "data_cleaning/README_ALL.md",
+      "sha256": "f0ba44868d066e4e766defa8262acbc095f9d736bbfa55b4a94864805f37a940",
+      "use": "current_metadata_and_revision_evidence"
+    },
+    {
+      "id": "D0_VARIABLE_DICTIONARY",
+      "path": "data_cleaning/cleaned_all/attachment01_02/variable_dictionary.csv",
+      "sha256": "88d5b5e1bab6fdb0bcf4a403e860b74a85dc2ae5e2078eb80830529d9851e66e",
+      "use": "current_metadata_and_revision_evidence"
+    },
+    {
+      "id": "DEFINITIONS",
+      "path": "reports/q1/readiness_v1/VARIABLE_DEFINITIONS.md",
+      "sha256": "37a0fba08c5eb5ddff1c0b2273e825b363807ac4c4ccee665a4b09c0338ccea1",
+      "use": "current_metadata_and_revision_evidence"
+    },
+    {
+      "id": "FLUX",
+      "path": "reports/q1/readiness_v1/flux_evidence/FLUX_PRESSURE_METHOD_EVIDENCE.md",
+      "sha256": "f2fe9b8c420c6527b58803c252211fa12c8b050909c828493bc41f13ac783187",
+      "use": "current_metadata_and_revision_evidence"
+    },
+    {
+      "id": "TPDC_CURRENT_ARCHIVE",
+      "path": "reports/independent_review/b20261024_01/reviews/model/references/tpdc_station_metadata.json",
+      "sha256": "23e8b279bb8ba314550165e823ead5f7ec18da6c7cd6db7f42bd6ed2974a680a",
+      "use": "current_metadata_and_revision_evidence"
+    },
+    {
+      "id": "COLUMN_MAP",
+      "path": "work/q1/phase_a/runs/run_20261024T201212_018963/data/COLUMN_MAP.json",
+      "sha256": "109f9986a25ad48c6dc47c3d91fe2da6a2e64486fcec36bdc5586d97031378b9",
+      "use": "current_metadata_and_revision_evidence"
+    },
+    {
+      "id": "ESSD_METHODS_ARCHIVE",
+      "path": "work/q1/readiness_v1/flux_evidence/web/004_open_methods_response.json",
+      "sha256": "74461c64aa940cb9102e5267eab34a5d9c68848da1b9995e50aae4f65d8a1ce8",
+      "use": "current_metadata_and_revision_evidence"
+    },
+    {
+      "id": "参考方法",
+      "path": "来源说明.txt",
+      "sha256": "124ce0d7ffbca12a8ed6d646786d231b80de21fac7b8cd1919209c9b8070503e",
+      "use": "inherited_V1_hypothesis_reference_not_new_source_confirmation"
+    },
+    {
+      "id": "OLD_REVIEW",
+      "path": "reports/q1/review_conditional_g2_g7/v0.1/Q1_REVIEW_DECISION.md",
+      "sha256": "2d90785243b8c542077b649a15fb05b67af852b991e9b0bb505b7ee11225df96",
+      "use": "inherited_V1_hypothesis_reference_not_new_source_confirmation"
+    },
+    {
+      "id": "MODEL_REVIEW",
+      "path": "reports/independent_review/b20261024_01/reviews/model/MODEL_REVIEW.md",
+      "sha256": "e5542610fdd61f01d1711d13c2b8c3878f1242e231df3bd6731ea85e8d87d53c",
+      "use": "inherited_V1_hypothesis_reference_not_new_source_confirmation"
+    },
+    {
+      "id": "PAPER1",
+      "path": "小红书论文1.docx",
+      "sha256": "017602763bde33a67ef3c9be5671c377b2fa55ab50dbf18d597e5a1cf2275363",
+      "use": "inherited_V1_hypothesis_reference_not_new_source_confirmation"
+    }
+  ],
+  "source_fact_flags": {
+    "hourly_support_confirmed": false,
+    "hourly_aggregation_confirmed": false,
+    "pressure_reference_confirmed": false,
+    "precip_accumulation_confirmed": false,
+    "radiation_signs_current_csv_confirmed": false,
+    "flux_processing_current_csv_confirmed": false,
+    "g01_sign_and_surface_correction_confirmed": false,
+    "cross_year_channel_processing_consistency_confirmed": false,
+    "new_external_observation_data_downloaded": false
+  },
+  "working_assumptions": {
+    "event_time": "2026-08-26T10:30:00+08:00",
+    "event_time_status": "Beijing time working assumption; not confirmed source-initiation time",
+    "primary_cutoff": "2026-08-26T10:00:00+08:00",
+    "comparison_cutoff": "2026-08-26T00:00:00+08:00",
+    "hour_label_branches": {
+      "H-END": "label h supports [h-1h,h)",
+      "H-START": "label h supports [h,h+1h)"
+    },
+    "window_interval": "[cutoff-w hours,cutoff), only fully ended supports; an H-START label equal to cutoff is excluded",
+    "daily_slope_blocks": "cutoff-aligned disjoint 24h blocks, explicitly not civil days",
+    "signed_basic_channel_comparability": "A_CHANNEL: 同名同单位基础通道在目标/历史年对应同一观测对象、相同正号和相同输出处理口径；现有同构列头不证明此事实。仅做原符号通道描述，不能据此推净能量、地表订正或完整交换量。",
+    "profile_proxy_common_support": "A_PROXY: 两高度在同一小时、同一H-END/H-START条件下共同有效后作差，再在窗口内按联合有效时长求均值；不使用各层各自窗口均值相减。",
+    "fixed_clock_subperiods": "固定UTC+8分时段仅供过程分析预定；不是真实日照/完整夜间，不新增排名因素。"
+  },
+  "rank_independence": {
+    "post_V1_result_revision": true,
+    "V1_target_result_summary_and_review_read": true,
+    "V2_rankings_read_for_dictionary": false,
+    "V2_target_values_used_to_select_new_channels_or_proxies": false,
+    "V2_new_proxy_count_fixed_before_V2_ranking": 2,
+    "direction_selected_from_target_tail": false,
+    "note": "V1独立结论含目标前五和解释，已读。修订不是盲定；新增通道/代理依据对象、单位与操作性定义，不根据V2名次取舍。2026不是独立终评样本。"
+  },
+  "default_statistical_support": {
+    "history_years": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "calendar_endpoint_month_day": "08-26",
+    "same_clock_endpoints_plus_minus_days": 15,
+    "endpoints_per_year": 31,
+    "minimum_jointly_supported_endpoints_per_year": 25,
+    "minimum_valid_history_years": 4,
+    "target_and_pseudo_events_use_identical_windows": true,
+    "means_coverage_min": 0.9,
+    "means_coverage_sensitivity": 0.95,
+    "sums_durations_maxima_require_complete_interval": true,
+    "all_ties_use_midrank": true,
+    "source_precision_rule": "不得添加随机扰动或根据名次调容差；简单十进制和/差/极值应优先按原token精度确定并列，派生斜率等须预先固定算术规则；字典不认证实现精度。",
+    "minimum_jointly_supported_endpoints_sensitivity": [
+      20,
+      15
+    ],
+    "sensitivity_applies_to_all_factors": true,
+    "cross_column_proxies_use_same_hour_joint_validity_before_aggregation": true
+  },
+  "redundancy_policy": {
+    "reference_hours": 168,
+    "threshold_main": 0.9,
+    "threshold_sensitivity": [
+      0.85,
+      0.95
+    ],
+    "minimum_common_history_years": 4,
+    "minimum_paired_endpoints_each_year": 25,
+    "automatic_merge_requires_same_physical_information_and_abs_spearman_threshold": true,
+    "temperature_level_duplicates": [
+      "t2_mean",
+      "t2_max",
+      "pdd"
+    ],
+    "different_vwc_depths_auto_merge": false,
+    "different_medium_air_and_soil_temperature_auto_merge": false,
+    "pressure_mean_vs_old_G7_same_factor": false,
+    "proxy_and_state_level_are_not_automatically_same_information": true,
+    "threshold_condition_and_same_physical_information_both_required": true
+  },
+  "interpretation": {
+    "eligible_for_top5": "具备可说明的观测对象或明确代理及操作定义的因素可进入双侧异常关注候选；资格还须通过实际目标/历史支持、无信息检查和去冗余，不等于已证致灾原因。",
+    "exploratory_factors": "不以缺少唯一促灾方向限制主榜资格；所有条件可算因素均用a=abs(2*q-1)。探索/机制证据强弱另记，不参与加分。",
+    "NA_factors": "8项局部定义不足维持NA，不以0参与排序，不阻塞其余因素。",
+    "hypothesis_direction": "逐项保留V1方向与依据，不依2026实际尾部翻转。原单侧假说单独评价；源方向仍未核的辐射供能假说不得由原通道偏高替代证实。",
+    "conditional_restoration": "基础通道的算术历史位置可在跨年同口径与小时均值假设下计算；来源事实标记不变。完整处理链未核限制精细能量/交换解释，并未被本字典关闭。"
+  },
+  "factors": [
+    {
+      "id": "precip_sum",
+      "name": "累计降水",
+      "label": "累计降水",
+      "modex_original_name": "累计降水",
+      "modex_original_statistic": "窗口和",
+      "modex_mechanism_score": 3,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Precip(mm)",
+          "unit": "mm",
+          "qc_column": null,
+          "source_qc_identity": "not_provided"
+        }
+      ],
+      "unit": "mm",
+      "formula": "若且仅若源列是每个完整小时的液态降水增量：sum(P_i)。当前禁止执行。",
+      "operation": "窗口和",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "precipitation_amount_or_intensity",
+      "duplicate_information": false,
+      "eligible_for_top5": false,
+      "exploratory": false,
+      "status": "NA",
+      "status_label": "暂不可计算",
+      "computable": false,
+      "status_reason": "Precip增量/累计读数/计数器及复位未获得当前数据原说明；因此降水变换对象不明确。无源QC本身不是本项永久NA的依据。",
+      "statistical_support": {
+        "support_rule": "complete_interval",
+        "coverage_min": 1.0,
+        "coverage_sensitivity": null,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "NA因素不计入可计算次数或Top5分母。",
+        "现阶段不求和、差分、计数或声称无雨；不借用ERA5或同站其他DOI的累计方式关闭当前定义。",
+        "定义一旦有源说明可局部重新评估；源QC未提供始终如实标记。"
+      ],
+      "historical_precision": {
+        "status": "not_scanned_because_semantically_NA",
+        "reason": "不为不可计算因素扫描数值或推断公式；定义闭合后另行检查。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "偏高可增加水源供给；这是预设方向假说，不证明本次存在降水触发。",
+        "sources": [
+          "参考方法 §4.3–4.4",
+          "DEFINITIONS Precip行"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "deferred_source_definition_or_sign",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "core_precip_interval_or_counter_semantics_missing",
+      "hypothesis_name": "累计降水"
+    },
+    {
+      "id": "precip_max",
+      "name": "最大小时雨强",
+      "label": "最大小时雨强",
+      "modex_original_name": "最大小时雨强",
+      "modex_original_statistic": "窗口最大",
+      "modex_mechanism_score": 3,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Precip(mm)",
+          "unit": "mm",
+          "qc_column": null,
+          "source_qc_identity": "not_provided"
+        }
+      ],
+      "unit": "mm h-1",
+      "formula": "若源列为完整小时增量：max(P_i / 1 h)，单位mm h-1。当前禁止执行。",
+      "operation": "窗口最大",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "precipitation_amount_or_intensity",
+      "duplicate_information": false,
+      "eligible_for_top5": false,
+      "exploratory": false,
+      "status": "NA",
+      "status_label": "暂不可计算",
+      "computable": false,
+      "status_reason": "Precip增量/累计读数/计数器及复位未获得当前数据原说明；因此降水变换对象不明确。无源QC本身不是本项永久NA的依据。",
+      "statistical_support": {
+        "support_rule": "complete_interval",
+        "coverage_min": 1.0,
+        "coverage_sensitivity": null,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "NA因素不计入可计算次数或Top5分母。",
+        "现阶段不求和、差分、计数或声称无雨；不借用ERA5或同站其他DOI的累计方式关闭当前定义。",
+        "定义一旦有源说明可局部重新评估；源QC未提供始终如实标记。"
+      ],
+      "historical_precision": {
+        "status": "not_scanned_because_semantically_NA",
+        "reason": "不为不可计算因素扫描数值或推断公式；定义闭合后另行检查。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "偏高可增加水源供给；这是预设方向假说，不证明本次存在降水触发。",
+        "sources": [
+          "参考方法 §4.3–4.4",
+          "DEFINITIONS Precip行"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "deferred_source_definition_or_sign",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "core_precip_interval_or_counter_semantics_missing",
+      "hypothesis_name": "最大小时雨强"
+    },
+    {
+      "id": "rain_hours",
+      "name": "有雨小时数",
+      "label": "有雨小时数",
+      "modex_original_name": "有雨小时数",
+      "modex_original_statistic": "窗口计数",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Precip(mm)",
+          "unit": "mm",
+          "qc_column": null,
+          "source_qc_identity": "not_provided"
+        }
+      ],
+      "unit": "h",
+      "formula": "若源列为完整小时增量：sum(1{P_i >= 0.1 mm} * 1 h)。当前禁止执行。",
+      "operation": "窗口计数",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "precipitation_amount_or_intensity",
+      "duplicate_information": false,
+      "eligible_for_top5": false,
+      "exploratory": false,
+      "status": "NA",
+      "status_label": "暂不可计算",
+      "computable": false,
+      "status_reason": "Precip增量/累计读数/计数器及复位未获得当前数据原说明；因此降水变换对象不明确。无源QC本身不是本项永久NA的依据。",
+      "statistical_support": {
+        "support_rule": "complete_interval",
+        "coverage_min": 1.0,
+        "coverage_sensitivity": null,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "NA因素不计入可计算次数或Top5分母。",
+        "现阶段不求和、差分、计数或声称无雨；不借用ERA5或同站其他DOI的累计方式关闭当前定义。",
+        "定义一旦有源说明可局部重新评估；源QC未提供始终如实标记。"
+      ],
+      "historical_precision": {
+        "status": "not_scanned_because_semantically_NA",
+        "reason": "不为不可计算因素扫描数值或推断公式；定义闭合后另行检查。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "偏高可增加水源供给；这是预设方向假说，不证明本次存在降水触发。",
+        "sources": [
+          "参考方法 §4.3–4.4",
+          "DEFINITIONS Precip行"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "deferred_source_definition_or_sign",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "core_precip_interval_or_counter_semantics_missing",
+      "hypothesis_name": "有雨小时数"
+    },
+    {
+      "id": "api",
+      "name": "前期降水指数API（日衰减K=0.9）",
+      "label": "前期降水指数API（日衰减K=0.9）",
+      "modex_original_name": "前期降水指数API（日衰减K=0.9）",
+      "modex_original_statistic": "窗口终点值",
+      "modex_mechanism_score": 3,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Precip(mm)",
+          "unit": "mm",
+          "qc_column": null,
+          "source_qc_identity": "not_provided"
+        }
+      ],
+      "unit": "mm",
+      "formula": "当前不执行：须先确认Precip区间语义。日衰减K=0.9可在说明后由分析者明确日界、初值/热启动与窗口规则；原文未写这些规则不构成永久禁止。任何后续适配必须在计算其结果前固定并与原参考方法定义差异一并报告。",
+      "operation": "窗口终点值",
+      "window_hours": [],
+      "representative_hours": null,
+      "window_applicability": {
+        "24": "不适用或定义未闭合，见限制",
+        "72": "不适用或定义未闭合，见限制",
+        "168": "不适用或定义未闭合，见限制",
+        "360": "不适用或定义未闭合，见限制",
+        "720": "不适用或定义未闭合，见限制"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "precipitation_memory",
+      "duplicate_information": false,
+      "eligible_for_top5": false,
+      "exploratory": false,
+      "status": "NA",
+      "status_label": "暂不可计算",
+      "computable": false,
+      "status_reason": "Precip增量/累计读数/计数器及复位未获得当前数据原说明；因此降水变换对象不明确。无源QC本身不是本项永久NA的依据。 API初值、日界和截断属可公开规定的操作规则；当前NA的核心阻断是Precip语义，而非原API初值缺失。",
+      "statistical_support": {
+        "support_rule": "complete_interval",
+        "coverage_min": 1.0,
+        "coverage_sensitivity": null,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "NA因素不计入可计算次数或Top5分母。",
+        "现阶段不求和、差分、计数或声称无雨；不借用ERA5或同站其他DOI的累计方式关闭当前定义。",
+        "定义一旦有源说明可局部重新评估；源QC未提供始终如实标记。"
+      ],
+      "historical_precision": {
+        "status": "not_scanned_because_semantically_NA",
+        "reason": "不为不可计算因素扫描数值或推断公式；定义闭合后另行检查。"
+      },
+      "windows_h": [],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "偏高可增加水源供给；这是预设方向假说，不证明本次存在降水触发。",
+        "sources": [
+          "参考方法 §4.3–4.4",
+          "DEFINITIONS Precip行"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "deferred_source_definition_or_sign",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "core_precip_interval_or_counter_semantics_missing",
+      "analyst_selectable_rule_components": [
+        "time_block_boundary",
+        "initial_state_or_spinup",
+        "finite_window_truncation",
+        "daily_to_hourly_decay_if_used"
+      ],
+      "hypothesis_name": "前期降水指数API（日衰减K=0.9）"
+    },
+    {
+      "id": "t2_mean",
+      "name": "2 m气温窗口均值",
+      "label": "2 m气温窗口均值",
+      "modex_original_name": "2 m 气温",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 3,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Ta_2m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "degC",
+      "formula": "sum(T_i*duration_i)/sum(duration_i)，仅在窗口覆盖率达标时计算。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "temperature_level",
+      "duplicate_information": true,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "在小时均值和双端点工作假设下可计算；真实统计支持未确认。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "相同正温条件下与PDD近似或精确单调重复，须按共同历史窗口检验。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/Ta_2m(degree C)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "较暖的近地面空气可为冰雪消融提供热力背景；站点气温不等于源区融化能量。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "2 m气温窗口均值"
+    },
+    {
+      "id": "t2_max",
+      "name": "2 m小时均温最大值（日最高的条件代理）",
+      "label": "2 m小时均温最大值（日最高的条件代理）",
+      "modex_original_name": "2 m 日最高气温",
+      "modex_original_statistic": "窗口最大",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Ta_2m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "degC",
+      "formula": "max(T_i) over complete hourly-mean supports in [cutoff-w,cutoff)。max(日内小时均温最大值)在相同纳入区间等于此式；不声称是真实瞬时/日最高温。",
+      "operation": "窗口最大",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "temperature_level",
+      "duplicate_information": true,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "D0无日最高原列；仅按小时均值最大值代理，不能重建小时内或自然日真正最高温。",
+      "statistical_support": {
+        "support_rule": "complete_interval",
+        "coverage_min": 1.0,
+        "coverage_sensitivity": null,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "与参考方法原名存在可识别的测量量差异；对照必须注明对齐代理。",
+        "极值对缺测敏感，主分析须完整窗口。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/Ta_2m(degree C)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "偏高表示较强短时暖背景，可能有利冰雪消融；不是经验证触发阈值。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "2 m小时均温最大值（日最高的条件代理）"
+    },
+    {
+      "id": "pdd",
+      "name": "站点正温指数",
+      "label": "站点正温指数",
+      "modex_original_name": "站点正积温 PDD",
+      "modex_original_statistic": "窗口和",
+      "modex_mechanism_score": 3,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Ta_2m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "degC h",
+      "formula": "sum(max(T_i,0)*duration_i)；完整小时均值条件下duration_i=1 h。不将负均温小时中的瞬时正温补入。",
+      "operation": "窗口和",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "temperature_level",
+      "duplicate_information": true,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "沿用已接受小时均温正温指数定义，新增窗口/截止须重算而非继承旧分数。",
+      "statistical_support": {
+        "support_rule": "complete_interval",
+        "coverage_min": 1.0,
+        "coverage_sensitivity": null,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "量纲明确为degC h；若展示degC d仅可除以24并标换算。",
+        "与温度均值同属temperature_level，历史相关阈值合格才自动合并。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/Ta_2m(degree C)"
+        ],
+        "arithmetic_recommendation": "Exact Decimal positive-part sum of original tokens, hourly durations exactly 1; do not restore from daily means."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "偏高表示给定时段的暖积累较大，是消融热力背景代理；不等于融水量或小时内精确正温积分。",
+        "sources": [
+          "参考方法 §4.4",
+          "OLD_REVIEW §2"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "站点正温指数"
+    },
+    {
+      "id": "warm_rate",
+      "name": "截止对齐24 h块均温变化率",
+      "label": "截止对齐24 h块均温变化率",
+      "modex_original_name": "升温速率",
+      "modex_original_statistic": "日均气温对时间的 OLS 斜率",
+      "modex_mechanism_score": 3,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Ta_2m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "degC day-1",
+      "formula": "将[cutoff-w,cutoff)分成w/24个互不重叠、截止对齐的24h块；各块先算覆盖达标均温y_d，以块中点实际经过日数x_d作OLS：sum((x-xbar)*(y-ybar))/sum((x-xbar)^2)。",
+      "operation": "日均气温对时间的 OLS 斜率",
+      "window_hours": [
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "不适用或定义未闭合，见限制",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "temperature_trend",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "明确采用截止对齐24h均温块代理；24h只有1个块无法估计斜率，不进入其择窗集合。",
+      "statistical_support": {
+        "support_rule": "daily_block_slope",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true,
+        "block_hours": 24,
+        "block_coverage_min": 0.9,
+        "minimum_valid_blocks": 3,
+        "valid_first_and_last_block_required": true,
+        "total_window_coverage_min": 0.9,
+        "block_coverage_sensitivity": 0.95,
+        "minimum_valid_blocks_fraction": 0.9,
+        "minimum_valid_blocks_formula": "max(3, ceil(coverage * (window_hours / 24)))",
+        "coverage_sensitivity_applies_to_blocks_and_valid_block_count": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_DAILY_BLOCK: 使用截止对齐24h块，不将其称为北京时间自然日均温；目标和所有伪事件完全相同。"
+      ],
+      "limitations": [
+        "与原文未明确日界的“日均”是显式操作性适配；若换自然日须独立分支。",
+        "至少3个有效24h块且覆盖首末块；不能用缺测后的样本序号代替经过时间。",
+        "有效24h块数还须达到ceil(coverage * w/24)，95%敏感性同步提高块覆盖与有效块个数；不是只要3块就接受长窗口。",
+        "主榜双侧，实际斜率可能为负；低历史分位必须结合实际符号区分慢升温、持平或降温，不由旧ID推断发生升温。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/Ta_2m(degree C)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "偏高表示窗口内更快升温，可提供增暖/融化加速背景；与温度水平是不同物理信息。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "截止对齐24 h块均温的升温速率",
+      "v1_name": "截止对齐24 h块均温的升温速率"
+    },
+    {
+      "id": "rn_mean",
+      "name": "净辐射窗口均值",
+      "label": "净辐射窗口均值",
+      "modex_original_name": "净辐射 R_n",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 3,
+      "raw_columns": [
+        {
+          "table": "RADM",
+          "column": "Rsd(W/m2)",
+          "unit": "W m-2",
+          "qc_column": "QC_Rsd",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "RADM",
+          "column": "Rsu(W/m2)",
+          "unit": "W m-2",
+          "qc_column": "QC_rsu",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "RADM",
+          "column": "Rld(W/m2)",
+          "unit": "W m-2",
+          "qc_column": "QC_rld",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "RADM",
+          "column": "Rlu(W/m2)",
+          "unit": "W m-2",
+          "qc_column": "QC_rlu",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "W m-2",
+      "formula": "mean(Rsd-Rsu+Rld-Rlu)（四分量须同一小时支持共同有效）；正向和列映射闭合前禁止执行。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "surface_energy_input",
+      "duplicate_information": false,
+      "eligible_for_top5": false,
+      "exploratory": false,
+      "status": "NA",
+      "status_label": "暂不可计算",
+      "computable": false,
+      "status_reason": "四个基础辐射通道可辨，但本批方向/正号映射未确认，不能组合成净辐射。独立通道恢复不关闭净量定义。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "不把文献的常规公式或截图论文的不同符号口径冒称当前CSV事实。",
+        "净辐射与单分量不同物理信息，不仅凭高相关自动合并。"
+      ],
+      "historical_precision": {
+        "status": "not_scanned_because_semantically_NA",
+        "reason": "不为不可计算因素扫描数值或推断公式；定义闭合后另行检查。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "若定义成立，偏高为更多表面辐射输入的热力背景；站点通量不等于源区净融化能。",
+        "sources": [
+          "参考方法 §4.2,§4.4",
+          "DEFINITIONS RADM行",
+          "FLUX §2 F3"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "deferred_source_definition_or_sign",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "base_channels_identifiable_net_derivation_not_closed",
+      "hypothesis_name": "净辐射窗口均值"
+    },
+    {
+      "id": "rsd_mean",
+      "name": "Rsd原符号短波辐射通道窗口均值",
+      "label": "Rsd原符号短波辐射通道窗口均值",
+      "modex_original_name": "入射短波 R_sd",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "RADM",
+          "column": "Rsd(W/m2)",
+          "unit": "W m-2",
+          "qc_column": "QC_Rsd",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "W m-2",
+      "formula": "sum(X_i*duration_i)/sum(duration_i)，X为该列原符号有效值；仅当联合/单列时间覆盖达标时计算，不取绝对值、不翻号。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "radiation_rsd",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在明确通道同口径假设下可计算",
+      "computable": true,
+      "status_reason": "官方辐射四分量和Rsd/W m-2列使基础短波通道可说明；在跨年同口径、同号与小时均值假设下描述原值位置。未核向下/正号不阻断本通道均值，但阻断供能量解释与净量合成。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_CHANNEL: 同名同单位基础通道在目标/历史年对应同一观测对象、相同正号和相同输出处理口径；现有同构列头不证明此事实。仅做原符号通道描述，不能据此推净能量、地表订正或完整交换量。"
+      ],
+      "limitations": [
+        "不将原符号偏高称为下行供能增强；不取绝对值、截负、翻号或套论文辐射剔除阈值。",
+        "本通道单独有效即可；净辐射另需四分量同时有效及方向映射。",
+        "详细处理链与当前CSV映射未确认；若同口径假设不成立，相应跨年历史位置结论无效。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "RADM/Rsd(W/m2)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "原token十进制精确编码，均值保留Fraction；不得据目标名次设容差，不能把V1未扫描当成不可计算。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "若定义成立，偏高为更多表面辐射输入的热力背景；站点通量不等于源区净融化能。",
+        "sources": [
+          "参考方法 §4.2,§4.4",
+          "DEFINITIONS RADM行",
+          "FLUX §2 F3"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "deferred_source_definition_or_sign",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "v1_name": "入射短波窗口均值",
+      "metadata_classification": "basic_channel_clear_derived_direction_missing",
+      "measurement_scope": "signed_source_channel_only",
+      "hypothesis_name": "入射短波窗口均值"
+    },
+    {
+      "id": "rld_mean",
+      "name": "Rld原符号长波辐射通道窗口均值",
+      "label": "Rld原符号长波辐射通道窗口均值",
+      "modex_original_name": "入射长波 R_ld",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "RADM",
+          "column": "Rld(W/m2)",
+          "unit": "W m-2",
+          "qc_column": "QC_rld",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "W m-2",
+      "formula": "sum(X_i*duration_i)/sum(duration_i)，X为该列原符号有效值；仅当联合/单列时间覆盖达标时计算，不取绝对值、不翻号。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "radiation_rld",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在明确通道同口径假设下可计算",
+      "computable": true,
+      "status_reason": "官方辐射四分量和Rld/W m-2列使基础长波通道可说明；在跨年同口径、同号与小时均值假设下描述原值位置。未核向下/正号不阻断本通道均值，但阻断供能量解释与净量合成。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_CHANNEL: 同名同单位基础通道在目标/历史年对应同一观测对象、相同正号和相同输出处理口径；现有同构列头不证明此事实。仅做原符号通道描述，不能据此推净能量、地表订正或完整交换量。"
+      ],
+      "limitations": [
+        "不将原符号偏高称为下行供能增强；不取绝对值、截负、翻号或套论文辐射剔除阈值。",
+        "不把长波通道直接转换成地表温度或源区融水。",
+        "详细处理链与当前CSV映射未确认；若同口径假设不成立，相应跨年历史位置结论无效。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "RADM/Rld(W/m2)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "原token十进制精确编码，均值保留Fraction；不得据目标名次设容差，不能把V1未扫描当成不可计算。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "若定义成立，偏高为更多表面辐射输入的热力背景；站点通量不等于源区净融化能。",
+        "sources": [
+          "参考方法 §4.2,§4.4",
+          "DEFINITIONS RADM行",
+          "FLUX §2 F3"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "deferred_source_definition_or_sign",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "v1_name": "入射长波窗口均值",
+      "metadata_classification": "basic_channel_clear_derived_direction_missing",
+      "measurement_scope": "signed_source_channel_only",
+      "hypothesis_name": "入射长波窗口均值"
+    },
+    {
+      "id": "vwc01",
+      "name": "0.1 m体积含水量窗口均值",
+      "label": "0.1 m体积含水量窗口均值",
+      "modex_original_name": "0.1 m 体积含水量",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 3,
+      "raw_columns": [
+        {
+          "table": "SOIL",
+          "column": "VWC_0.1m(m3/m3)",
+          "unit": "m3 m-3",
+          "qc_column": "QC_VWC_0.1m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "m3 m-3",
+      "formula": "sum(VWC_i*duration_i)/sum(duration_i)，覆盖达标。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "soil_moisture_profile",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "列深度/单位与D0有效掩码已明确；小时均值支持为本轮工作假设。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "不同深度代表不同响应/储水层，预先规定duplicate_information=false；高相关本身不触发跨深度合并。",
+        "介电含水量的冻结/温度响应和传感器校准未闭合；不能直接解释为液态可动水或孔压。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "SOIL/VWC_0.1m(m3/m3)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "预设偏高表示该深度更湿的土体状态，可能与孔隙水/物质易动性有关；未证本站与源区同一含水状态。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "0.1 m体积含水量窗口均值"
+    },
+    {
+      "id": "vwc02",
+      "name": "0.2 m体积含水量窗口均值",
+      "label": "0.2 m体积含水量窗口均值",
+      "modex_original_name": "0.2 m 体积含水量",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "SOIL",
+          "column": "VWC_0.2m(m3/m3)",
+          "unit": "m3 m-3",
+          "qc_column": "QC_VWC_0.2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "m3 m-3",
+      "formula": "sum(VWC_i*duration_i)/sum(duration_i)，覆盖达标。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "soil_moisture_profile",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "列深度/单位与D0有效掩码已明确；小时均值支持为本轮工作假设。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "不同深度代表不同响应/储水层，预先规定duplicate_information=false；高相关本身不触发跨深度合并。",
+        "介电含水量的冻结/温度响应和传感器校准未闭合；不能直接解释为液态可动水或孔压。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "SOIL/VWC_0.2m(m3/m3)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "预设偏高表示该深度更湿的土体状态，可能与孔隙水/物质易动性有关；未证本站与源区同一含水状态。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "0.2 m体积含水量窗口均值"
+    },
+    {
+      "id": "soilt01",
+      "name": "0.1 m土温窗口均值",
+      "label": "0.1 m土温窗口均值",
+      "modex_original_name": "0.1 m 土温",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "SOIL",
+          "column": "soilT_0.1m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_soilT_0.1m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "degC",
+      "formula": "sum(Tsoil_i*duration_i)/sum(duration_i)，覆盖达标。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "shallow_soil_temperature",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "摄氏温度和深度明确；按小时均值支持工作假设。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "与空气温度不同介质/滞后过程，不仅凭高相关自动合并。",
+        "未确认冻土存在或融冻状态，不可断言已发生融冻失稳。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "SOIL/soilT_0.1m(degree C)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": true,
+      "hypothesis_direction": "high",
+      "hypothesis_direction_evidence": {
+        "basis": "预设偏高表示近表层土体更暖，可能影响融冻/物质状态；不等于源区冻土或冰体内部温度。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "directional_physical_hypothesis_not_event_validated"
+      },
+      "hypothesis_single_sided": true,
+      "hypothesis_evidence_status": "conditional_one_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "0.1 m土温窗口均值"
+    },
+    {
+      "id": "g01",
+      "name": "0.1 m土壤热流原通道窗口均值",
+      "label": "0.1 m土壤热流原通道窗口均值",
+      "modex_original_name": "0.1 m 土壤热通量 G",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 1,
+      "raw_columns": [
+        {
+          "table": "SOIL",
+          "column": "G_0.1m(W/m2)",
+          "unit": "W m-2",
+          "qc_column": "QC_G_0.1m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "W m-2",
+      "formula": "sum(X_i*duration_i)/sum(duration_i)，X为该列原符号有效值；仅当联合/单列时间覆盖达标时计算，不取绝对值、不翻号。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "soil_heat_flux",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在明确通道同口径假设下可计算",
+      "computable": true,
+      "status_reason": "SOIL深度、G列及W m-2使0.1 m土壤热流原通道可说明；在跨年同口径同号、小时均值假设下描述。热流板具体配置、正向及0–0.1m储热订正未核，不阻断板位/深度通道均值，却阻断订正地表热流解释。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_CHANNEL: 同名同单位基础通道在目标/历史年对应同一观测对象、相同正号和相同输出处理口径；现有同构列头不证明此事实。仅做原符号通道描述，不能据此推净能量、地表订正或完整交换量。"
+      ],
+      "limitations": [
+        "解释上限为0.1 m深度的原通道，不能冒称已作上覆土层储热订正的地表热通量；当前资料未认证热流板型号。",
+        "不由原数值正负判断向上/向下，不以翻号、绝对值或删负规避定义。",
+        "详细处理链与当前CSV映射未确认；若同口径假设不成立，相应跨年历史位置结论无效。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "SOIL/G_0.1m(W/m2)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "原token十进制精确编码，均值保留Fraction；不得据目标名次设容差，不能把V1未扫描当成不可计算。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "没有可据当前资料固定的灾害异常单向；即使算术可做也只可探索性描述。",
+        "sources": [
+          "参考方法 §4.4",
+          "DEFINITIONS 与D0单位边界"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "v1_name": "0.1 m土壤热通量窗口均值",
+      "metadata_classification": "basic_channel_clear_surface_correction_missing",
+      "measurement_scope": "signed_source_channel_only",
+      "hypothesis_name": "0.1 m土壤热通量窗口均值"
+    },
+    {
+      "id": "dthdz_night",
+      "name": "夜间位温梯度窗口均值",
+      "label": "夜间位温梯度窗口均值",
+      "modex_original_name": "夜间（22–06 时）位温梯度",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 1,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Ta_1m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_1m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Ta_2m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_2m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Ta_4m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_4m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Ta_10m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_10m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Ta_20m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_20m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Pressure(hPa)",
+          "unit": "hPa",
+          "qc_column": "QC_Pressure",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "K m-1",
+      "formula": "参考方法原式：theta_z=(T_z+273.15)*(1000/p)^0.286；对ln(z)拟合theta=a+b ln(z)，梯度b/z_g，夜间均值。原式单p广播已被干绝热柱反例否定；不执行。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "boundary_layer_thermal_stratification",
+      "duplicate_information": false,
+      "eligible_for_top5": false,
+      "exploratory": true,
+      "status": "NA",
+      "status_label": "暂不可计算",
+      "computable": false,
+      "status_reason": "原单p广播位温梯度有已知实质缺陷，层间静力/虚温与压力基准未闭合；固定钟点时段可由分析者规定，但不能修复物理量。基础T剖面和T20−T2代理可独立计算。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "不得为使24项齐全沿用错误单层压力广播。",
+        "原文夜间22–06具体端点未闭合；修正后拟明确22:00–06:00区间整体支持，不按小时标签直接筛选。"
+      ],
+      "historical_precision": {
+        "status": "not_scanned_because_semantically_NA",
+        "reason": "不为不可计算因素扫描数值或推断公式；定义闭合后另行检查。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "层结高低有多重过程含义，当前无可靠灾害单向；须先修正物理量再作探索性比较。",
+        "sources": [
+          "参考方法 §4.2",
+          "MODEL_REVIEW MODEL-01",
+          "DEFINITIONS Pressure行"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "derived_thermodynamic_definition_invalid_or_incomplete",
+      "hypothesis_name": "夜间位温梯度窗口均值"
+    },
+    {
+      "id": "rig_day",
+      "name": "日间梯度Richardson数中位数",
+      "label": "日间梯度Richardson数中位数",
+      "modex_original_name": "日间（10–16 时）Ri_g 中位数",
+      "modex_original_statistic": "窗口中位数",
+      "modex_mechanism_score": 1,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Ta_1m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_1m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Ta_2m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_2m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Ta_4m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_4m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Ta_10m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_10m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Ta_20m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_20m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WS_1m(m/s)",
+          "unit": "m s-1",
+          "qc_column": "QC_WS_1m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WS_2m(m/s)",
+          "unit": "m s-1",
+          "qc_column": "QC_WS_2m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WS_4m(m/s)",
+          "unit": "m s-1",
+          "qc_column": "QC_WS_4m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WS_10m(m/s)",
+          "unit": "m s-1",
+          "qc_column": "QC_WS_10m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WS_20m(m/s)",
+          "unit": "m s-1",
+          "qc_column": "QC_WS_20m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WD_1m(degree)",
+          "unit": "degree",
+          "qc_column": "QC_WD_1m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WD_2m(degree)",
+          "unit": "degree",
+          "qc_column": "QC_WD_2m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WD_4m(degree)",
+          "unit": "degree",
+          "qc_column": "QC_WD_4m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WD_10m(degree)",
+          "unit": "degree",
+          "qc_column": "QC_WD_10m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WD_20m(degree)",
+          "unit": "degree",
+          "qc_column": "QC_WD_20m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Pressure(hPa)",
+          "unit": "hPa",
+          "qc_column": "QC_Pressure",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "1",
+      "formula": "参考方法原式Ri_g=(g/theta_bar)*(b_theta/z_g)/((b_u^2+b_v^2)/z_g^2+1e-4 s^-2)；u=-U sin(phi),v=-U cos(phi)，至少4层。theta梯度错误未修正，禁止执行。",
+      "operation": "窗口中位数",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "boundary_layer_gradient_stability",
+      "duplicate_information": false,
+      "eligible_for_top5": false,
+      "exploratory": true,
+      "status": "NA",
+      "status_label": "暂不可计算",
+      "computable": false,
+      "status_reason": "继承位温梯度实质缺陷，风向约定与共同支持未闭合；日间钟点可定但不足以修复Ri定义。标量WS20−WS2代理不代替矢量切变。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "正则项1e-4 s^-2是参考方法设置，不是当前源仪器事实。",
+        "不将多层高度对数拟合与浅层真梯度混同。"
+      ],
+      "historical_precision": {
+        "status": "not_scanned_because_semantically_NA",
+        "reason": "不为不可计算因素扫描数值或推断公式；定义闭合后另行检查。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "稳定性异常没有预先可辩护的单向灾害机制；保持探索性。",
+        "sources": [
+          "参考方法 §4.2",
+          "MODEL_REVIEW MODEL-01"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "derived_thermodynamic_and_vector_shear_definition_incomplete",
+      "hypothesis_name": "日间梯度Richardson数中位数"
+    },
+    {
+      "id": "zeta_med",
+      "name": "稳定度参数zeta中位数",
+      "label": "稳定度参数zeta中位数",
+      "modex_original_name": "稳定度参数 zeta 中位数",
+      "modex_original_statistic": "窗口中位数",
+      "modex_mechanism_score": 1,
+      "raw_columns": [
+        {
+          "table": "FLUX",
+          "column": "H(W/m2)",
+          "unit": "W m-2",
+          "qc_column": null,
+          "source_qc_identity": "not_provided"
+        },
+        {
+          "table": "FLUX",
+          "column": "USTAR(m/s)",
+          "unit": "m s-1",
+          "qc_column": null,
+          "source_qc_identity": "not_provided"
+        },
+        {
+          "table": "FLUX",
+          "column": "T_SONIC(deg C)",
+          "unit": "degC",
+          "qc_column": null,
+          "source_qc_identity": "not_provided"
+        },
+        {
+          "table": "MET",
+          "column": "Pressure(hPa)",
+          "unit": "hPa",
+          "qc_column": "QC_Pressure",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "1",
+      "formula": "参考方法原式rho=100p/[287.05*(T_SONIC+273.15)]；wtheta=H/(rho*1004)；L=-u*^3*theta_bar/(0.4*9.80665*wtheta)，zeta=z_f/L，z_f=3m原为自设值。当前禁止执行。",
+      "operation": "窗口中位数",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "boundary_layer_obukhov_stability",
+      "duplicate_information": false,
+      "eligible_for_top5": false,
+      "exploratory": true,
+      "status": "NA",
+      "status_label": "暂不可计算",
+      "computable": false,
+      "status_reason": "原H/声温/干温转换、u*协方差定义及实际通量高度不足，不能由基础H/USTAR通道均值恢复Obukhov长度或zeta；不填3m。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "3m及2/5m不是来源高度；不能因灵敏度安排就把未知参数视为事实。",
+        "H=0、u*=0等退化情形须另有物理规则，不能任意epsilon后强算。"
+      ],
+      "historical_precision": {
+        "status": "not_scanned_because_semantically_NA",
+        "reason": "不为不可计算因素扫描数值或推断公式；定义闭合后另行检查。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "正负稳定度只描述大气交换状态，当前无固定灾害单向；保持探索性。",
+        "sources": [
+          "参考方法 §4.2",
+          "FLUX §1–2",
+          "MODEL_REVIEW MODEL-09"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "derived_flux_thermodynamics_and_height_incomplete",
+      "hypothesis_name": "稳定度参数zeta中位数"
+    },
+    {
+      "id": "h_mean",
+      "name": "H原符号湍流热通量通道窗口均值",
+      "label": "H原符号湍流热通量通道窗口均值",
+      "modex_original_name": "感热 H",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "FLUX",
+          "column": "H(W/m2)",
+          "unit": "W m-2",
+          "qc_column": null,
+          "source_qc_identity": "not_provided"
+        }
+      ],
+      "unit": "W m-2",
+      "formula": "sum(X_i*duration_i)/sum(duration_i)，X为该列原符号有效值；仅当联合/单列时间覆盖达标时计算，不取绝对值、不翻号。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "turbulent_h",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在明确通道同口径假设下可计算",
+      "computable": true,
+      "status_reason": "官方FLUX湍流类型、H/W m-2列及同站网络热通量方法使宽泛热通量对象可辨。在跨年算法/同号/小时均值一致假设下仅描述H原通道；感热或浮力通量的精确转换及校正未核，阻断温度通量、Obukhov与能量解释。无源QC列不等于QC0。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_CHANNEL: 同名同单位基础通道在目标/历史年对应同一观测对象、相同正号和相同输出处理口径；现有同构列头不证明此事实。仅做原符号通道描述，不能据此推净能量、地表订正或完整交换量。"
+      ],
+      "limitations": [
+        "source_qc=not_provided；源QC列未提供，不能推定QC9或QC0，不能称通过源QC，也不新增低通量阈值。",
+        "不得H/(rho*cp)反推温度通量，不声称确证感热/浮力算法、正向、WPL或密度处理。",
+        "详细处理链与当前CSV映射未确认；若同口径假设不成立，相应跨年历史位置结论无效。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "FLUX/H(W/m2)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "原token十进制精确编码，均值保留Fraction；不得据目标名次设容差，不能把V1未扫描当成不可计算。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "交换强弱与水热供给存在方向依赖，当前资料不足固定一个灾害有利尾部。",
+        "sources": [
+          "参考方法 §4.4",
+          "DEFINITIONS FLUX/USTAR行",
+          "FLUX §1"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "v1_name": "感热通量窗口均值",
+      "metadata_classification": "basic_turbulent_channel_clear_processing_pending",
+      "measurement_scope": "signed_source_channel_only",
+      "hypothesis_name": "感热通量窗口均值"
+    },
+    {
+      "id": "le_mean",
+      "name": "LE原符号湍流热通量通道窗口均值",
+      "label": "LE原符号湍流热通量通道窗口均值",
+      "modex_original_name": "潜热 LE",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "FLUX",
+          "column": "LE(W/m2)",
+          "unit": "W m-2",
+          "qc_column": null,
+          "source_qc_identity": "not_provided"
+        }
+      ],
+      "unit": "W m-2",
+      "formula": "sum(X_i*duration_i)/sum(duration_i)，X为该列原符号有效值；仅当联合/单列时间覆盖达标时计算，不取绝对值、不翻号。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "turbulent_le",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在明确通道同口径假设下可计算",
+      "computable": true,
+      "status_reason": "官方FLUX湍流类型、LE/W m-2列及同站网络水热通量方法使潜热类热通量对象可辨。在跨年算法/同号/小时均值一致假设下仅描述LE原通道；精确处理与正向未核，阻断蒸散量及能量闭合推导。无源QC列不等于QC0。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_CHANNEL: 同名同单位基础通道在目标/历史年对应同一观测对象、相同正号和相同输出处理口径；现有同构列头不证明此事实。仅做原符号通道描述，不能据此推净能量、地表订正或完整交换量。"
+      ],
+      "limitations": [
+        "source_qc=not_provided；不将无QC列改成QC0/QC9或整列删除，不复制其他数据DOI的质量筛选。",
+        "不由LE换算蒸散、融水或闭合残差；不绝对值、截负或翻号。",
+        "详细处理链与当前CSV映射未确认；若同口径假设不成立，相应跨年历史位置结论无效。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "FLUX/LE(W/m2)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "原token十进制精确编码，均值保留Fraction；不得据目标名次设容差，不能把V1未扫描当成不可计算。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "交换强弱与水热供给存在方向依赖，当前资料不足固定一个灾害有利尾部。",
+        "sources": [
+          "参考方法 §4.4",
+          "DEFINITIONS FLUX/USTAR行",
+          "FLUX §1"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "v1_name": "潜热通量窗口均值",
+      "metadata_classification": "basic_turbulent_channel_clear_processing_pending",
+      "measurement_scope": "signed_source_channel_only",
+      "hypothesis_name": "潜热通量窗口均值"
+    },
+    {
+      "id": "p_mean",
+      "name": "近地面气压窗口均值",
+      "label": "近地面气压窗口均值",
+      "modex_original_name": "气压",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 1,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Pressure(hPa)",
+          "unit": "hPa",
+          "qc_column": "QC_Pressure",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "hPa",
+      "formula": "sum(p_i*duration_i)/sum(duration_i)，仅固定MET列，不与FLUX PA混填。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "surface_pressure_level",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "小时均值及稳定压力基准仅为跨年工作假设；不宣称站压或海平面气压已确认。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_PRESSURE: MET Pressure在各历史年与目标年具有同一未知但稳定的测量/订正基准；pressure_reference_confirmed仍false。"
+      ],
+      "limitations": [
+        "该因素是均压，不是旧G7的24h压差最大幅度，二者不得冒称相同因素。",
+        "无唯一促灾方向不影响双侧异常主榜；站压/海平面基准未确认，跨年同一基准为假设。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/Pressure(hPa)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "资料仅支持天气背景异常描述；偏高或偏低均不能直接解释成泥石流触发。",
+        "sources": [
+          "参考方法 §4.4",
+          "DEFINITIONS Pressure行",
+          "OLD_REVIEW §2"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "近地面气压窗口均值"
+    },
+    {
+      "id": "rh2_mean",
+      "name": "2 m相对湿度窗口均值",
+      "label": "2 m相对湿度窗口均值",
+      "modex_original_name": "2 m 相对湿度",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 2,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "RH_2m(%)",
+          "unit": "percent",
+          "qc_column": "QC_RH_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "percent",
+      "formula": "sum(RH_i*duration_i)/sum(duration_i)，沿用D0保留值，不能重新截到100。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "air_relative_humidity",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "列单位/高度可核，小时均值支持为工作假设；没有唯一促灾方向不再阻断双侧主榜。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "不看2026哪一尾更异常来选择high或low。",
+        "相对湿度不是融水或土壤含水量。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/RH_2m(%)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "偏湿可伴随降水/水汽，偏干可伴随热干背景与蒸发需求；当前无证据在二者中预选灾害有利方向。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "2 m相对湿度窗口均值"
+    },
+    {
+      "id": "ws10_mean",
+      "name": "10 m风速窗口均值",
+      "label": "10 m风速窗口均值",
+      "modex_original_name": "10 m 风速",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 1,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "WS_10m(m/s)",
+          "unit": "m s-1",
+          "qc_column": "QC_WS_10m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "m s-1",
+      "formula": "sum(U_i*duration_i)/sum(duration_i)，这是标量风速均值而不是向量合成风。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "surface_wind_speed",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "可在明确假设下计算",
+      "computable": true,
+      "status_reason": "列高度/单位可核，小时均值支持为工作假设；标量风速双侧异常可入主榜，不等于强触发。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。"
+      ],
+      "limitations": [
+        "不借WS范围自动新增极值删除或低风速阈值。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/WS_10m(m/s)"
+        ],
+        "arithmetic_recommendation": "For extrema use exact source-token Decimal; for means/slopes preserve exact rational ratios of source-token sums and support rather than inventing a display rounding tolerance. Same arithmetic target/pseudo and all branches."
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "conditional",
+      "v1_computable": true,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "风速可调制湍流与显热/潜热交换；效应取决温湿差与方向，不能一概以高风速当强触发。",
+        "sources": [
+          "参考方法 §4.4"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "previously_conditional_basic_state_or_operational_index",
+      "hypothesis_name": "10 m风速窗口均值"
+    },
+    {
+      "id": "ustar_mean",
+      "name": "USTAR原通道窗口均值（摩擦速度类）",
+      "label": "USTAR原通道窗口均值（摩擦速度类）",
+      "modex_original_name": "摩擦速度 u*",
+      "modex_original_statistic": "窗口均值",
+      "modex_mechanism_score": 1,
+      "raw_columns": [
+        {
+          "table": "FLUX",
+          "column": "USTAR(m/s)",
+          "unit": "m s-1",
+          "qc_column": null,
+          "source_qc_identity": "not_provided"
+        }
+      ],
+      "unit": "m s-1",
+      "formula": "sum(X_i*duration_i)/sum(duration_i)，X为该列原符号有效值；仅当联合/单列时间覆盖达标时计算，不取绝对值、不翻号。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "turbulent_ustar",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在明确通道同口径假设下可计算",
+      "computable": true,
+      "status_reason": "官方FLUX湍流类型、USTAR/m s-1列、伴随应力通道和同站摩擦速度方法使速度类通道对象可辨。在跨年协方差/旋转/处理与小时均值同口径假设下仅描述已给USTAR值；精确u*公式未核，阻断由其重建应力/交换和稳定度。无源QC列不等于QC0。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "该窗口真实时间支持；同一时段重复记录不得重复计入",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_TIME: UTC+8；仅使用支持区间完整结束于截止点的记录，H-END/H-START分别计算。",
+        "A_MEAN: 各纳入普通状态量按已接受工作假设视为小时均值，跨年同解释；源事实未确认。",
+        "A_CHANNEL: 同名同单位基础通道在目标/历史年对应同一观测对象、相同正号和相同输出处理口径；现有同构列头不证明此事实。仅做原符号通道描述，不能据此推净能量、地表订正或完整交换量。"
+      ],
+      "limitations": [
+        "source_qc=not_provided；不自设低u*、零值或其他经验剔除阈值。",
+        "对已给数值求均值不需把未知传感器高度填入公式；高度和精确协方差定义限制物理交换解释。",
+        "详细处理链与当前CSV映射未确认；若同口径假设不成立，相应跨年历史位置结论无效。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "FLUX/USTAR(m/s)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "原token十进制精确编码，均值保留Fraction；不得据目标名次设容差，不能把V1未扫描当成不可计算。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "NA",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": "two_sided",
+      "hypothesis_direction_evidence": {
+        "basis": "交换强弱与水热供给存在方向依赖，当前资料不足固定一个灾害有利尾部。",
+        "sources": [
+          "参考方法 §4.4",
+          "DEFINITIONS FLUX/USTAR行",
+          "FLUX §1"
+        ],
+        "strength": "no_unique_hazard_direction_exploratory"
+      },
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "not_single_sided",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "v1_name": "摩擦速度窗口均值",
+      "metadata_classification": "basic_turbulent_channel_clear_processing_pending",
+      "measurement_scope": "signed_source_channel_only",
+      "hypothesis_name": "摩擦速度窗口均值"
+    },
+    {
+      "id": "t20_t2_diff",
+      "name": "20 m−2 m同小时气温差窗口均值",
+      "label": "20 m−2 m同小时气温差窗口均值",
+      "modex_original_name": null,
+      "modex_original_statistic": null,
+      "modex_mechanism_score": null,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "Ta_20m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_20m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "Ta_2m(degree C)",
+          "unit": "degC",
+          "qc_column": "QC_Ta_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "degC",
+      "formula": "delta_i=Ta_20m(degree C)−Ta_2m(degree C)；仅两列同小时共同D0有效时保留delta_i；sum(delta_i*duration_i)/sum(duration_i)，分母按原窗口全部应有小时评价联合覆盖率。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "near_surface_temperature_difference_proxy",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在共同小时有效与小时均值假设下可计算",
+      "computable": true,
+      "status_reason": "固定两个清楚命名的原量差代理；上下层先共同有效作差，窗口均值要求联合覆盖≥90%，敏感性95%；目标与所有pseudo同规则。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "窗口全部应有小时；分子只计同小时两个原列均通过各自D0有效掩码的共同小时，不用两列各自支持的并集。",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true,
+        "joint_required_columns": [
+          "Ta_20m(degree C)",
+          "Ta_2m(degree C)"
+        ],
+        "pair_before_aggregation": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_PROXY: 两高度在同一小时、同一H-END/H-START条件下共同有效后作差，再在窗口内按联合有效时长求均值；不使用各层各自窗口均值相减。",
+        "A_TIME与A_MEAN同原通道；各层测高和对象不随年改变为跨年条件假设。"
+      ],
+      "limitations": [
+        "不是位温差/位温梯度，不能据1–20 m资料估计完整边界层高度。",
+        "不先取各层独立均值再相减；不按V2排名更换高度或再增同义代理。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/Ta_20m(degree C)",
+          "MET/Ta_2m(degree C)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "两列原token分别精确整数化，共同有效后精确相减与Fraction均值；不用float先做差决定并列。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "not_defined",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": null,
+      "hypothesis_direction_evidence": null,
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "new_proxy_no_inherited_single_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "explicit_operational_paired_profile_proxy",
+      "measurement_scope": "same_hour_jointly_valid_source_difference",
+      "hypothesis_name": null
+    },
+    {
+      "id": "ws20_ws2_diff",
+      "name": "20 m−2 m同小时标量风速差窗口均值",
+      "label": "20 m−2 m同小时标量风速差窗口均值",
+      "modex_original_name": null,
+      "modex_original_statistic": null,
+      "modex_mechanism_score": null,
+      "raw_columns": [
+        {
+          "table": "MET",
+          "column": "WS_20m(m/s)",
+          "unit": "m s-1",
+          "qc_column": "QC_WS_20m",
+          "source_qc_identity": "provided_column"
+        },
+        {
+          "table": "MET",
+          "column": "WS_2m(m/s)",
+          "unit": "m s-1",
+          "qc_column": "QC_WS_2m",
+          "source_qc_identity": "provided_column"
+        }
+      ],
+      "unit": "m s-1",
+      "formula": "delta_i=WS_20m(m/s)−WS_2m(m/s)；仅两列同小时共同D0有效时保留delta_i；sum(delta_i*duration_i)/sum(duration_i)，分母按原窗口全部应有小时评价联合覆盖率。",
+      "operation": "窗口均值",
+      "window_hours": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "representative_hours": 168,
+      "window_applicability": {
+        "24": "适用；仍须通过该因素支持检查",
+        "72": "适用；仍须通过该因素支持检查",
+        "168": "适用；仍须通过该因素支持检查",
+        "360": "适用；仍须通过该因素支持检查",
+        "720": "适用；仍须通过该因素支持检查"
+      },
+      "direction": "two_sided",
+      "direction_evidence": {
+        "basis": "主榜以a=abs(2*q-1)统一衡量双侧历史异常；偏高/偏低由实际q和物理值报告，不能据目标尾部选择单侧。",
+        "sources": [
+          "TASK §1"
+        ],
+        "strength": "two_sided_anomaly_attention_not_hazard_direction"
+      },
+      "physical_family": "near_surface_scalar_wind_difference_proxy",
+      "duplicate_information": false,
+      "eligible_for_top5": true,
+      "exploratory": false,
+      "status": "conditional",
+      "status_label": "在共同小时有效与小时均值假设下可计算",
+      "computable": true,
+      "status_reason": "固定两个清楚命名的原量差代理；上下层先共同有效作差，窗口均值要求联合覆盖≥90%，敏感性95%；目标与所有pseudo同规则。",
+      "statistical_support": {
+        "support_rule": "time_coverage_mean",
+        "coverage_min": 0.9,
+        "coverage_sensitivity": 0.95,
+        "support_denominator": "窗口全部应有小时；分子只计同小时两个原列均通过各自D0有效掩码的共同小时，不用两列各自支持的并集。",
+        "minimum_history_endpoints_per_year": 25,
+        "possible_history_endpoints_per_year": 31,
+        "minimum_valid_history_years": 4,
+        "all_applicable_windows_jointly_required": true,
+        "joint_required_columns": [
+          "WS_20m(m/s)",
+          "WS_2m(m/s)"
+        ],
+        "pair_before_aggregation": true
+      },
+      "missing_policy": "沿用D0已接受掩码；缺测保留缺测，不插值、不补零、不平滑、不按目标数值剔除极值；不达支持要求返回NA。",
+      "conditional_assumptions": [
+        "A_PROXY: 两高度在同一小时、同一H-END/H-START条件下共同有效后作差，再在窗口内按联合有效时长求均值；不使用各层各自窗口均值相减。",
+        "A_TIME与A_MEAN同原通道；各层测高和对象不随年改变为跨年条件假设。"
+      ],
+      "limitations": [
+        "是两层标量速率差，不是矢量风切变、风向变化或湍流交换系数。",
+        "不先取各层独立均值再相减；不按V2排名更换高度或再增同义代理。"
+      ],
+      "historical_precision": {
+        "source_columns": [
+          "MET/WS_20m(m/s)",
+          "MET/WS_2m(m/s)"
+        ],
+        "status": "requires_V2_exact_token_encoding",
+        "arithmetic_recommendation": "两列原token分别精确整数化，共同有效后精确相减与Fraction均值；不用float先做差决定并列。"
+      },
+      "windows_h": [
+        24,
+        72,
+        168,
+        360,
+        720
+      ],
+      "v1_status": "not_defined",
+      "v1_computable": false,
+      "v1_eligible_for_top5": false,
+      "hypothesis_direction": null,
+      "hypothesis_direction_evidence": null,
+      "hypothesis_single_sided": false,
+      "hypothesis_evidence_status": "new_proxy_no_inherited_single_sided_hypothesis",
+      "main_ranking_eligibility_requires": [
+        "actual_target_and_history_support",
+        "same_applicable_windows_for_target_and_pseudo",
+        "not_no_information_constant_or_all_tied",
+        "redundancy_policy"
+      ],
+      "metadata_classification": "explicit_operational_paired_profile_proxy",
+      "measurement_scope": "same_hour_jointly_valid_source_difference",
+      "hypothesis_name": null
+    }
+  ],
+  "historical_source_token_precision": {
+    "scope": "Only accepted D0 cells from source CSVs named 2021–2025; 2026 value columns not accessed",
+    "mask_source": "data_cleaning/cleaned_all/attachment01_02/station/*.csv.gz",
+    "raw_token_source": "official attachment01 CSVs from input_inventory.csv",
+    "source_columns": {
+      "MET/RH_2m(%)": {
+        "table": "MET",
+        "column": "RH_2m(%)",
+        "years": {
+          "2021": 5986,
+          "2022": 8760,
+          "2023": 8760,
+          "2024": 8781,
+          "2025": 8760
+        },
+        "normalized_decimal_places_histogram": {
+          "0": 854,
+          "1": 7095,
+          "2": 32319,
+          "3": 779
+        },
+        "lexical_decimal_places_histogram": {
+          "0": 854,
+          "1": 7095,
+          "2": 32319,
+          "3": 779
+        },
+        "valid_historical_tokens": 41047,
+        "finest_observed_normalized_decimal_places": 3,
+        "observed_decimal_grid": "0.001",
+        "interpretation": "D0有效掩码对应2021–2025原token的最细观测十进制网格；不是仪器分辨率/精度或统计不确定度。"
+      },
+      "MET/WS_10m(m/s)": {
+        "table": "MET",
+        "column": "WS_10m(m/s)",
+        "years": {
+          "2021": 5920,
+          "2022": 8639,
+          "2023": 8656,
+          "2024": 8665,
+          "2025": 8551
+        },
+        "normalized_decimal_places_histogram": {
+          "0": 599,
+          "1": 391,
+          "2": 3817,
+          "3": 35624
+        },
+        "lexical_decimal_places_histogram": {
+          "0": 599,
+          "1": 391,
+          "2": 3817,
+          "3": 35624
+        },
+        "valid_historical_tokens": 40431,
+        "finest_observed_normalized_decimal_places": 3,
+        "observed_decimal_grid": "0.001",
+        "interpretation": "D0有效掩码对应2021–2025原token的最细观测十进制网格；不是仪器分辨率/精度或统计不确定度。"
+      },
+      "MET/Pressure(hPa)": {
+        "table": "MET",
+        "column": "Pressure(hPa)",
+        "years": {
+          "2021": 5726,
+          "2022": 8373,
+          "2023": 8607,
+          "2024": 8509,
+          "2025": 8693
+        },
+        "normalized_decimal_places_histogram": {
+          "0": 3980,
+          "1": 35928
+        },
+        "lexical_decimal_places_histogram": {
+          "0": 3980,
+          "1": 35928
+        },
+        "valid_historical_tokens": 39908,
+        "finest_observed_normalized_decimal_places": 1,
+        "observed_decimal_grid": "0.1",
+        "interpretation": "D0有效掩码对应2021–2025原token的最细观测十进制网格；不是仪器分辨率/精度或统计不确定度。"
+      },
+      "MET/Ta_2m(degree C)": {
+        "table": "MET",
+        "column": "Ta_2m(degree C)",
+        "years": {
+          "2021": 5985,
+          "2022": 8759,
+          "2023": 8758,
+          "2024": 8781,
+          "2025": 8760
+        },
+        "normalized_decimal_places_histogram": {
+          "0": 350,
+          "1": 3239,
+          "2": 20138,
+          "3": 17316
+        },
+        "lexical_decimal_places_histogram": {
+          "0": 350,
+          "1": 3239,
+          "2": 20138,
+          "3": 17316
+        },
+        "valid_historical_tokens": 41043,
+        "finest_observed_normalized_decimal_places": 3,
+        "observed_decimal_grid": "0.001",
+        "interpretation": "D0有效掩码对应2021–2025原token的最细观测十进制网格；不是仪器分辨率/精度或统计不确定度。"
+      },
+      "SOIL/VWC_0.1m(m3/m3)": {
+        "table": "SOIL",
+        "column": "VWC_0.1m(m3/m3)",
+        "years": {
+          "2021": 5955,
+          "2022": 8760,
+          "2023": 8760,
+          "2024": 8781,
+          "2025": 8760
+        },
+        "normalized_decimal_places_histogram": {
+          "1": 56,
+          "2": 2618,
+          "3": 21197,
+          "4": 169,
+          "5": 599,
+          "6": 3409,
+          "7": 12968
+        },
+        "lexical_decimal_places_histogram": {
+          "1": 56,
+          "2": 2618,
+          "3": 21197,
+          "4": 169,
+          "5": 599,
+          "6": 3409,
+          "7": 12968
+        },
+        "valid_historical_tokens": 41016,
+        "finest_observed_normalized_decimal_places": 7,
+        "observed_decimal_grid": "1E-7",
+        "interpretation": "D0有效掩码对应2021–2025原token的最细观测十进制网格；不是仪器分辨率/精度或统计不确定度。"
+      },
+      "SOIL/soilT_0.1m(degree C)": {
+        "table": "SOIL",
+        "column": "soilT_0.1m(degree C)",
+        "years": {
+          "2021": 5986,
+          "2022": 8760,
+          "2023": 8760,
+          "2024": 8781,
+          "2025": 8760
+        },
+        "normalized_decimal_places_histogram": {
+          "0": 192,
+          "1": 1512,
+          "2": 15109,
+          "3": 8105,
+          "4": 9416,
+          "5": 5433,
+          "6": 1117,
+          "7": 148,
+          "8": 15
+        },
+        "lexical_decimal_places_histogram": {
+          "0": 192,
+          "1": 1512,
+          "2": 15109,
+          "3": 8105,
+          "4": 9416,
+          "5": 5433,
+          "6": 1117,
+          "7": 148,
+          "8": 15
+        },
+        "valid_historical_tokens": 41047,
+        "finest_observed_normalized_decimal_places": 8,
+        "observed_decimal_grid": "1E-8",
+        "interpretation": "D0有效掩码对应2021–2025原token的最细观测十进制网格；不是仪器分辨率/精度或统计不确定度。"
+      },
+      "SOIL/VWC_0.2m(m3/m3)": {
+        "table": "SOIL",
+        "column": "VWC_0.2m(m3/m3)",
+        "years": {
+          "2021": 5733,
+          "2022": 8417,
+          "2023": 8596,
+          "2024": 8781,
+          "2025": 8760
+        },
+        "normalized_decimal_places_histogram": {
+          "1": 56,
+          "2": 2999,
+          "3": 20101,
+          "4": 277,
+          "5": 902,
+          "6": 4606,
+          "7": 11346
+        },
+        "lexical_decimal_places_histogram": {
+          "1": 56,
+          "2": 2999,
+          "3": 20101,
+          "4": 277,
+          "5": 902,
+          "6": 4606,
+          "7": 11346
+        },
+        "valid_historical_tokens": 40287,
+        "finest_observed_normalized_decimal_places": 7,
+        "observed_decimal_grid": "1E-7",
+        "interpretation": "D0有效掩码对应2021–2025原token的最细观测十进制网格；不是仪器分辨率/精度或统计不确定度。"
+      }
+    },
+    "provenance": "Inherited unchanged from V1 final dictionary; applies only to the listed original columns and is not an expanded-channel precision scan."
+  },
+  "precision_policy": "沿用V1精确原token/Fraction规则；V2实际运行对所有纳入列和派生量重新生成所需编码与共同分母。本定义字典不携带V1运行时rank_scale等缓存，不能以未扫描的新列自动当NA。",
+  "created_at": "2026-10-26T00:04:14+08:00",
+  "scope": "Definition and channel eligibility specification only; actual target/history support, constants, rankings and numerical precision encodings are determined by the V2 run.",
+  "metadata_lookup": {
+    "new_network_requests": 0,
+    "new_observation_downloads": 0,
+    "failed_endpoints_retried": false,
+    "method": "只读已有官方元数据、同站方法原始抽取归档、已审列映射及D0变量字典；读取四张D0压缩CSV表头，没有扫描目标数值。",
+    "source_fact_status": "No previously false source fact was changed to true."
+  },
+  "NA_reassessment": [
+    {
+      "id": "precip_sum",
+      "v1_decision": "NA",
+      "v2_decision": "retain_local_NA",
+      "classification": "core_precip_interval_or_counter_semantics_missing",
+      "missing_or_assumed": "Precip增量/累计读数/计数器及复位未获得当前数据原说明；因此降水变换对象不明确。无源QC本身不是本项永久NA的依据。",
+      "allowed_scope": "相关基础通道/合法代理可独立使用；本派生因素不计分",
+      "cross_year_consistency": "does_not_close_missing_definition",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "precip_max",
+      "v1_decision": "NA",
+      "v2_decision": "retain_local_NA",
+      "classification": "core_precip_interval_or_counter_semantics_missing",
+      "missing_or_assumed": "Precip增量/累计读数/计数器及复位未获得当前数据原说明；因此降水变换对象不明确。无源QC本身不是本项永久NA的依据。",
+      "allowed_scope": "相关基础通道/合法代理可独立使用；本派生因素不计分",
+      "cross_year_consistency": "does_not_close_missing_definition",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "rain_hours",
+      "v1_decision": "NA",
+      "v2_decision": "retain_local_NA",
+      "classification": "core_precip_interval_or_counter_semantics_missing",
+      "missing_or_assumed": "Precip增量/累计读数/计数器及复位未获得当前数据原说明；因此降水变换对象不明确。无源QC本身不是本项永久NA的依据。",
+      "allowed_scope": "相关基础通道/合法代理可独立使用；本派生因素不计分",
+      "cross_year_consistency": "does_not_close_missing_definition",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "api",
+      "v1_decision": "NA",
+      "v2_decision": "retain_local_NA",
+      "classification": "core_precip_interval_or_counter_semantics_missing",
+      "missing_or_assumed": "Precip增量/累计读数/计数器及复位未获得当前数据原说明；因此降水变换对象不明确。无源QC本身不是本项永久NA的依据。 API初值、日界和截断属可公开规定的操作规则；当前NA的核心阻断是Precip语义，而非原API初值缺失。",
+      "allowed_scope": "相关基础通道/合法代理可独立使用；本派生因素不计分",
+      "cross_year_consistency": "does_not_close_missing_definition",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "rn_mean",
+      "v1_decision": "NA",
+      "v2_decision": "retain_local_NA",
+      "classification": "base_channels_identifiable_net_derivation_not_closed",
+      "missing_or_assumed": "四个基础辐射通道可辨，但本批方向/正号映射未确认，不能组合成净辐射。独立通道恢复不关闭净量定义。",
+      "allowed_scope": "相关基础通道/合法代理可独立使用；本派生因素不计分",
+      "cross_year_consistency": "does_not_close_missing_definition",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "rsd_mean",
+      "v1_decision": "NA",
+      "v2_decision": "conditional_restore_basic_channel",
+      "classification": "basic_channel_clear_derived_direction_missing",
+      "missing_or_assumed": "官方辐射四分量和Rsd/W m-2列使基础短波通道可说明；在跨年同口径、同号与小时均值假设下描述原值位置。未核向下/正号不阻断本通道均值，但阻断供能量解释与净量合成。",
+      "allowed_scope": "仅原符号基础通道历史位置与过程描述，仍须实际统计支持",
+      "cross_year_consistency": "explicit_unconfirmed_assumption",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "rld_mean",
+      "v1_decision": "NA",
+      "v2_decision": "conditional_restore_basic_channel",
+      "classification": "basic_channel_clear_derived_direction_missing",
+      "missing_or_assumed": "官方辐射四分量和Rld/W m-2列使基础长波通道可说明；在跨年同口径、同号与小时均值假设下描述原值位置。未核向下/正号不阻断本通道均值，但阻断供能量解释与净量合成。",
+      "allowed_scope": "仅原符号基础通道历史位置与过程描述，仍须实际统计支持",
+      "cross_year_consistency": "explicit_unconfirmed_assumption",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "g01",
+      "v1_decision": "NA",
+      "v2_decision": "conditional_restore_basic_channel",
+      "classification": "basic_channel_clear_surface_correction_missing",
+      "missing_or_assumed": "SOIL深度、G列及W m-2使0.1 m土壤热流原通道可说明；在跨年同口径同号、小时均值假设下描述。热流板具体配置、正向及0–0.1m储热订正未核，不阻断板位/深度通道均值，却阻断订正地表热流解释。",
+      "allowed_scope": "仅原符号基础通道历史位置与过程描述，仍须实际统计支持",
+      "cross_year_consistency": "explicit_unconfirmed_assumption",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "dthdz_night",
+      "v1_decision": "NA",
+      "v2_decision": "retain_local_NA",
+      "classification": "derived_thermodynamic_definition_invalid_or_incomplete",
+      "missing_or_assumed": "原单p广播位温梯度有已知实质缺陷，层间静力/虚温与压力基准未闭合；固定钟点时段可由分析者规定，但不能修复物理量。基础T剖面和T20−T2代理可独立计算。",
+      "allowed_scope": "相关基础通道/合法代理可独立使用；本派生因素不计分",
+      "cross_year_consistency": "does_not_close_missing_definition",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "rig_day",
+      "v1_decision": "NA",
+      "v2_decision": "retain_local_NA",
+      "classification": "derived_thermodynamic_and_vector_shear_definition_incomplete",
+      "missing_or_assumed": "继承位温梯度实质缺陷，风向约定与共同支持未闭合；日间钟点可定但不足以修复Ri定义。标量WS20−WS2代理不代替矢量切变。",
+      "allowed_scope": "相关基础通道/合法代理可独立使用；本派生因素不计分",
+      "cross_year_consistency": "does_not_close_missing_definition",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "zeta_med",
+      "v1_decision": "NA",
+      "v2_decision": "retain_local_NA",
+      "classification": "derived_flux_thermodynamics_and_height_incomplete",
+      "missing_or_assumed": "原H/声温/干温转换、u*协方差定义及实际通量高度不足，不能由基础H/USTAR通道均值恢复Obukhov长度或zeta；不填3m。",
+      "allowed_scope": "相关基础通道/合法代理可独立使用；本派生因素不计分",
+      "cross_year_consistency": "does_not_close_missing_definition",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "h_mean",
+      "v1_decision": "NA",
+      "v2_decision": "conditional_restore_basic_channel",
+      "classification": "basic_turbulent_channel_clear_processing_pending",
+      "missing_or_assumed": "官方FLUX湍流类型、H/W m-2列及同站网络热通量方法使宽泛热通量对象可辨。在跨年算法/同号/小时均值一致假设下仅描述H原通道；感热或浮力通量的精确转换及校正未核，阻断温度通量、Obukhov与能量解释。无源QC列不等于QC0。",
+      "allowed_scope": "仅原符号基础通道历史位置与过程描述，仍须实际统计支持",
+      "cross_year_consistency": "explicit_unconfirmed_assumption",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "le_mean",
+      "v1_decision": "NA",
+      "v2_decision": "conditional_restore_basic_channel",
+      "classification": "basic_turbulent_channel_clear_processing_pending",
+      "missing_or_assumed": "官方FLUX湍流类型、LE/W m-2列及同站网络水热通量方法使潜热类热通量对象可辨。在跨年算法/同号/小时均值一致假设下仅描述LE原通道；精确处理与正向未核，阻断蒸散量及能量闭合推导。无源QC列不等于QC0。",
+      "allowed_scope": "仅原符号基础通道历史位置与过程描述，仍须实际统计支持",
+      "cross_year_consistency": "explicit_unconfirmed_assumption",
+      "source_fact_flags_changed_to_true": false
+    },
+    {
+      "id": "ustar_mean",
+      "v1_decision": "NA",
+      "v2_decision": "conditional_restore_basic_channel",
+      "classification": "basic_turbulent_channel_clear_processing_pending",
+      "missing_or_assumed": "官方FLUX湍流类型、USTAR/m s-1列、伴随应力通道和同站摩擦速度方法使速度类通道对象可辨。在跨年协方差/旋转/处理与小时均值同口径假设下仅描述已给USTAR值；精确u*公式未核，阻断由其重建应力/交换和稳定度。无源QC列不等于QC0。",
+      "allowed_scope": "仅原符号基础通道历史位置与过程描述，仍须实际统计支持",
+      "cross_year_consistency": "explicit_unconfirmed_assumption",
+      "source_fact_flags_changed_to_true": false
+    }
+  ],
+  "experiment_factor_sets": {
+    "E0": "V1 preserved without modification in outputs/q1_formal/",
+    "E1_original10_ids": [
+      "t2_mean",
+      "t2_max",
+      "pdd",
+      "warm_rate",
+      "vwc01",
+      "vwc02",
+      "soilt01",
+      "p_mean",
+      "rh2_mean",
+      "ws10_mean"
+    ],
+    "E1_definition": "仅V1原10条件可算因素，所有a/T/S与资格统一双侧重算；不含新恢复通道/代理。",
+    "E2_original24_ids_in_original_order": [
+      "precip_sum",
+      "precip_max",
+      "rain_hours",
+      "api",
+      "t2_mean",
+      "t2_max",
+      "pdd",
+      "warm_rate",
+      "rn_mean",
+      "rsd_mean",
+      "rld_mean",
+      "vwc01",
+      "vwc02",
+      "soilt01",
+      "g01",
+      "dthdz_night",
+      "rig_day",
+      "zeta_med",
+      "h_mean",
+      "le_mean",
+      "p_mean",
+      "rh2_mean",
+      "ws10_mean",
+      "ustar_mean"
+    ],
+    "E2_restored_original_ids": [
+      "rsd_mean",
+      "rld_mean",
+      "g01",
+      "h_mean",
+      "le_mean",
+      "ustar_mean"
+    ],
+    "E2_predefined_proxy_ids": [
+      "t20_t2_diff",
+      "ws20_ws2_diff"
+    ],
+    "E2_conditionally_computable_ids": [
+      "t2_mean",
+      "t2_max",
+      "pdd",
+      "warm_rate",
+      "rsd_mean",
+      "rld_mean",
+      "vwc01",
+      "vwc02",
+      "soilt01",
+      "g01",
+      "h_mean",
+      "le_mean",
+      "p_mean",
+      "rh2_mean",
+      "ws10_mean",
+      "ustar_mean",
+      "t20_t2_diff",
+      "ws20_ws2_diff"
+    ],
+    "E2_semantic_NA_ids": [
+      "precip_sum",
+      "precip_max",
+      "rain_hours",
+      "api",
+      "rn_mean",
+      "dthdz_night",
+      "rig_day",
+      "zeta_med"
+    ],
+    "E2_definition": "原24项中16项条件可算，加2个代理共18项；不预断实际支持、无信息剔除、去重或最终入榜池大小。",
+    "E3_endpoint_minimums": [
+      25,
+      20,
+      15
+    ],
+    "E3_policy": "20/15必须对所有因素统一，不因VWC02或满意名单改变主门槛；去30d等改变目标与全部pseudo的适用W。",
+    "B_policy": "代理没有原机理分；不加入B原体系。共同原24可算池须按共同集合重拟合熵权/TOPSIS，不能用全池旧分数假称共同集拟合。"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "steps": 6270,
+  "wall_s": 31.39703508396633,
+  "min_h": 0.0,
+  "mass_error_abs_m3": 1.4551915228366852e-09,
+  "mass_error_rel": 3.0591633376524095e-15,
+  "momentum_error_abs": 1.477259232274264e-06,
+  "momentum_error_rel": 3.55506800427731e-15,
+  "initial": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "final": [
+    475682.84600108856,
+    -97677.97746844564,
+    -13755.441192008639
+  ],
+  "boundary_integral": [
+    -475682.8460010879,
+    14624262.2413725,
+    0.0
+  ],
+  "bed_impulse": [
+    -391610745.9305106,
+    -85856604.72010559
+  ],
+  "friction_impulse": [
+    406137425.2837314,
+    85842848.14628959
+  ],
+  "dry_clear_impulse": [
+    -95.0893156949029,
+    1.1326237818160403
+  ],
+  "inlet_volume_m3": 475682.8460010879,
+  "min_inlet_Fr": 9.129045234677196,
+  "total_inflow_m3": 475682.8460010879,
+  "total_outflow_m3": 0.0,
+  "dry_threshold_m": 0.0001,
+  "outflow_by_side_m3": {
+    "west": 0.0,
+    "east": 0.0,
+    "north": 0.0,
+    "south": 0.0
+  },
+  "illegal_outflow_m3": 0.0,
+  "first_significant_illegal_outflow_s": null,
+  "illegal_outflow_threshold_m3": 0.47568284600108834,
+  "whole_window_valid": true,
+  "valid_until_s": 1800.0,
+  "inlet_advective_impulse_west_per_density": 14270485.38003264,
+  "inlet_pressure_impulse_west_per_density": 353537.5345869933,
+  "prescribed_inflow_pressure_impulse_west_per_density": 57092.32018977279,
+  "closed_gate_pressure_impulse_west_per_density": 296445.21439721953,
+  "legacy_inlet_pressure_definition": "total inlet-strip pressure including post-pulse closed gate; not solely prescribed inflow",
+  "energy_in_per_density": 1642781734.0053866,
+  "energy_final_per_density": 761826601.1243289,
+  "energy_reference_elevation_m": 2510.127062538267,
+  "energy_initial_per_density": 0.0,
+  "energy_boundary_outward_per_density": -1642781734.0053866,
+  "friction_energy_loss_per_density": 827412059.013967,
+  "dry_clear_energy_loss_per_density": 84917.95751086489,
+  "maximum_energy_per_density": 943010321.9105468,
+  "energy_residual_per_density": -53458155.909579836,
+  "energy_status": "first-order boundary head flux; residual combines transport dissipation, bed discretization and source splitting; no exact entropy claim",
+  "independent_review": "pending",
+  "dx_m": 30.0,
+  "shape": [
+    44,
+    88
+  ],
+  "target_max_h": 1.743419012724509,
+  "threshold_arrivals": {
+    "0.05": {
+      "status": "arrived",
+      "time_bracket_s": [
+        1450.69068762155,
+        1450.977782552803
+      ]
+    },
+    "0.1": {
+      "status": "arrived",
+      "time_bracket_s": [
+        1467.3421936342254,
+        1467.6292885654784
+      ]
+    },
+    "0.2": {
+      "status": "arrived",
+      "time_bracket_s": [
+        1489.7355982719612,
+        1490.0226932032142
+      ]
+    }
+  },
+  "status": "arrived",
+  "run_termination": "time_horizon",
+  "final_motion_state": "moving",
+  "terrain_qualification": "pending",
+  "full_reach": false,
+  "legal_exit_geometry": {
+    "side": "west",
+    "interval_m": [
+      3134880,
+      3135600
+    ]
+  },
+  "arrival_support": {
+    "axis": "x",
+    "coordinate_m": 348720,
+    "interpolation_columns": [
+      23,
+      24
+    ],
+    "interpolation_weights": [
+      0.5,
+      0.5
+    ],
+    "crs": "EPSG:32645",
+    "tangent_interval_m": [
+      3134880,
+      3135600
+    ],
+    "criterion": "instantaneous maximum vertical event depth >= threshold on fixed interpolated line"
+  },
+  "field_convention": "saved U=(h,hu_east,hu_south); north momentum=-hu_south; lengths m, times s, velocity m/s",
+  "peak_h_anywhere_m": 18.84733107672324,
+  "maximum_speed_m_s": 19.819076911438618,
+  "inundated_area_m2": 148500.0,
+  "pulse_definition": "single triangle in [0,T]",
+  "target_Q_downstream_max_m3_s": -0.0,
+  "target_Q_downstream_min_m3_s": -0.0,
+  "target_peak_h_paired": {
+    "time_s": 1800.0,
+    "h_m": 1.743419012724509,
+    "u_east_m_s": 0.0,
+    "u_north_m_s": -0.0,
+    "tangent_coordinate_m": 3135435.0
+  },
+  "speed_envelope_for_figures": "max speed computed only at steps with local event h>=0.1m; raw max_speed separately retained",
+  "loads_not_computed": true,
+  "ever_threshold_coverage_area_m2": 148500.0,
+  "final_threshold_inundated_area_m2": 103500.0
+}

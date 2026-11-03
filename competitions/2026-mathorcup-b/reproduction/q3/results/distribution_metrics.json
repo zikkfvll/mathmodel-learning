@@ -1,0 +1,2234 @@
+[
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.08475754223763943,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.001083333333333325,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781632194038932,
+      0.7924319180683692,
+      0.8073097727598773
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.8317052797311995e-05,
+      3.568039943502299e-07,
+      2.102506054735276e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.08475754223763943,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0016666666666667052,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749661664212775,
+      0.7924944369110737,
+      0.8107209727433818
+    ],
+    "quantile_endpoint_abs_error_s": [
+      3.258793698113216e-05,
+      4.121222242359224e-07,
+      3.897273662734069e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.08475754223763943,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.003186111111111334,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7798195831904049,
+      0.8003342694667015,
+      0.8112294044494445
+    ],
+    "quantile_endpoint_abs_error_s": [
+      6.392607455385502e-06,
+      1.5866367011341254e-06,
+      2.2789670784839622e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 3.787502646446228e-05,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.0848610419780016,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.001083333333333325,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781632194038932,
+      0.7924319180683692,
+      0.8073097727598773
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.8317052797311995e-05,
+      3.568039943502299e-07,
+      2.102506054735276e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 3.787502646446228e-05,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.0848610419780016,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0016666666666667052,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749661664212775,
+      0.7924944369110737,
+      0.8107209727433818
+    ],
+    "quantile_endpoint_abs_error_s": [
+      3.258793698113216e-05,
+      4.121222242359224e-07,
+      3.897273662734069e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 3.787502646446228e-05,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.0848610419780016,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.003186111111111334,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7798195831904049,
+      0.8003342694667015,
+      0.8112294044494445
+    ],
+    "quantile_endpoint_abs_error_s": [
+      6.392607455385502e-06,
+      1.5866367011341254e-06,
+      2.2789670784839622e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.17538533289916813,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781815013441864,
+      0.7924322745730451,
+      0.8072865083253379
+    ],
+    "quantile_endpoint_abs_error_s": [
+      3.5112504126466604e-08,
+      2.993184589072939e-10,
+      2.2393739920190114e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.17538533289916813,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749941857939971,
+      0.7924948499494274,
+      0.810689493943271
+    ],
+    "quantile_endpoint_abs_error_s": [
+      4.568564261453467e-06,
+      9.161295055903906e-10,
+      7.493936516445032e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.17538533289916813,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.779813332057067,
+      0.8003327644395852,
+      0.8112122782354328
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.4147411753206995e-07,
+      8.160958486769232e-08,
+      5.663456773219444e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 3.383401781320572e-05,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.1754767089150846,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781815013441864,
+      0.7924322745730451,
+      0.8072865083253379
+    ],
+    "quantile_endpoint_abs_error_s": [
+      3.5112504126466604e-08,
+      2.993184589072939e-10,
+      2.2393739920190114e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 3.383401781320572e-05,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.1754767089150846,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749941857939971,
+      0.7924948499494274,
+      0.810689493943271
+    ],
+    "quantile_endpoint_abs_error_s": [
+      4.568564261453467e-06,
+      9.161295055903906e-10,
+      7.493936516445032e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 3.383401781320572e-05,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.1754767089150846,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.779813332057067,
+      0.8003327644395852,
+      0.8112122782354328
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.4147411753206995e-07,
+      8.160958486769232e-08,
+      5.663456773219444e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3570224158465862,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781815254478263,
+      0.7924322748732853,
+      0.8072887536813268
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.1008864264638873e-08,
+      9.21707155043805e-13,
+      5.9819968978302995e-09
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3570224158465862,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749980174407196,
+      0.792494849034096,
+      0.8106825826786523
+    ],
+    "quantile_endpoint_abs_error_s": [
+      7.369175389904115e-07,
+      7.980283101005625e-13,
+      5.82671897841891e-07
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3570224158465862,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7798131860339939,
+      0.8003326828282759,
+      0.8112075470862729
+    ],
+    "quantile_endpoint_abs_error_s": [
+      4.548955656602516e-09,
+      1.7245094241502557e-12,
+      9.323076132217167e-07
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 2.908310852944851e-05,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3570810412056744,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781815254478263,
+      0.7924322748732853,
+      0.8072887536813268
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.1008864264638873e-08,
+      9.21707155043805e-13,
+      5.9819968978302995e-09
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 2.908310852944851e-05,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3570810412056744,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749980174407196,
+      0.792494849034096,
+      0.8106825826786523
+    ],
+    "quantile_endpoint_abs_error_s": [
+      7.369175389904115e-07,
+      7.980283101005625e-13,
+      5.82671897841891e-07
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "passive",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 2.908310852944851e-05,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3570810412056744,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7798131860339939,
+      0.8003326828282759,
+      0.8112075470862729
+    ],
+    "quantile_endpoint_abs_error_s": [
+      4.548955656602516e-09,
+      1.7245094241502557e-12,
+      9.323076132217167e-07
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.07296695816330612,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.001083333333333325,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781632194038932,
+      0.7924319180683692,
+      0.8073097727598773
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.8317052797311995e-05,
+      3.568039943502299e-07,
+      2.102506054735276e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.07296695816330612,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0016666666666667052,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749661664212775,
+      0.7924944369110737,
+      0.8107209727433818
+    ],
+    "quantile_endpoint_abs_error_s": [
+      3.258793698113216e-05,
+      4.121222242359224e-07,
+      3.897273662734069e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.07296695816330612,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.003186111111111334,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7798195831904049,
+      0.8003342694667015,
+      0.8112294044494445
+    ],
+    "quantile_endpoint_abs_error_s": [
+      6.392607455385502e-06,
+      1.5866367011341254e-06,
+      2.2789670784839622e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 3.804219886660576e-05,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.07303916639648378,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.001083333333333325,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781632194038932,
+      0.7924319180683692,
+      0.8073097727598773
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.8317052797311995e-05,
+      3.568039943502299e-07,
+      2.102506054735276e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 3.804219886660576e-05,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.07303916639648378,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0016666666666667052,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749661664212775,
+      0.7924944369110737,
+      0.8107209727433818
+    ],
+    "quantile_endpoint_abs_error_s": [
+      3.258793698113216e-05,
+      4.121222242359224e-07,
+      3.897273662734069e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 3.804219886660576e-05,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.07303916639648378,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.003186111111111334,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7798195831904049,
+      0.8003342694667015,
+      0.8112294044494445
+    ],
+    "quantile_endpoint_abs_error_s": [
+      6.392607455385502e-06,
+      1.5866367011341254e-06,
+      2.2789670784839622e-05
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.1658001272007823,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781813681682793,
+      0.7924322745895969,
+      0.8072861176731484
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.6828841120641869e-07,
+      2.8276669894466977e-10,
+      2.6300261815048742e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.1658001272007823,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749954496857282,
+      0.7924948499502522,
+      0.8106877227925793
+    ],
+    "quantile_endpoint_abs_error_s": [
+      3.3046725304020086e-06,
+      9.169542902753847e-10,
+      5.722785824779919e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.1658001272007823,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.779813364944907,
+      0.800332763195865,
+      0.8112112463515387
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.7436195753894879e-07,
+      8.036586462978335e-08,
+      4.631572879110202e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 2.987496554851532e-05,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.1657749603036791,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781813681682793,
+      0.7924322745895969,
+      0.8072861176731484
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.6828841120641869e-07,
+      2.8276669894466977e-10,
+      2.6300261815048742e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 2.987496554851532e-05,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.1657749603036791,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749954496857282,
+      0.7924948499502522,
+      0.8106877227925793
+    ],
+    "quantile_endpoint_abs_error_s": [
+      3.3046725304020086e-06,
+      9.169542902753847e-10,
+      5.722785824779919e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 2.987496554851532e-05,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.1657749603036791,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.779813364944907,
+      0.800332763195865,
+      0.8112112463515387
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.7436195753894879e-07,
+      8.036586462978335e-08,
+      4.631572879110202e-06
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3505685441195965,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781815389763371,
+      0.7924322748729299,
+      0.8072887459052814
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.519646602472392e-09,
+      5.663247648612924e-13,
+      1.7940484653422573e-09
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3505685441195965,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749985848738089,
+      0.7924948490337199,
+      0.8106821284042508
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.6948444969688836e-07,
+      4.21995771660022e-13,
+      1.2839749630177977e-07
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3505685441195965,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7798131887017392,
+      0.8003326828121824,
+      0.8112071497207458
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.881210298648739e-09,
+      1.7817969322209137e-11,
+      5.34942086183321e-07
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 2.7625123038887978e-05,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3507018352393061,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7781815364566905,
+      0.7924322748723636,
+      0.8072887476993299
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7781815389763371,
+      0.7924322748729299,
+      0.8072887459052814
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.519646602472392e-09,
+      5.663247648612924e-13,
+      1.7940484653422573e-09
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 2.7625123038887978e-05,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3507018352393061,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7749987543582586,
+      0.7924948490332979,
+      0.8106820000067545
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7749985848738089,
+      0.7924948490337199,
+      0.8106821284042508
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.6948444969688836e-07,
+      4.21995771660022e-13,
+      1.2839749630177977e-07
+    ]
+  },
+  {
+    "regime": "strong",
+    "method": "active",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 0,
+    "fallback_wall_s": 2.7625123038887978e-05,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 0.3507018352393061,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.0,
+    "no_hit_mass_pred": 0.0,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      0.7798131905829495,
+      0.8003326828300004,
+      0.8112066147786596
+    ],
+    "finite_subcdf_quantiles_pred": [
+      0.7798131887017392,
+      0.8003326828121824,
+      0.8112071497207458
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.881210298648739e-09,
+      1.7817969322209137e-11,
+      5.34942086183321e-07
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.4586701672524214,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.5,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0033277777777778184,
+    "cdf_sup_error": 0.00978333333333331,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.69942364876364,
+      72.97367746824526,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0008410874636410881,
+      0.020583993805900036,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.4586701672524214,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.5000000000000001,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0016666666666667052,
+    "cdf_sup_error": 0.0050000000000000044,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.40836892843501,
+      72.97367746824526,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0020066056430181334,
+      0.026225660180500654,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.4586701672524214,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.75,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0016694444444445011,
+    "cdf_sup_error": 0.004891666666666655,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.84896825328302,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.00019584088479973616,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 532,
+    "fallback_wall_s": 33.166155957849696,
+    "total_nominal_q2_calls": 540,
+    "total_nominal_wall_s": 33.62658099993132,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.4966722222222222,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 532,
+    "fallback_wall_s": 33.166155957849696,
+    "total_nominal_q2_calls": 540,
+    "total_nominal_wall_s": 33.62658099993132,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.4983333333333334,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 532,
+    "fallback_wall_s": 33.166155957849696,
+    "total_nominal_q2_calls": 540,
+    "total_nominal_wall_s": 33.62658099993132,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.7483305555555555,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.84896825328302,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.00019584088479973616,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.9264018340036273,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.42935555555555555,
+    "unknown_mass_pred": 0.06731666666666666,
+    "no_hit_mass_abs_error": 0.06731666666666664,
+    "cdf_sup_error": 0.0026499999999999857,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.70027946270532,
+      72.99430055284948,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.472647804234839e-05,
+      3.909079832453699e-05,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.9264018340036273,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.4633333333333334,
+    "unknown_mass_pred": 0.034999999999999996,
+    "no_hit_mass_abs_error": 0.03500000000000003,
+    "cdf_sup_error": 0.0016666666666667052,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.41004271604005,
+      72.99988783520325,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0003328180379753576,
+      1.5293222503487414e-05,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.9264018340036273,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.7119888888888889,
+    "unknown_mass_pred": 0.03634166666666666,
+    "no_hit_mass_abs_error": 0.036341666666666606,
+    "cdf_sup_error": 0.0013249999999999929,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.84879154989095,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.9137492728305006e-05,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 115,
+    "fallback_wall_s": 7.3920657080598176,
+    "total_nominal_q2_calls": 131,
+    "total_nominal_wall_s": 8.326627209084108,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.4966722222222222,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0026499999999999857,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.70027946270532,
+      72.99426146205116,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.472647804234839e-05,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 115,
+    "fallback_wall_s": 7.3920657080598176,
+    "total_nominal_q2_calls": 131,
+    "total_nominal_wall_s": 8.326627209084108,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.4983333333333334,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0016666666666667052,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.41004271604005,
+      72.99990312842576,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0003328180379753576,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 115,
+    "fallback_wall_s": 7.3920657080598176,
+    "total_nominal_q2_calls": 131,
+    "total_nominal_wall_s": 8.326627209084108,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.7483305555555555,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0013249999999999929,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.84879154989095,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.9137492728305006e-05,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 1.8888413331005722,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.4672222222222222,
+    "unknown_mass_pred": 0.02945,
+    "no_hit_mass_abs_error": 0.029449999999999976,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.70028610961981,
+      72.99427092790582,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.1373392527834767e-05,
+      9.465854660106743e-06,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 1.8888413331005722,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.4833333333333334,
+    "unknown_mass_pred": 0.015000000000000001,
+    "no_hit_mass_abs_error": 0.015000000000000013,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.41034870424075,
+      72.99991669822278,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.6829837281638902e-05,
+      1.3569797019385987e-05,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 1.8888413331005722,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.7330555555555556,
+    "unknown_mass_pred": 0.015275,
+    "no_hit_mass_abs_error": 0.015274999999999928,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.8487738244572,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.4120589781896342e-06,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 66,
+    "fallback_wall_s": 4.241186207858846,
+    "total_nominal_q2_calls": 98,
+    "total_nominal_wall_s": 6.129577915882692,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.4966722222222222,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.70028610961981,
+      72.99426146205116,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.1373392527834767e-05,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 66,
+    "fallback_wall_s": 4.241186207858846,
+    "total_nominal_q2_calls": 98,
+    "total_nominal_wall_s": 6.129577915882692,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.4983333333333334,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.41034870424075,
+      72.99990312842576,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.6829837281638902e-05,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "passive",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 66,
+    "fallback_wall_s": 4.241186207858846,
+    "total_nominal_q2_calls": 98,
+    "total_nominal_wall_s": 6.129577915882692,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.7483305555555555,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.8487738244572,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      1.4120589781896342e-06,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.45846666605211794,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.5,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0033277777777778184,
+    "cdf_sup_error": 0.00978333333333331,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.69942364876364,
+      72.97367746824526,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0008410874636410881,
+      0.020583993805900036,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.45846666605211794,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.5000000000000001,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0016666666666667052,
+    "cdf_sup_error": 0.0050000000000000044,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.40836892843501,
+      72.97367746824526,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0020066056430181334,
+      0.026225660180500654,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 8,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 8,
+    "total_nominal_wall_s": 0.45846666605211794,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.75,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0016694444444445011,
+    "cdf_sup_error": 0.004891666666666655,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.84896825328302,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.00019584088479973616,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 532,
+    "fallback_wall_s": 33.34179433318786,
+    "total_nominal_q2_calls": 540,
+    "total_nominal_wall_s": 33.79931924934499,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.4966722222222222,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 532,
+    "fallback_wall_s": 33.34179433318786,
+    "total_nominal_q2_calls": 540,
+    "total_nominal_wall_s": 33.79931924934499,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.4983333333333334,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 8,
+    "mode": "fallback",
+    "fallback_calls": 532,
+    "fallback_wall_s": 33.34179433318786,
+    "total_nominal_q2_calls": 540,
+    "total_nominal_wall_s": 33.79931924934499,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.7483305555555555,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.84896825328302,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.00019584088479973616,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.9534332922194153,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.48019999999999996,
+    "unknown_mass_pred": 0.01647222222222222,
+    "no_hit_mass_abs_error": 0.01647222222222222,
+    "cdf_sup_error": 0.0026499999999999857,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.69880484837388,
+      72.9942070238749,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0014598878534002324,
+      5.443817624950498e-05,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.9534332922194153,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.4900000000000001,
+    "unknown_mass_pred": 0.008333333333333333,
+    "no_hit_mass_abs_error": 0.008333333333333304,
+    "cdf_sup_error": 0.0016666666666667052,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.40772709805593,
+      72.99985648456074,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0026484360220990766,
+      4.66438650192913e-05,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 16,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 16,
+    "total_nominal_wall_s": 0.9534332922194153,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.7399,
+    "unknown_mass_pred": 0.008430555555555556,
+    "no_hit_mass_abs_error": 0.008430555555555497,
+    "cdf_sup_error": 0.0013249999999999929,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.84928361046397,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0005111980657517279,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 184,
+    "fallback_wall_s": 15.083871624898165,
+    "total_nominal_q2_calls": 200,
+    "total_nominal_wall_s": 16.041938083944842,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.4966722222222222,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0026499999999999857,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.69880484837388,
+      72.99426146205116,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0014598878534002324,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 184,
+    "fallback_wall_s": 15.083871624898165,
+    "total_nominal_q2_calls": 200,
+    "total_nominal_wall_s": 16.041938083944842,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.4983333333333334,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0016666666666667052,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 16,
+    "mode": "fallback",
+    "fallback_calls": 184,
+    "fallback_wall_s": 15.083871624898165,
+    "total_nominal_q2_calls": 200,
+    "total_nominal_wall_s": 16.041938083944842,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.7483305555555555,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0013249999999999929,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.84928361046397,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      0.0005111980657517279,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 1.9246213340666145,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.5033277777777778,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.006655555555555637,
+    "cdf_sup_error": 0.006655555555555637,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.70023656509267,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.817113461617282e-05,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 1.9246213340666145,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.5016666666666667,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0033333333333332993,
+    "cdf_sup_error": 0.0033333333333332993,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.41039841802538,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.2883947352170253e-05,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 32,
+    "mode": "raw",
+    "fallback_calls": 0,
+    "fallback_wall_s": 0.0,
+    "total_nominal_q2_calls": 32,
+    "total_nominal_wall_s": 1.9246213340666145,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.7516638888888889,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0033333333333334103,
+    "cdf_sup_error": 0.0033333333333332993,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.84879689292048,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.4480522256453696e-05,
+      null,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 53,
+    "fallback_wall_s": 4.2334777500946075,
+    "total_nominal_q2_calls": 85,
+    "total_nominal_wall_s": 6.159122375072911,
+    "family": "nominal_triangular",
+    "no_hit_mass_true": 0.4966722222222222,
+    "no_hit_mass_pred": 0.4966722222222222,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.70026473622728,
+      72.99426146205116,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.70023656509267,
+      72.99426146205116,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.817113461617282e-05,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 53,
+    "fallback_wall_s": 4.2334777500946075,
+    "total_nominal_q2_calls": 85,
+    "total_nominal_wall_s": 6.159122375072911,
+    "family": "uniform_support",
+    "no_hit_mass_true": 0.4983333333333334,
+    "no_hit_mass_pred": 0.4983333333333334,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.41037553407803,
+      72.99990312842576,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.41039841802538,
+      72.99990312842576,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.2883947352170253e-05,
+      0.0,
+      null
+    ]
+  },
+  {
+    "regime": "near",
+    "method": "active",
+    "budget": 32,
+    "mode": "fallback",
+    "fallback_calls": 53,
+    "fallback_wall_s": 4.2334777500946075,
+    "total_nominal_q2_calls": 85,
+    "total_nominal_wall_s": 6.159122375072911,
+    "family": "lower_mode_triangular",
+    "no_hit_mass_true": 0.7483305555555555,
+    "no_hit_mass_pred": 0.7483305555555555,
+    "unknown_mass_pred": 0.0,
+    "no_hit_mass_abs_error": 0.0,
+    "cdf_sup_error": 0.0,
+    "finite_subcdf_quantiles_true": [
+      71.84877241239822,
+      null,
+      null
+    ],
+    "finite_subcdf_quantiles_pred": [
+      71.84879689292048,
+      null,
+      null
+    ],
+    "quantile_endpoint_abs_error_s": [
+      2.4480522256453696e-05,
+      null,
+      null
+    ]
+  }
+]

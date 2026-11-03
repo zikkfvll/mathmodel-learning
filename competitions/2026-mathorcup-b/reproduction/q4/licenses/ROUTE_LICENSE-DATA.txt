@@ -1,0 +1,7 @@
+The files under data/ and config/ in this folder are licensed under the Creative Commons Attribution 4.0 International licence (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/, with one exception:
+
+data/dem/lhende_dem_glo30.npz is a crop of the Copernicus DEM GLO-30 tile Copernicus_DSM_COG_10_N28_00_E085_00_DEM, redistributed under the Copernicus DEM licence with its required notice:
+
+    (c) DLR e.V. 2010-2014 and (c) Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.
+
+The code in this folder (scripts/, nafi/, pyproject.toml) is licensed under the MIT licence in LICENSE.

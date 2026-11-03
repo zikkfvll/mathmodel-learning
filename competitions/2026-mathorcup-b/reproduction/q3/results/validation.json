@@ -1,0 +1,85 @@
+{
+  "version": "Q3-FINAL-v3.0",
+  "status": "completed_fixed_n",
+  "alpha": 0.05,
+  "familywise_delta": 0.05,
+  "per_claim_delta": 0.008333333333333333,
+  "claims": [
+    {
+      "regime": "strong",
+      "candidate": "strong_robust",
+      "family": "nominal_triangular",
+      "n": 4096,
+      "k": 4090,
+      "empirical_mass": 0.99853515625,
+      "lower_bound": 0.9963757473690618,
+      "unknown": 0,
+      "initial": 0,
+      "passed": true
+    },
+    {
+      "regime": "strong",
+      "candidate": "strong_robust",
+      "family": "uniform_support",
+      "n": 4096,
+      "k": 3999,
+      "empirical_mass": 0.976318359375,
+      "lower_bound": 0.9700025484701945,
+      "unknown": 0,
+      "initial": 0,
+      "passed": true
+    },
+    {
+      "regime": "strong",
+      "candidate": "strong_robust",
+      "family": "lower_mode_triangular",
+      "n": 4096,
+      "k": 4094,
+      "empirical_mass": 0.99951171875,
+      "lower_bound": 0.997893287619358,
+      "unknown": 0,
+      "initial": 0,
+      "passed": true
+    },
+    {
+      "regime": "near",
+      "candidate": "near_robust",
+      "family": "nominal_triangular",
+      "n": 4096,
+      "k": 3979,
+      "empirical_mass": 0.971435546875,
+      "lower_bound": 0.9645841840408961,
+      "unknown": 0,
+      "initial": 0,
+      "passed": true
+    },
+    {
+      "regime": "near",
+      "candidate": "near_robust",
+      "family": "uniform_support",
+      "n": 4096,
+      "k": 3947,
+      "empirical_mass": 0.963623046875,
+      "lower_bound": 0.9560105835981271,
+      "unknown": 0,
+      "initial": 0,
+      "passed": true
+    },
+    {
+      "regime": "near",
+      "candidate": "near_robust",
+      "family": "lower_mode_triangular",
+      "n": 4096,
+      "k": 4047,
+      "empirical_mass": 0.988037109375,
+      "lower_bound": 0.9833185724189604,
+      "unknown": 0,
+      "initial": 0,
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "wall_s": 632.1629858331289,
+  "bindings_sha256": "fd25d06bbd4f2050e66c24c15bc3ea62583ae8d051fa6e7991c1fac59f474b15",
+  "identity": "new independent declared-input iid Q2 simulation validation; not natural-event coverage"
+}

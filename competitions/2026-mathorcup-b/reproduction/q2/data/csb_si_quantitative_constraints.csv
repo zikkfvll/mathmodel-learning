@@ -1,0 +1,14 @@
+﻿id,variable,value,unit,object,product_or_method,time_support,asset_locator,evidence_type,candidate_use,limitation,entered_model
+SI01,source_72h_precipitation,8.3,mm,作者灾害源区提取位置,GPM IMERG V07,2026-08-23 10:00至2026-08-26 10:00 BJT,SI DOCX ¶34/42；图S2标注,satellite_product_derived,约束前期区域水分背景与外部天气对照,不是ERA5-Land；不是h0或孔压；原像元坐标未给,False
+SI02,port_72h_precipitation,15.3,mm,作者吉隆口岸提取位置,GPM IMERG V07,2026-08-23 10:00至2026-08-26 10:00 BJT,SI DOCX ¶34/42；图S2标注,satellite_product_derived,源区与下游区域比较,口岸值不可直接迁为B-C床面供水,False
+SI03,ERA5L_source_longitude,85.528822,degE,作者长期气候提取点,ERA5-Land native ~0.1deg,长期1951–2025；2026分析另列,SI DOCX ¶35,declared_sampling_geometry,准确定位再分析支持,坐标是作者提取点；不是返回格点坐标或床段,False
+SI04,ERA5L_source_latitude,28.29075,degN,作者长期气候提取点,ERA5-Land native ~0.1deg,长期1951–2025；2026分析另列,SI DOCX ¶35,declared_sampling_geometry,准确定位再分析支持,同上,False
+SI05,annual_temperature_trend,0.09,degC/10yr,源区所在原生0.1deg像元,ECMWF/ERA5_LAND/DAILY_AGGR；作者线性回归,1951–2025,SI DOCX ¶35/45；内嵌图S3a,author_reanalysis_summary,气候背景,P<0.001；非本事件床段升温率,False
+SI06,longterm_temperature_mean,0.67,degC,同上,ERA5-Land日资料年聚合,1951–2025,SI DOCX ¶45；图S3a,author_reanalysis_summary,长期气温背景,不是2026年临灾气温,False
+SI07,annual_precipitation_trend,-1,mm/10yr,同上,ERA5-Land日资料年聚合；作者回归,1951–2025,SI DOCX ¶45；图S3b,author_reanalysis_summary,长期背景,P=0.905；不得写成显著趋势,False
+SI08,longterm_annual_precipitation_mean,1817,mm/yr,同上,ERA5-Land日资料年聚合,1951–2025,SI DOCX ¶45；图S3b,author_reanalysis_summary,长期水量背景,不是当年30日或72h量,False
+SI09,pre_event_available_temperature_mean,9.31,degC,源区小时ERA5-Land聚合,ERA5-Land hourly converted to BJT daily,事件前30d中的可用时段,SI DOCX ¶36/45；图S3c,author_reanalysis_summary,灾前较近尺度热背景,末段斜线区覆盖不完整；不称完整30d均值,False
+SI10,pre_event_precipitation_cumulative_to_Aug24,423.0,mm,源区小时ERA5-Land聚合,ERA5-Land hourly converted to BJT daily,事件前30d展示范围内，截至2026-08-24,SI DOCX ¶45；图S3c,author_reanalysis_summary,约束前期累计湿润背景/条件库存假说,不是IMERG72h；不是8/26前完整累计；不直接换算孔压,False
+SI11,source_release_volume,110000000.0,m3,CGHC源释放冰岩体,作者灾前后DEM差分,2026-08-26事件,CGHC正文PDF5/印4（本轮复用已核）,author_geometric_reconstruction,源体库存/组成守恒的间接约束,不是B-C同段初始床库存,False
+SI12,source_release_ice_content_low,10,%,CGHC源释放冰岩体,作者残留断面/遥感估计,2026-08-26事件,CGHC正文PDF5/印4（复用）,author_composition_estimate,可支撑含冰源体组成的条件范围,ratio_basis=unknown；不能擅称质量或体积分数,False
+SI13,source_release_ice_content_high,15,%,CGHC源释放冰岩体,同上,2026-08-26事件,CGHC正文PDF5/印4（复用）,author_composition_estimate,与低端保留同一具名范围,不是床含冰比例；基准需假说明示,False

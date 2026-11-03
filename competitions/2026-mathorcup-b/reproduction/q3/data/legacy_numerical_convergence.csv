@@ -1,0 +1,7 @@
+case_id,q0,chi_m_inv,base_status,tight_status,base_tau_s,tight_tau_s,tau_abs_difference_s,status_agrees,base_rtol,tight_rtol,base_max_step_s,tight_max_step_s,identity
+0,0.5,0.02,hit,hit,0.8116990684891348,0.8116990691430196,6.53884835166707e-10,True,1e-08,1e-09,0.5,0.25,historical verified numerical tolerance sensitivity; not new physical parameter experiment
+1,0.5,0.02,hit,hit,0.79246356069726,0.792463561443884,7.466239848596956e-10,True,1e-08,1e-09,0.5,0.25,historical verified numerical tolerance sensitivity; not new physical parameter experiment
+2,0.5,0.02,hit,hit,0.7741325971491843,0.7741325979291904,7.800061707641248e-10,True,1e-08,1e-09,0.5,0.25,historical verified numerical tolerance sensitivity; not new physical parameter experiment
+3,0.5,0.0002265378784906,no_hit,no_hit,,,,True,1e-08,1e-09,0.5,0.25,historical verified numerical tolerance sensitivity; not new physical parameter experiment
+4,0.5,0.0002265378784906,hit,hit,72.99709511735144,72.99709668266843,1.5653169924689792e-06,True,1e-08,1e-09,0.5,0.25,historical verified numerical tolerance sensitivity; not new physical parameter experiment
+5,0.5,0.0002265378784906,hit,hit,71.33145083857586,71.33145282111072,1.982534854505502e-06,True,1e-08,1e-09,0.5,0.25,historical verified numerical tolerance sensitivity; not new physical parameter experiment
