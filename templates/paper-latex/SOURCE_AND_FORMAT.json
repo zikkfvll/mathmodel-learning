@@ -1,14 +1,14 @@
 {
-  "date": "2026-11-03",
-  "source_tex": "outputs/q1q2q3q4_paper_revision_20261030/main.tex",
+  "name": "个人数学建模论文 LaTeX 模板",
+  "version": "1.0.0",
+  "source_tex": "https://github.com/zikkfvll/mathmodel-learning/blob/862091fadc56b367d7c4cc90598e679229e61d42/competitions/2026-mathorcup-b/paper/main.tex",
   "source_tex_sha256": "b4271fbc11556437b7d09484aee678765c5521fa21670028d9b0a2468635cdfe",
-  "source_pdf": "local archived final-paper.pdf (identity-bearing original filename omitted in public distribution)",
+  "source_pdf": "https://github.com/zikkfvll/mathmodel-learning/blob/862091fadc56b367d7c4cc90598e679229e61d42/competitions/2026-mathorcup-b/paper/paper.pdf",
   "source_pdf_sha256": "8d31d755ac34e72791fbc606e8cfb91ac0bf1db54ffb0bc6bb8593fc9dee4c37",
   "source_class_sha256": "fb04802a48cab5c0f8b09a340658ff24e1461c52116870f50a7e67596f4e57fe",
   "copied_class_sha256": "fb04802a48cab5c0f8b09a340658ff24e1461c52116870f50a7e67596f4e57fe",
-  "class_original_preserved": true,
-  "source_class_note": "原文件来自项目既有CUMCMThesis类，项目源tex声明来源https://github.com/latexstudio/CUMCMThesis；类文件逐字节保留，不添加或改写其许可主张。",
-  "template_kind": "reusable LaTeX assets in personal writing skill; not Template Gallery installation",
+  "source_class_note": "基于项目既有 CUMCMThesis 修改版；上游来源 https://github.com/latexstudio/CUMCMThesis 。本模板保留类文件原有字节，许可说明见 NOTICE.md。",
+  "preview": "模板样张.pdf",
   "reused": [
     "class and global typography",
     "A4 25mm margins",
@@ -24,11 +24,10 @@
     "per-page Needspace/crop patches",
     "fixed contest rules or page limits"
   ],
-  "source_read_scope": "Full TeX structure and global style; reference PDF key-page read, not whole 313-page original",
   "small_reusable_adjustments": [
     "Long titles wrap; short original underline retained, long title has bottom rule",
     "Per-question figure/table reset centralized in startquestion macro",
     "Reference bookmark spacing handled without changing printed title"
   ],
-  "public_distribution_note": "v1.0.0 public distribution: source_pdf identity-bearing filename redacted; original source fingerprint and template scientific-content exclusions retained. Original local release preserved."
+  "template_kind": "可复用的个人论文结构与版式；用于新项目时按当届官方要求调整。"
 }

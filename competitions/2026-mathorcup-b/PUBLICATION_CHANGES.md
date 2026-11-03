@@ -1,45 +1,19 @@
-# 公开副本变更记录
+# 数据与版本说明
 
-整理日期：2026-11-03。原项目和原始文件保持不变。
+本项目保存2026 MathorCup B赛道的论文、计算程序、必要输入、结果表和图件。数据来源与分发许可见 [数据来源与许可](reproduction/数据来源与许可.txt)，运行步骤见 [复现指南](docs/reproduction.md)。
 
-## 处理规则
+## 文件整理
 
-- 文本中的本机绝对路径将 `/Users/<本机用户名>/` 改为 `/Users/USER/`，保留后续目录和相对路径。
-- 带明确Codex/ChatGPT会话URL前缀的会话标识替换为公开占位，不改科学运行ID、种子和数据标识。
-- 本轮不重算、不重绘、不编译；科学数字、条件、计算逻辑和数组结果保持原有版本。
-- 论文PDF仅改保存文件名，字节未改。原论文README保留为README.source-history.md，另新增当前使用说明。
-- 不复制签名承诺书、个人工具详情、历史工作日志、编译产物及官方原始大附件。
-- 公开运行说明补充：旧Q4 cache-only命令只适用于原始未脱敏包；公开副本给出省略两个cache参数的新物理解命令。本轮只核读代码，未执行该新命令。
-- 补入科学支持Markdown实际引用的4张既有图，图像字节未改。
+论文PDF保持原文件内容，使用便于阅读的文件名 `paper/paper.pdf`。各问程序与数据保持原有相对目录，论文所需图件及补充分析图件集中放在 `paper/figures/`。参考文献全文、签名承诺书和私人账号材料不随项目分发。
 
-## 修改文件
+来源记录中的本机用户名和私聊定位已匿名化。计算代码、科学数字、设计条件及数组结果未因此修改。当前文件校验值见 [文件清单](PUBLICATION_MANIFEST.json)。
 
-历史SHA与运行证据绑定原始文件。下列公开副本已改变文本，不能将其标为仍满足原文件逐字节SHA绑定；新的SHA见PUBLICATION_MANIFEST.json。
+## Q4历史缓存与重新计算
 
-- `reproduction/q4/base/data/full/TERRAIN.json`：local_username=2
-- `reproduction/q4/base/results/inverse/INVERSE_RESULTS.json`：local_username=6
-- `reproduction/q4/data/FORMAL_POLICY.json`：local_username=1
-- `reproduction/q4/data/MORRIS_QUERIES.json`：local_username=76
-- `reproduction/q4/data/cache/new1/CACHE_ENTRY.json`：local_username=2
-- `reproduction/q4/data/cache/new1/ORIGINAL_CACHE_ENTRY.json`：local_username=1
-- `reproduction/q4/data/cache/new1/evidence/RUN_RECEIPT.json`：local_username=3
-- `reproduction/q4/data/cache/new2/CACHE_ENTRY.json`：local_username=2
-- `reproduction/q4/data/cache/new2/ORIGINAL_CACHE_ENTRY.json`：local_username=1
-- `reproduction/q4/data/cache/new2/evidence/RUN_RECEIPT.json`：local_username=3
-- `reproduction/q4/data/cache/old0/CACHE_ENTRY.json`：local_username=4
-- `reproduction/q4/data/cache/old0/ORIGINAL_CACHE_ENTRY.json`：local_username=2
-- `reproduction/q4/data/cache/old0/evidence/RUN_RECEIPT.json`：local_username=3
-- `reproduction/q4/data/cache/old1/CACHE_ENTRY.json`：local_username=4
-- `reproduction/q4/data/cache/old1/ORIGINAL_CACHE_ENTRY.json`：local_username=2
-- `reproduction/q4/data/cache/old1/evidence/RUN_RECEIPT.json`：local_username=3
-- `reproduction/q4/data/cache/old2/CACHE_ENTRY.json`：local_username=4
-- `reproduction/q4/data/cache/old2/ORIGINAL_CACHE_ENTRY.json`：local_username=2
-- `reproduction/q4/data/cache/old2/evidence/RUN_RECEIPT.json`：local_username=3
-- `reproduction/q4/data/cache/old3/CACHE_ENTRY.json`：local_username=4
-- `reproduction/q4/data/cache/old3/ORIGINAL_CACHE_ENTRY.json`：local_username=2
-- `reproduction/q4/data/cache/old3/evidence/RUN_RECEIPT.json`：local_username=3
-- `reproduction/q4/data/local/TERRAIN.json`：local_username=2
+`reproduction/q4/data/cache/` 保存既有计算的历史证据。输入与回执中的路径元信息匿名化后，文件字节及其哈希发生变化，旧缓存的绑定不再适用于当前目录；不能将它直接用于 `--cache-only` 回放，也不能将旧哈希改写成一次新的运行证明。
 
-- `reproduction/软件与运行命令.txt`：补充公开版Q4运行方式、旧缓存绑定失效说明与本轮未实跑边界。
+复现指南中的公开命令使用新输出目录，不传入旧缓存参数。程序会执行物理求解，并为本次运行生成与实际输入匹配的新回执。该命令已按代码路径检查，但这次仓库整理没有重新运行Q4；依赖、编译器及数值有效域仍按指南检查。
 
-除上列脱敏和运行说明补充文件外，复制文件与清单中原始来源字节相同。新生成文件仅包括本说明、目录README与PUBLICATION_MANIFEST.json。清单自排除以避免循环哈希。
+## 图表与文档
+
+成果页面提供论文、完整图件和支持分析的直接入口。说明文件按读者查阅顺序组织，历史内部目录已替换为仓库中可访问的位置。通用论文模板另放在仓库 `templates/paper-latex/`，便于在新比赛中使用。

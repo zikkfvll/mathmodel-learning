@@ -1,8 +1,6 @@
 # 问题四补充分析、成本与条件记录
 
-本文件保存Q1—Q4整合正文未展开的反演、完整对照、成本、验证、故障及未运行事项。材料来自相邻 `../Q4_upgrade_20261030/` 已完成的研究包，其主文 `PAPER.md` SHA-256 为 `c6a8be85520b31b642769d2f5ae86477b564d2db1606eb9a63423de8ef8ce502`；技术审核见项目 `reports/q4/final_review_20261030/FINAL_REVIEW.md`、`gp/deadline_seed137/FINAL_SCOPE_REVIEW.md`、`numerical/NEW_V30_MORRIS_TARGET_AND_COMPLETED_CASES_REVIEW.md` 与 `numerical/INVERSE_V30_SYNTHETIC_REVIEW.md`。本次论文整合仅读取已保存的材料，没有运行PDE、训练代理、重新反演或重绘数据图。源研究的受限结论与整合论文的新版本审核分开。
-
-> **增量证据更新（2026-10-30）：** 下文保留v31基础包的旧24点与单seed事实；新增的真实临界压力测试显示，137主动组在四个临界端点错2/4，不能将旧24点零错判扩展为边界稳健优势。271对旧24为历史描述性回放，503未形成完整模型，三seed稳定性未完成。新增证据和原始结果见文末“后续增量”。
+本分析记录二维传播、多保真代理、合成反演、临界压力测试与计算成本。基础结果见[base/results](../reproduction/q4/base/results/)，后续诊断见[followup/results](../reproduction/q4/followup/results/)，图件见[Q4图件目录](figures/q4/)。基础部分的`results/`路径相对`q4/base/`，后续增量部分相对`q4/followup/`。
 
 ## 研究对象与时间、空间身份
 
@@ -51,7 +49,7 @@ seed,method,stratum,n,valid_n,unknown_n,TP,FN,FP,TN,disagreement_rate,arrival_mi
 
 ## 完整成本与记录缺项
 
-以下是 `results/formal_test/METHOD_COSTS.csv` 的全部四行、全部列，空字段真实保留。`physical_child_wall_sum_s` 为各方法所用唯一物理子进程墙时之和；`solver_wall_sum_s` 和 `compile_load_sum_s` 是对应的记录分量。共享物理调用按方法所用真实key计入，这四行不应相加作为本轮并行总耗时；它们不是CPU秒。四方法的GP拟合、采集和辅助预测累计时间及完整冷启动总时间因中断未持久化，不能以零填补或从物理调用部分声称端到端加速。
+以下是 `results/formal_test/METHOD_COSTS.csv` 的全部四行、全部列，空字段真实保留。`physical_child_wall_sum_s` 为各方法所用唯一物理子进程墙时之和；`solver_wall_sum_s` 和 `compile_load_sum_s` 是对应的记录分量。共享物理调用按方法所用真实key计入，这四行不应相加作为实验并行总耗时；它们不是CPU秒。四方法的GP拟合、采集和辅助预测累计时间及完整冷启动总时间因中断未持久化，不能以零填补或从物理调用部分声称端到端加速。
 
 ```csv
 seed,method,LF_queries,HF_queries,physical_child_wall_sum_s,solver_wall_sum_s,compile_load_sum_s,GP_fit_wall_s,acquisition_wall_s,auxiliary_prediction_wall_s,logical_cold_start_total_s
@@ -98,7 +96,7 @@ low_40,not_run_deadline,,3600,,,,,,,,
 
 早期数值核在干湿/实体边界和近干波速上发生过实际故障；修复过程保留相应测试与原失败证据，v30同参数15 m合成真值在修正后成功完成，没有通过更换真值隐藏失败。60 m低保真层出现明显人工阻塞及能量缺口，未纳入正式多保真融合。完整河段高低机动角点因时限未运行；后续种子未完成的部分工作保留历史消耗，不混入单seed结果。拟合/采集/预测累计计时缺失，未补成零。
 
-原Q4技术审核完成了所声明范围内的真实回执、数学独立复核、代表PDE干净环境复现、9图重绘与归档检查；其中代表PDE复现是一个1800 s、30 m案例，不代表完整参数库已第二次复算。源研究中的旧完整河段审核经历先后追加：以最终四例状态和最终 `FULL_CASES.csv` 为准，不将早期“尚未完成”的中间状态当最终事实。独立审核也不代表当前整合全文完成验收、队员接受或竞赛提交。
+研究阶段完成过代表PDE案例的干净环境复现：范围为一个1800 s、30 m案例，不等于完整参数库的第二次复算。完整河段以[最终四例](../reproduction/q4/base/results/FULL_CASES.csv)的状态和诊断为准。
 
 ## 研究资料与实际采用方法
 
@@ -108,12 +106,12 @@ low_40,not_run_deadline,,3600,,,,,,,,
 4. Renganathan S A, Rao V, Navon I M. *CAMERA: A method for cost-aware, adaptive, multifidelity, efficient reliability analysis*. Journal of Computational Physics, 2023. https://doi.org/10.1016/j.jcp.2022.111698
 5. Marques A N, Lam R R, Willcox K E. *Contour location via entropy reduction leveraging multiple information sources*. NeurIPS, 2018. https://proceedings.neurips.cc/paper_files/paper/2018/file/01a0683665f38d8e5e567b3b15ca98bf-Paper.pdf
 
-论文主文只引用实际采用的必要来源；补充资料保留原研究方法与完整证据入口。源 `results/PLOT_INPUTS.json` 绑定各图使用的持久化结果，源目录与最终 `figures/q4/` 中九幅图件均可供后续核查。
+论文主文引用实际采用的必要来源。基础图件对应的持久化结果索引见[PLOT_INPUTS.json](../reproduction/q4/base/results/PLOT_INPUTS.json)，九组图见[figures/q4](figures/q4/)。
 
 
 ## 后续增量：真实临界、历史回放与离线数值诊断
 
-以下依据 `../Q4_followup_20261030/论文修订说明.md`（SHA-256 `a1983a43ce747a77a96569e5ac71271de2fb7bac17d74c07b6ddd2aba02de925`）、其 `README.md`、保存结果及项目 `reports/q4/followup_review_20261030/gp/FINAL_INCREMENT_SCOPE.md`、`numerical/OFFLINE_FOLLOWUP_REVIEW.md` 和 `numerical/terrain_subanalysis/POOL_TERRAIN_OFFLINE_REVIEW.md`。本次合稿只读这些现有证据，不重新拟合、运行PDE或生成验证标签。此增量的旧v31基础包和新增结果有独立身份。
+以下为[followup/results](../reproduction/q4/followup/results/)中的临界搜索、历史回放及离线诊断。它们与前述基础实验分别记录，不能合并解释为同一批全新独立测试。
 
 ### seed137已冻结模型的新真实临界压力测试
 

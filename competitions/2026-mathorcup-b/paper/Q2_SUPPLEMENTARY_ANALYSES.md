@@ -1,6 +1,6 @@
 # 问题二补充分析与移出记录
 
-本文件保存合稿精简时从正文移出的来源、数值实现细节与外部材料对照。下列段落是上一版正文逐段原样摘录，行内TeX保持原样；数据与求解结果来自 `Q2_initial_state_20261029_v3/`，本轮未运行求解、清洗或重绘。本文档不是独立科学验收。旧合稿 `outputs/q1q2_paper_precipitation_revision_20261030/main.tex` 为逐段原文来源；核对材料包括 `reports/q1q2_readability_20261030/ANSWER_EVIDENCE_REVIEW.md` 和 `reports/q1q2_readability_20261030/OBJECT_AND_TITLE_EVIDENCE.md`。
+本分析展开论文问题二的数值设置、初态效应、材料和时间窗敏感性，以及外部试验对照。配置与数据见[Q2目录](../reproduction/q2/)，关键表见[results](../reproduction/q2/results/)，完整方程与论述见[论文](paper.pdf)。
 
 ## 源体含冰率与饱和水源比较
 
@@ -42,6 +42,6 @@ Iverson R M, Reid M E, Iverson N R, et al. Acute sensitivity of landslide rates 
 
 ## 自由排水对照的状态关系
 
-理想自由排水对照取 $e=0$、$s=E/2$，并使用 $\dot m=-m\dot\gamma\tan\psi$、$H=H_s/m$ 描述固相分数及柱厚变化；该对照状态关系与正文保留的饱和柱式（12）属于不同情景。原始记录见 `Q2_initial_state_20261029_v3/Q2_paper.md` 第3.2节。
+理想自由排水对照取 $e=0$、$s=E/2$，并使用 $\dot m=-m\dot\gamma\tan\psi$、$H=H_s/m$ 描述固相分数及柱厚变化；该对照状态关系与正文保留的饱和柱式（12）属于不同情景。状态定义与具体实现见[配置](../reproduction/q2/config.json)和[分析程序](../reproduction/q2/sol.py)。
 
 正文将旧符号 $U_{\rm ASL}$ 更名为 $U_{\mathrm{ext}}$，表示图7(b)地震反演速度曲线；源论文区分图7的长周期单力反演与后文ASL振幅源定位，故不将两种方法名称混同。两种记号指同一输入序列，更名不改变计算。

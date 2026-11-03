@@ -4,11 +4,11 @@
 
 Copernicus GLO-30：随附许可原文第4条允许复制、分发和改编；第6条规定归属、许可转交等义务，应连同该PDF一起传递。
 
-ASTER GDEM V003：NOAA InPort 官方政策记录明确V003无再分发要求，并请求适当引用。该记录链接为 https://www.fisheries.noaa.gov/inport/item/59575/full-list 。NASA/LPDAAC原页请求失败已在回执记录，不冒称已直接核读。
+ASTER GDEM V003：NOAA InPort 官方政策记录明确V003无再分发要求，并请求适当引用。该记录链接为 https://www.fisheries.noaa.gov/inport/item/59575/full-list 。可查阅随附[政策页面存档](NASA_LPDAAC_policy_NOAA_record.html)。
 
 ASTER GDEM is a product of Japan’s Ministry of Economy, Trade, and Industry (METI) and NASA.
 
-本包只有研究区域派生连续支持。输入来源和字节指纹见 INPUT_MANIFEST.json；支持投影为 EPSG:32645，15 m双线性重投影，未填洼或削床。
+本库提供研究区域的派生连续支持，输入说明见[地形元数据](../../reproduction/q4/base/data/full/TERRAIN.json)，文件指纹见[发布清单](../../PUBLICATION_MANIFEST.json)。支持投影为EPSG:32645，15 m双线性重投影，未填洼或削床。
 
 Copernicus 派生数据法定归属通知：
 

@@ -1,6 +1,6 @@
 # 问题三补充分析与证据记录
 
-本文件保留整合正文未展开的代理比较、全部预算与成本、条件延迟、数值诊断、未采用路线及来源。资料来自 `../Q3_final_polish_20261030_v4_1/Q3_submission/` 的原文及持久化结果，正文源文件 `Q3_paper.md` 的 SHA-256 为 `1d339aeb1b6e3feee23bccfa026776c63e7f507f5baeb1a28373b6452d3481e3`。本次整合按既有文件整理，未训练、求解、生成新随机标签或重绘数据图。表中时间来自原次执行的计时，随硬件及运行环境变化。
+本分析展示首达概率与集合、GP主动/非主动比较、计算成本、条件延迟和敏感性。程序、固定输入与结果在[Q3目录](../reproduction/q3/)，图件在[Q3图件目录](figures/q3/)。文中的`data/`与`results/`路径均相对Q3目录；计时来自原实验，随硬件与运行环境变化。
 
 ## 对象及方法身份
 
@@ -173,7 +173,7 @@ near,near_robust,60,30,-18.599999999999994,-17.049999999999997,True,5.9502317739
 
 ![临界放大及概率假设敏感性](figures/q3/fig08_boundary_probability_sensitivity.png)
 
-完整设计和结果保留于原包 `results/sensitivity/phase_map.csv`、`chi_perturbation.csv`、`crossing_amplification.csv`、`local_derivatives.csv`、`derivative_step_stability.csv`、`set_sensitivity.csv`、`distribution_sensitivity.csv` 和 `legacy_numerical_convergence.csv`。这些设计不表示已测量的初态联合概率。
+完整设计和结果保留于[敏感性结果目录](../reproduction/q3/results/sensitivity/)中的 `results/sensitivity/phase_map.csv`、`chi_perturbation.csv`、`crossing_amplification.csv`、`local_derivatives.csv`、`derivative_step_stability.csv`、`set_sensitivity.csv`、`distribution_sensitivity.csv` 和 `legacy_numerical_convergence.csv`。这些设计不表示已测量的初态联合概率。
 
 ## 传播测试、未采用项及资料范围
 
@@ -185,9 +185,9 @@ near,near_robust,60,30,-18.599999999999994,-17.049999999999997,True,5.9502317739
 
 ## 来源与方法文献
 
-- 源正文 `../Q3_final_polish_20261030_v4_1/Q3_submission/Q3_paper.md`；对应分析代码、冻结配置、结果表、原始图和运行回执均保存在同一 `Q3_submission/` 目录。结果身份与精确取数另见 `../../reports/q123_writing_20261030/Q3_EVIDENCE_AUDIT.md` 及其 `evidence/Q3_EXACT_READBACK.json`。
+- [Q3分析程序](../reproduction/q3/sol.py)、[固定输入](../reproduction/q3/data/)和[结果表](../reproduction/q3/results/)可用于对照本文的定义与数值。
 - Dang C, Valdebenito M A, Faes M G R. Towards a single-loop Gaussian process regression based-active learning method for time-dependent reliability analysis. *Mechanical Systems and Signal Processing*, 2025, 226:112294. https://doi.org/10.1016/j.ymssp.2024.112294.
 - Dang C, Valdebenito M A, Faes M G R. Time-dependent reliability analysis by a single-loop Bayesian active learning method using Gaussian process regression. *Computer Methods in Applied Mechanics and Engineering*, 2025, 444:118092. https://doi.org/10.1016/j.cma.2025.118092.
-- Clopper C J, Pearson E S. The use of confidence or fiducial limits illustrated in the case of the binomial. *Biometrika*, 1934, 26(4):404–413. 本地SciPy条目核对方法名称与书目信息，本轮未获取期刊原文。单侧下界的实现依据及文档见 [SciPy proportion_ci](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html)。
-- PCHIP 算法说明见 [SciPy PchipInterpolator](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.PchipInterpolator.html)；Fritsch F N, Butland J. A method for constructing local monotone piecewise cubic interpolants. 1984, 5(2):300–304. https://doi.org/10.1137/0905021. 本轮为本地文档二级核对，未取得原刊全文。
+- Clopper C J, Pearson E S. The use of confidence or fiducial limits illustrated in the case of the binomial. *Biometrika*, 1934, 26(4):404–413. 该条目的实现参考SciPy文档，未以原刊全文精读作为本分析依据。单侧下界的实现依据及文档见 [SciPy proportion_ci](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html)。
+- PCHIP 算法说明见 [SciPy PchipInterpolator](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.PchipInterpolator.html)；Fritsch F N, Butland J. A method for constructing local monotone piecewise cubic interpolants. 1984, 5(2):300–304. https://doi.org/10.1137/0905021. 本分析通过算法文档核对，不声称复核了原刊全部推导。
 - Duan T, Anand A, Ding D Y, et al. NGBoost: Natural Gradient Boosting for Probabilistic Prediction. ICML, PMLR, 2020, 119:2690–2700. https://proceedings.mlr.press/v119/duan20a.html. 此条用于记录未采用路线，不对应本项目已训练模型。
